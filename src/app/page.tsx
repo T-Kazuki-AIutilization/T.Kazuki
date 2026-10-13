@@ -469,6 +469,7 @@ export default function LandingPage() {
               <a href="#pricing" className="hover:text-foreground transition-colors">料金プラン</a>
               <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
               <Link href="/blog" className="hover:text-foreground transition-colors">ブログ</Link>
+              <a href="https://freelancekt.booth.pm" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Excelテンプレート（BOOTH）</a>
             </nav>
           </div>
           <div className="mt-6 border-t pt-6 text-center text-xs text-muted-foreground">
