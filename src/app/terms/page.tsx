@@ -76,16 +76,15 @@ export default function TermsPage() {
             <p>当サービスには以下のプランがあります。</p>
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li><strong>Free プラン:</strong> 無料。クライアント3件・案件10件/月まで利用可能。</li>
-              <li><strong>Pro プラン:</strong> 月額980円（税込）または年額9,408円（税込）。</li>
-              <li><strong>Pro+ プラン:</strong> 月額1,480円（税込）または年額14,208円（税込）。</li>
+              <li><strong>Pro プラン:</strong> 月額980円（税込）。</li>
+              <li><strong>Pro+ プラン:</strong> 月額1,480円（税込）。</li>
             </ul>
-            <p className="mt-2">有料プランの料金は、Stripe を通じてクレジットカードにより毎月（または毎年）自動で請求されます。料金は前払いとなります。</p>
+            <p className="mt-2">有料プランの料金は、Stripe を通じてクレジットカードにより毎月自動で請求されます。料金は前払いとなります。</p>
           </section>
 
           <section>
             <h2 className="mb-3 text-lg font-semibold">第6条（解約・返金）</h2>
             <p>有料プランはいつでも解約できます。解約後は当該請求期間の終了まで引き続きご利用いただけます。日割り返金は行いません。</p>
-            <p className="mt-2">14日間の無料トライアル期間中に解約した場合、料金は発生しません。</p>
           </section>
 
           <section>
