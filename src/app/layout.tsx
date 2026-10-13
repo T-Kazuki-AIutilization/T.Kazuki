@@ -2,11 +2,12 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import '@/styles/tokens.css'
 import { Toaster } from 'sonner'
+import { SITE_URL } from '@/lib/site'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://freelanceos-eosin.vercel.app'),
+  metadataBase: new URL(SITE_URL),
   title: 'FreelanceOS — フリーランスの事業管理ダッシュボード',
   description: '案件・売上・クライアントを1画面で見える化。フリーランス専用の事業管理ツール。',
 }

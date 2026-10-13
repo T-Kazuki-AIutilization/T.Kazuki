@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { ARTICLES } from '@/content/blog'
 
-const BASE = process.env.NEXT_PUBLIC_APP_URL || 'https://freelanceos-eosin.vercel.app'
+import { SITE_URL } from '@/lib/site'
+
+const BASE = SITE_URL
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
