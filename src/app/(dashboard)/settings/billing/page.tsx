@@ -18,6 +18,8 @@ export default function BillingPage() {
   useEffect(() => { fetch('/api/profile').then(r => r.json()).then(j => setProfile(j.data)) }, [])
 
   async function handleUpgrade(plan: string) {
+    // Free へのダウングレードは Stripe のカスタマーポータルで解約する
+    if (plan === 'free') { await handlePortal(); return }
     setLoading(plan)
     try {
       const res = await fetch('/api/stripe/create-checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plan }) })
@@ -38,6 +40,7 @@ export default function BillingPage() {
   }
 
   const currentPlan = profile?.plan ?? 'free'
+  const hasSubscription = currentPlan !== 'free'
 
   return (
     <AppShell title="プラン・支払い">
@@ -68,8 +71,8 @@ export default function BillingPage() {
               {currentPlan === plan.key ? (
                 <Button disabled variant="outline" className="w-full">現在のプラン</Button>
               ) : (
-                <Button className="w-full" onClick={() => handleUpgrade(plan.key)} disabled={!!loading}>
-                  {loading === plan.key ? '処理中...' : plan.price === 0 ? 'ダウングレード' : 'アップグレード'}
+                <Button className="w-full" onClick={() => hasSubscription ? handlePortal() : handleUpgrade(plan.key)} disabled={!!loading}>
+                  {loading === plan.key || (hasSubscription && loading === 'portal') ? '処理中...' : plan.price === 0 ? '解約してFreeに戻す' : hasSubscription ? 'プランを変更' : 'アップグレード'}
                 </Button>
               )}
             </div>
