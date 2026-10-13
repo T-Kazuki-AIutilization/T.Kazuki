@@ -20,7 +20,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
-  if (pathname.startsWith('/admin')) {
+  if (pathname.startsWith('/admin') || pathname.startsWith('/api/admin')) {
     const { data: profile } = await supabase
       .from('profiles').select('role').eq('id', user.id).single()
     if (profile?.role !== 'admin') {
