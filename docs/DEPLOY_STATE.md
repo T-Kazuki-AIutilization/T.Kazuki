@@ -51,3 +51,23 @@ Vercel → freelanceos → Settings → Environment Variables → 「Add Environ
 - [ ] /settings/billing → Pro アップグレード → Stripe Checkout（テストカード 4242 4242 4242 4242）→ plan が pro になる（14日トライアル）
 - [ ] Stripe で解約 → plan が free に戻る
 
+
+## 本番課金への切り替え（2026-10-13 着手）
+### 完了
+- [x] 課金ページ: Free へのダウングレード／プラン変更を Stripe カスタマーポータル経由に修正（以前は checkout に plan=free を送って 422 になっていた）
+- [x] テスト環境のカスタマーポータル設定を保存（解約可・プラン切替可（Pro 月額 ⇄ Pro+ 月額）・数量変更不可）
+
+### 要対応（ユーザー）: Stripe 本番環境の有効化
+Stripe ダッシュボード右上「本番環境に切り替える」→ 事業情報ウィザードを完了する（本人確認・銀行口座を含むため Claude は入力しない）。
+- 事業形態: 個人事業主
+- ビジネスのウェブサイト: https://freelanceos-eosin.vercel.app
+- 商品またはサービスの説明: フリーランス向けの事業管理 SaaS（月額サブスクリプション）。案件・売上・クライアントの管理ダッシュボードを提供。
+- 公開情報の明細書表記（カード明細に出る名前）: FREELANCEOS など
+- 銀行口座: 売上の振込先
+
+### 有効化後に Claude が行うこと
+1. 本番モードで商品・価格を作成（Pro 月額 980円 / Pro+ 月額 1,480円、JPY、継続）
+2. 本番モードの Webhook を作成（URL 同じ、イベント4種）
+3. 本番モードのカスタマーポータル設定を保存
+4. Vercel の環境変数を本番値に更新（STRIPE_PRO_PRICE_ID / STRIPE_PRO_PLUS_PRICE_ID は Claude、STRIPE_SECRET_KEY（sk_live_）と STRIPE_WEBHOOK_SECRET はユーザー）→ 再デプロイ
+5. 実カードで 1 件登録し即解約して疎通確認（任意）
