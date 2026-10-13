@@ -79,3 +79,12 @@ Stripe ダッシュボード右上「本番環境に切り替える」→ 事業
 | STRIPE_PRO_PLUS_PRICE_ID | price_1UQC8K3FoQrVynU5UhtqTDt4（FreelanceOS Pro+（月間）¥1,480） |
 | STRIPE_SECRET_KEY | sk_live_…（ユーザーが転記） |
 | STRIPE_WEBHOOK_SECRET | 本番 Webhook の whsec_…（ユーザーが転記） |
+
+### 本番モード切替の進捗（2026-10-14 早朝）
+- [x] 本番の商品・価格は Stripe 側で有効化時にコピー済み（Pro 月額 980 / Pro+ 月額 1,480 / 年額2種 / 不要な myproduct $15）
+- [x] 本番 Webhook 作成: `freelanceos-production-live`（we_1UQCLX3FoQrVynU5aY0QKglj、イベント4種、URL 同じ）
+- [x] 本番カスタマーポータル設定を保存（解約可・Pro⇄Pro+ 切替可・数量変更不可）
+- [x] Vercel の STRIPE_PRO_PRICE_ID / STRIPE_PRO_PLUS_PRICE_ID を本番値に更新
+- [ ] **要対応**: Vercel の STRIPE_SECRET_KEY を sk_live_… に、STRIPE_WEBHOOK_SECRET を本番 Webhook の whsec_… に更新（Edit → 値を貼り付け → Save）
+- [ ] 上記完了後に再デプロイ（Claude が実施）→ 本番 Webhook のテスト送信で 200 を確認
+- 注意: 秘密キー更新前に再デプロイすると「本番価格 ID × テスト秘密キー」の組合せになり決済が失敗するため、更新完了まで push を止める。
