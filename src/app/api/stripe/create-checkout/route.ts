@@ -19,7 +19,16 @@ export async function POST(request: NextRequest) {
   const allowed = [PLANS.pro.priceId, PLANS.pro_plus.priceId].filter(Boolean)
   if (!priceId || !allowed.includes(priceId)) return errorResponse('Unknown plan', 'VALIDATION_ERROR', 422)
   const { data: profile } = await supabase.from('profiles').select('stripe_customer_id, email').eq('id', user.id).single()
-  let customerId = profile?.stripe_customer_id
+  let customerId = profile?.stripe_customer_id as string | null | undefined
+  // 保存済みの顧客 ID が現在のモード（本番/テスト）に存在しない場合は作り直す
+  if (customerId) {
+    try {
+      const existing = await stripe.customers.retrieve(customerId)
+      if ((existing as { deleted?: boolean }).deleted) customerId = null
+    } catch {
+      customerId = null
+    }
+  }
   if (!customerId) {
     const customer = await stripe.customers.create({ email: profile?.email, metadata: { userId: user.id } })
     customerId = customer.id

@@ -11,8 +11,14 @@ async function handle(request: NextRequest) {
   if (!user) return errorResponse('Unauthorized', 'UNAUTHORIZED', 401)
   const { data: profile } = await supabase.from('profiles').select('stripe_customer_id').eq('id', user.id).single()
   if (!profile?.stripe_customer_id) return errorResponse('No subscription', 'NOT_FOUND', 404)
-  const session = await stripe.billingPortal.sessions.create({ customer: profile.stripe_customer_id, return_url: `${request.nextUrl.origin}/settings/billing` })
-  return jsonResponse({ url: session.url })
+  try {
+    const session = await stripe.billingPortal.sessions.create({ customer: profile.stripe_customer_id, return_url: `${request.nextUrl.origin}/settings/billing` })
+    return jsonResponse({ url: session.url })
+  } catch (e) {
+    // 旧モードの顧客 ID など、現在の Stripe 環境に存在しない場合
+    console.error('[stripe portal] failed', (e as Error).message)
+    return errorResponse('No subscription', 'NOT_FOUND', 404)
+  }
 }
 
 export async function GET(request: NextRequest) { return handle(request) }
