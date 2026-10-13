@@ -30,7 +30,14 @@
   - URL: https://freelanceos-eosin.vercel.app/api/stripe/webhook
   - イベント: checkout.session.completed / customer.subscription.created / updated / deleted
 
-## 残り（ユーザー操作: 秘密キー3件を Vercel に登録）
+## 完了: 秘密キー3件を Vercel に登録（ユーザー、2026-10-13）→ 再デプロイ済み
+
+### 検証結果（2026-10-13）
+- 未認証の checkout API → 401 / webhook 署名なし → 400 / 不正署名 → 400（= 署名シークレット読込済み）
+- Stripe Shell から `stripe trigger customer.subscription.created` → Webhook 配信 **200 OK**
+- /dashboard 未ログイン → /login にリダイレクト
+
+## 登録手順の控え（再掲）
 Vercel → freelanceos → Settings → Environment Variables → 「Add Environment Variable」で以下を追加（Environment: Production and Preview）。
 | Key | 取得場所 |
 |---|---|
