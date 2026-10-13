@@ -85,6 +85,7 @@ export default function TermsPage() {
           <section>
             <h2 className="mb-3 text-lg font-semibold">第6条（解約・返金）</h2>
             <p>有料プランはいつでも解約できます。解約後は当該請求期間の終了まで引き続きご利用いただけます。日割り返金は行いません。</p>
+            <p className="mt-2">有料プランには14日間の無料トライアルがあり、トライアル期間中に解約した場合、料金は発生しません。</p>
           </section>
 
           <section>

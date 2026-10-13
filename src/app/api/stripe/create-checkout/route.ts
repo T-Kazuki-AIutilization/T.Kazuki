@@ -9,10 +9,15 @@ export async function POST(request: NextRequest) {
   const supabase = createServerClient()
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) return errorResponse('Unauthorized', 'UNAUTHORIZED', 401)
-  const { priceId } = await request.json()
-  if (!priceId) return errorResponse('priceId is required', 'VALIDATION_ERROR', 422)
+  const body = await request.json().catch(() => ({}))
+  // plan キー（pro / pro_plus）を受け取り、price id はサーバー側で決める
+  const plan = body.plan as string | undefined
+  const priceId =
+    plan === 'pro' ? PLANS.pro.priceId
+    : plan === 'pro_plus' ? PLANS.pro_plus.priceId
+    : (body.priceId as string | undefined)
   const allowed = [PLANS.pro.priceId, PLANS.pro_plus.priceId].filter(Boolean)
-  if (!allowed.includes(priceId)) return errorResponse('Unknown priceId', 'VALIDATION_ERROR', 422)
+  if (!priceId || !allowed.includes(priceId)) return errorResponse('Unknown plan', 'VALIDATION_ERROR', 422)
   const { data: profile } = await supabase.from('profiles').select('stripe_customer_id, email').eq('id', user.id).single()
   let customerId = profile?.stripe_customer_id
   if (!customerId) {
@@ -23,6 +28,7 @@ export async function POST(request: NextRequest) {
   const session = await stripe.checkout.sessions.create({
     customer: customerId, mode: 'subscription', line_items: [{ price: priceId, quantity: 1 }],
     locale: 'ja', allow_promotion_codes: true,
+    subscription_data: { trial_period_days: 14 },
     success_url: `${request.nextUrl.origin}/settings/billing?success=true`,
     cancel_url: `${request.nextUrl.origin}/settings/billing?canceled=true`,
   })

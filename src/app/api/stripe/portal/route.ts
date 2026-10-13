@@ -4,7 +4,7 @@ import { createServerClient } from '@/lib/supabase/server'
 import { getStripe } from '@/lib/stripe'
 import { jsonResponse, errorResponse } from '@/lib/utils'
 
-export async function GET(request: NextRequest) {
+async function handle(request: NextRequest) {
   const stripe = getStripe()
   const supabase = createServerClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -14,3 +14,6 @@ export async function GET(request: NextRequest) {
   const session = await stripe.billingPortal.sessions.create({ customer: profile.stripe_customer_id, return_url: `${request.nextUrl.origin}/settings/billing` })
   return jsonResponse({ url: session.url })
 }
+
+export async function GET(request: NextRequest) { return handle(request) }
+export async function POST(request: NextRequest) { return handle(request) }
