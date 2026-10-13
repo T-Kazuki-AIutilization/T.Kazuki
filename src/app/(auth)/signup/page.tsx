@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { createBrowserClient } from '@supabase/ssr'
+import { createBrowserClient } from '@/lib/supabase/client'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -14,7 +14,7 @@ export default function SignupPage() {
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
   const router = useRouter()
-  const supabase = createBrowserClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+  const supabase = createBrowserClient()
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -32,6 +32,13 @@ export default function SignupPage() {
       <div><Label htmlFor="email">メールアドレス</Label><Input id="email" type="email" value={email} onChange={e => setEmail(e.target.value)} required /></div>
       <div><Label htmlFor="password">パスワード（8文字以上）</Label><Input id="password" type="password" minLength={8} value={password} onChange={e => setPassword(e.target.value)} required /></div>
       <Button type="submit" className="w-full" disabled={loading}>{loading ? '作成中...' : 'アカウントを作成'}</Button>
+      <p className="text-center text-xs text-muted-foreground leading-relaxed">
+        アカウントを作成することで、
+        <Link href="/terms" className="text-primary hover:underline">利用規約</Link>・
+        <Link href="/privacy" className="text-primary hover:underline">プライバシーポリシー</Link>・
+        <Link href="/tokusho" className="text-primary hover:underline">特定商取引法に基づく表記</Link>
+        に同意したものとみなします。
+      </p>
       <p className="text-center text-sm text-muted-foreground">既にアカウントをお持ちの方は<Link href="/login" className="text-primary hover:underline">ログイン</Link></p>
     </form>
   )

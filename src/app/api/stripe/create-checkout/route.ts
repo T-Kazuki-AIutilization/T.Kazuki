@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic'
 import { NextRequest } from 'next/server'
 import { createServerClient } from '@/lib/supabase/server'
-import { getStripe } from '@/lib/stripe'
+import { getStripe, PLANS } from '@/lib/stripe'
 import { jsonResponse, errorResponse } from '@/lib/utils'
 
 export async function POST(request: NextRequest) {
@@ -11,6 +11,8 @@ export async function POST(request: NextRequest) {
   if (!user) return errorResponse('Unauthorized', 'UNAUTHORIZED', 401)
   const { priceId } = await request.json()
   if (!priceId) return errorResponse('priceId is required', 'VALIDATION_ERROR', 422)
+  const allowed = [PLANS.pro.priceId, PLANS.pro_plus.priceId].filter(Boolean)
+  if (!allowed.includes(priceId)) return errorResponse('Unknown priceId', 'VALIDATION_ERROR', 422)
   const { data: profile } = await supabase.from('profiles').select('stripe_customer_id, email').eq('id', user.id).single()
   let customerId = profile?.stripe_customer_id
   if (!customerId) {
@@ -20,6 +22,7 @@ export async function POST(request: NextRequest) {
   }
   const session = await stripe.checkout.sessions.create({
     customer: customerId, mode: 'subscription', line_items: [{ price: priceId, quantity: 1 }],
+    locale: 'ja', allow_promotion_codes: true,
     success_url: `${request.nextUrl.origin}/settings/billing?success=true`,
     cancel_url: `${request.nextUrl.origin}/settings/billing?canceled=true`,
   })
