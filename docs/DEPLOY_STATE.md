@@ -21,8 +21,26 @@
 
 ※ 本番課金を始めるときは Stripe を本番モードに切り替え、商品・価格・Webhook を本番側で作り直し、上記のキー・価格 IDを本番用に差し替える。
 
-## 残り
-- [ ] Vercel ログイン（ユーザー）→ Import Git Repository → 環境変数登録 → Deploy
-- [ ] Stripe Webhook 作成（URL: https://<ドメイン>/api/stripe/webhook、イベント: checkout.session.completed / customer.subscription.created / updated / deleted）→ 署名シークレットを Vercel に登録して再デプロイ
-- [ ] Supabase Auth → URL Configuration → Site URL と Redirect URLs に本番ドメインを設定
-- [ ] 動作確認（サインアップ → ダッシュボード → テストカード 4242… で Checkout → plan が pro に変わる）
+## 完了（2026-10-13 夜）
+- [x] Vercel プロジェクト `freelanceos`（Hobby）作成、GitHub 連携、本番デプロイ成功 → **https://freelanceos-eosin.vercel.app**
+  - 注意: `freelanceos.vercel.app` は他人のプロジェクト。実ドメインは `-eosin` 付き。
+  - `vercel.json` の regions を `nrt1`（無効）→ `hnd1` に修正
+- [x] Supabase Auth → Site URL = https://freelanceos-eosin.vercel.app、Redirect URL = https://freelanceos-eosin.vercel.app/**
+- [x] Stripe（テスト）Webhook 作成: `freelanceos-production`（we_1UQB4O485lX35o0sJ0b5XHIU）
+  - URL: https://freelanceos-eosin.vercel.app/api/stripe/webhook
+  - イベント: checkout.session.completed / customer.subscription.created / updated / deleted
+
+## 残り（ユーザー操作: 秘密キー3件を Vercel に登録）
+Vercel → freelanceos → Settings → Environment Variables → 「Add Environment Variable」で以下を追加（Environment: Production and Preview）。
+| Key | 取得場所 |
+|---|---|
+| SUPABASE_SERVICE_ROLE_KEY | Supabase → Project Settings → API Keys → Secret keys → default の目のアイコンで表示してコピー |
+| STRIPE_SECRET_KEY | Stripe（テスト）→ 開発者 → API キー → シークレットキー（sk_test_…） |
+| STRIPE_WEBHOOK_SECRET | Stripe → Workbench → Webhook → freelanceos-production → 署名シークレット（whsec_…）の目のアイコン |
+登録後に再デプロイが必要（Deployments → 最新 → … → Redeploy。または Claude に「再デプロイして」と依頼）。
+
+## その後の動作確認
+- [ ] サインアップ → メール確認 → /dashboard
+- [ ] /settings/billing → Pro アップグレード → Stripe Checkout（テストカード 4242 4242 4242 4242）→ plan が pro になる（14日トライアル）
+- [ ] Stripe で解約 → plan が free に戻る
+
