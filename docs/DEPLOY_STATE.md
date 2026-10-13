@@ -1,0 +1,28 @@
+# FreelanceOS 公開作業の進捗（2026-10-13 時点）
+
+## 完了
+- [x] GitHub へ push 済み（リポジトリは T-Kazuki-AIutilization/T.Kazuki へ移動済み。旧 URL からリダイレクトされる）
+- [x] Supabase クラウド（ref `fjbbkbphlmxfyisiejqv`、東京）にスキーマ適用済み（テーブル9・RLSポリシー27・auth トリガー）
+- [x] 既存ユーザー（t.kazuki1385@gmail.com）を `admin` に設定
+- [x] Stripe テスト環境に商品・価格あり（Pro 月額980 / Pro+ 月額1,480）
+
+## Vercel に登録する環境変数（Production）
+| 変数名 | 値 | 備考 |
+|---|---|---|
+| NEXT_PUBLIC_SUPABASE_URL | https://fjbbkbphlmxfyisiejqv.supabase.co | 公開情報 |
+| NEXT_PUBLIC_SUPABASE_ANON_KEY | sb_publishable_07RC1x7I7v78IKrYRa7d2w_z4KFy_P2 | 公開キー（Supabase の新形式 publishable key） |
+| SUPABASE_SERVICE_ROLE_KEY | **（ユーザーが転記）** Supabase → Project Settings → API Keys → Secret keys の `default` を表示してコピー | 秘密 |
+| STRIPE_SECRET_KEY | **（ユーザーが転記）** Stripe → 開発者 → API キー → シークレットキー（テスト: sk_test_…） | 秘密 |
+| STRIPE_WEBHOOK_SECRET | **（Webhook 作成後に転記）** | 秘密 |
+| STRIPE_PRO_PRICE_ID | price_1TnOs8485lX35o0sKDoIfzov | テスト環境 Pro 月額 |
+| STRIPE_PRO_PLUS_PRICE_ID | price_1TnQL8485lX35o0syH7PjZzJ | テスト環境 Pro+ 月額 |
+| NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY | pk_test_…（Stripe → 開発者 → API キー → 公開可能キー） | 公開キー |
+| NEXT_PUBLIC_APP_URL | https://<vercel のドメイン> | デプロイ後に確定 |
+
+※ 本番課金を始めるときは Stripe を本番モードに切り替え、商品・価格・Webhook を本番側で作り直し、上記のキー・価格 IDを本番用に差し替える。
+
+## 残り
+- [ ] Vercel ログイン（ユーザー）→ Import Git Repository → 環境変数登録 → Deploy
+- [ ] Stripe Webhook 作成（URL: https://<ドメイン>/api/stripe/webhook、イベント: checkout.session.completed / customer.subscription.created / updated / deleted）→ 署名シークレットを Vercel に登録して再デプロイ
+- [ ] Supabase Auth → URL Configuration → Site URL と Redirect URLs に本番ドメインを設定
+- [ ] 動作確認（サインアップ → ダッシュボード → テストカード 4242… で Checkout → plan が pro に変わる）
