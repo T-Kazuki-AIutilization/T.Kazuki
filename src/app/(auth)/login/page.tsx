@@ -1,35 +1,34 @@
 'use client'
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { createBrowserClient } from '@supabase/ssr'
+import { signInAction } from '@/app/actions/auth'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { toast } from 'sonner'
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
-  const supabase = createBrowserClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+  const [error, setError] = useState('')
 
-  async function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setLoading(true)
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
-    if (error) { toast.error(error.message); setLoading(false); return }
-    router.push('/dashboard')
-    router.refresh()
+    setError('')
+    const formData = new FormData(e.currentTarget)
+    const result = await signInAction(formData)
+    if (result?.error) {
+      setError(result.error)
+      setLoading(false)
+    }
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 rounded-lg border bg-white p-6 shadow-sm">
       <h2 className="text-lg font-semibold text-center">ログイン</h2>
-      <div><Label htmlFor="email">メールアドレス</Label><Input id="email" type="email" value={email} onChange={e => setEmail(e.target.value)} required /></div>
-      <div><Label htmlFor="password">パスワード</Label><Input id="password" type="password" value={password} onChange={e => setPassword(e.target.value)} required /></div>
+      <div><Label htmlFor="email">メールアドレス</Label><Input id="email" name="email" type="email" required /></div>
+      <div><Label htmlFor="password">パスワード</Label><Input id="password" name="password" type="password" required /></div>
       <Button type="submit" className="w-full" disabled={loading}>{loading ? 'ログイン中...' : 'ログイン'}</Button>
+      {error && <p className="text-sm text-center text-red-500">{error}</p>}
       <div className="text-center text-sm text-muted-foreground">
         <Link href="/reset-password" className="text-primary hover:underline">パスワードを忘れた方</Link>
         {' | '}
