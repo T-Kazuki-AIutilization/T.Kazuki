@@ -23,6 +23,8 @@ export type Article = {
 
 export const BOOTH_INVOICE_URL = 'https://freelancekt.booth.pm/items/8986203'
 export const BOOTH_TAX_URL = 'https://freelancekt.booth.pm/items/8986380'
+export const BOOTH_RATE_URL = 'https://freelancekt.booth.pm/items/8986468'
+export const BOOTH_TAKEHOME_URL = 'https://freelancekt.booth.pm/items/8986475'
 
 export const ARTICLES: Article[] = [
   {
@@ -216,6 +218,22 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'cta',
+        title: '時間単価計算＋見積作成シート（Excel）',
+        text: 'この記事の計算式をそのまま Excel にしました。目標年収からの逆算、工程別の見積、案件ごとの実績単価の記録までセット。',
+        href: BOOTH_RATE_URL,
+        label: 'BOOTH で見る（780円）',
+        external: true,
+      },
+      {
+        type: 'cta',
+        title: '売上からの手取りを知りたい方へ',
+        text: '売上と経費を入れるだけで、所得税・住民税・国保・年金・事業税を差し引いた手取りを概算する Excel シミュレーターも用意しています。',
+        href: BOOTH_TAKEHOME_URL,
+        label: 'BOOTH で見る（680円）',
+        external: true,
+      },
+      {
+        type: 'cta',
         title: '案件ごとの売上と実績を1画面で',
         text: 'FreelanceOS で案件・金額・状態を記録すると、どの案件が稼げているかがダッシュボードで分かります。無料プランあり。',
         href: '/signup',
@@ -280,6 +298,14 @@ export const ARTICLES: Article[] = [
         text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別集計、所得税の概算までセットにしたテンプレートです。',
         href: BOOTH_TAX_URL,
         label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      {
+        type: 'cta',
+        title: '来年の納税額を先に知っておきたい方へ',
+        text: '売上と経費から所得税・住民税・国保・年金を概算し、手取りと納税資金の目安を出す Excel シミュレーター（2026年分対応）。',
+        href: BOOTH_TAKEHOME_URL,
+        label: 'BOOTH で見る（680円）',
         external: true,
       },
       {
