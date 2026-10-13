@@ -143,6 +143,7 @@ export default function LandingPage() {
             <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">機能</a>
             <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">料金</a>
             <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">FAQ</a>
+            <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">ブログ</Link>
           </nav>
           <div className="flex items-center gap-3">
             <Link href="/login" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -467,6 +468,7 @@ export default function LandingPage() {
               <Link href="/signup" className="hover:text-foreground transition-colors">新規登録</Link>
               <a href="#pricing" className="hover:text-foreground transition-colors">料金プラン</a>
               <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
+              <Link href="/blog" className="hover:text-foreground transition-colors">ブログ</Link>
             </nav>
           </div>
           <div className="mt-6 border-t pt-6 text-center text-xs text-muted-foreground">
