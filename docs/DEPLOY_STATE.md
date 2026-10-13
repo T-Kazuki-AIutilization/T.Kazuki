@@ -71,3 +71,11 @@ Stripe ダッシュボード右上「本番環境に切り替える」→ 事業
 3. 本番モードのカスタマーポータル設定を保存
 4. Vercel の環境変数を本番値に更新（STRIPE_PRO_PRICE_ID / STRIPE_PRO_PLUS_PRICE_ID は Claude、STRIPE_SECRET_KEY（sk_live_）と STRIPE_WEBHOOK_SECRET はユーザー）→ 再デプロイ
 5. 実カードで 1 件登録し即解約して疎通確認（任意）
+
+### 本番モードの値（2026-10-14）
+| 変数名 | 本番値 |
+|---|---|
+| STRIPE_PRO_PRICE_ID | price_1UQC8L3FoQrVynU5yjgqfamF（FreelanceOS Pro（月間）¥980） |
+| STRIPE_PRO_PLUS_PRICE_ID | price_1UQC8K3FoQrVynU5UhtqTDt4（FreelanceOS Pro+（月間）¥1,480） |
+| STRIPE_SECRET_KEY | sk_live_…（ユーザーが転記） |
+| STRIPE_WEBHOOK_SECRET | 本番 Webhook の whsec_…（ユーザーが転記） |
