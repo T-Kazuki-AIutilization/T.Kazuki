@@ -27,6 +27,7 @@ export const BOOTH_TAX_URL = 'https://freelancekt.booth.pm/items/8986380'
 export const BOOTH_RATE_URL = 'https://freelancekt.booth.pm/items/8986468'
 export const BOOTH_TAKEHOME_URL = 'https://freelancekt.booth.pm/items/8986475'
 export const BOOTH_TRACKER_URL = 'https://freelancekt.booth.pm/items/8986812'
+export const BOOTH_LEDGER_FREE_URL = 'https://freelancekt.booth.pm/items/8988405'
 
 export const ARTICLES: Article[] = [
   {
@@ -197,6 +198,14 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'cta',
+        title: 'まずは無料で入金管理だけ始めたい方へ',
+        text: '請求番号・支払期限・入金日を記録して未入金を自動で色分けする Excel 台帳を無料で配布しています。',
+        href: BOOTH_LEDGER_FREE_URL,
+        label: 'BOOTH で無料ダウンロード',
+        external: true,
+      },
+      {
+        type: 'cta',
         title: '見積書・納品書・請求書テンプレート（Excel・インボイス対応）',
         text: '設定シートに事業者情報を入れるだけで3帳票に反映。税率別の消費税、源泉徴収の表示切替、入金管理台帳つき。',
         href: BOOTH_INVOICE_URL,
@@ -261,6 +270,14 @@ export const ARTICLES: Article[] = [
         caption: '請求番号・請求日・宛先・金額・支払期限・入金日を並べた台帳。期限を過ぎて入金日が空欄の行が自動で色付けされます。',
         width: 1400,
         height: 754,
+      },
+      {
+        type: 'cta',
+        title: '入金管理台帳（Excel・無料）',
+        text: 'この記事の仕組みをそのまま形にした台帳です。入金日を入れるだけで状態を自動判定し、期限超過は赤で表示。月別集計つき。',
+        href: BOOTH_LEDGER_FREE_URL,
+        label: 'BOOTH で無料ダウンロード',
+        external: true,
       },
       {
         type: 'cta',
