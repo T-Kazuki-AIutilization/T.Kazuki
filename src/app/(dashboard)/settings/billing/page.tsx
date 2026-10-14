@@ -11,11 +11,44 @@ const PLANS = [
   { key: 'pro_plus', name: 'Pro+', price: 1480, features: ['Pro の全機能', 'クライアント別収益分析', '優先サポート', '今後追加される分析機能を先行利用'] },
 ]
 
+type SubscriptionInfo = {
+  id: string
+  status: string
+  plan: string
+  trialEnd: number | null
+  cancelAtPeriodEnd: boolean
+  cancelAt: number | null
+  currentPeriodEnd: number | null
+}
+
+function fmtDate(unix: number | null | undefined) {
+  if (!unix) return ''
+  return new Date(unix * 1000).toLocaleDateString('ja-JP', { year: 'numeric', month: 'numeric', day: 'numeric' })
+}
+
+/** サブスクリプションの状態を 1〜2 文で説明する */
+function describeSubscription(sub: SubscriptionInfo): string {
+  const endsAt = sub.cancelAt ?? sub.currentPeriodEnd
+  if (sub.cancelAtPeriodEnd || sub.cancelAt) {
+    const base = sub.status === 'trialing' ? `無料トライアル中（${fmtDate(sub.trialEnd)} まで）。` : ''
+    return `${base}解約手続き済みです。${fmtDate(endsAt)} に Free プランへ戻り、それ以降の請求はありません。再開する場合は「支払い・請求管理」から行えます。`
+  }
+  if (sub.status === 'trialing') {
+    return `無料トライアル中（${fmtDate(sub.trialEnd)} まで）。トライアル終了後の ${fmtDate(sub.trialEnd)} に初回の請求が行われます。期間中に解約すれば請求はありません。`
+  }
+  if (sub.status === 'past_due') return 'お支払いが確認できていません。「支払い・請求管理」から決済手段をご確認ください。'
+  return `次回の請求日: ${fmtDate(sub.currentPeriodEnd)}`
+}
+
 export default function BillingPage() {
   const [profile, setProfile] = useState<any>(null)
+  const [sub, setSub] = useState<SubscriptionInfo | null | undefined>(undefined)
   const [loading, setLoading] = useState<string | null>(null)
 
-  useEffect(() => { fetch('/api/profile').then(r => r.json()).then(j => setProfile(j.data)) }, [])
+  useEffect(() => {
+    fetch('/api/profile').then(r => r.json()).then(j => setProfile(j.data))
+    fetch('/api/stripe/subscription').then(r => r.json()).then(j => setSub(j.data?.subscription ?? null)).catch(() => setSub(null))
+  }, [])
 
   async function handleUpgrade(plan: string) {
     // Free へのダウングレードは Stripe のカスタマーポータルで解約する
@@ -49,6 +82,7 @@ export default function BillingPage() {
           <div>
             <p className="text-sm text-muted-foreground">現在のプラン</p>
             <p className="text-xl font-bold mt-0.5">{currentPlan === 'pro_plus' ? 'Pro+' : currentPlan.charAt(0).toUpperCase() + currentPlan.slice(1)}</p>
+            {sub ? <p className="mt-1 text-sm text-muted-foreground">{describeSubscription(sub)}</p> : null}
           </div>
           {currentPlan !== 'free' && (
             <Button variant="outline" onClick={handlePortal} disabled={loading === 'portal'}>
