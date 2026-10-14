@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: 'FreelanceOS — フリーランスの事業管理ダッシュボード',
   description: '案件・売上・クライアントを1画面で見える化。フリーランス専用の事業管理ツール。',
+  verification: { google: 'ujXnAkMeIgF55jtXBwvhHfvlrlIwxO-MAlGOErP2z-Y' },
   twitter: {
     card: 'summary_large_image',
     site: X_HANDLE,
