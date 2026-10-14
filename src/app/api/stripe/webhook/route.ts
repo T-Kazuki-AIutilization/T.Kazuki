@@ -42,6 +42,13 @@ async function setPlanForCustomer(stripe: Stripe, customerId: string, plan: Plan
       console.error('[stripe webhook] no profile for customer and no userId metadata', customerId)
       return
     }
+    // 既に別の顧客 ID が紐付いているプロファイルは上書きしない（古い重複顧客のイベントで壊さないため）
+    const { data: profile } = await supabase.from('profiles').select('stripe_customer_id').eq('id', userId).single()
+    if (!profile || (profile.stripe_customer_id && profile.stripe_customer_id !== customerId)) {
+      console.warn('[stripe webhook] ignoring event for unlinked customer', customerId, userId)
+      return
+    }
+    if (plan === 'free') return // 未紐付けの顧客の解約・失効は無視
     const { error: linkError } = await supabase
       .from('profiles')
       .update({ plan, stripe_customer_id: customerId })
