@@ -22,10 +22,34 @@ function planFromSubscription(sub: Stripe.Subscription): Plan {
   return planFromPriceId(priceId)
 }
 
-async function setPlanForCustomer(customerId: string, plan: Plan) {
+async function setPlanForCustomer(stripe: Stripe, customerId: string, plan: Plan) {
   const supabase = createAdminClient()
-  const { error } = await supabase.from('profiles').update({ plan }).eq('stripe_customer_id', customerId)
-  if (error) console.error('[stripe webhook] profile update failed', customerId, error.message)
+  const { data, error } = await supabase
+    .from('profiles')
+    .update({ plan })
+    .eq('stripe_customer_id', customerId)
+    .select('id')
+  if (error) {
+    console.error('[stripe webhook] profile update failed', customerId, error.message)
+    return
+  }
+  if (data && data.length > 0) return
+  // 顧客 ID がプロファイルに未保存の場合は、顧客作成時に付けた metadata.userId で紐付け直す（自己修復）
+  try {
+    const customer = await stripe.customers.retrieve(customerId)
+    const userId = (customer as Stripe.Customer).metadata?.userId
+    if (!userId) {
+      console.error('[stripe webhook] no profile for customer and no userId metadata', customerId)
+      return
+    }
+    const { error: linkError } = await supabase
+      .from('profiles')
+      .update({ plan, stripe_customer_id: customerId })
+      .eq('id', userId)
+    if (linkError) console.error('[stripe webhook] profile link failed', customerId, userId, linkError.message)
+  } catch (e) {
+    console.error('[stripe webhook] customer lookup failed', customerId, e instanceof Error ? e.message : e)
+  }
 }
 
 function customerIdOf(obj: { customer: string | Stripe.Customer | Stripe.DeletedCustomer | null }): string | null {
@@ -53,20 +77,20 @@ export async function POST(request: NextRequest) {
       if (!customerId || session.mode !== 'subscription' || !session.subscription) break
       const subId = typeof session.subscription === 'string' ? session.subscription : session.subscription.id
       const sub = await stripe.subscriptions.retrieve(subId)
-      await setPlanForCustomer(customerId, planFromSubscription(sub))
+      await setPlanForCustomer(stripe, customerId, planFromSubscription(sub))
       break
     }
     case 'customer.subscription.created':
     case 'customer.subscription.updated': {
       const sub = event.data.object
       const customerId = customerIdOf(sub)
-      if (customerId) await setPlanForCustomer(customerId, planFromSubscription(sub))
+      if (customerId) await setPlanForCustomer(stripe, customerId, planFromSubscription(sub))
       break
     }
     case 'customer.subscription.deleted': {
       const sub = event.data.object
       const customerId = customerIdOf(sub)
-      if (customerId) await setPlanForCustomer(customerId, 'free')
+      if (customerId) await setPlanForCustomer(stripe, customerId, 'free')
       break
     }
     default:
