@@ -28,6 +28,7 @@ export const BOOTH_RATE_URL = 'https://freelancekt.booth.pm/items/8986468'
 export const BOOTH_TAKEHOME_URL = 'https://freelancekt.booth.pm/items/8986475'
 export const BOOTH_TRACKER_URL = 'https://freelancekt.booth.pm/items/8986812'
 export const BOOTH_LEDGER_FREE_URL = 'https://freelancekt.booth.pm/items/8988405'
+export const BOOTH_CASHFLOW_URL = 'https://freelancekt.booth.pm/items/8990973'
 
 export const ARTICLES: Article[] = [
   {
@@ -467,6 +468,14 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'cta',
+        title: '納税の月に現金が足りない、を防ぐ資金繰り表（Excel）',
+        text: '月ごとの入金予定と経費を入れると、12 か月先までの月末残高と毎月の納税積立額を自動計算。所得税・住民税・国保・年金の支払月カレンダーつき。',
+        href: BOOTH_CASHFLOW_URL,
+        label: 'BOOTH で見る（980円）',
+        external: true,
+      },
+      {
+        type: 'cta',
         title: '自分の数字で試算する: 手取り計算シミュレーター（Excel）',
         text: '売上と経費を入れるだけで、所得税・住民税・国保・年金・事業税・消費税を差し引いた手取りと納税資金の目安を表示。国保の料率は自治体に合わせて編集できます。',
         href: BOOTH_TAKEHOME_URL,
@@ -638,6 +647,14 @@ export const ARTICLES: Article[] = [
         caption: '時期別にやることを並べたチェックリスト。済んだものにチェックを入れて進捗を管理します。',
         width: 1400,
         height: 878,
+      },
+      {
+        type: 'cta',
+        title: '納税の月に現金が足りない、を防ぐ資金繰り表（Excel）',
+        text: '月ごとの入金予定と経費を入れると、12 か月先までの月末残高と毎月の納税積立額を自動計算。所得税・住民税・国保・年金の支払月カレンダーつき。',
+        href: BOOTH_CASHFLOW_URL,
+        label: 'BOOTH で見る（980円）',
+        external: true,
       },
       {
         type: 'cta',
