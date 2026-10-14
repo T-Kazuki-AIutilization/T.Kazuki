@@ -29,6 +29,7 @@ export const BOOTH_TAKEHOME_URL = 'https://freelancekt.booth.pm/items/8986475'
 export const BOOTH_TRACKER_URL = 'https://freelancekt.booth.pm/items/8986812'
 export const BOOTH_LEDGER_FREE_URL = 'https://freelancekt.booth.pm/items/8988405'
 export const BOOTH_CASHFLOW_URL = 'https://freelancekt.booth.pm/items/8990973'
+export const BOOTH_TIMESHEET_URL = 'https://freelancekt.booth.pm/items/8991307'
 
 export const ARTICLES: Article[] = [
   {
@@ -89,6 +90,14 @@ export const ARTICLES: Article[] = [
         caption: '今月の受注額・入金額・入金予定・未入金・期限超過を自動集計するダッシュボード。',
         width: 1400,
         height: 710,
+      },
+      {
+        type: 'cta',
+        title: '案件ごとの「実績時給」を日々の記録から出す（Excel）',
+        text: '開始・終了・休憩を入れるだけで作業時間を計算し、案件別の合計時間・受注額・実績時給と月別の稼働を自動集計。目標時給を下回る案件は赤表示。',
+        href: BOOTH_TIMESHEET_URL,
+        label: 'BOOTH で見る（780円）',
+        external: true,
       },
       {
         type: 'cta',
@@ -362,6 +371,14 @@ export const ARTICLES: Article[] = [
         caption: '目標年収・経費・税金と年間の請求可能時間から、必要な時間単価を逆算するシート。',
         width: 1000,
         height: 906,
+      },
+      {
+        type: 'cta',
+        title: '案件ごとの「実績時給」を日々の記録から出す（Excel）',
+        text: '開始・終了・休憩を入れるだけで作業時間を計算し、案件別の合計時間・受注額・実績時給と月別の稼働を自動集計。目標時給を下回る案件は赤表示。',
+        href: BOOTH_TIMESHEET_URL,
+        label: 'BOOTH で見る（780円）',
+        external: true,
       },
       {
         type: 'cta',
