@@ -88,3 +88,10 @@ Stripe ダッシュボード右上「本番環境に切り替える」→ 事業
 - [ ] **要対応**: Vercel の STRIPE_SECRET_KEY を sk_live_… に、STRIPE_WEBHOOK_SECRET を本番 Webhook の whsec_… に更新（Edit → 値を貼り付け → Save）
 - [ ] 上記完了後に再デプロイ（Claude が実施）→ 本番 Webhook のテスト送信で 200 を確認
 - 注意: 秘密キー更新前に再デプロイすると「本番価格 ID × テスト秘密キー」の組合せになり決済が失敗するため、更新完了まで push を止める。
+
+## 2026-10-14 本番トライアル検証の結果
+- 実カードでの Pro トライアル開始は Stripe 側で成功（サブスク作成・請求 0 円・Webhook 4 件すべて 200）。
+- アプリ側でプランが Free のままになる障害が発生。原因は profiles の列単位 GRANT により、チェックアウト時の `stripe_customer_id` 保存（ユーザー権限）が拒否されていたこと。
+- 修正: create-checkout は管理者クライアントで保存し失敗時は 500 を返す。Webhook は顧客 ID 未紐付けの場合 `customer.metadata.userId` で紐付け（既存の別顧客 ID は上書きしない、free イベントは無視）。
+- 手動復旧: Stripe の「再送する」で checkout.session.completed を再送 → profiles 更新を確認。
+- 残課題（ユーザー）: 重複サブスク sub_1UQMg73FoQrVynU55g26hDG2 を Stripe で即時キャンセル。
