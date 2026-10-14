@@ -25,6 +25,7 @@ export const BOOTH_INVOICE_URL = 'https://freelancekt.booth.pm/items/8986203'
 export const BOOTH_TAX_URL = 'https://freelancekt.booth.pm/items/8986380'
 export const BOOTH_RATE_URL = 'https://freelancekt.booth.pm/items/8986468'
 export const BOOTH_TAKEHOME_URL = 'https://freelancekt.booth.pm/items/8986475'
+export const BOOTH_TRACKER_URL = 'https://freelancekt.booth.pm/items/8986812'
 
 export const ARTICLES: Article[] = [
   {
@@ -86,8 +87,16 @@ export const ARTICLES: Article[] = [
         label: '無料で始める',
       },
       {
+        type: 'cta',
+        title: 'Excel で始めたい方へ: クライアント管理＋案件・入金管理シート',
+        text: '案件一覧に入力するだけで、今月の受注額・入金予定・未入金・期限超過をダッシュボードに自動集計。クライアント別・月別の集計つき。',
+        href: BOOTH_TRACKER_URL,
+        label: 'BOOTH で見る（880円）',
+        external: true,
+      },
+      {
         type: 'note',
-        text: 'スプレッドシート派の方には、見積書・納品書・請求書と入金管理台帳がセットになった Excel テンプレートも用意しています（BOOTH で販売中）。',
+        text: '請求書まわりは、見積書・納品書・請求書と入金管理台帳がセットになった Excel テンプレートも用意しています（BOOTH で販売中）。',
       },
       {
         type: 'cta',
