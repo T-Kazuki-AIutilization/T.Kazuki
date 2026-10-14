@@ -8,6 +8,7 @@ export type Block =
   | { type: 'ol'; items: string[] }
   | { type: 'table'; headers: string[]; rows: string[][] }
   | { type: 'note'; text: string }
+  | { type: 'img'; src: string; alt: string; caption?: string; width: number; height: number }
   | { type: 'cta'; title: string; text: string; href: string; label: string; external?: boolean }
 
 export type Article = {
@@ -78,6 +79,14 @@ export const ARTICLES: Article[] = [
       {
         type: 'p',
         text: '最初から多機能なツールを選び、入力が面倒で続かなくなるケースが最も多いです。まず「案件名・金額・状態・入金予定日」の4項目だけを毎回記録する習慣をつけ、それが回り始めてからツールを強化するのが近道です。',
+      },
+      {
+        type: 'img',
+        src: '/blog/previews/tracker_preview_1.png',
+        alt: '案件・入金管理シートのダッシュボード',
+        caption: '今月の受注額・入金額・入金予定・未入金・期限超過を自動集計するダッシュボード。',
+        width: 1400,
+        height: 710,
       },
       {
         type: 'cta',
@@ -179,6 +188,14 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
+        type: 'img',
+        src: '/blog/previews/invoice_preview_1.png',
+        alt: '請求書テンプレートの請求書シート（サンプル入力時）',
+        caption: 'テンプレートの請求書シート。設定シートの事業者情報と振込先が自動で入り、税率別の消費税と合計も自動計算されます。',
+        width: 1000,
+        height: 1374,
+      },
+      {
         type: 'cta',
         title: '見積書・納品書・請求書テンプレート（Excel・インボイス対応）',
         text: '設定シートに事業者情報を入れるだけで3帳票に反映。税率別の消費税、源泉徴収の表示切替、入金管理台帳つき。',
@@ -236,6 +253,14 @@ export const ARTICLES: Article[] = [
       {
         type: 'p',
         text: '「お世話になっております。請求番号 2026-0012（支払期限 10月31日）につきまして、本日時点で入金の確認が取れておりません。行き違いでしたら恐縮ですが、ご状況をお知らせいただけますと幸いです。」短く、事実だけを伝えるのがコツです。',
+      },
+      {
+        type: 'img',
+        src: '/blog/previews/invoice_preview_2.png',
+        alt: '入金管理台帳のサンプル',
+        caption: '請求番号・請求日・宛先・金額・支払期限・入金日を並べた台帳。期限を過ぎて入金日が空欄の行が自動で色付けされます。',
+        width: 1400,
+        height: 754,
       },
       {
         type: 'cta',
@@ -311,6 +336,14 @@ export const ARTICLES: Article[] = [
       {
         type: 'note',
         text: '受けた案件の「実際にかかった時間」を記録しておくと、次の見積もり精度が上がります。案件ごとの時間単価の実績を可視化することが、単価アップの最短ルートです。',
+      },
+      {
+        type: 'img',
+        src: '/blog/previews/rate_preview_1.png',
+        alt: '時間単価の逆算シート',
+        caption: '目標年収・経費・税金と年間の請求可能時間から、必要な時間単価を逆算するシート。',
+        width: 1000,
+        height: 906,
       },
       {
         type: 'cta',
@@ -408,6 +441,14 @@ export const ARTICLES: Article[] = [
         text: '自宅兼事務所の家賃・光熱費・通信費の家事按分、書籍・セミナー代、取引先との打ち合わせ費用など、記録していないだけで経費になるものは多いです。毎月の経費帳が、結果的に最大の節税になります。',
       },
       {
+        type: 'img',
+        src: '/blog/previews/takehome_preview_1.png',
+        alt: '手取り計算シートのサンプル',
+        caption: '年間売上と経費を入れると、所得税・住民税・国保・年金・事業税・消費税と手取りが一覧で出ます。',
+        width: 1000,
+        height: 1074,
+      },
+      {
         type: 'cta',
         title: '自分の数字で試算する: 手取り計算シミュレーター（Excel）',
         text: '売上と経費を入れるだけで、所得税・住民税・国保・年金・事業税・消費税を差し引いた手取りと納税資金の目安を表示。国保の料率は自治体に合わせて編集できます。',
@@ -497,6 +538,14 @@ export const ARTICLES: Article[] = [
         text: '判断に迷う支出は「売上との関係を一言で説明できるか」で決めます。説明できるなら計上し、根拠をメモに残す。説明できないなら計上しない。これだけで税務調査への備えにもなります。',
       },
       {
+        type: 'img',
+        src: '/blog/previews/tax_preview_3.png',
+        alt: '経費帳のサンプル',
+        caption: '科目をプルダウンで選ぶと、家事按分率の既定値が自動で入る経費帳。',
+        width: 1400,
+        height: 822,
+      },
+      {
         type: 'cta',
         title: '科目別に記録できる経費帳（確定申告準備キット）',
         text: '勘定科目のプルダウンと既定の按分率つきの経費帳、売上帳、科目別集計、所得税の概算をひとつにまとめた Excel キット。',
@@ -564,6 +613,14 @@ export const ARTICLES: Article[] = [
       {
         type: 'p',
         text: '原稿料やデザイン料から引かれた 10.21% は「所得税の前払い」です。確定申告で精算され、多く引かれていれば還付されます。売上帳に源泉徴収額を記録しておくと計算が楽です。',
+      },
+      {
+        type: 'img',
+        src: '/blog/previews/tax_preview_1.png',
+        alt: '確定申告のやることチェックリスト',
+        caption: '時期別にやることを並べたチェックリスト。済んだものにチェックを入れて進捗を管理します。',
+        width: 1400,
+        height: 878,
       },
       {
         type: 'cta',
@@ -698,6 +755,14 @@ export const ARTICLES: Article[] = [
           '消費税の区分（税込／税別）が明記されているか',
           'ファイル名に日付と見積番号が入っているか（例: 見積書_Q-2026-0012_御社名.pdf）',
         ],
+      },
+      {
+        type: 'img',
+        src: '/blog/previews/rate_preview_3.png',
+        alt: '見積作成シートのサンプル',
+        caption: '作業を分解して時間単価 × 想定時間で見積金額を組み立てるシート。',
+        width: 1100,
+        height: 1018,
       },
       {
         type: 'cta',

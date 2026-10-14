@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ARTICLES, getArticle, type Block } from '@/content/blog'
@@ -65,6 +66,20 @@ function renderBlock(b: Block, i: number) {
             </tbody>
           </table>
         </div>
+      )
+    case 'img':
+      return (
+        <figure key={i} className="mt-6">
+          <Image
+            src={b.src}
+            alt={b.alt}
+            width={b.width}
+            height={b.height}
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="w-full rounded-lg border"
+          />
+          {b.caption ? <figcaption className="mt-2 text-sm text-muted-foreground">{b.caption}</figcaption> : null}
+        </figure>
       )
     case 'note':
       return (
