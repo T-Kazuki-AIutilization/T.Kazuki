@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic'
 import { NextRequest } from 'next/server'
-import { createServerClient } from '@/lib/supabase/server'
+import { createServerClient, createAdminClient } from '@/lib/supabase/server'
 import { getStripe, PLANS } from '@/lib/stripe'
 import { jsonResponse, errorResponse } from '@/lib/utils'
 
@@ -32,7 +32,13 @@ export async function POST(request: NextRequest) {
   if (!customerId) {
     const customer = await stripe.customers.create({ email: profile?.email, metadata: { userId: user.id } })
     customerId = customer.id
-    await supabase.from('profiles').update({ stripe_customer_id: customerId }).eq('id', user.id)
+    // stripe_customer_id は一般ユーザーに更新権限を与えていない列なので、サーバー側の管理者クライアントで書き込む
+    const admin = createAdminClient()
+    const { error: saveError } = await admin.from('profiles').update({ stripe_customer_id: customerId }).eq('id', user.id)
+    if (saveError) {
+      console.error('[create-checkout] failed to save stripe_customer_id', user.id, saveError.message)
+      return errorResponse('Failed to prepare billing', 'INTERNAL_ERROR', 500)
+    }
   }
   const session = await stripe.checkout.sessions.create({
     customer: customerId, mode: 'subscription', line_items: [{ price: priceId, quantity: 1 }],
