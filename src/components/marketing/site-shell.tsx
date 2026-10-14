@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { BOOTH_SHOP_URL, X_URL } from '@/lib/site'
+import { BOOTH_SHOP_URL, NOTE_URL, X_URL } from '@/lib/site'
 
 /** ランディング以外の公開ページ（ブログ・規約など）で共用するヘッダー／フッター */
 export function SiteShell({ children }: { children: React.ReactNode }) {
@@ -36,6 +36,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <Link href="/tokusho" className="hover:text-foreground transition-colors">特定商取引法に基づく表記</Link>
           <a href={BOOTH_SHOP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">BOOTH</a>
           <a href={X_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">X</a>
+          <a href={NOTE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">note</a>
         </div>
         <p className="mt-4 text-center text-xs text-muted-foreground">© 2026 FreelanceOS. All rights reserved.</p>
       </footer>

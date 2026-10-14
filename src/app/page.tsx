@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { BOOTH_SHOP_URL, X_URL } from '@/lib/site'
+import { BOOTH_SHOP_URL, NOTE_URL, X_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'FreelanceOS — 案件・売上・クライアントを1画面で管理',
@@ -150,7 +150,7 @@ export default function LandingPage() {
       { '@type': 'Offer', price: '980', priceCurrency: 'JPY', name: 'Pro（月額）' },
       { '@type': 'Offer', price: '1480', priceCurrency: 'JPY', name: 'Pro+（月額）' },
     ],
-    sameAs: [X_URL, BOOTH_SHOP_URL],
+    sameAs: [X_URL, BOOTH_SHOP_URL, NOTE_URL],
   }
   return (
     <div className="min-h-screen bg-white text-foreground">
@@ -497,6 +497,7 @@ export default function LandingPage() {
               <Link href="/blog" className="hover:text-foreground transition-colors">ブログ</Link>
               <a href={BOOTH_SHOP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Excelテンプレート（BOOTH）</a>
               <a href={X_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">X（@freelanceos_jp）</a>
+              <a href={NOTE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">note</a>
             </nav>
           </div>
           <div className="mt-6 border-t pt-6 text-center text-xs text-muted-foreground">
