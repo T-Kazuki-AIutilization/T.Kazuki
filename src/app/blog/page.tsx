@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
-import { ARTICLES } from '@/content/blog'
+import { ARTICLES, BOOTH_LEDGER_FREE_URL } from '@/content/blog'
 
 export const metadata: Metadata = {
   title: 'ブログ｜フリーランスの案件管理・入金管理・確定申告のコツ | FreelanceOS',
@@ -40,6 +40,11 @@ export default function BlogIndexPage() {
             </li>
           ))}
         </ul>
+        <div className="mt-12 rounded-xl border border-primary/30 bg-primary/5 p-6">
+          <p className="font-semibold">無料の Excel 入金管理台帳を配布しています</p>
+          <p className="mt-1 text-sm text-muted-foreground">請求番号・支払期限・入金日を記録するだけで、未入金と期限超過を自動で色分け。月別集計つき。</p>
+          <a href={BOOTH_LEDGER_FREE_URL} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex h-10 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white">BOOTH で無料ダウンロード ↗</a>
+        </div>
       </main>
     </SiteShell>
   )

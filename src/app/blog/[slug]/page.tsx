@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
-import { ARTICLES, getArticle, type Block } from '@/content/blog'
+import { ARTICLES, getArticle, getRelatedArticles, type Block } from '@/content/blog'
 
 type Params = { params: { slug: string } }
 
@@ -117,7 +117,7 @@ function renderBlock(b: Block, i: number) {
 export default function BlogArticlePage({ params }: Params) {
   const a = getArticle(params.slug)
   if (!a) notFound()
-  const others = ARTICLES.filter((x) => x.slug !== a.slug).slice(0, 3)
+  const others = getRelatedArticles(a.slug, 3)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',

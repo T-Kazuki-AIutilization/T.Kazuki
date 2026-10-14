@@ -926,3 +926,21 @@ export const ARTICLES: Article[] = [
 export function getArticle(slug: string): Article | undefined {
   return ARTICLES.find((a) => a.slug === slug)
 }
+
+/** キーワードの重なりで関連記事を選ぶ（同点は新しい順） */
+export function getRelatedArticles(slug: string, limit = 3): Article[] {
+  const self = getArticle(slug)
+  if (!self) return []
+  const tokens = (a: Article) => new Set(a.keywords.flatMap((k) => k.split(/\s+/)).filter((t) => t.length >= 2))
+  const mine = tokens(self)
+  return ARTICLES.filter((a) => a.slug !== slug)
+    .map((a) => ({ a, score: [...tokens(a)].filter((t) => mine.has(t)).length }))
+    .sort((x, y) => y.score - x.score || (x.a.date < y.a.date ? 1 : -1))
+    .slice(0, limit)
+    .map((x) => x.a)
+}
+
+/** 新しい順の記事一覧 */
+export function getLatestArticles(limit = 3): Article[] {
+  return [...ARTICLES].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, limit)
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { BOOTH_SHOP_URL, NOTE_URL, X_URL } from '@/lib/site'
+import { BOOTH_LEDGER_FREE_URL, getLatestArticles } from '@/content/blog'
 
 export const metadata: Metadata = {
   title: 'FreelanceOS — 案件・売上・クライアントを1画面で管理',
@@ -437,6 +438,34 @@ export default function LandingPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog + free template */}
+      <section className="px-4 py-20 sm:px-6">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold sm:text-4xl">フリーランスのお金の管理ガイド</h2>
+            <p className="mt-3 text-muted-foreground">請求・入金・単価・確定申告を、実務で使える形で解説しています。</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-3">
+            {getLatestArticles(3).map((a) => (
+              <Link key={a.slug} href={`/blog/${a.slug}`} className="rounded-xl border bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
+                <p className="text-xs text-muted-foreground">{a.date.replace(/-/g, '/')} · 約{a.readingMinutes}分</p>
+                <h3 className="mt-2 font-semibold leading-snug">{a.title}</h3>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-xl border border-primary/30 bg-primary/5 p-6 sm:flex-row">
+            <div>
+              <p className="font-semibold">まずは無料の Excel 台帳から始めたい方へ</p>
+              <p className="mt-1 text-sm text-muted-foreground">入金日を入れるだけで未入金・期限超過を自動で色分けする「入金管理台帳」を無料で配布しています。</p>
+            </div>
+            <div className="flex shrink-0 gap-3">
+              <a href={BOOTH_LEDGER_FREE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-10 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white">無料でダウンロード ↗</a>
+              <Link href="/blog" className="inline-flex h-10 items-center rounded-md px-4 text-sm font-medium text-primary hover:underline">ブログ一覧</Link>
+            </div>
           </div>
         </div>
       </section>
