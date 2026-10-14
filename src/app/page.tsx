@@ -128,8 +128,32 @@ const FAQS = [
 ]
 
 export default function LandingPage() {
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  }
+  const appJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'FreelanceOS',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    description: 'フリーランス専用の事業管理ダッシュボード。案件・売上・クライアント・入金を1画面で管理。',
+    offers: [
+      { '@type': 'Offer', price: '0', priceCurrency: 'JPY', name: 'Free' },
+      { '@type': 'Offer', price: '980', priceCurrency: 'JPY', name: 'Pro（月額）' },
+      { '@type': 'Offer', price: '1480', priceCurrency: 'JPY', name: 'Pro+（月額）' },
+    ],
+  }
   return (
     <div className="min-h-screen bg-white text-foreground">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }} />
       {/* Nav */}
       <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur-sm">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
