@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { AppShell } from '@/components/layouts/app-shell'
 import { StatCard } from '@/components/features/stat-card'
 import { MonthlyTrendChart } from '@/components/features/monthly-trend-chart'
+import { OnboardingChecklist } from '@/components/features/onboarding-checklist'
 import { Banknote, CreditCard, AlertCircle, FolderKanban } from 'lucide-react'
 
 type Summary = { totalRevenue: number; paidAmount: number; unpaidAmount: number; activeProjects: number; completedProjects: number; totalClients: number }
@@ -15,15 +16,20 @@ export default function DashboardPage() {
   const [summary, setSummary] = useState<Summary | null>(null)
   const [upcoming, setUpcoming] = useState<Upcoming>([])
   const [trend, setTrend] = useState<Trend>([])
+  const [revenueCount, setRevenueCount] = useState<number | null>(null)
 
   useEffect(() => {
     fetch('/api/dashboard/summary').then(r => r.json()).then(j => setSummary(j.data))
     fetch('/api/dashboard/upcoming-payments').then(r => r.json()).then(j => setUpcoming(j.data ?? []))
     fetch('/api/dashboard/monthly-trend').then(r => r.json()).then(j => setTrend(j.data ?? []))
+    fetch('/api/revenue?limit=1').then(r => r.json()).then(j => setRevenueCount(j.data?.pagination?.total ?? (Array.isArray(j.data?.data) ? j.data.data.length : Array.isArray(j.data) ? j.data.length : 0))).catch(() => setRevenueCount(0))
   }, [])
 
   return (
     <AppShell title="ダッシュボード">
+      {summary && revenueCount !== null && (
+        <OnboardingChecklist clients={summary.totalClients} projects={summary.activeProjects + summary.completedProjects} revenue={revenueCount} />
+      )}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="今月の売上" value={summary ? fmt(summary.totalRevenue) : '—'} icon={Banknote} />
         <StatCard label="入金済み" value={summary ? fmt(summary.paidAmount) : '—'} icon={CreditCard} />
