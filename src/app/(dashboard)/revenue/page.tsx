@@ -5,6 +5,7 @@ import { StatusBadge } from '@/components/ui/status-badge'
 import { Button } from '@/components/ui/button'
 import { PAYMENT_STATUSES } from '@/lib/constants/navigation'
 import { toast } from 'sonner'
+import { ClientRevenueBreakdown } from '@/components/features/client-revenue-breakdown'
 
 function fmt(n: number) { return new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY', maximumFractionDigits: 0 }).format(n) }
 
@@ -56,6 +57,7 @@ export default function RevenuePage() {
           })}</tbody>
         </table>
       </div>
+      <ClientRevenueBreakdown />
     </AppShell>
   )
 }
