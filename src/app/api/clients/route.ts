@@ -3,6 +3,7 @@ import { NextRequest } from 'next/server'
 import { createServerClient } from '@/lib/supabase/server'
 import { clientCreateSchema } from '@/lib/validations/client'
 import { jsonResponse, errorResponse } from '@/lib/utils'
+import { clientLimitReason } from '@/lib/plan-limits'
 
 export async function GET(request: NextRequest) {
   const supabase = createServerClient()
@@ -38,6 +39,9 @@ export async function POST(request: NextRequest) {
   const body = await request.json()
   const parsed = clientCreateSchema.safeParse(body)
   if (!parsed.success) return errorResponse(parsed.error.issues[0].message, 'VALIDATION_ERROR', 422)
+
+  const limitReason = await clientLimitReason(supabase, user.id)
+  if (limitReason) return errorResponse(limitReason, 'PLAN_LIMIT', 403)
 
   const { tagIds, ...clientData } = parsed.data
   const insert = {
