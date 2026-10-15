@@ -2,9 +2,11 @@
 import { useEffect, useState } from 'react'
 import { AppShell } from '@/components/layouts/app-shell'
 import { StatCard } from '@/components/features/stat-card'
+import { MonthlyTrendChart } from '@/components/features/monthly-trend-chart'
 import { Banknote, CreditCard, AlertCircle, FolderKanban } from 'lucide-react'
 
 type Summary = { totalRevenue: number; paidAmount: number; unpaidAmount: number; activeProjects: number; completedProjects: number; totalClients: number }
+type Trend = { month: string; revenue: number; paidAmount: number }[]
 type Upcoming = { id: string; amount: number; due_date: string; project: { title: string; client: { name: string } | null } | null }[]
 
 function fmt(n: number) { return new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY', maximumFractionDigits: 0 }).format(n) }
@@ -12,10 +14,12 @@ function fmt(n: number) { return new Intl.NumberFormat('ja-JP', { style: 'curren
 export default function DashboardPage() {
   const [summary, setSummary] = useState<Summary | null>(null)
   const [upcoming, setUpcoming] = useState<Upcoming>([])
+  const [trend, setTrend] = useState<Trend>([])
 
   useEffect(() => {
     fetch('/api/dashboard/summary').then(r => r.json()).then(j => setSummary(j.data))
     fetch('/api/dashboard/upcoming-payments').then(r => r.json()).then(j => setUpcoming(j.data ?? []))
+    fetch('/api/dashboard/monthly-trend').then(r => r.json()).then(j => setTrend(j.data ?? []))
   }, [])
 
   return (
@@ -29,9 +33,8 @@ export default function DashboardPage() {
 
       <div className="mt-6 grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2 rounded-lg border bg-white p-4 shadow-sm">
-          <h2 className="text-sm font-semibold mb-3">月次売上推移</h2>
-          <p className="text-xs text-muted-foreground">※ recharts で実装予定</p>
-          <div className="h-48 flex items-center justify-center text-muted-foreground text-sm bg-slate-50 rounded">グラフ描画エリア</div>
+          <h2 className="text-sm font-semibold mb-3">月次売上推移（直近 6 か月）</h2>
+          <MonthlyTrendChart data={trend} />
         </div>
         <div className="rounded-lg border bg-white p-4 shadow-sm">
           <h2 className="text-sm font-semibold mb-3">直近の入金予定</h2>
