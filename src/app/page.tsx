@@ -524,7 +524,7 @@ export default function LandingPage() {
               <a href="#pricing" className="hover:text-foreground transition-colors">料金プラン</a>
               <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
               <Link href="/blog" className="hover:text-foreground transition-colors">ブログ</Link>
-              <a href={BOOTH_SHOP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Excelテンプレート（BOOTH）</a>
+              <Link href="/templates" className="hover:text-foreground transition-colors">Excelテンプレート</Link>
               <a href={X_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">X（@freelanceos_jp）</a>
               <a href={NOTE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">note</a>
             </nav>

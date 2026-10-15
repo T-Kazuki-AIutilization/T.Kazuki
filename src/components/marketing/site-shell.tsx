@@ -15,6 +15,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </Link>
           <nav className="flex items-center gap-4 text-sm">
             <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">ブログ</Link>
+            <Link href="/templates" className="text-muted-foreground hover:text-foreground transition-colors">テンプレート</Link>
             <Link href="/#pricing" className="hidden text-muted-foreground hover:text-foreground transition-colors sm:inline">料金</Link>
             <Link href="/login" className="text-muted-foreground hover:text-foreground transition-colors">ログイン</Link>
             <Link
@@ -31,6 +32,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-4 text-xs text-muted-foreground">
           <Link href="/" className="hover:text-foreground transition-colors">トップ</Link>
           <Link href="/blog" className="hover:text-foreground transition-colors">ブログ</Link>
+          <Link href="/templates" className="hover:text-foreground transition-colors">テンプレート</Link>
           <Link href="/terms" className="hover:text-foreground transition-colors">利用規約</Link>
           <Link href="/privacy" className="hover:text-foreground transition-colors">プライバシーポリシー</Link>
           <Link href="/tokusho" className="hover:text-foreground transition-colors">特定商取引法に基づく表記</Link>
