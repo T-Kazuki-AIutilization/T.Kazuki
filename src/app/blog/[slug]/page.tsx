@@ -26,6 +26,13 @@ export function generateMetadata({ params }: Params): Metadata {
       locale: 'ja_JP',
       publishedTime: a.date,
       modifiedTime: a.updated ?? a.date,
+      images: [{ url: `/blog/og/${a.slug}.png`, width: 1200, height: 630, alt: a.title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: a.title,
+      description: a.description,
+      images: [`/blog/og/${a.slug}.png`],
     },
   }
 }
