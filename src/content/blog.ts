@@ -1505,3 +1505,21 @@ export function getRelatedArticles(slug: string, limit = 3): Article[] {
 export function getLatestArticles(limit = 3): Article[] {
   return [...ARTICLES].sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, limit)
 }
+
+// 「よくある質問」セクション（h3＋p、または 質問/答え の表）から FAQ を抽出する。FAQPage 構造化データ用。
+export function getFaq(a: Article): { q: string; a: string }[] {
+  const out: { q: string; a: string }[] = []
+  let inFaq = false
+  for (let i = 0; i < a.blocks.length; i++) {
+    const b = a.blocks[i]
+    if (b.type === 'h2') { inFaq = b.text.includes('よくある質問'); continue }
+    if (!inFaq) continue
+    if (b.type === 'h3') {
+      const next = a.blocks[i + 1]
+      if (next && next.type === 'p') out.push({ q: b.text, a: next.text })
+    } else if (b.type === 'table' && b.headers[0] === '質問') {
+      for (const r of b.rows) out.push({ q: r[0], a: r[1] })
+    }
+  }
+  return out
+}

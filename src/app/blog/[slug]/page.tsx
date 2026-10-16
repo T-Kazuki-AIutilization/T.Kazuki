@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
-import { ARTICLES, getArticle, getRelatedArticles, type Block } from '@/content/blog'
+import { ARTICLES, getArticle, getFaq, getRelatedArticles, type Block } from '@/content/blog'
 
 type Params = { params: { slug: string } }
 
@@ -136,10 +136,19 @@ export default function BlogArticlePage({ params }: Params) {
     publisher: { '@type': 'Organization', name: 'FreelanceOS' },
     inLanguage: 'ja',
   }
+  const faq = getFaq(a)
+  const faqLd = faq.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+      }
+    : null
   return (
     <SiteShell>
       <main className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
         <p className="text-xs text-muted-foreground">
           <Link href="/blog" className="hover:text-foreground">ブログ</Link> / {a.date.replace(/-/g, '/')} · 約{a.readingMinutes}分
         </p>
