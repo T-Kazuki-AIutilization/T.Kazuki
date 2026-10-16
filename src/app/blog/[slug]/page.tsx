@@ -90,7 +90,7 @@ function renderBlock(b: Block, i: number) {
       )
     case 'note':
       return (
-        <p key={i} className="mt-6 rounded-lg border-l-4 border-amber-400 bg-amber-50 px-4 py-3 text-sm text-foreground/80">
+        <p key={i} className="mt-6 whitespace-pre-line rounded-lg border-l-4 border-amber-400 bg-amber-50 px-4 py-3 text-sm text-foreground/80">
           {b.text}
         </p>
       )
