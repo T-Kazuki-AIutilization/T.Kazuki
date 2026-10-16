@@ -10,7 +10,7 @@ export type Block =
   | { type: 'note'; text: string }
   | { type: 'img'; src: string; alt: string; caption?: string; width: number; height: number }
   | { type: 'links'; title?: string; items: string[] } // 記事 slug の配列（本文中の「あわせて読みたい」）
-  | { type: 'cta'; title: string; text: string; href: string; label: string; external?: boolean }
+  | { type: 'cta'; title: string; text: string; href: string; label: string; external?: boolean; secondary?: { href: string; label: string; download?: boolean } }
 
 export type Article = {
   slug: string
@@ -29,6 +29,8 @@ export const BOOTH_RATE_URL = 'https://freelancekt.booth.pm/items/8986468'
 export const BOOTH_TAKEHOME_URL = 'https://freelancekt.booth.pm/items/8986475'
 export const BOOTH_TRACKER_URL = 'https://freelancekt.booth.pm/items/8986812'
 export const BOOTH_LEDGER_FREE_URL = 'https://freelancekt.booth.pm/items/8988405'
+/** 無料台帳のサイト内直接ダウンロード（BOOTH/pixiv アカウント不要） */
+export const LEDGER_DOWNLOAD_URL = '/downloads/freelance_payment_ledger_free.xlsx'
 export const BOOTH_CASHFLOW_URL = 'https://freelancekt.booth.pm/items/8990973'
 export const BOOTH_TIMESHEET_URL = 'https://freelancekt.booth.pm/items/8991307'
 
@@ -214,6 +216,7 @@ export const ARTICLES: Article[] = [
         title: 'まずは無料で入金管理だけ始めたい方へ',
         text: '請求番号・支払期限・入金日を記録して未入金を自動で色分けする Excel 台帳を無料で配布しています。',
         href: BOOTH_LEDGER_FREE_URL,
+        secondary: { href: LEDGER_DOWNLOAD_URL, label: '登録不要で直接ダウンロード（xlsx）', download: true },
         label: 'BOOTH で無料ダウンロード',
         external: true,
       },
@@ -290,6 +293,7 @@ export const ARTICLES: Article[] = [
         title: '入金管理台帳（Excel・無料）',
         text: 'この記事の仕組みをそのまま形にした台帳です。入金日を入れるだけで状態を自動判定し、期限超過は赤で表示。月別集計つき。',
         href: BOOTH_LEDGER_FREE_URL,
+        secondary: { href: LEDGER_DOWNLOAD_URL, label: '登録不要で直接ダウンロード（xlsx）', download: true },
         label: 'BOOTH で無料ダウンロード',
         external: true,
       },
@@ -1074,6 +1078,7 @@ export const ARTICLES: Article[] = [
         title: '請求書の番号と入金管理は無料の台帳から',
         text: '請求番号・支払期限・入金日を記録するだけで未入金を自動で色分けする Excel 台帳を無料で配布しています。',
         href: BOOTH_LEDGER_FREE_URL,
+        secondary: { href: LEDGER_DOWNLOAD_URL, label: '登録不要で直接ダウンロード（xlsx）', download: true },
         label: 'BOOTH で無料ダウンロード',
         external: true,
       },
@@ -1305,6 +1310,7 @@ export const ARTICLES: Article[] = [
         title: '無料の入金管理台帳（Excel）',
         text: '請求番号・支払期限・入金日を記録するだけで、期限超過の請求を赤く表示。催促のタイミングを逃しません。',
         href: BOOTH_LEDGER_FREE_URL,
+        secondary: { href: LEDGER_DOWNLOAD_URL, label: '登録不要で直接ダウンロード（xlsx）', download: true },
         label: 'BOOTH で無料ダウンロード',
         external: true,
       },
@@ -1491,6 +1497,7 @@ export const ARTICLES: Article[] = [
         title: '無料の入金管理台帳（Excel）',
         text: '請求額・入金額・源泉徴収額を記録するだけで、年間の源泉徴収税額の合計と未入金の請求がひと目で分かります。',
         href: BOOTH_LEDGER_FREE_URL,
+        secondary: { href: LEDGER_DOWNLOAD_URL, label: '登録不要で直接ダウンロード（xlsx）', download: true },
         label: 'BOOTH で無料ダウンロード',
         external: true,
       },

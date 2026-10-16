@@ -1,4 +1,4 @@
-import {
+import { LEDGER_DOWNLOAD_URL,
   BOOTH_INVOICE_URL, BOOTH_TAX_URL, BOOTH_RATE_URL, BOOTH_TAKEHOME_URL, BOOTH_TRACKER_URL,
   BOOTH_LEDGER_FREE_URL, BOOTH_CASHFLOW_URL, BOOTH_TIMESHEET_URL,
 } from '@/content/blog'
@@ -11,6 +11,8 @@ export type Template = {
   features: string[]
   image: string
   href: string
+  /** サイト内の直接ダウンロード URL（無料テンプレート用） */
+  download?: string
   related?: { label: string; href: string }
 }
 
@@ -24,6 +26,7 @@ export const TEMPLATES: Template[] = [
     features: ['状態を自動判定（入金済／未入金／期限超過）', '請求合計・入金済・未入金・期限超過を自動集計', '月別の請求額・入金額・未入金額'],
     image: '/blog/previews/ledger_preview_1.png',
     href: BOOTH_LEDGER_FREE_URL,
+    download: LEDGER_DOWNLOAD_URL,
     related: { label: '未入金を防ぐ入金管理の仕組み', href: '/blog/freelance-payment-tracking' },
   },
   {

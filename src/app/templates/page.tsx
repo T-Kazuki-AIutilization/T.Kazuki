@@ -67,9 +67,14 @@ export default function TemplatesPage() {
                   ))}
                 </ul>
                 <div className="mt-auto flex flex-wrap items-center gap-3 pt-4">
-                  <a href={t.href} target="_blank" rel="noopener noreferrer" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white transition-colors hover:bg-primary/90">
-                    {t.price === 0 ? '無料でダウンロード ↗' : 'BOOTH で見る ↗'}
-                  </a>
+                  {t.download ? (
+                    <a href={t.download} download className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white transition-colors hover:bg-primary/90">無料でダウンロード（登録不要・xlsx）</a>
+                  ) : (
+                    <a href={t.href} target="_blank" rel="noopener noreferrer" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white transition-colors hover:bg-primary/90">BOOTH で見る ↗</a>
+                  )}
+                  {t.download && (
+                    <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:underline">BOOTH でも配布中 ↗</a>
+                  )}
                   {t.related && (
                     <Link href={t.related.href} className="text-sm text-primary hover:underline">{t.related.label}</Link>
                   )}

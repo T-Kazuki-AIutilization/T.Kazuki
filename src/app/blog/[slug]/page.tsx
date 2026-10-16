@@ -134,6 +134,11 @@ function renderBlock(b: Block, i: number) {
               {b.label}
             </Link>
           )}
+          {b.secondary && (
+            <a href={b.secondary.href} download={b.secondary.download} className="ml-3 inline-flex h-9 items-center text-sm text-primary hover:underline">
+              {b.secondary.label}
+            </a>
+          )}
         </div>
       )
   }
