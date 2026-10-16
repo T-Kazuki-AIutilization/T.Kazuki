@@ -9,6 +9,7 @@ export type Block =
   | { type: 'table'; headers: string[]; rows: string[][] }
   | { type: 'note'; text: string }
   | { type: 'img'; src: string; alt: string; caption?: string; width: number; height: number }
+  | { type: 'links'; title?: string; items: string[] } // 記事 slug の配列（本文中の「あわせて読みたい」）
   | { type: 'cta'; title: string; text: string; href: string; label: string; external?: boolean }
 
 export type Article = {
@@ -69,6 +70,7 @@ export const ARTICLES: Article[] = [
           ['案件管理に特化した SaaS（FreelanceOS など）', '無料プランあり、有料は月額 980円〜', '案件・売上・入金を1画面で追いたい人', '会計ソフトの代わりにはならない（CSV 連携で補う）'],
         ],
       },
+      { type: 'links', items: ['freelance-payment-tracking', 'freelance-invoice-how-to', 'freelance-hourly-rate'] },
       { type: 'h2', text: '選び方の目安' },
       {
         type: 'ol',
@@ -168,6 +170,7 @@ export const ARTICLES: Article[] = [
           ['消費税の端数処理', '税率ごとに1回（切り捨てが一般的）', '同左'],
         ],
       },
+      { type: 'links', items: ['freelance-withholding-tax', 'freelance-invoice-email-template', 'freelance-invoice-registration'] },
       { type: 'h2', text: '源泉徴収がある場合の計算' },
       {
         type: 'p',
@@ -263,6 +266,7 @@ export const ARTICLES: Article[] = [
           ['入金済', '入金日を記入', '通帳の金額と一致するか確認'],
         ],
       },
+      { type: 'links', items: ['freelance-invoice-email-template', 'freelance-invoice-how-to', 'freelance-tax-calendar'] },
       { type: 'h2', text: '仕組み3: 月初に「今月の入金予定」を確認する' },
       {
         type: 'p',
@@ -350,6 +354,7 @@ export const ARTICLES: Article[] = [
           ['コンサル・マーケ', '5,000〜20,000円', '成果報酬を組み合わせることも'],
         ],
       },
+      { type: 'links', items: ['freelance-take-home-pay', 'freelance-estimate-how-to', 'freelance-health-insurance-pension'] },
       { type: 'h2', text: '見積もりへの落とし込み方' },
       {
         type: 'ol',
@@ -447,6 +452,7 @@ export const ARTICLES: Article[] = [
           '一方で国民年金は定額（年 21.5万円）なので、売上が小さいほど負担感が重い',
         ],
       },
+      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '手取りの計算手順' },
       {
         type: 'ol',
@@ -560,6 +566,7 @@ export const ARTICLES: Article[] = [
           ['車', '走行距離の事業割合', '走行記録をつける'],
         ],
       },
+      { type: 'links', items: ['freelance-tax-prep', 'freelance-take-home-pay', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '経費にならないもの' },
       {
         type: 'ul',
@@ -641,6 +648,7 @@ export const ARTICLES: Article[] = [
       { type: 'ul', items: ['請求日（発生主義: 入金日ではなく請求日で計上）', '取引先', '内容', '金額', '入金日', '源泉徴収額（あれば）'] },
       { type: 'h3', text: '経費帳に書く項目' },
       { type: 'ul', items: ['日付', '内容と支払先', '勘定科目（通信費・消耗品費など）', '金額', '支払方法', '按分率（私用と兼用のもの）', '証憑の有無'] },
+      { type: 'links', items: ['freelance-tax-calendar', 'freelance-expenses-list', 'freelance-withholding-tax'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -751,6 +759,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '分解しておくと、予算が合わないときに「下層ページを 2 ページに減らす」「フォームは先方で用意する」といった調整が、値引きではなく範囲の調整で済みます。単価を下げずに合計を合わせられるのが大きな利点です。',
       },
+      { type: 'links', items: ['freelance-hourly-rate', 'freelance-invoice-how-to', 'freelance-invoice-email-template'] },
       { type: 'h2', text: '有効期限と支払条件の決め方' },
       { type: 'h3', text: '有効期限' },
       {
@@ -896,6 +905,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '2割特例が使えるのは 2026 年分までです。2027 年分からは簡易課税（業種ごとのみなし仕入率）か本則課税を選ぶことになります。サービス業の簡易課税はみなし仕入率 50% なので、納税額は預かった消費税の約 50% まで増えます。簡易課税を使うには 2026 年 12 月末までに届出が必要です。',
       },
+      { type: 'links', items: ['freelance-invoice-how-to', 'freelance-tax-calendar', 'freelance-take-home-pay'] },
       { type: 'h2', text: '登録しないと何が起きるか' },
       {
         type: 'p',
@@ -990,6 +1000,7 @@ export const ARTICLES: Article[] = [
           '郵送: 控えと返信用封筒（切手貼付）を同封する。受付印つきの控えが返送される',
         ],
       },
+      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-tax-prep', 'freelance-expenses-list'] },
       { type: 'h2', text: '開業届の書き方（迷いやすい欄）' },
       {
         type: 'table',
@@ -1125,6 +1136,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ポイントは「前年の所得」で決まることです。独立 1 年目は会社員時代の給与所得で計算されるため高くなりがちで、2 年目は 1 年目の事業所得で決まります。売上が伸びた翌年に保険料が跳ね上がるので、資金繰りの計画に入れておく必要があります。',
       },
+      { type: 'links', items: ['freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '国民年金の保険料' },
       {
         type: 'p',
@@ -1234,6 +1246,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '株式会社〇〇\n△△様\n\nお世話になっております。山田太郎です。\n\n〇〇サイト制作の件、本日納品が完了しましたので、請求書を添付にてお送りいたします。\n\n・請求番号: 2026-0012\n・請求金額: 341,000 円（税込）\n・お支払期限: 2026 年 11 月 30 日\n・お振込先: 請求書に記載\n\nご確認のうえ、期限までにお振込みをお願いいたします。\nご不明点がございましたら、お気軽にお知らせください。\n\n引き続きよろしくお願いいたします。\n\n山田太郎\n（連絡先）',
       },
+      { type: 'links', items: ['freelance-payment-tracking', 'freelance-invoice-how-to', 'freelance-withholding-tax'] },
       { type: 'h2', text: '文例 2: 月次（継続案件）の請求書送付' },
       {
         type: 'p',
@@ -1348,6 +1361,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: 'Web 制作のように「デザイン（対象）」と「コーディング（対象外）」が 1 つの案件に混ざる場合は、請求書でデザイン料とコーディング料を分けて書くと、クライアント側も処理しやすくなります。分けていないと全額が対象として扱われることがあります。',
       },
+      { type: 'links', items: ['freelance-invoice-how-to', 'freelance-tax-prep', 'freelance-tax-calendar'] },
       { type: 'h2', text: '計算方法（10.21%、100 万円超は 20.42%）' },
       {
         type: 'p',
@@ -1553,6 +1567,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '国民健康保険は 6〜7 月に保険料が決まり、年 8〜10 回の分割で払います（自治体により異なる）。国民年金は毎月定額で、前納すると割引があります。どちらも社会保険料控除の対象なので、払った額は確定申告で全額控除できます。',
       },
+      { type: 'links', items: ['freelance-tax-prep', 'freelance-health-insurance-pension', 'freelance-withholding-tax'] },
       { type: 'h2', text: '納税資金はいくら積み立てればよい？' },
       {
         type: 'p',

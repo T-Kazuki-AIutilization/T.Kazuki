@@ -94,6 +94,24 @@ function renderBlock(b: Block, i: number) {
           {b.text}
         </p>
       )
+    case 'links': {
+      const linked = b.items.map((slug) => getArticle(slug)).filter((x): x is NonNullable<typeof x> => Boolean(x))
+      if (!linked.length) return null
+      return (
+        <aside key={i} className="mt-8 rounded-xl border border-dashed bg-white p-4">
+          <p className="text-xs font-semibold tracking-wide text-muted-foreground">{b.title ?? 'あわせて読みたい'}</p>
+          <ul className="mt-2 space-y-1.5">
+            {linked.map((x) => (
+              <li key={x.slug} className="text-sm">
+                <Link href={`/blog/${x.slug}`} className="text-primary hover:underline">
+                  {x.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )
+    }
     case 'cta':
       return (
         <div key={i} className="mt-8 rounded-xl border bg-slate-50 p-5">
