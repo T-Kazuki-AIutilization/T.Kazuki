@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'フリーランス向け Excel テンプレート一覧（無料あり）',
     description: '請求書・確定申告・入金管理・単価計算・資金繰りの実務テンプレート。',
+    images: [{ url: '/blog/og/templates.png', width: 1200, height: 630, alt: 'フリーランス向け Excel テンプレート 8 点' }],
     type: 'website',
     locale: 'ja_JP',
   },

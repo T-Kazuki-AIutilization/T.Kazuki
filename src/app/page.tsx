@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     'Notion、Excel、メールに散らばった情報をひとつに。フリーランス専用の事業管理ダッシュボード。案件進捗・売上記録・入金追跡・収益分析が月額980円〜。',
   keywords: 'フリーランス 案件管理, フリーランス 売上管理, フリーランス ダッシュボード, 業務委託 管理ツール',
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'FreelanceOS — 案件・売上・クライアントを1画面で管理',
     description: '案件・売上・クライアントをひとつの画面で「見える化」する、フリーランス専用の事業管理ダッシュボード。',
