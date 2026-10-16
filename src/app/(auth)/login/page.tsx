@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
+import { authErrorMessage } from '@/lib/supabase/auth-errors'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -19,7 +20,7 @@ export default function LoginPage() {
     e.preventDefault()
     setLoading(true)
     const { error } = await supabase.auth.signInWithPassword({ email, password })
-    if (error) { toast.error(error.message); setLoading(false); return }
+    if (error) { toast.error(authErrorMessage(error.message)); setLoading(false); return }
     router.push('/dashboard')
     router.refresh()
   }

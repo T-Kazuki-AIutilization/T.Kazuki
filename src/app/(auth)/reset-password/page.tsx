@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { toast } from 'sonner'
+import { authErrorMessage } from '@/lib/supabase/auth-errors'
 import Link from 'next/link'
 
 export default function ResetPasswordPage() {
@@ -15,7 +16,7 @@ export default function ResetPasswordPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo: `${window.location.origin}/login` })
-    if (error) { toast.error(error.message); return }
+    if (error) { toast.error(authErrorMessage(error.message)); return }
     setSent(true)
   }
 
