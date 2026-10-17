@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: [],
   },
+  async redirects() {
+    // 料金はトップページ内のセクション。/pricing への直接アクセスや外部リンクを受ける
+    return [{ source: '/pricing', destination: '/#pricing', permanent: false }]
+  },
   async headers() {
     return [
       {
