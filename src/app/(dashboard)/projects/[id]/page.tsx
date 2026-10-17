@@ -9,7 +9,7 @@ import { Label } from '@/components/ui/label'
 import { StatusBadge } from '@/components/ui/status-badge'
 import { PROJECT_STATUSES } from '@/lib/constants/navigation'
 import { toast } from 'sonner'
-import { Pencil, Trash2, ChevronLeft } from 'lucide-react'
+import { Pencil, Trash2, ChevronLeft, FileText } from 'lucide-react'
 
 function fmt(n: number) { return new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(n) }
 
@@ -69,6 +69,7 @@ export default function ProjectDetailPage() {
       <div className="mb-4 flex items-center gap-2">
         <Link href="/projects"><Button variant="ghost" size="sm"><ChevronLeft className="h-4 w-4 mr-1" />案件一覧</Button></Link>
         <div className="ml-auto flex gap-2">
+          <Link href={`/projects/${id}/invoice`}><Button variant="outline" size="sm"><FileText className="h-4 w-4 mr-1" />請求書を作成</Button></Link>
           <Button variant="outline" size="sm" onClick={() => setEditing(!editing)}><Pencil className="h-4 w-4 mr-1" />{editing ? 'キャンセル' : '編集'}</Button>
           <Button variant="destructive" size="sm" onClick={handleDelete}><Trash2 className="h-4 w-4 mr-1" />削除</Button>
         </div>
