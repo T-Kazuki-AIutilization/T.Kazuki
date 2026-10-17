@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { ChevronLeft, Printer, Plus, Trash2 } from 'lucide-react'
+import { ChevronLeft, Printer, Plus, Trash2, Receipt } from 'lucide-react'
+import { toast } from 'sonner'
 
 /**
  * 案件から請求書を作成して印刷（PDF 保存）するページ。
@@ -15,7 +16,14 @@ import { ChevronLeft, Printer, Plus, Trash2 } from 'lucide-react'
 
 type Issuer = { name: string; address: string; tel: string; email: string; regNo: string; bank: string }
 type Item = { desc: string; qty: number; unit: number }
-type Doc = { number: string; date: string; due: string; items: Item[]; withholding: boolean; note: string; subject: string }
+type Kind = 'invoice' | 'quote' | 'delivery'
+type Doc = { kind: Kind; number: string; date: string; due: string; items: Item[]; withholding: boolean; note: string; subject: string; recordedRevenueId?: string }
+
+const KINDS: Record<Kind, { title: string; dateLabel: string; dueLabel: string | null; amountLabel: string; greeting: string }> = {
+  invoice: { title: '請求書', dateLabel: '請求日', dueLabel: 'お支払期限', amountLabel: 'ご請求金額', greeting: '下記のとおりご請求申し上げます。' },
+  quote: { title: '見積書', dateLabel: '見積日', dueLabel: '有効期限', amountLabel: 'お見積金額', greeting: '下記のとおりお見積り申し上げます。' },
+  delivery: { title: '納品書', dateLabel: '納品日', dueLabel: null, amountLabel: '納品金額', greeting: '下記のとおり納品いたしました。' },
+}
 
 const ISSUER_KEY = 'fos.invoice.issuer'
 const emptyIssuer: Issuer = { name: '', address: '', tel: '', email: '', regNo: '', bank: '' }
@@ -37,6 +45,7 @@ export default function ProjectInvoicePage() {
   const [paid, setPaid] = useState<boolean | null>(null)
   const [issuer, setIssuer] = useState<Issuer>(emptyIssuer)
   const [doc, setDoc] = useState<Doc | null>(null)
+  const [recording, setRecording] = useState(false)
 
   useEffect(() => {
     setIssuer(load(ISSUER_KEY, emptyIssuer))
@@ -47,6 +56,7 @@ export default function ProjectInvoicePage() {
       setProject(p)
       const ym = today().slice(0, 7).replace('-', '')
       const fallback: Doc = {
+        kind: 'invoice',
         number: `${ym}-${String(p.id).slice(0, 4).toUpperCase()}`,
         date: today(),
         due: p.deadline ?? today(30),
@@ -70,7 +80,23 @@ export default function ProjectInvoicePage() {
     return { subtotal, tax, withholding, total: subtotal + tax - withholding }
   }, [doc])
 
+  async function recordRevenue() {
+    if (!doc || !project || recording) return
+    setRecording(true)
+    try {
+      const res = await fetch('/api/revenue', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ projectId: project.id, amount: totals.total, paymentStatus: 'billed', billedDate: doc.date, dueDate: doc.due || null, memo: `請求書 ${doc.number}` }),
+      })
+      const j = await res.json()
+      if (!res.ok) throw new Error(j.error?.message ?? '記録に失敗しました')
+      setDoc(d => d && ({ ...d, recordedRevenueId: j.data?.id }))
+      toast.success('売上・入金に「請求済み」として記録しました')
+    } catch (e: any) { toast.error(e.message) } finally { setRecording(false) }
+  }
+
   if (!project || !doc) return <div className="p-8 text-sm text-muted-foreground">読み込み中...</div>
+  const K = KINDS[doc.kind]
 
   const setI = (k: keyof Issuer) => (e: React.ChangeEvent<HTMLInputElement>) => setIssuer(s => ({ ...s, [k]: e.target.value }))
   const setD = (k: keyof Doc) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setDoc(d => d && ({ ...d, [k]: e.target.value }))
@@ -94,6 +120,25 @@ export default function ProjectInvoicePage() {
             </div>
           )}
           <section className="rounded-lg border bg-white p-4">
+            <h2 className="text-sm font-semibold">書類の種類</h2>
+            <div className="mt-2 flex gap-2">
+              {(Object.keys(KINDS) as Kind[]).map(k => (
+                <button key={k} type="button" onClick={() => setDoc(d => d && ({ ...d, kind: k }))}
+                  className={`rounded-md border px-3 py-1.5 text-sm ${doc.kind === k ? 'border-primary bg-primary text-white' : 'bg-white hover:bg-slate-50'}`}>{KINDS[k].title}</button>
+              ))}
+            </div>
+            {doc.kind === 'invoice' && (
+              <div className="mt-3">
+                {doc.recordedRevenueId ? (
+                  <p className="text-xs text-muted-foreground">この請求書は売上・入金に記録済みです（<Link href="/revenue" className="text-primary underline">入金状況を見る</Link>）</p>
+                ) : (
+                  <Button size="sm" variant="outline" onClick={recordRevenue} disabled={recording || totals.total <= 0}><Receipt className="mr-1 h-4 w-4" />{recording ? '記録中...' : '売上・入金に「請求済み」で記録'}</Button>
+                )}
+                <p className="mt-1 text-xs text-muted-foreground">合計 ¥{yen(totals.total)} を請求日・支払期限つきで登録し、未入金アラートの対象にします。</p>
+              </div>
+            )}
+          </section>
+          <section className="rounded-lg border bg-white p-4">
             <h2 className="text-sm font-semibold">発行者情報（この端末に保存）</h2>
             <div className="mt-3 grid gap-2">
               <div><Label className="text-xs">屋号・氏名</Label><Input value={issuer.name} onChange={setI('name')} placeholder="山田 太郎 / 〇〇デザイン" /></div>
@@ -107,12 +152,12 @@ export default function ProjectInvoicePage() {
             </div>
           </section>
           <section className="rounded-lg border bg-white p-4">
-            <h2 className="text-sm font-semibold">請求内容</h2>
+            <h2 className="text-sm font-semibold">{K.title}の内容</h2>
             <div className="mt-3 grid gap-2">
               <div className="grid grid-cols-3 gap-2">
-                <div><Label className="text-xs">請求番号</Label><Input value={doc.number} onChange={setD('number')} /></div>
-                <div><Label className="text-xs">請求日</Label><Input type="date" value={doc.date} onChange={setD('date')} /></div>
-                <div><Label className="text-xs">支払期限</Label><Input type="date" value={doc.due} onChange={setD('due')} /></div>
+                <div><Label className="text-xs">番号</Label><Input value={doc.number} onChange={setD('number')} /></div>
+                <div><Label className="text-xs">{K.dateLabel}</Label><Input type="date" value={doc.date} onChange={setD('date')} /></div>
+                <div><Label className="text-xs">{K.dueLabel ?? '期限（未使用）'}</Label><Input type="date" value={doc.due} onChange={setD('due')} disabled={!K.dueLabel} /></div>
               </div>
               <div><Label className="text-xs">件名</Label><Input value={doc.subject} onChange={setD('subject')} /></div>
               <div>
@@ -144,18 +189,18 @@ export default function ProjectInvoicePage() {
                 <span className="rotate-[-30deg] text-4xl font-bold text-slate-200">FreelanceOS 無料プラン</span>
               </div>
             )}
-            <h1 className="text-center text-2xl font-bold tracking-[0.5em]">請求書</h1>
+            <h1 className="text-center text-2xl font-bold tracking-[0.5em]">{K.title}</h1>
             <div className="mt-6 flex items-start justify-between gap-6">
               <div>
                 <p className="whitespace-pre-line text-base font-semibold">{clientName || '（宛先未設定）'} <span className="text-sm font-normal">御中</span></p>
                 <p className="mt-4">件名: {doc.subject}</p>
-                <p className="mt-1">下記のとおりご請求申し上げます。</p>
-                <p className="mt-3 text-lg font-bold">ご請求金額 <span className="ml-2 text-2xl">¥{yen(totals.total)}</span>（税込）</p>
-                <p className="mt-1">お支払期限: {doc.due.replace(/-/g, '/')}</p>
+                <p className="mt-1">{K.greeting}</p>
+                <p className="mt-3 text-lg font-bold">{K.amountLabel} <span className="ml-2 text-2xl">¥{yen(totals.total)}</span>（税込）</p>
+                {K.dueLabel && doc.due && <p className="mt-1">{K.dueLabel}: {doc.due.replace(/-/g, '/')}</p>}
               </div>
               <div className="min-w-[240px] text-right">
-                <p>請求番号: {doc.number}</p>
-                <p>請求日: {doc.date.replace(/-/g, '/')}</p>
+                <p>{K.title}番号: {doc.number}</p>
+                <p>{K.dateLabel}: {doc.date.replace(/-/g, '/')}</p>
                 <div className="mt-4 whitespace-pre-line text-left">
                   <p className="font-semibold">{issuer.name || '（発行者未設定）'}</p>
                   {issuer.address && <p>{issuer.address}</p>}
@@ -184,7 +229,7 @@ export default function ProjectInvoicePage() {
               {doc.withholding && <div className="flex justify-between"><span>源泉徴収税額（10.21%）</span><span>−¥{yen(totals.withholding)}</span></div>}
               <div className="flex justify-between border-t-2 border-slate-800 pt-1 text-base font-bold"><span>合計</span><span>¥{yen(totals.total)}</span></div>
             </div>
-            {issuer.bank && (
+            {issuer.bank && doc.kind === 'invoice' && (
               <div className="mt-8">
                 <p className="font-semibold">お振込先</p>
                 <p className="whitespace-pre-line">{issuer.bank}</p>
