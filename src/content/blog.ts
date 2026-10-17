@@ -2173,3 +2173,35 @@ export function getFaq(a: Article): { q: string; a: string }[] {
   }
   return out
 }
+
+/** ブログ一覧のカテゴリ分け（slug の並び順＝表示順） */
+export const CATEGORIES: { id: string; name: string; description: string; slugs: string[] }[] = [
+  {
+    id: 'billing',
+    name: '請求・入金',
+    description: '請求書の書き方、送付メール、未入金の防ぎ方、源泉徴収',
+    slugs: ['freelance-invoice-how-to', 'freelance-payment-tracking', 'freelance-invoice-email-template', 'freelance-withholding-tax'],
+  },
+  {
+    id: 'pricing',
+    name: '単価・見積・契約',
+    description: '時間単価の決め方、見積書、値上げ交渉、業務委託契約書',
+    slugs: ['freelance-hourly-rate', 'freelance-estimate-how-to', 'freelance-rate-negotiation', 'freelance-contract-checklist'],
+  },
+  {
+    id: 'tax',
+    name: '税金・確定申告',
+    description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration'],
+  },
+  {
+    id: 'setup',
+    name: '開業・制度・ツール',
+    description: '開業届、国保と年金、案件管理ツールの選び方',
+    slugs: ['freelance-kaigyo-todoke', 'freelance-health-insurance-pension', 'freelance-project-management-tools'],
+  },
+]
+
+export function categoryOf(slug: string) {
+  return CATEGORIES.find((c) => c.slugs.includes(slug))
+}

@@ -4,6 +4,7 @@ import { AppShell } from '@/components/layouts/app-shell'
 import { StatCard } from '@/components/features/stat-card'
 import { MonthlyTrendChart } from '@/components/features/monthly-trend-chart'
 import { OnboardingChecklist } from '@/components/features/onboarding-checklist'
+import { PlanUsageCard } from '@/components/features/plan-usage-card'
 import { Banknote, CreditCard, AlertCircle, FolderKanban } from 'lucide-react'
 
 type Summary = { totalRevenue: number; paidAmount: number; unpaidAmount: number; activeProjects: number; completedProjects: number; totalClients: number }
@@ -30,6 +31,7 @@ export default function DashboardPage() {
       {summary && revenueCount !== null && (
         <OnboardingChecklist clients={summary.totalClients} projects={summary.activeProjects + summary.completedProjects} revenue={revenueCount} />
       )}
+      <PlanUsageCard />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="今月の売上" value={summary ? fmt(summary.totalRevenue) : '—'} icon={Banknote} />
         <StatCard label="入金済み" value={summary ? fmt(summary.paidAmount) : '—'} icon={CreditCard} />
