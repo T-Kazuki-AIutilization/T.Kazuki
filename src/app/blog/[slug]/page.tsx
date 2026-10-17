@@ -18,7 +18,7 @@ export function generateMetadata({ params }: Params): Metadata {
     title: `${a.title} | FreelanceOS ブログ`,
     description: a.description,
     keywords: a.keywords.join(', '),
-    alternates: { canonical: `/blog/${a.slug}` },
+    alternates: { canonical: `/blog/${a.slug}`, types: { 'application/rss+xml': '/blog/feed.xml' } },
     openGraph: {
       title: a.title,
       description: a.description,

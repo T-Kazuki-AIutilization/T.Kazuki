@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'ブログ｜フリーランスの案件管理・入金管理・確定申告のコツ | FreelanceOS',
   description:
     'フリーランス・個人事業主向けに、案件管理ツールの選び方、未入金を防ぐ入金管理、時間単価の計算、確定申告の準備を実務目線で解説します。',
-  alternates: { canonical: '/blog' },
+  alternates: { canonical: '/blog', types: { 'application/rss+xml': '/blog/feed.xml' } },
   openGraph: {
     title: 'FreelanceOS ブログ',
     description: 'フリーランスの事業管理を楽にする実務ガイド。',
