@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { AppShell } from '@/components/layouts/app-shell'
 import { StatCard } from '@/components/features/stat-card'
 import { MonthlyTrendChart } from '@/components/features/monthly-trend-chart'
@@ -32,6 +33,11 @@ export default function DashboardPage() {
         <OnboardingChecklist clients={summary.totalClients} projects={summary.activeProjects + summary.completedProjects} revenue={revenueCount} />
       )}
       <PlanUsageCard />
+      <div className="mb-6 flex flex-wrap gap-2 text-sm">
+        <Link href="/projects/new" className="inline-flex h-9 items-center rounded-md border bg-white px-3 font-medium hover:bg-slate-50">＋ 案件を追加</Link>
+        <Link href="/projects" className="inline-flex h-9 items-center rounded-md border bg-white px-3 font-medium hover:bg-slate-50">請求書を作る（案件から）</Link>
+        <Link href="/revenue" className="inline-flex h-9 items-center rounded-md border bg-white px-3 font-medium hover:bg-slate-50">入金を記録</Link>
+      </div>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="今月の売上" value={summary ? fmt(summary.totalRevenue) : '—'} icon={Banknote} />
         <StatCard label="入金済み" value={summary ? fmt(summary.paidAmount) : '—'} icon={CreditCard} />

@@ -35,6 +35,13 @@ const PAIN_POINTS = [
   },
 ]
 
+const FREE_TOOLS = [
+  { href: '/tools/invoice', name: '請求書作成ツール', desc: '請求書・見積書・納品書を作成して PDF 保存。消費税・源泉徴収を自動計算。' },
+  { href: '/tools/takehome', name: '手取り計算シミュレーター', desc: '売上と経費から所得税・住民税・国保・年金を差し引いた手取りを概算（2026 年分）。' },
+  { href: '/tools/rate', name: '時間単価計算ツール', desc: '目標の手取り年収から、税金込みで必要な時間単価・日単価を逆算。' },
+  { href: '/tools/withholding', name: '源泉徴収税額の計算', desc: '10.21% の源泉徴収税額と請求額を計算。振込額からの逆算にも対応。' },
+]
+
 const FEATURES = [
   {
     icon: '📊',
@@ -224,6 +231,9 @@ export default function LandingPage() {
               ログイン
             </Link>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground">
+            登録せずに試すなら <Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール</Link>・<Link href="/tools/takehome" className="text-primary hover:underline">手取り計算</Link>（無料・登録不要）
+          </p>
           <p className="mt-4 text-sm text-muted-foreground">
             Freeプランはずっと無料 · クレジットカード登録不要 · いつでもキャンセル可
           </p>
@@ -445,6 +455,27 @@ export default function LandingPage() {
                 <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Free tools */}
+      <section className="bg-slate-50 px-4 py-16 sm:px-6">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold sm:text-4xl">登録不要の無料ツール</h2>
+            <p className="mt-3 text-muted-foreground">ブラウザで完結し、入力内容は端末内にだけ保存されます。</p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {FREE_TOOLS.map((t) => (
+              <Link key={t.href} href={t.href} className="rounded-xl border bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
+                <p className="font-semibold">{t.name}</p>
+                <p className="mt-1 text-sm text-muted-foreground">{t.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-6 text-center">
+            <Link href="/tools" className="text-sm font-medium text-primary hover:underline">無料ツール一覧</Link>
           </div>
         </div>
       </section>
