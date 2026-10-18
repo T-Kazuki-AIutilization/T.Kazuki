@@ -49,6 +49,9 @@ export default function TemplatesPage() {
         <p className="mt-3 text-muted-foreground">
           請求・入金・確定申告・単価・資金繰りの実務を、そのまま使える Excel にしました。数式はすべて検証済みで保護なし。Excel / LibreOffice / Google スプレッドシートで使えます。販売は BOOTH で行っています。
         </p>
+        <p className="mt-4 text-sm text-muted-foreground">
+          Excel を使わずブラウザで済ませたい方は、登録不要の <Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール</Link> と <Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター</Link> もご利用ください。
+        </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {TEMPLATES.map((t) => (
             <article key={t.id} className="flex flex-col overflow-hidden rounded-xl border bg-white shadow-sm">
