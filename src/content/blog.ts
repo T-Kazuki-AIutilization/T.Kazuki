@@ -33,6 +33,7 @@ export const BOOTH_LEDGER_FREE_URL = 'https://freelancekt.booth.pm/items/8988405
 export const LEDGER_DOWNLOAD_URL = '/downloads/freelance_payment_ledger_free.xlsx'
 export const BOOTH_CASHFLOW_URL = 'https://freelancekt.booth.pm/items/8990973'
 export const BOOTH_TIMESHEET_URL = 'https://freelancekt.booth.pm/items/8991307'
+export const BOOTH_BUNDLE_URL = 'https://freelancekt.booth.pm/items/9010299'
 
 export const ARTICLES: Article[] = [
   {

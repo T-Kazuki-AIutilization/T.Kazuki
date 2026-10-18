@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { TEMPLATES } from '@/content/templates'
+import { BOOTH_BUNDLE_URL } from '@/content/blog'
 import { BOOTH_SHOP_URL, SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -52,6 +53,15 @@ export default function TemplatesPage() {
         <p className="mt-4 text-sm text-muted-foreground">
           Excel を使わずブラウザで済ませたい方は、登録不要の <Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール</Link> と <Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター</Link> もご利用ください。
         </p>
+        <a href={BOOTH_BUNDLE_URL} target="_blank" rel="noopener noreferrer" className="mt-8 flex flex-col gap-4 rounded-xl border-2 border-primary bg-primary/5 p-5 transition-shadow hover:shadow-md sm:flex-row sm:items-center">
+          <Image src="/blog/previews/bundle_thumbnail.png" alt="フリーランス事務テンプレート 7 点セット" width={240} height={180} className="rounded-lg border bg-white" />
+          <div>
+            <p className="text-xs font-semibold text-primary">まとめて買うと 37% オフ</p>
+            <p className="mt-1 text-lg font-bold">有料テンプレート 7 点セット　<span className="text-slate-400 line-through">6,360 円</span> → 3,980 円</p>
+            <p className="mt-1 text-sm text-muted-foreground">見積・請求・案件管理・単価計算・手取り・確定申告・資金繰りの 7 本をまとめて。3 つ以上買う予定ならセットのほうが安くなります。</p>
+            <span className="mt-2 inline-block text-sm font-medium text-primary">BOOTH でセットを見る ↗</span>
+          </div>
+        </a>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {TEMPLATES.map((t) => (
             <article key={t.id} className="flex flex-col overflow-hidden rounded-xl border bg-white shadow-sm">
