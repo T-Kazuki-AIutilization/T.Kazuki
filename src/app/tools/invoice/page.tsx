@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { PublicInvoiceTool } from './tool'
 import { SITE_URL } from '@/lib/site'
+import { ToolFaq } from '@/components/marketing/tool-faq'
 
 export const metadata: Metadata = {
   title: '請求書作成ツール（無料・登録不要）｜見積書・納品書も。消費税・源泉徴収を自動計算して PDF 保存 | FreelanceOS',
@@ -16,6 +17,14 @@ export const metadata: Metadata = {
     images: [{ url: '/blog/og/tools-invoice.png', width: 1200, height: 630 }],
   },
 }
+
+const FAQS = [
+  { q: '請求書は手書きや Word でもよい？', a: '形式は自由です。宛先・発行者・日付・品目・金額・消費税額があれば手書きでも Word でも有効です。インボイス制度の登録事業者は、登録番号と税率ごとの消費税額も必要です。このツールは必要な項目を入力欄にまとめているので、漏れを防げます。' },
+  { q: 'インボイス登録していない場合はどう書く？', a: '登録番号の欄を空欄にしてください。消費税を請求するかどうかは取引先との契約によります。免税事業者が消費税相当額を請求すること自体は禁止されていませんが、取引先は仕入税額控除ができない（経過措置あり）ため、事前に相談しておくと安心です。' },
+  { q: '源泉徴収はいつ差し引く？', a: '原稿料・デザイン料・講演料など、所得税法で定められた報酬を法人などに請求する場合です。チェックを入れると税抜額 × 10.21% を差し引いた請求額になります。プログラミングやシステム開発の報酬は対象外です。' },
+  { q: '作った請求書はどこに保存される？', a: '入力内容はお使いのブラウザ（この端末）の中にだけ保存され、サーバーには送信されません。別の端末では表示されないので、発行した請求書は PDF に保存して控えにしてください。' },
+  { q: 'PDF にするには？', a: '「印刷 / PDF に保存」を押し、印刷ダイアログの送信先で「PDF に保存」を選びます。スマホの場合は共有メニューから「PDF」や「プリント」を選ぶと保存できます。' },
+]
 
 export default function InvoiceToolPage() {
   const jsonLd = {
@@ -62,6 +71,7 @@ export default function InvoiceToolPage() {
           <li><Link href="/blog/freelance-withholding-tax" className="text-primary hover:underline">フリーランスの源泉徴収とは？10.21% の計算方法</Link></li>
           <li><Link href="/blog/freelance-estimate-how-to" className="text-primary hover:underline">フリーランスの見積書の書き方</Link></li>
         </ul>
+        <ToolFaq items={FAQS} />
       </section>
     </>
   )

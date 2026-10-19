@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { TakeHomeCalculator } from './calculator'
 import { SITE_URL } from '@/lib/site'
+import { ToolFaq } from '@/components/marketing/tool-faq'
 
 export const metadata: Metadata = {
   title: 'フリーランスの手取り計算シミュレーター（無料・登録不要）｜所得税・住民税・国保・年金を一括概算【2026年分】 | FreelanceOS',
@@ -17,6 +18,14 @@ export const metadata: Metadata = {
     images: [{ url: '/blog/og/tools-takehome.png', width: 1200, height: 630 }],
   },
 }
+
+const FAQS = [
+  { q: '売上 500 万円のフリーランスの手取りはいくら？', a: '経費 60 万円、青色申告 65 万円控除、国保の所得割率 10% の条件では、年間の手取りは約 336 万円（売上の約 67%）です。税金・保険料の合計は約 103 万円で、内訳は所得税 約 15 万円、住民税 約 27 万円、国保 約 39 万円、国民年金 約 22 万円です。' },
+  { q: '会社員の年収と比べるには？', a: '会社員の手取りは額面の 75〜80% が目安ですが、フリーランスは国保と国民年金を全額自己負担し、退職金や有給もありません。同じ手取りを得るには、会社員の額面年収の 1.3〜1.5 倍程度の売上が必要になることが多いです。' },
+  { q: '国民健康保険の計算が自治体の試算と違う', a: '国保の所得割率と均等割は市区町村ごとに大きく異なります。このツールは所得割率を 9〜13% から選べ、均等割は 1 人 6 万円で概算しています。正確な額はお住まいの自治体の試算ページで確認してください。' },
+  { q: '配偶者や扶養家族がいる場合は？', a: 'このツールは配偶者控除・扶養控除と国保の家族分を含みません。扶養家族がいる場合、所得税・住民税は少し下がり、国保は人数分の均等割が増えます。家族構成まで反映したい場合は Excel 版のパラメータを編集して試算してください。' },
+  { q: '源泉徴収された分は手取りに含まれる？', a: '源泉徴収は所得税の前払いなので、手取りの計算には影響しません。「源泉徴収された所得税」を入力すると、確定申告で納付になるか還付になるかの目安を表示します。' },
+]
 
 export default function TakeHomeToolPage() {
   const jsonLd = {
@@ -57,6 +66,7 @@ export default function TakeHomeToolPage() {
             <li><Link href="/blog/freelance-expenses-list" className="text-primary hover:underline">経費になるもの・ならないもの一覧</Link></li>
             <li><Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール（無料・登録不要）</Link></li>
           </ul>
+          <ToolFaq items={FAQS} />
         </section>
       </main>
     </SiteShell>
