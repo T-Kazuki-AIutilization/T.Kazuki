@@ -19,7 +19,7 @@ const RES_BASIC = 430000
 const RES_ADJ = 2500
 const BIZ_DEDUCT = 2900000
 const RECON = 0.021
-const IT_TABLE: [number, number, number][] = [
+export const IT_TABLE: [number, number, number][] = [
   [40000000, 0.45, 4796000], [18000000, 0.4, 2796000], [9000000, 0.33, 1536000], [6950000, 0.23, 636000],
   [3300000, 0.2, 427500], [1950000, 0.1, 97500], [0, 0.05, 0],
 ]
