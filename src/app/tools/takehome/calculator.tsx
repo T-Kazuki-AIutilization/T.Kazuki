@@ -31,7 +31,7 @@ const BASIC_TABLE: [number, number][] = [
 const floor = (n: number, unit = 1) => Math.floor(n / unit) * unit
 const yen = (n: number) => new Intl.NumberFormat('ja-JP').format(n)
 
-export type Inputs = { sales: number; expenses: number; aoiro: number; other: number; withheld: number; taxable: boolean; bizRate: number; nhiRate: number }
+export type Inputs = { sales: number; expenses: number; aoiro: number; other: number; withheld: number; taxable: boolean; bizRate: number; nhiRate: number; ctRate?: number }
 
 export function calc(i: Inputs) {
   const profit = Math.max(0, i.sales - i.expenses)
@@ -49,14 +49,14 @@ export function calc(i: Inputs) {
   const taxableRes = Math.max(0, floor(income - social - RES_BASIC - i.other, 1000))
   const residentTax = Math.max(0, floor(taxableRes * RES_RATE - RES_ADJ, 100)) + RES_FLAT
   const bizTax = Math.max(0, floor((income + aoiroApplied - BIZ_DEDUCT) * i.bizRate, 100))
-  const consumptionTax = i.taxable ? floor(i.sales * 0.1 * 0.2, 100) : 0
+  const consumptionTax = i.taxable ? floor(i.sales * 0.1 * (i.ctRate ?? 0.2), 100) : 0
   const taxes = incomeTax + residentTax + bizTax + consumptionTax
   const takeHome = i.sales - i.expenses - taxes - social
   return { profit, aoiroApplied, income, pension, nhi, social, basic, taxableIt, incomeTax, taxableRes, residentTax, bizTax, consumptionTax, taxes, takeHome, settle: incomeTax - i.withheld }
 }
 
 const KEY = 'fos.tool.takehome'
-const defaults: Inputs = { sales: 5000000, expenses: 600000, aoiro: 650000, other: 0, withheld: 0, taxable: false, bizRate: 0, nhiRate: 0.1 }
+const defaults: Inputs = { sales: 5000000, expenses: 600000, aoiro: 650000, other: 0, withheld: 0, taxable: false, bizRate: 0, nhiRate: 0.1, ctRate: 0.2 }
 
 export function TakeHomeCalculator() {
   const [v, setV] = useState<Inputs>(defaults)
@@ -98,7 +98,15 @@ export function TakeHomeCalculator() {
             <option value={0.09}>9%</option><option value={0.1}>10%（標準）</option><option value={0.11}>11%</option><option value={0.12}>12%</option><option value={0.13}>13%</option>
           </select>
         </div>
-        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={v.taxable} onChange={e => setV(s => ({ ...s, taxable: e.target.checked }))} />消費税の課税事業者（インボイス登録・2 割特例で概算）</label>
+        <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={v.taxable} onChange={e => setV(s => ({ ...s, taxable: e.target.checked }))} />消費税の課税事業者（インボイス登録した個人の特例で概算）</label>
+        {v.taxable && (
+          <div>
+            <Label className="text-xs">消費税の特例（売上の消費税に対する納税額の割合）</Label>
+            <select className="mt-1 h-10 w-full rounded-md border px-3 text-sm" value={v.ctRate ?? 0.2} onChange={e => setV(s => ({ ...s, ctRate: Number(e.target.value) }))}>
+              <option value={0.2}>2 割特例（2026 年分まで）</option><option value={0.3}>3 割特例（2027・2028 年分）</option><option value={0.5}>簡易課税・サービス業（みなし仕入率 50%）</option>
+            </select>
+          </div>
+        )}
         <p className="text-xs text-muted-foreground">入力はこの端末にだけ保存されます。</p>
       </section>
 
@@ -121,7 +129,7 @@ export function TakeHomeCalculator() {
               <Row label="所得税（復興特別所得税込み）" v={-r.incomeTax} />
               <Row label="住民税（翌年 6 月から納付）" v={-r.residentTax} />
               {v.bizRate > 0 && <Row label="個人事業税" v={-r.bizTax} />}
-              {v.taxable && <Row label="消費税（2 割特例）" v={-r.consumptionTax} />}
+              {v.taxable && <Row label={`消費税（売上の消費税 × ${Math.round((v.ctRate ?? 0.2) * 100)}%）`} v={-r.consumptionTax} />}
               <Row label="税金・保険料の合計" v={-(r.taxes + r.social)} bold />
               <Row label="手取り" v={r.takeHome} bold />
             </tbody>
