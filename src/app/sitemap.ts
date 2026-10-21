@@ -34,5 +34,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly',
     priority: 0.6,
   }))
-  return [...staticPages, ...articles, ...takehome]
+  const furusato: MetadataRoute.Sitemap = TAKEHOME_AMOUNTS.map((a) => ({
+    url: `${BASE}/tools/furusato/${a}`,
+    lastModified: new Date('2026-10-21'),
+    changeFrequency: 'yearly',
+    priority: 0.6,
+  }))
+  return [...staticPages, ...articles, ...takehome, ...furusato]
 }

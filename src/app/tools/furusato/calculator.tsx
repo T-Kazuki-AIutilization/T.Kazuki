@@ -3,31 +3,12 @@ import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { calc, IT_TABLE } from '@/lib/takehome'
+import { furusatoLimit, floor, type FurusatoInputs as Inputs } from '@/lib/takehome'
 
-/**
- * ふるさと納税の控除上限額（自己負担 2,000 円で済む寄附額）の概算。
- * 上限 = 住民税所得割額 × 20% ÷ (90% − 所得税の限界税率 × 1.021) ＋ 2,000 円
- * 限界税率は住民税の課税所得 − 人的控除差調整額（基礎控除分 5 万円）で判定（地方税法の特例控除割合）。
- */
-
-const PERSONAL_DIFF = 50000
-const floor = (n: number, unit = 1) => Math.floor(n / unit) * unit
 const yen = (n: number) => new Intl.NumberFormat('ja-JP').format(n)
 
-type Inputs = { sales: number; expenses: number; aoiro: number; other: number; nhiRate: number }
 const KEY = 'fos.tool.furusato'
 const defaults: Inputs = { sales: 5000000, expenses: 600000, aoiro: 650000, other: 0, nhiRate: 0.1 }
-
-export function furusatoLimit(i: Inputs) {
-  const r = calc({ ...i, withheld: 0, taxable: false, bizRate: 0 })
-  const shotokuwari = Math.max(0, r.taxableRes * 0.1 - 2500)
-  const base = Math.max(0, r.taxableRes - PERSONAL_DIFF)
-  const rate = base > 0 ? (IT_TABLE.find(([lo]) => base >= lo) ?? IT_TABLE[IT_TABLE.length - 1])[1] : 0
-  const denom = 0.9 - rate * 1.021
-  const limit = shotokuwari > 0 ? floor((shotokuwari * 0.2) / denom + 2000, 1000) : 0
-  return { ...r, shotokuwari: floor(shotokuwari, 100), rate, limit }
-}
 
 export function FurusatoCalculator() {
   const [v, setV] = useState<Inputs>(defaults)

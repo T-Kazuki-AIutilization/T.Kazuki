@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { FurusatoCalculator } from './calculator'
+import { TAKEHOME_AMOUNTS } from '@/lib/takehome'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 
@@ -33,6 +34,14 @@ export default function FurusatoToolPage() {
           <p className="mt-2 text-sm text-muted-foreground">会社員向けの早見表は「給与収入」で作られているため、フリーランスにはそのまま使えません。売上・経費・青色申告特別控除から、自己負担 2,000 円で済む寄附額の上限を概算します。国民年金・国民健康保険の社会保険料控除も自動で反映します。</p>
         </div>
         <FurusatoCalculator />
+        <section className="mt-12 text-sm">
+          <h2 className="text-base font-semibold">売上別の上限の目安（経費率 20%・青色申告・独身）</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {TAKEHOME_AMOUNTS.map((x) => (
+              <li key={x}><Link href={`/tools/furusato/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">売上 {x.toLocaleString('ja-JP')}万円</Link></li>
+            ))}
+          </ul>
+        </section>
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">

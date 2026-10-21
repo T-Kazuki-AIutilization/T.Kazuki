@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { SITE_URL } from '@/lib/site'
-import { calc, TAKEHOME_AMOUNTS as AMOUNTS, type Inputs } from '@/lib/takehome'
+import { calc, furusatoLimit, TAKEHOME_AMOUNTS as AMOUNTS, type Inputs } from '@/lib/takehome'
 
 // 売上別の手取りページ。数値はツールと同じ計算式でビルド時に算出する。
 export const dynamicParams = false
@@ -22,7 +22,8 @@ function figures(amount: number) {
   const ct3 = calc({ ...base(sales), taxable: true, ctRate: 0.3 })
   const ideco = calc({ ...base(sales), other: 816000 })
   const idecoSaving = r.taxes + r.social - (ideco.taxes + ideco.social)
-  return { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving }
+  const furusato = furusatoLimit({ sales, expenses: Math.round(sales * 0.2), aoiro: 650000, other: 0, nhiRate: 0.1 }).limit
+  return { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving, furusato }
 }
 
 export function generateStaticParams() {
@@ -46,7 +47,7 @@ export function generateMetadata({ params }: { params: { amount: string } }): Me
 export default function TakeHomeAmountPage({ params }: { params: { amount: string } }) {
   const a = Number(params.amount)
   if (!AMOUNTS.includes(a)) notFound()
-  const { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving } = figures(a)
+  const { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving, furusato } = figures(a)
   const label = `${a.toLocaleString('ja-JP')}万円`
   const idx = AMOUNTS.indexOf(a)
   const prev = AMOUNTS[idx - 1]
@@ -106,7 +107,8 @@ export default function TakeHomeAmountPage({ params }: { params: { amount: strin
           <li>個人事業税: デザイン業・コンサルタント業など法定業種なら、（所得 − 事業主控除 290 万円）× 5% で約 {man(biz.bizTax)} 万円かかり、手取りは約 {man(biz.takeHome)} 万円になります。ライター・プログラマーなど非該当の業種はかかりません。</li>
           <li>インボイス登録した課税事業者: 消費税の納税が加わります。2026 年分は 2 割特例で約 {man(ct2.consumptionTax)} 万円（手取り 約 {man(ct2.takeHome)} 万円）、2027・2028 年分は 3 割特例で約 {man(ct3.consumptionTax)} 万円（手取り 約 {man(ct3.takeHome)} 万円）が目安です（売上を税抜で計算）。</li>
           <li>国民健康保険: 料率と均等割は自治体ごとに違い、40〜64 歳は介護分が加わります。扶養家族がいれば人数分の均等割がかかります。</li>
-          <li>配偶者控除・扶養控除・医療費控除・ふるさと納税などは含んでいません。</li>
+          <li>ふるさと納税: この条件での上限の目安は約 {furusato.toLocaleString('ja-JP')} 円です（<Link href={`/tools/furusato/${a}`} className="text-primary hover:underline">売上{label}のふるさと納税の上限</Link>）。</li>
+          <li>配偶者控除・扶養控除・医療費控除などは含んでいません。</li>
         </ul>
 
         <div className="mt-10 rounded-xl border border-primary/30 bg-primary/5 p-5 text-sm">
@@ -114,7 +116,7 @@ export default function TakeHomeAmountPage({ params }: { params: { amount: strin
           <p className="mt-1 text-muted-foreground">手取り計算シミュレーター（無料・登録不要）なら、経費・青色申告・iDeCo などの控除・国保の料率・消費税の特例を自由に変えて計算できます。</p>
           <div className="mt-3 flex flex-wrap gap-3">
             <Link href="/tools/takehome" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">手取り計算シミュレーターを開く</Link>
-            <Link href="/tools/furusato" className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">ふるさと納税の上限も計算する</Link>
+            <Link href={`/tools/furusato/${a}`} className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">ふるさと納税の上限を見る</Link>
           </div>
         </div>
 

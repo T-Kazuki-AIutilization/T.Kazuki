@@ -51,3 +51,22 @@ export function calc(i: Inputs) {
 
 /** 売上別の手取りページ（/tools/takehome/[万円]）の対象額。300 万〜2,000 万円、100 万円刻み */
 export const TAKEHOME_AMOUNTS = Array.from({ length: 18 }, (_, i) => 300 + i * 100)
+
+/**
+ * ふるさと納税の控除上限額（自己負担 2,000 円で済む寄附額）の概算。
+ * 上限 = 住民税所得割額 × 20% ÷ (90% − 所得税の限界税率 × 1.021) ＋ 2,000 円
+ * 限界税率は住民税の課税所得 − 人的控除差調整額（基礎控除分 5 万円）で判定（地方税法の特例控除割合）。
+ */
+
+const PERSONAL_DIFF = 50000
+export type FurusatoInputs = { sales: number; expenses: number; aoiro: number; other: number; nhiRate: number }
+export function furusatoLimit(i: FurusatoInputs) {
+  const r = calc({ ...i, withheld: 0, taxable: false, bizRate: 0 })
+  const shotokuwari = Math.max(0, r.taxableRes * 0.1 - 2500)
+  const base = Math.max(0, r.taxableRes - PERSONAL_DIFF)
+  const rate = base > 0 ? (IT_TABLE.find(([lo]) => base >= lo) ?? IT_TABLE[IT_TABLE.length - 1])[1] : 0
+  const denom = 0.9 - rate * 1.021
+  const limit = shotokuwari > 0 ? floor((shotokuwari * 0.2) / denom + 2000, 1000) : 0
+  return { ...r, shotokuwari: floor(shotokuwari, 100), rate, limit }
+}
+
