@@ -40,6 +40,8 @@ const FREE_TOOLS = [
   { href: '/tools/takehome', name: '手取り計算シミュレーター', desc: '売上と経費から所得税・住民税・国保・年金を差し引いた手取りを概算（2026 年分）。' },
   { href: '/tools/rate', name: '時間単価計算ツール', desc: '目標の手取り年収から、税金込みで必要な時間単価・日単価を逆算。' },
   { href: '/tools/withholding', name: '源泉徴収税額の計算', desc: '10.21% の源泉徴収税額と請求額を計算。振込額からの逆算にも対応。' },
+  { href: '/tools/furusato', name: 'ふるさと納税の上限額', desc: '売上・経費・青色申告控除から、自己負担 2,000 円で済む寄附額の上限を概算。' },
+  { href: '/tools/hayamihyo', name: '手取り早見表', desc: '売上別・月単価別の手取り、所得別の国保料、ふるさと納税の上限を一覧で確認。' },
 ]
 
 const FEATURES = [
