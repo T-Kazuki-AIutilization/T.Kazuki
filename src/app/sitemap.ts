@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { ARTICLES } from '@/content/blog'
 
 import { SITE_URL } from '@/lib/site'
+import { TAKEHOME_AMOUNTS } from '@/lib/takehome'
 
 const BASE = SITE_URL
 
@@ -27,5 +28,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.7,
   }))
-  return [...staticPages, ...articles]
+  const takehome: MetadataRoute.Sitemap = TAKEHOME_AMOUNTS.map((a) => ({
+    url: `${BASE}/tools/takehome/${a}`,
+    lastModified: new Date('2026-10-21'),
+    changeFrequency: 'yearly',
+    priority: 0.6,
+  }))
+  return [...staticPages, ...articles, ...takehome]
 }

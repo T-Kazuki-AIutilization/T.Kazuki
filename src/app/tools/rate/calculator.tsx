@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { calc } from '../takehome/calculator'
+import { calc } from '@/lib/takehome'
 
 /** 目標の手取り年収から、税金・保険料を含めて必要な売上と時間単価を逆算する */
 

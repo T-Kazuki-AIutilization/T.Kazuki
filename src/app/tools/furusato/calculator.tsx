@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { calc, IT_TABLE } from '../takehome/calculator'
+import { calc, IT_TABLE } from '@/lib/takehome'
 
 /**
  * ふるさと納税の控除上限額（自己負担 2,000 円で済む寄附額）の概算。

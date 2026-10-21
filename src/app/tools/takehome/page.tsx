@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { TakeHomeCalculator } from './calculator'
+import { TAKEHOME_AMOUNTS } from '@/lib/takehome'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 
@@ -48,6 +49,14 @@ export default function TakeHomeToolPage() {
           <p className="mt-2 text-sm text-muted-foreground">売上と経費を入れるだけで、所得税・住民税・国民健康保険・国民年金・個人事業税・消費税を差し引いた年間・月間の手取りを概算します。2026 年分（2027 年 3 月申告）の税制を反映。</p>
         </div>
         <TakeHomeCalculator />
+        <section className="mt-12 text-sm">
+          <h2 className="text-base font-semibold">売上別の手取りと内訳（経費率 20%・青色申告・独身）</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {TAKEHOME_AMOUNTS.map((x) => (
+              <li key={x}><Link href={`/tools/takehome/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">売上 {x.toLocaleString('ja-JP')}万円</Link></li>
+            ))}
+          </ul>
+        </section>
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">計算の前提</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
