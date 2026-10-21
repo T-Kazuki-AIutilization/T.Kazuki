@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { TakeHomeCalculator } from './calculator'
-import { TAKEHOME_AMOUNTS } from '@/lib/takehome'
+import { TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS } from '@/lib/takehome'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 
@@ -54,6 +54,14 @@ export default function TakeHomeToolPage() {
           <ul className="mt-3 flex flex-wrap gap-2">
             {TAKEHOME_AMOUNTS.map((x) => (
               <li key={x}><Link href={`/tools/takehome/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">売上 {x.toLocaleString('ja-JP')}万円</Link></li>
+            ))}
+          </ul>
+        </section>
+        <section className="mt-8 text-sm">
+          <h2 className="text-base font-semibold">月単価別の手取り（フリーランスエンジニアなど・経費率 10%）</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {MONTHLY_AMOUNTS.map((x) => (
+              <li key={x}><Link href={`/tools/takehome/monthly/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">月単価 {x}万円</Link></li>
             ))}
           </ul>
         </section>

@@ -70,3 +70,6 @@ export function furusatoLimit(i: FurusatoInputs) {
   return { ...r, shotokuwari: floor(shotokuwari, 100), rate, limit }
 }
 
+
+/** 月単価別の手取りページ（/tools/takehome/monthly/[万円]）の対象額。月 40 万〜150 万円、10 万円刻み */
+export const MONTHLY_AMOUNTS = Array.from({ length: 12 }, (_, i) => 40 + i * 10)
