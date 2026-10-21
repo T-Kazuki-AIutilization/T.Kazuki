@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { NhiCalculator } from './calculator'
+import { NHI_AMOUNTS } from '@/lib/nhi'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 
@@ -32,6 +33,14 @@ export default function NhiToolPage() {
           <p className="mt-2 text-sm text-muted-foreground">所得と世帯の加入者数から、フリーランス・個人事業主の国民健康保険料を概算します。料率は自治体ごとに違うため、お住まいの市区町村の値に変更して計算できます。</p>
         </div>
         <NhiCalculator />
+        <section className="mt-12 text-sm">
+          <h2 className="text-base font-semibold">所得別の国民健康保険料の目安（世帯別）</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {NHI_AMOUNTS.map((x) => (
+              <li key={x}><Link href={`/tools/nhi/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">所得 {x.toLocaleString('ja-JP')}万円</Link></li>
+            ))}
+          </ul>
+        </section>
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">

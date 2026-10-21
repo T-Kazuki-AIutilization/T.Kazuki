@@ -3,6 +3,7 @@ import { ARTICLES } from '@/content/blog'
 
 import { SITE_URL } from '@/lib/site'
 import { TAKEHOME_AMOUNTS } from '@/lib/takehome'
+import { NHI_AMOUNTS } from '@/lib/nhi'
 
 const BASE = SITE_URL
 
@@ -40,5 +41,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly',
     priority: 0.6,
   }))
-  return [...staticPages, ...articles, ...takehome, ...furusato]
+  const nhi: MetadataRoute.Sitemap = NHI_AMOUNTS.map((a) => ({
+    url: `${BASE}/tools/nhi/${a}`,
+    lastModified: new Date('2026-10-21'),
+    changeFrequency: 'yearly',
+    priority: 0.6,
+  }))
+  return [...staticPages, ...articles, ...takehome, ...furusato, ...nhi]
 }
