@@ -1230,6 +1230,7 @@ export const ARTICLES: Article[] = [
         text: '所得と世帯の加入者数を入れ、医療分・支援金分・介護分の料率を市区町村の値に変えて国民健康保険料を概算できます。',
         href: '/tools/nhi',
         label: '国民健康保険料の計算ツールを開く',
+        secondary: { href: '/tools/nhi/400', label: '所得別・世帯別の目安を見る（例: 所得 400 万円）' },
       },
       {
         type: 'cta',
@@ -2425,6 +2426,7 @@ export const ARTICLES: Article[] = [
         text: '売上・経費・青色申告特別控除から、自己負担 2,000 円で済む寄附額の上限を概算。国保・年金の社会保険料控除も自動で反映します。登録不要。',
         href: '/tools/furusato',
         label: '上限額シミュレーターを開く',
+        secondary: { href: '/tools/furusato/500', label: '売上別の上限を見る（例: 売上 500 万円）' },
       },
       { type: 'h2', text: '売上側の確認: 請求漏れと未入金' },
       {
@@ -2990,6 +2992,7 @@ export const ARTICLES: Article[] = [
         text: '売上・経費・青色申告特別控除・その他の控除を入れるだけで、国保・年金の控除も自動で反映して上限額を概算します。登録不要。',
         href: '/tools/furusato',
         label: '上限額シミュレーターを開く',
+        secondary: { href: '/tools/furusato/500', label: '売上別の上限を見る（例: 売上 500 万円）' },
       },
       { type: 'h2', text: '上限額が変わる要因' },
       {
