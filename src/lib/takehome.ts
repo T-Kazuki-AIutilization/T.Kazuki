@@ -73,3 +73,19 @@ export function furusatoLimit(i: FurusatoInputs) {
 
 /** 月単価別の手取りページ（/tools/takehome/monthly/[万円]）の対象額。月 40 万〜150 万円、10 万円刻み */
 export const MONTHLY_AMOUNTS = Array.from({ length: 12 }, (_, i) => 40 + i * 10)
+
+/** 手取りが target に達する売上を二分探索で求める（経費は売上に対する率 or 固定額） */
+export function requiredSalesFor(target: number, opts: { expenseRate?: number; expenses?: number; aoiro?: number; taxable?: boolean; ctRate?: number } = {}) {
+  const { expenseRate, expenses = 600000, aoiro = 650000, taxable = false, ctRate } = opts
+  let lo = 0, hi = 200000000
+  for (let k = 0; k < 45; k++) {
+    const mid = Math.floor((lo + hi) / 2)
+    const exp = expenseRate !== undefined ? Math.round(mid * expenseRate) : expenses
+    const th = calc({ sales: mid, expenses: exp, aoiro, other: 0, withheld: 0, taxable, bizRate: 0, nhiRate: 0.1, ctRate }).takeHome
+    if (th < target) lo = mid; else hi = mid
+  }
+  return Math.ceil(hi / 10000) * 10000
+}
+
+/** 目標手取り別の必要売上ページ（/tools/rate/[万円]）の対象額。手取り 300 万〜1,200 万円、100 万円刻み */
+export const RATE_TARGETS = Array.from({ length: 10 }, (_, i) => 300 + i * 100)

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
-import { calc, furusatoLimit, TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS, type Inputs } from '@/lib/takehome'
+import { calc, furusatoLimit, requiredSalesFor, TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS, RATE_TARGETS, type Inputs } from '@/lib/takehome'
 import { calcNhi, NHI_AMOUNTS, NHI_DEFAULTS } from '@/lib/nhi'
 
 export const metadata: Metadata = {
@@ -29,6 +29,7 @@ export default function HayamihyoPage() {
     care: calcNhi({ ...NHI_DEFAULTS, incomes: [a * 10000], members40to64: 1 }).total,
     family: calcNhi({ ...NHI_DEFAULTS, incomes: [a * 10000, 0, 0], members40to64: 0 }).total,
   }))
+  const rateRows = RATE_TARGETS.map((a) => { const sales = requiredSalesFor(a * 10000, { expenses: 600000 }); return { a, sales, hourly: Math.ceil(sales / 1152 / 100) * 100 } })
   const th = 'py-2 pr-3 text-left font-medium text-muted-foreground'
   const td = 'py-1.5 pr-3 tabular-nums'
   return (
@@ -41,6 +42,7 @@ export default function HayamihyoPage() {
           <li><a href="#sales" className="text-primary hover:underline">売上別の手取り</a></li>
           <li><a href="#monthly" className="text-primary hover:underline">月単価別の手取り</a></li>
           <li><a href="#nhi" className="text-primary hover:underline">所得別の国保料</a></li>
+          <li><a href="#rate" className="text-primary hover:underline">手取り目標に必要な売上</a></li>
         </ul>
 
         <section id="sales" className="mt-10">
@@ -97,6 +99,26 @@ export default function HayamihyoPage() {
                     <td className={`${td} font-semibold`}>{man(single)} 万円</td>
                     <td className={td}>{man(care)} 万円</td>
                     <td className={td}>{man(family)} 万円</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="rate" className="mt-12">
+          <h2 className="text-xl font-bold">目標の手取りに必要な売上と時間単価</h2>
+          <p className="mt-1 text-xs text-muted-foreground">経費 60 万円・青色申告特別控除 65 万円・独身。時間単価は年 1,152 時間（週 40 時間 × 48 週 × 請求できる割合 6 割）で計算</p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead><tr className="border-b"><th className={th}>目標の手取り</th><th className={th}>必要な売上（年）</th><th className={th}>月あたり</th><th className={th}>時間単価</th></tr></thead>
+              <tbody>
+                {rateRows.map(({ a, sales, hourly }) => (
+                  <tr key={a} className="border-b border-slate-100">
+                    <td className={td}><Link href={`/tools/rate/${a}`} className="text-primary hover:underline">{a.toLocaleString('ja-JP')} 万円</Link></td>
+                    <td className={`${td} font-semibold`}>{man(sales)} 万円</td>
+                    <td className={td}>{man(sales / 12)} 万円</td>
+                    <td className={td}>{hourly.toLocaleString('ja-JP')} 円</td>
                   </tr>
                 ))}
               </tbody>

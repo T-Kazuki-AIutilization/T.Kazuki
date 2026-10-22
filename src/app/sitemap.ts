@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { ARTICLES } from '@/content/blog'
 
 import { SITE_URL } from '@/lib/site'
-import { TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS } from '@/lib/takehome'
+import { TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS, RATE_TARGETS } from '@/lib/takehome'
 import { NHI_AMOUNTS } from '@/lib/nhi'
 
 const BASE = SITE_URL
@@ -54,5 +54,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'yearly',
     priority: 0.6,
   }))
-  return [...staticPages, ...articles, ...takehome, ...furusato, ...nhi, ...monthly]
+  const rate: MetadataRoute.Sitemap = RATE_TARGETS.map((a) => ({
+    url: `${BASE}/tools/rate/${a}`,
+    lastModified: new Date('2026-10-22'),
+    changeFrequency: 'yearly',
+    priority: 0.6,
+  }))
+  return [...staticPages, ...articles, ...takehome, ...furusato, ...nhi, ...monthly, ...rate]
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { RateCalculator } from './calculator'
+import { RATE_TARGETS } from '@/lib/takehome'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 
@@ -31,6 +32,14 @@ export default function RateToolPage() {
           <p className="mt-2 text-sm text-muted-foreground">「目標の手取り年収」から、税金・保険料・経費を上乗せした必要売上を求め、請求できる時間で割って時間単価を逆算します。時給 3,000 円で年収 600 万円に届かない理由が数字で分かります。</p>
         </div>
         <RateCalculator />
+        <section className="mt-12 text-sm">
+          <h2 className="text-base font-semibold">目標の手取り別に必要な売上・時間単価</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {RATE_TARGETS.map((x) => (
+              <li key={x}><Link href={`/tools/rate/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">手取り {x.toLocaleString('ja-JP')}万円</Link></li>
+            ))}
+          </ul>
+        </section>
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
