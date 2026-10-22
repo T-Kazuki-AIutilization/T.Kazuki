@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
+import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { calcNhi, NHI_AMOUNTS as AMOUNTS, NHI_DEFAULTS } from '@/lib/nhi'
 
@@ -110,6 +111,8 @@ export default function NhiAmountPage({ params }: { params: { amount: string } }
             <Link href="/tools/takehome" className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">税金・年金も含めた手取りを計算する</Link>
           </div>
         </div>
+
+        <ExcelUpsell item="cashflow" />
 
         <ToolFaq items={faqs} />
 

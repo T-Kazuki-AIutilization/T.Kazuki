@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
+import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { FukugyoCalculator } from './calculator'
 import { sideJobTax, FUKUGYO_SALARIES, FUKUGYO_SIDES } from '@/lib/fukugyo'
@@ -66,6 +67,7 @@ export default function FukugyoToolPage() {
             <li><Link href="/blog/freelance-expenses-list" className="text-primary hover:underline">経費にできるものの一覧</Link></li>
             <li><Link href="/tools/invoice" className="text-primary hover:underline">副業の請求書を作る（無料ツール）</Link></li>
           </ul>
+          <ExcelUpsell item="tax" />
           <ToolFaq items={FAQS} />
           <MoreTools current="/tools/fukugyo" />
         </section>

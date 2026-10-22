@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
+import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { AoiroCalculator } from './calculator'
 import { calc } from '@/lib/takehome'
@@ -72,6 +73,7 @@ export default function AoiroToolPage() {
             <li><Link href="/blog/freelance-tax-prep" className="text-primary hover:underline">確定申告の準備と帳簿のつけ方</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター</Link></li>
           </ul>
+          <ExcelUpsell item="tax" />
           <ToolFaq items={FAQS} />
           <MoreTools current="/tools/aoiro" />
         </section>

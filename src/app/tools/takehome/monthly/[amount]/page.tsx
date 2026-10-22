@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
+import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { calc, MONTHLY_AMOUNTS as AMOUNTS, type Inputs } from '@/lib/takehome'
 
@@ -134,6 +135,8 @@ export default function MonthlyTakeHomePage({ params }: { params: { amount: stri
             <Link href="/tools/rate" className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">必要な単価を逆算する</Link>
           </div>
         </div>
+
+        <ExcelUpsell item="takehome" />
 
         <ToolFaq items={faqs} />
 

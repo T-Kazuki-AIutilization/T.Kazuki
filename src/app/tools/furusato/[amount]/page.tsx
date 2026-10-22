@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
+import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { furusatoLimit, TAKEHOME_AMOUNTS as AMOUNTS, type FurusatoInputs } from '@/lib/takehome'
 
@@ -128,6 +129,8 @@ export default function FurusatoAmountPage({ params }: { params: { amount: strin
             <Link href={`/tools/takehome/${a}`} className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">売上{label}の手取りを見る</Link>
           </div>
         </div>
+
+        <ExcelUpsell item="cashflow" />
 
         <ToolFaq items={faqs} />
 
