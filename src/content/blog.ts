@@ -453,6 +453,7 @@ export const ARTICLES: Article[] = [
         text: '売上 300 万〜2,000 万円の 100 万円ごとに、所得税・住民税・国保・年金の内訳、経費率別の手取り、インボイス登録した場合の消費税まで 1 ページずつまとめています。',
         href: '/tools/takehome/900',
         label: '例: 売上 900 万円の手取りを見る',
+        secondary: { href: '/tools/hayamihyo', label: '売上別・月単価別の早見表を見る' },
       },
       { type: 'h2', text: '手取り率が売上とともに下がる理由' },
       {
