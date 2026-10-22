@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/tools/nhi`, lastModified: new Date('2026-10-20'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/tools/hayamihyo`, lastModified: new Date('2026-10-22'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/fukugyo`, lastModified: new Date('2026-10-22'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/tools/aoiro`, lastModified: new Date('2026-10-23'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/furusato`, lastModified: new Date('2026-10-21'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/signup`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/terms`, changeFrequency: 'yearly', priority: 0.2 },

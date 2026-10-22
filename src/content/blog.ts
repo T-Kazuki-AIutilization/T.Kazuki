@@ -1100,6 +1100,13 @@ export const ARTICLES: Article[] = [
       { type: 'affiliate', title: '開業届と青色申告承認申請書をまとめて作るなら', ids: ['freee-kaigyo', 'freee-kaikei', 'mf-kakutei'] },
       {
         type: 'cta',
+        title: '青色申告にするといくら得か計算する（無料ツール）',
+        text: '売上と経費を入れるだけで、白色申告と比べて青色申告（65 万・55 万・10 万円控除）で所得税・住民税・国保がいくら下がるかを計算します。登録不要。',
+        href: '/tools/aoiro',
+        label: '青色申告の節税額シミュレーターを開く',
+      },
+      {
+        type: 'cta',
         title: '開業後の帳簿づけと確定申告の準備をまとめて: 確定申告準備キット（Excel）',
         text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別の集計、所得税の概算までセットにしたテンプレートです。',
         href: BOOTH_TAX_URL,
