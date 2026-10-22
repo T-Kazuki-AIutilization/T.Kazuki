@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import { activeOffers } from '@/content/affiliates'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ARTICLES, getArticle, getFaq, getRelatedArticles, type Block } from '@/content/blog'
 
@@ -109,6 +110,24 @@ function renderBlock(b: Block, i: number) {
               </li>
             ))}
           </ul>
+        </aside>
+      )
+    }
+    case 'affiliate': {
+      const offers = activeOffers(b.ids)
+      if (!offers.length) return null
+      return (
+        <aside key={i} className="mt-8 rounded-xl border bg-white p-5">
+          <p className="flex items-center gap-2 font-semibold"><span className="rounded bg-slate-200 px-1.5 py-0.5 text-[10px] font-medium text-slate-600">PR</span>{b.title}</p>
+          <ul className="mt-3 space-y-3">
+            {offers.map((o) => (
+              <li key={o.id} className="text-sm">
+                <a href={o.url} target="_blank" rel="sponsored noopener noreferrer" className="font-medium text-primary hover:underline">{o.name} ↗</a>
+                <p className="mt-0.5 text-muted-foreground">{o.note}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 text-xs text-muted-foreground">このボックスには広告（提携）リンクを含みます。料金・機能は各公式サイトでご確認ください。</p>
         </aside>
       )
     }
