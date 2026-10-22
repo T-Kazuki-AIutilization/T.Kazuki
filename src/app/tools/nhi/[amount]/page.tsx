@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 import { SITE_URL } from '@/lib/site'
 import { calcNhi, NHI_AMOUNTS as AMOUNTS, NHI_DEFAULTS } from '@/lib/nhi'
 
@@ -111,6 +112,8 @@ export default function NhiAmountPage({ params }: { params: { amount: string } }
         </div>
 
         <ToolFaq items={faqs} />
+
+        <MoreTools current="/tools/nhi" />
 
         <section className="mt-10 text-sm">
           <h2 className="text-base font-semibold">ほかの所得の国民健康保険料</h2>

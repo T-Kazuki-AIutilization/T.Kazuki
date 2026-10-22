@@ -4,6 +4,7 @@ import { SiteShell } from '@/components/marketing/site-shell'
 import { WithholdingCalculator } from './calculator'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 
 export const metadata: Metadata = {
   title: '源泉徴収税額の計算ツール（10.21%・無料）｜報酬額から計算・振込額から逆算 | FreelanceOS',
@@ -40,6 +41,7 @@ export default function WithholdingToolPage() {
             <li><Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール（無料）</Link></li>
           </ul>
           <ToolFaq items={FAQS} />
+          <MoreTools current="/tools/withholding" />
         </section>
       </main>
     </SiteShell>

@@ -5,6 +5,7 @@ import { TakeHomeCalculator } from './calculator'
 import { TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS } from '@/lib/takehome'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 
 export const metadata: Metadata = {
   title: 'フリーランスの手取り計算シミュレーター（無料・登録不要）｜所得税・住民税・国保・年金を一括概算【2026年分】 | FreelanceOS',
@@ -84,6 +85,7 @@ export default function TakeHomeToolPage() {
             <li><Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール（無料・登録不要）</Link></li>
           </ul>
           <ToolFaq items={FAQS} />
+          <MoreTools current="/tools/takehome" />
         </section>
       </main>
     </SiteShell>

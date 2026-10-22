@@ -5,6 +5,7 @@ import { FurusatoCalculator } from './calculator'
 import { TAKEHOME_AMOUNTS } from '@/lib/takehome'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 
 export const metadata: Metadata = {
   title: 'ふるさと納税の上限額シミュレーター（フリーランス・個人事業主向け・無料）| FreelanceOS',
@@ -51,6 +52,7 @@ export default function FurusatoToolPage() {
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター（無料）</Link></li>
           </ul>
           <ToolFaq items={FAQS} />
+          <MoreTools current="/tools/furusato" />
         </section>
       </main>
     </SiteShell>

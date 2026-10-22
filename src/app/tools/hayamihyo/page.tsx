@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
+import { MoreTools } from '@/components/marketing/more-tools'
 import { calc, furusatoLimit, requiredSalesFor, TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS, RATE_TARGETS, type Inputs } from '@/lib/takehome'
 import { calcNhi, NHI_AMOUNTS, NHI_DEFAULTS } from '@/lib/nhi'
 
@@ -133,6 +134,7 @@ export default function HayamihyoPage() {
           <p className="mt-1 text-muted-foreground">案件ごとの売上・請求・入金をダッシュボードで集計。今年の売上の見込みがいつでもわかるので、納税資金やふるさと納税の計算にも使えます。無料プランあり。</p>
           <Link href="/signup" className="mt-3 inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">無料ではじめる</Link>
         </div>
+        <MoreTools current="/tools/hayamihyo" />
       </main>
     </SiteShell>
   )

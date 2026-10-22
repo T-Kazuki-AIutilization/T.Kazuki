@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 import { SITE_URL } from '@/lib/site'
 import { AoiroCalculator } from './calculator'
 import { calc } from '@/lib/takehome'
@@ -72,6 +73,7 @@ export default function AoiroToolPage() {
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター</Link></li>
           </ul>
           <ToolFaq items={FAQS} />
+          <MoreTools current="/tools/aoiro" />
         </section>
       </main>
     </SiteShell>

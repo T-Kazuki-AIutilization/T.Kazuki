@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 import { SITE_URL } from '@/lib/site'
 import { calc, MONTHLY_AMOUNTS as AMOUNTS, type Inputs } from '@/lib/takehome'
 
@@ -135,6 +136,8 @@ export default function MonthlyTakeHomePage({ params }: { params: { amount: stri
         </div>
 
         <ToolFaq items={faqs} />
+
+        <MoreTools current="/tools/takehome" />
 
         <section className="mt-10 text-sm">
           <h2 className="text-base font-semibold">ほかの月単価の手取り</h2>

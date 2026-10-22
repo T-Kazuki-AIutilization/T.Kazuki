@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { PublicInvoiceTool } from './tool'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 
 export const metadata: Metadata = {
   title: '請求書作成ツール（無料・登録不要）｜見積書・納品書も。消費税・源泉徴収を自動計算して PDF 保存 | FreelanceOS',
@@ -72,6 +73,7 @@ export default function InvoiceToolPage() {
           <li><Link href="/blog/freelance-estimate-how-to" className="text-primary hover:underline">フリーランスの見積書の書き方</Link></li>
         </ul>
         <ToolFaq items={FAQS} />
+        <MoreTools current="/tools/invoice" />
       </section>
     </>
   )

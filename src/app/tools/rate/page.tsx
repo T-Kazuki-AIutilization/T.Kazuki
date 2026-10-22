@@ -5,6 +5,7 @@ import { RateCalculator } from './calculator'
 import { RATE_TARGETS } from '@/lib/takehome'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
+import { MoreTools } from '@/components/marketing/more-tools'
 
 export const metadata: Metadata = {
   title: 'フリーランスの時間単価計算ツール（無料・登録不要）｜目標の手取り年収から必要単価を逆算 | FreelanceOS',
@@ -49,6 +50,7 @@ export default function RateToolPage() {
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター（無料ツール）</Link></li>
           </ul>
           <ToolFaq items={FAQS} />
+          <MoreTools current="/tools/rate" />
         </section>
       </main>
     </SiteShell>
