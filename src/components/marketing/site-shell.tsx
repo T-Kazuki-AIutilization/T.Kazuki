@@ -38,6 +38,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           <Link href="/terms" className="hover:text-foreground transition-colors">利用規約</Link>
           <Link href="/privacy" className="hover:text-foreground transition-colors">プライバシーポリシー</Link>
           <Link href="/tokusho" className="hover:text-foreground transition-colors">特定商取引法に基づく表記</Link>
+          <Link href="/ad-policy" className="hover:text-foreground transition-colors">広告の掲載について</Link>
           <a href={BOOTH_SHOP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">BOOTH</a>
           <a href={X_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">X</a>
           <a href={NOTE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">note</a>

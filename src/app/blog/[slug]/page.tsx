@@ -178,6 +178,7 @@ export default function BlogArticlePage({ params }: Params) {
     publisher: { '@type': 'Organization', name: 'FreelanceOS' },
     inLanguage: 'ja',
   }
+  const hasAds = a.blocks.some((x) => x.type === 'affiliate' && activeOffers(x.ids).length > 0)
   const faq = getFaq(a)
   const faqLd = faq.length
     ? {
@@ -194,6 +195,11 @@ export default function BlogArticlePage({ params }: Params) {
         <p className="text-xs text-muted-foreground">
           <Link href="/blog" className="hover:text-foreground">ブログ</Link> / {a.date.replace(/-/g, '/')} · 約{a.readingMinutes}分
         </p>
+        {hasAds && (
+          <p className="mt-3 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-900">
+            【PR】この記事にはプロモーション（広告）が含まれています。<Link href="/ad-policy" className="underline">広告の掲載について</Link>
+          </p>
+        )}
         <h1 className="mt-3 text-3xl font-bold leading-tight">{a.title}</h1>
         <p className="mt-4 text-muted-foreground">{a.description}</p>
         <article>{a.blocks.map(renderBlock)}</article>
