@@ -631,6 +631,13 @@ export const ARTICLES: Article[] = [
       { type: 'affiliate', title: '経費の記録を自動化するなら', ids: ['freee-kaikei', 'mf-kakutei', 'yayoi-aoiro'] },
       {
         type: 'cta',
+        title: '家賃・電気代・通信費の按分を計算する（無料ツール）',
+        text: '仕事部屋の面積、仕事の時間、業務で使う割合を入れるだけで、経費にできる額と税金・国保が下がる目安を計算します。登録不要。',
+        href: '/tools/anbun',
+        label: '家事按分の計算ツールを開く',
+      },
+      {
+        type: 'cta',
         title: '科目別に記録できる経費帳（確定申告準備キット）',
         text: '勘定科目のプルダウンと既定の按分率つきの経費帳、売上帳、科目別集計、所得税の概算をひとつにまとめた Excel キット。',
         href: BOOTH_TAX_URL,
