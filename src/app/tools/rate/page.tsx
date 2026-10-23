@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { RateCalculator } from './calculator'
 import { RATE_TARGETS } from '@/lib/takehome'
+import { KANSAN_SALARIES } from '@/lib/fukugyo'
 import { SITE_URL } from '@/lib/site'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
@@ -38,6 +39,12 @@ export default function RateToolPage() {
           <ul className="mt-3 flex flex-wrap gap-2">
             {RATE_TARGETS.map((x) => (
               <li key={x}><Link href={`/tools/rate/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">手取り {x.toLocaleString('ja-JP')}万円</Link></li>
+            ))}
+          </ul>
+          <h2 className="mt-6 text-base font-semibold">会社員の年収と同じ手取りに必要なフリーランスの売上</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {KANSAN_SALARIES.map((x) => (
+              <li key={x}><Link href={`/tools/kansan/${x}`} className="inline-block rounded border px-2 py-1 text-xs hover:bg-slate-50">年収 {x}万円の会社員</Link></li>
             ))}
           </ul>
         </section>

@@ -43,3 +43,13 @@ export function sideJobTax(salary: number, side: number) {
 
 export const FUKUGYO_SALARIES = [300, 400, 500, 600, 700, 800, 1000]
 export const FUKUGYO_SIDES = [20, 50, 100, 200]
+
+/** 会社員（独身・扶養なし）の手取りの概算。社会保険料は年収の 15%、2026 年分の基礎控除 */
+export function employeeTakeHome(salary: number) {
+  const social = Math.round(salary * SOCIAL_RATE)
+  const t = taxes(salary, 0)
+  return { social, incomeTax: t.incomeTax, residentTax: t.residentTax, takeHome: salary - social - t.incomeTax - t.residentTax }
+}
+
+/** 会社員の年収 → フリーランスの売上換算ページ（/tools/kansan/[万円]）の対象額 */
+export const KANSAN_SALARIES = [300, 400, 500, 600, 700, 800, 900, 1000]
