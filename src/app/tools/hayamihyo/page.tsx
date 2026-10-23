@@ -4,6 +4,7 @@ import { SiteShell } from '@/components/marketing/site-shell'
 import { MoreTools } from '@/components/marketing/more-tools'
 import { calc, furusatoLimit, requiredSalesFor, TAKEHOME_AMOUNTS, MONTHLY_AMOUNTS, RATE_TARGETS, type Inputs } from '@/lib/takehome'
 import { calcNhi, NHI_AMOUNTS, NHI_DEFAULTS } from '@/lib/nhi'
+import { employeeTakeHome, KANSAN_SALARIES } from '@/lib/fukugyo'
 
 export const metadata: Metadata = {
   title: 'フリーランス・個人事業主の手取り早見表｜売上別・月単価別・国保・ふるさと納税上限【2026年分】| FreelanceOS',
@@ -31,6 +32,7 @@ export default function HayamihyoPage() {
     family: calcNhi({ ...NHI_DEFAULTS, incomes: [a * 10000, 0, 0], members40to64: 0 }).total,
   }))
   const rateRows = RATE_TARGETS.map((a) => { const sales = requiredSalesFor(a * 10000, { expenses: 600000 }); return { a, sales, hourly: Math.ceil(sales / 1152 / 100) * 100 } })
+  const kansanRows = KANSAN_SALARIES.map((a) => { const e = employeeTakeHome(a * 10000); return { a, take: e.takeHome, sales: requiredSalesFor(e.takeHome, { expenses: 600000 }) } })
   const th = 'py-2 pr-3 text-left font-medium text-muted-foreground'
   const td = 'py-1.5 pr-3 tabular-nums'
   return (
@@ -44,6 +46,7 @@ export default function HayamihyoPage() {
           <li><a href="#monthly" className="text-primary hover:underline">月単価別の手取り</a></li>
           <li><a href="#nhi" className="text-primary hover:underline">所得別の国保料</a></li>
           <li><a href="#rate" className="text-primary hover:underline">手取り目標に必要な売上</a></li>
+          <li><a href="#kansan" className="text-primary hover:underline">会社員の年収との比較</a></li>
         </ul>
 
         <section id="sales" className="mt-10">
@@ -120,6 +123,25 @@ export default function HayamihyoPage() {
                     <td className={`${td} font-semibold`}>{man(sales)} 万円</td>
                     <td className={td}>{man(sales / 12)} 万円</td>
                     <td className={td}>{hourly.toLocaleString('ja-JP')} 円</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="kansan" className="mt-12">
+          <h2 className="text-xl font-bold">会社員の年収と同じ手取りに必要なフリーランスの売上</h2>
+          <p className="mt-1 text-xs text-muted-foreground">会社員は独身・社会保険料を年収の 15% で概算。フリーランスは経費 60 万円・青色申告特別控除 65 万円</p>
+          <div className="mt-3 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead><tr className="border-b"><th className={th}>会社員の年収</th><th className={th}>会社員の手取り</th><th className={th}>フリーランスに必要な売上</th></tr></thead>
+              <tbody>
+                {kansanRows.map(({ a, take, sales }) => (
+                  <tr key={a} className="border-b border-slate-100">
+                    <td className={td}><Link href={`/tools/kansan/${a}`} className="text-primary hover:underline">{a} 万円</Link></td>
+                    <td className={td}>{man(take)} 万円</td>
+                    <td className={`${td} font-semibold`}>{man(sales)} 万円</td>
                   </tr>
                 ))}
               </tbody>
