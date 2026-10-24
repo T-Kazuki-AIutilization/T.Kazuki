@@ -114,6 +114,17 @@ function renderBlock(b: Block, i: number) {
         </aside>
       )
     }
+    case 'linkgrid':
+      return (
+        <section key={i} className="mt-6">
+          <p className="text-sm font-semibold">{b.title}</p>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {b.items.map((x) => (
+              <li key={x.href}><Link href={x.href} className="inline-block rounded border px-2 py-1 text-xs text-primary hover:bg-slate-50">{x.label}</Link></li>
+            ))}
+          </ul>
+        </section>
+      )
     case 'affiliate':
       return <AffiliateBox key={i} title={b.title} ids={b.ids} />
     case 'cta':
