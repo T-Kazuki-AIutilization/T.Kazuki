@@ -3591,6 +3591,94 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'freelance-kakutei-shinkoku-ikurakara',
+    title: 'フリーランスの確定申告はいくらから必要？2026年分は所得95万円が目安、申告しなくても出したほうがいい人',
+    description:
+      'フリーランス・個人事業主の確定申告が必要になる所得の目安を、2026 年分の基礎控除（所得 132 万円以下は 95 万円）で解説。国保・年金を払っている場合の計算例、申告義務がなくても確定申告や住民税の申告をしたほうがいいケース、副業の 20 万円ルールとの違いをまとめました。',
+    date: '2026-10-25',
+    keywords: ['フリーランス 確定申告 いくらから', '個人事業主 確定申告 必要 所得', '確定申告 不要 2026 所得', 'フリーランス 赤字 確定申告'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '独立したばかりで売上が少ない年や、事業を始めた年の途中から稼働した年は、「そもそも確定申告は必要なのか」が気になります。結論から言うと、フリーランス（事業所得のみ）の場合、所得税がかかる人に確定申告の義務があり、2026 年分は所得 95 万円がひとつの目安です。ただし、義務がなくても申告したほうが得なケースが多くあります。',
+      },
+      { type: 'h2', text: '「所得」は売上ではない' },
+      {
+        type: 'p',
+        text: '判定に使うのは売上ではなく所得です。事業所得は「売上 − 経費 − 青色申告特別控除」で計算します。売上 200 万円でも、経費が 60 万円、青色申告特別控除が 65 万円なら、所得は 75 万円です。',
+      },
+      { type: 'h2', text: '2026 年分は所得 95 万円が目安' },
+      {
+        type: 'p',
+        text: '所得税は、所得から所得控除を引いた残り（課税所得）にかかります。2025 年の税制改正で、2025 年分・2026 年分の基礎控除は合計所得 132 万円以下なら 95 万円に引き上げられました。ほかに控除がなければ、所得が 95 万円以下なら所得税は 0 円で、確定申告の義務はありません。',
+      },
+      {
+        type: 'table',
+        headers: ['所得（売上 − 経費 − 青色控除）', '所得税がかかるか（控除が基礎控除だけの場合）'],
+        rows: [
+          ['95 万円以下', 'かからない（申告義務なし）'],
+          ['95 万円超〜132 万円', '超えた分に 5%（＋復興税）かかる → 申告が必要'],
+          ['132 万円超', '基礎控除が 88 万円以下に下がる → 申告が必要'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '実際には、国民年金・国民健康保険の保険料（社会保険料控除）なども所得から引けます。たとえば年金 約 21.5 万円と国保 10 万円を払っていれば、所得 約 126.5 万円までは所得税がかかりません。iDeCo・小規模企業共済・生命保険料なども控除になります。',
+      },
+      { type: 'h2', text: '申告義務がなくても、確定申告したほうがいい人' },
+      {
+        type: 'ul',
+        items: [
+          '報酬から源泉徴収されている人: 所得税が 0 円なら、引かれた源泉徴収税が全額戻る（還付申告。翌年 1 月 1 日から 5 年間できる）',
+          '青色申告で赤字の人: 申告すれば赤字を翌年以降 3 年間繰り越して、利益が出た年の所得から引ける',
+          '国民健康保険に入っている人: 所得が低い世帯は保険料の均等割が 7・5・2 割軽減されるが、所得の申告がないと軽減が判定されないことがある',
+          '所得の証明が必要な人: 賃貸の審査、保育園の申し込み、ローンなどで「所得証明」「課税証明」を求められたとき、申告していないと所得が証明できない',
+        ],
+      },
+      { type: 'links', items: ['freelance-withholding-tax', 'freelance-etax-how-to', 'freelance-tax-prep'] },
+      { type: 'h2', text: '確定申告しない場合も「住民税の申告」は必要' },
+      {
+        type: 'p',
+        text: '所得税の確定申告をしない場合でも、所得があるなら市区町村への住民税の申告が原則として必要です。住民税は所得税より基礎控除が小さく（43 万円）、非課税になる所得の基準も自治体によって違うため、所得税が 0 円でも住民税はかかることがあります。確定申告をすれば、その内容が市区町村に伝わるので住民税の申告は不要です。',
+      },
+      { type: 'h2', text: '会社員の副業の「20 万円ルール」とは別' },
+      {
+        type: 'p',
+        text: 'よく聞く「20 万円以下なら確定申告不要」は、会社で年末調整を受けている会社員の、給与以外の所得についてのルールです。フリーランス（事業所得が中心）には当てはまりません。副業の場合の詳しい条件は「副業の確定申告は 20 万円以下なら不要は本当？」の記事で解説しています。',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      {
+        type: 'h3',
+        text: '開業 1 年目で売上がほとんどない場合も申告したほうがいい？',
+      },
+      {
+        type: 'p',
+        text: '多くの場合、申告したほうが得です。開業準備で使った費用（開業費）や機材の購入で赤字になっていれば、青色申告なら翌年以降に繰り越せます。会社を辞めた年なら、退職までの給与から引かれていた所得税が戻ることもあります。',
+      },
+      {
+        type: 'h3',
+        text: '申告が必要なのにしなかったらどうなる？',
+      },
+      {
+        type: 'p',
+        text: '期限後に申告すると、本来の税金に加えて無申告加算税や延滞税がかかることがあります。気づいた時点で、できるだけ早く期限後申告をするのが負担を小さくするポイントです。',
+      },
+      {
+        type: 'cta',
+        title: '自分の所得と税金を計算する（無料ツール）',
+        text: '売上と経費を入れるだけで、所得税・住民税・国民健康保険・国民年金と手取りを概算します。所得税が 0 円になるかどうかもすぐわかります。',
+        href: '/tools/takehome',
+        label: '手取り計算シミュレーターを開く',
+        secondary: { href: '/tools/aoiro', label: '青色申告の節税額も計算する' },
+      },
+      {
+        type: 'note',
+        text: '本記事は 2026 年 10 月時点の制度に基づく一般的な説明です。給与・年金などほかの所得がある人、扶養に入っている人は判定が変わります。個別の判断は税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -3651,7 +3739,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'side-job-tax-return-200k'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'side-job-tax-return-200k'],
   },
   {
     id: 'setup',
