@@ -4,6 +4,7 @@ import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
 import { ExcelUpsell } from '@/components/marketing/excel-upsell'
+import { AffiliateBox, AdNotice } from '@/components/marketing/affiliate-box'
 import { SITE_URL } from '@/lib/site'
 import { AoiroCalculator } from './calculator'
 import { calc } from '@/lib/takehome'
@@ -41,6 +42,7 @@ export default function AoiroToolPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <div className="mb-8">
           <h1 className="text-2xl font-bold sm:text-3xl">青色申告の節税額シミュレーター <span className="ml-1 align-middle rounded bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">無料・登録不要</span></h1>
+          <AdNotice ids={['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei']} />
           <p className="mt-2 text-sm text-muted-foreground">白色申告と比べて、青色申告（65 万・55 万・10 万円控除）にすると所得税・住民税・国民健康保険がいくら下がるかを計算します（2026 年分）。</p>
         </div>
         <AoiroCalculator />
@@ -73,6 +75,7 @@ export default function AoiroToolPage() {
             <li><Link href="/blog/freelance-tax-prep" className="text-primary hover:underline">確定申告の準備と帳簿のつけ方</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター</Link></li>
           </ul>
+          <AffiliateBox title="青色申告の帳簿づけと e-Tax 申告をまとめて済ませるなら" ids={['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei']} />
           <ExcelUpsell item="tax" />
           <ToolFaq items={FAQS} />
           <MoreTools current="/tools/aoiro" />

@@ -4,6 +4,7 @@ import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
 import { ExcelUpsell } from '@/components/marketing/excel-upsell'
+import { AffiliateBox, AdNotice } from '@/components/marketing/affiliate-box'
 import { SITE_URL } from '@/lib/site'
 import { AnbunCalculator } from './calculator'
 
@@ -31,6 +32,7 @@ export default function AnbunToolPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <div className="mb-8">
           <h1 className="text-2xl font-bold sm:text-3xl">家事按分の計算ツール <span className="ml-1 align-middle rounded bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">無料・登録不要</span></h1>
+          <AdNotice ids={['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei']} />
           <p className="mt-2 text-sm text-muted-foreground">自宅で仕事をするフリーランス・個人事業主向けに、家賃・電気代・ネット回線・携帯電話のうち経費にできる額と、税金・保険料が下がる目安を計算します。</p>
         </div>
         <AnbunCalculator />
@@ -41,6 +43,7 @@ export default function AnbunToolPage() {
             <li><Link href="/blog/freelance-tax-prep" className="text-primary hover:underline">確定申告の準備と帳簿のつけ方</Link></li>
             <li><Link href="/tools/aoiro" className="text-primary hover:underline">青色申告の節税額シミュレーター</Link></li>
           </ul>
+          <AffiliateBox title="按分した経費の記録と確定申告をまとめて済ませるなら" ids={['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei']} />
           <ExcelUpsell item="tax" />
           <ToolFaq items={FAQS} />
           <MoreTools current="/tools/anbun" />

@@ -628,7 +628,7 @@ export const ARTICLES: Article[] = [
         width: 1400,
         height: 822,
       },
-      { type: 'affiliate', title: '経費の記録を自動化するなら', ids: ['freee-kaikei', 'mf-kakutei', 'yayoi-aoiro'] },
+      { type: 'affiliate', title: '経費の記録を自動化するなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       {
         type: 'cta',
         title: '家賃・電気代・通信費の按分を計算する（無料ツール）',
@@ -714,7 +714,7 @@ export const ARTICLES: Article[] = [
         width: 1400,
         height: 878,
       },
-      { type: 'affiliate', title: '確定申告をラクにする会計ソフト', ids: ['freee-kaikei', 'mf-kakutei', 'yayoi-aoiro'] },
+      { type: 'affiliate', title: '確定申告をラクにする会計ソフト', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       {
         type: 'cta',
         title: '納税の月に現金が足りない、を防ぐ資金繰り表（Excel）',
@@ -1104,7 +1104,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '出せます。ただし青色申告承認申請書の期限は開業日から 2 か月以内なので、さかのぼった開業日から 2 か月を過ぎていると、その年は青色申告になりません。',
       },
-      { type: 'affiliate', title: '開業届と青色申告承認申請書をまとめて作るなら', ids: ['freee-kaigyo', 'freee-kaikei', 'mf-kakutei'] },
+      { type: 'affiliate', title: '開業届と青色申告承認申請書をまとめて作るなら', ids: ['freee-kaigyo', 'mf-kakutei', 'yayoi-aoiro'] },
       {
         type: 'cta',
         title: '青色申告にするといくら得か計算する（無料ツール）',
@@ -2175,7 +2175,7 @@ export const ARTICLES: Article[] = [
           '送信後は受信通知の「受付完了」と PDF の控えを確認。納付は 3 月 15 日、還付は約 3 週間',
         ],
       },
-      { type: 'affiliate', title: '帳簿づくりから e-Tax 提出までまとめるなら', ids: ['freee-kaikei', 'mf-kakutei', 'yayoi-aoiro'] },
+      { type: 'affiliate', title: '帳簿づくりから e-Tax 提出までまとめるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       {
         type: 'cta',
         title: '確定申告準備キット（Excel）',
@@ -2348,7 +2348,7 @@ export const ARTICLES: Article[] = [
           '保存は 7 年。クラウドストレージに置き、週 1 回まとめて保存する習慣をつくる',
         ],
       },
-      { type: 'affiliate', title: '帳簿と書類をデータで保存するなら', ids: ['freee-kaikei', 'mf-kakutei', 'yayoi-aoiro'] },
+      { type: 'affiliate', title: '帳簿と書類をデータで保存するなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       {
         type: 'cta',
         title: '見積書・納品書・請求書テンプレート（Excel）',
