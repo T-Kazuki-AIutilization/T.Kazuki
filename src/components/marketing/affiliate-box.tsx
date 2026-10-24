@@ -11,7 +11,7 @@ export function AffiliateBox({ title, ids, className = 'mt-8' }: { title: string
       <ul className="mt-3 space-y-3">
         {offers.map((o) => (
           <li key={o.id} className="text-sm">
-            <a href={o.url} target="_blank" rel="sponsored noopener noreferrer" className="font-medium text-primary hover:underline">{o.name} ↗</a>
+            <a href={o.url} target="_blank" rel="sponsored nofollow noopener" className="font-medium text-primary hover:underline">{o.name} ↗</a>
             {o.pixel && <img src={o.pixel} width={1} height={1} alt="" className="inline" />}
             <p className="mt-0.5 text-muted-foreground">{o.note}</p>
           </li>
