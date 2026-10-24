@@ -8,7 +8,7 @@ import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
 
 export const metadata: Metadata = {
-  title: 'フリーランスの手取り計算シミュレーター（無料・登録不要）｜所得税・住民税・国保・年金を一括概算【2026年分】 | FreelanceOS',
+  title: 'フリーランス・個人事業主の手取り計算シミュレーター（無料）｜売上と経費から所得税・住民税・国保・年金を一括計算【2026年分】 | FreelanceOS',
   description:
     '売上と経費を入れるだけで、フリーランス・個人事業主の手取りを概算。所得税（基礎控除の 2026 年分特例を反映）・住民税・国民健康保険・国民年金・個人事業税・消費税（2 割特例）の内訳と、源泉徴収との差額（還付の目安）を表示。登録不要、入力は端末内にのみ保存。',
   alternates: { canonical: '/tools/takehome' },

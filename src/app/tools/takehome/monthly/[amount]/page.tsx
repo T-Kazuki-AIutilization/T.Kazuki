@@ -36,7 +36,7 @@ export function generateMetadata({ params }: { params: { amount: string } }): Me
   const a = Number(params.amount)
   if (!AMOUNTS.includes(a)) return {}
   const { r } = figures(a)
-  const title = `月単価${a}万円のフリーランスの手取りは月約${man(r.takeHome / 12)}万円（年${man(r.takeHome)}万円）【2026年分】| FreelanceOS`
+  const title = `月単価・月収${a}万円のフリーランス・個人事業主の手取りは月約${man(r.takeHome / 12)}万円（年${man(r.takeHome)}万円）【2026年分】| FreelanceOS`
   const description = `月単価 ${a} 万円（年商 ${man(a * 120000)} 万円）のフリーランスエンジニア・個人事業主の手取りは年 約 ${man(r.takeHome)} 万円、月 約 ${man(r.takeHome / 12)} 万円（経費率 10%・青色申告・独身）。税金・国保・年金の内訳、案件が途切れた場合、インボイス登録時の消費税まで試算。`
   return {
     title,
@@ -65,7 +65,7 @@ export default function MonthlyTakeHomePage({ params }: { params: { amount: stri
     <SiteShell>
       <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
         <nav className="text-xs text-muted-foreground"><Link href="/tools" className="hover:underline">無料ツール</Link> › <Link href="/tools/takehome" className="hover:underline">手取り計算</Link> › 月単価{label}</nav>
-        <h1 className="mt-3 text-2xl font-bold sm:text-3xl">月単価{label}のフリーランスの手取りはいくら？【2026年分】</h1>
+        <h1 className="mt-3 text-2xl font-bold sm:text-3xl">月単価（月の売上）{label}のフリーランス・個人事業主の手取りはいくら？【2026年分】</h1>
         <div className="mt-6 rounded-xl border bg-white p-5">
           <p className="text-sm text-muted-foreground">月単価 {label} × 12 か月（年商 {man(sales)} 万円）・経費率 10%・青色申告・独身</p>
           <p className="mt-1 text-4xl font-bold">月 約 {man(r.takeHome / 12)} 万円</p>
