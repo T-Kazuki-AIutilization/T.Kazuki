@@ -1018,7 +1018,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '2割特例が使えるのは 2026 年分までです。令和 8 年度税制改正で、2027 年分と 2028 年分は個人事業者向けの「3割特例」（納税額＝売上にかかる消費税 × 30%）が使えるようになりました。2029 年分からは簡易課税か本則課税です。詳しくは「インボイスの 2 割特例は 2026 年分で終了。2027 年からの 3 割特例」の記事にまとめています。',
       },
-      { type: 'links', items: ['freelance-invoice-3wari-tokurei', 'freelance-invoice-how-to', 'freelance-take-home-pay'] },
+      { type: 'links', items: ['freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-invoice-how-to'] },
       { type: 'h2', text: '登録しないと何が起きるか' },
       {
         type: 'p',
@@ -2898,7 +2898,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '増えるのは売上にかかる消費税の 10% 分、税抜売上の 1% 分です。月の積立額で考えると、2 割特例なら税込入金額の約 1.8%、3 割特例なら約 2.7% を消費税用に取り分けておけば足ります。',
       },
-      { type: 'links', items: ['freelance-invoice-registration', 'freelance-tax-calendar', 'freelance-take-home-pay'] },
+      { type: 'links', items: ['freelance-invoice-touroku-yarikata', 'freelance-invoice-registration', 'freelance-tax-calendar'] },
       { type: 'h2', text: '3 割特例を使える人・使えない人' },
       {
         type: 'p',
@@ -3789,6 +3789,104 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'freelance-invoice-touroku-yarikata',
+    title: 'インボイス登録のやり方（個人事業主）：e-Tax での申請手順、登録日の決め方、公表される情報と取りやめ方',
+    description:
+      'フリーランス・個人事業主がインボイス（適格請求書発行事業者）に登録する手順を、e-Tax での申請、登録希望日の決め方、登録番号の通知、公表サイトに載る情報（本名など）、登録後にやること、登録をやめる方法の順に整理。2 割特例・3 割特例との関係もまとめました。',
+    date: '2026-10-25',
+    keywords: ['インボイス 登録 やり方 個人事業主', 'インボイス 登録申請 e-Tax', 'インボイス 登録 本名 公表', 'インボイス 登録 取消し'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '取引先から「インボイスの登録番号を教えてください」と言われて、登録を決めたフリーランスの人向けに、実際の手続きを順番にまとめます。登録すべきかどうかの判断は「インボイス登録すべきか」の記事を、登録後の消費税の負担は「3 割特例」の記事を参考にしてください。',
+      },
+      { type: 'h2', text: '登録の流れ' },
+      {
+        type: 'ol',
+        items: [
+          '「適格請求書発行事業者の登録申請書」を出す（e-Tax が早くて確実。書面なら各国税局のインボイス登録センターへ郵送）',
+          '税務署の審査を経て、登録番号（T ＋ 13 桁）の通知が届く（e-Tax で申請し、通知も e-Tax で受け取ると早い）',
+          '国税庁の「適格請求書発行事業者公表サイト」に登録情報が載る',
+          '請求書に登録番号・税率ごとの金額と消費税額を書き、取引先に番号を伝える',
+        ],
+      },
+      { type: 'h2', text: 'e-Tax で申請する手順' },
+      {
+        type: 'ul',
+        items: [
+          '用意するもの: マイナンバーカード（スマホで読み取り）、e-Tax の利用者識別番号（16 桁。確定申告で e-Tax を使っていればある）',
+          'e-Tax（WEB 版）または スマホから「適格請求書発行事業者の登録申請書」を選び、質問に答えて作成・送信する',
+          '免税事業者が登録する場合は「登録希望日」を書く（申請書を出した日から 15 日以後の日を指定できる）',
+          '通知の受け取り方で「e-Tax で受け取る」を選ぶと、郵送より早く登録番号がわかる',
+        ],
+      },
+      {
+        type: 'note',
+        text: '申請から通知までの期間は時期によって変わります（国税庁が目安を公表しています）。取引先に番号を伝える期限がある場合は、余裕を持って申請してください。',
+      },
+      { type: 'h2', text: '登録日の決め方と、消費税の負担' },
+      {
+        type: 'p',
+        text: '免税事業者が登録すると、登録日から消費税の課税事業者になり、その日以後の売上について消費税の申告と納税が必要になります。年の途中の日を登録日にすると、その年は登録日以後の売上だけが対象です。個人事業者は、2026 年分は 2 割特例（売上の消費税 × 20%）、2027・2028 年分は 3 割特例（× 30%）が使えます。',
+      },
+      {
+        type: 'p',
+        text: '取引先が求めている時期に合わせて登録日を決めるのが基本です。必要もないのに早く登録すると、その分だけ消費税の負担が早く始まります。',
+      },
+      { type: 'links', items: ['freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-invoice-how-to'] },
+      { type: 'h2', text: '公表サイトに載る情報（本名に注意）' },
+      {
+        type: 'p',
+        text: '個人事業者の場合、公表サイトには登録番号・登録年月日とともに氏名（本名）が載り、登録番号で検索すれば誰でも確認できます。屋号や事務所の所在地、旧姓・通称は、申し出れば追加で公表したり、氏名に代えて（または併記して）公表したりできます。ペンネームで活動している人は、取引先に本名が伝わることを前提に準備しておきましょう。',
+      },
+      { type: 'h2', text: '登録したらやること' },
+      {
+        type: 'ul',
+        items: [
+          '請求書のテンプレートに登録番号、税率ごとの合計金額、税率ごとの消費税額を入れる',
+          '発行した請求書の控えを 7 年間保存する（電子で送ったものは電子のまま）',
+          '消費税の申告に備えて、税込の入金額の約 1.8%（2026 年分）〜約 2.7%（2027・2028 年分）を取り分ける',
+          '翌年 3 月 31 日までに消費税の確定申告と納付をする',
+        ],
+      },
+      { type: 'h2', text: '登録をやめるには' },
+      {
+        type: 'p',
+        text: '「適格請求書発行事業者の登録の取消しを求める旨の届出書」を出すと、原則として翌年（翌課税期間）の初めから登録がなくなります。提出の期限は翌課税期間の初日から起算して 15 日前の日までです。なお、年の途中から登録した免税事業者は、登録日の属する年の翌年から 2 年間は免税事業者に戻れない場合があるため、取りやめを考えている人は国税庁の Q&A で条件を確認してください。',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      {
+        type: 'h3',
+        text: '登録番号はマイナンバーと関係ある？',
+      },
+      {
+        type: 'p',
+        text: '関係ありません。個人事業者の登録番号は「T」と、マイナンバーとは別に割り当てられた 13 桁の数字です。請求書に書いても、マイナンバーが知られることはありません。',
+      },
+      {
+        type: 'h3',
+        text: '開業届を出していなくても登録できる？',
+      },
+      {
+        type: 'p',
+        text: '登録申請の条件に開業届の提出は含まれていませんが、事業をしていることが前提の制度です。開業届や青色申告承認申請書もあわせて整えておくと、確定申告や取引先とのやりとりがスムーズです。',
+      },
+      {
+        type: 'cta',
+        title: '登録番号入りの請求書を作る（無料ツール）',
+        text: '登録番号、10%／8% の税率ごとの金額と消費税額、源泉徴収に対応した請求書をブラウザで作って PDF 保存できます。登録不要。',
+        href: '/tools/invoice',
+        label: '請求書作成ツールを開く',
+        secondary: { href: '/tools/takehome', label: '消費税の負担も含めた手取りを計算する' },
+      },
+      {
+        type: 'note',
+        text: '本記事は 2026 年 10 月時点の国税庁の案内に基づく一般的な説明です。手続きの詳細や期間は、国税庁のインボイス制度特設サイトでご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -3849,7 +3947,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k'],
   },
   {
     id: 'setup',
