@@ -33,6 +33,11 @@ export default function KakuteiChecklistPage() {
         <AdNotice ids={IDS} />
         <p className="mt-2 text-sm text-muted-foreground">フリーランス・個人事業主の 2026 年分の確定申告（2027 年 2 月 16 日〜3 月 15 日）に向けて、やることを時期順に 32 項目にまとめました。終わったものにチェックを入れると、進み具合が表示されます。</p>
         <div className="mt-6"><KakuteiChecklist /></div>
+        <div className="mt-6 rounded-xl border border-primary/30 bg-primary/5 p-5 text-sm">
+          <p className="font-semibold">Excel 版をダウンロード（無料）</p>
+          <p className="mt-1 text-muted-foreground">同じチェックリストを Excel でも使えます。状態の列で ✓ を選ぶと進捗率が表示されます（Excel・LibreOffice・Google スプレッドシート）。</p>
+          <a href="/downloads/freelance_kakutei_checklist_free.xlsx" download className="mt-3 inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">Excel をダウンロード</a>
+        </div>
         <AffiliateBox title="帳簿づけから申告書の作成・e-Tax 提出までまとめるなら" ids={IDS} className="mt-10" />
         <ExcelUpsell item="tax" />
         <section className="mt-10 text-sm leading-relaxed text-muted-foreground">
