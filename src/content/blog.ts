@@ -3679,6 +3679,116 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'freelance-kaikei-soft-hitsuyou',
+    title: 'フリーランスに会計ソフトは必要？Excel・確定申告書等作成コーナーとの違いと、選ぶときの5つのポイント',
+    description:
+      'フリーランス・個人事業主に会計ソフトが必要かどうかを、白色申告・青色申告 10 万円控除・65 万円控除の別と取引の量で整理。Excel や国税庁の確定申告書等作成コーナーとの違い、会計ソフトを選ぶときに確認したい 5 つのポイントをまとめました。',
+    date: '2026-10-25',
+    keywords: ['フリーランス 会計ソフト 必要', '個人事業主 会計ソフト いらない', '会計ソフト Excel 違い', '確定申告 会計ソフト 選び方'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '独立すると「会計ソフトは契約したほうがいいのか」で一度は迷います。答えは、どの申告方法を選ぶかと、取引の量でほぼ決まります。この記事では、会計ソフトが必要な人・なくてもいい人を整理し、Excel や国税庁の確定申告書等作成コーナーとの違い、選ぶときに確認したいポイントをまとめます。',
+      },
+      { type: 'h2', text: '結論: 青色申告 65 万円控除を受けるなら、ほぼ必要' },
+      {
+        type: 'table',
+        headers: ['申告方法', '必要な帳簿', '会計ソフト'],
+        rows: [
+          ['白色申告', '簡易な帳簿（収入と経費の記録）', 'なくてもよい。Excel や作成コーナーで足りることが多い'],
+          ['青色申告 10 万円控除', '簡易簿記（現金出納帳・経費帳など）', 'なくてもよい。取引が多いなら便利'],
+          ['青色申告 55 万・65 万円控除', '複式簿記＋貸借対照表・損益計算書', 'ほぼ必要。手作業でもできるが、手間とミスが大きい'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '65 万円控除は、所得税・住民税・国民健康保険を合わせて年 10 万〜30 万円ほど負担が下がる大きな特典です。複式簿記の帳簿と決算書を自力で作るのは負担が大きいため、65 万円控除を狙うなら会計ソフトを使うのが現実的です。',
+      },
+      { type: 'h2', text: 'Excel・確定申告書等作成コーナー・会計ソフトの違い' },
+      {
+        type: 'table',
+        headers: ['', 'Excel・手書き', '確定申告書等作成コーナー（国税庁）', '会計ソフト'],
+        rows: [
+          ['日々の記帳', '自分で 1 件ずつ入力', '帳簿づけの機能はない（年 1 回、集計した数字を入れる）', '口座・カードの明細を取り込み、仕訳の候補が出る'],
+          ['決算書', '自分で集計して作る', '集計済みの数字を入力すれば作成できる', '帳簿から自動で作成'],
+          ['e-Tax 提出', '作成コーナーに転記して提出', 'そのまま提出できる', '多くのソフトはそのまま提出できる'],
+          ['費用', 'ほぼ無料', '無料', '年額の利用料がかかる（無料で試せるものもある）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '確定申告書等作成コーナーは申告書を作る道具で、1 年間の帳簿をつける道具ではありません。帳簿は Excel や会計ソフトでつけ、年末に集計した数字を作成コーナーに入れる、という使い分けになります。',
+      },
+      { type: 'links', items: ['freelance-boki-shiwake', 'freelance-etax-how-to', 'freelance-tax-prep'] },
+      { type: 'h2', text: '会計ソフトがなくてもいい人' },
+      {
+        type: 'ul',
+        items: [
+          '白色申告、または青色申告 10 万円控除で十分な人（所得が少なく、65 万円控除の効果が小さい）',
+          '取引が月に数件で、Excel で記録するのが苦にならない人',
+          '開業したばかりで、まずは売上の見通しを立てたい人（年の途中から会計ソフトに切り替えることもできる）',
+        ],
+      },
+      { type: 'h2', text: '会計ソフトを選ぶときの 5 つのポイント' },
+      {
+        type: 'ol',
+        items: [
+          '銀行口座・クレジットカードとの連携: 自分が使っている銀行・カードの明細を自動で取り込めるか',
+          'e-Tax での提出: 青色申告決算書と確定申告書をソフトからそのまま提出できるか（65 万円控除に必要）',
+          '消費税・インボイスへの対応: インボイス登録している人は、2 割特例・3 割特例・簡易課税での消費税の申告に対応しているか',
+          'スマホでの入力: 領収書を撮影して記録できるか、外出先から入力できるか',
+          '料金と無料期間: 個人事業主向けのプランの年額と、無料で試せる期間があるか（自分の取引量で使い勝手を試してから決める）',
+        ],
+      },
+      {
+        type: 'p',
+        text: '個人事業主向けのクラウド会計ソフトとしては、マネーフォワード クラウド確定申告、やよいの青色申告 オンライン、freee会計などがよく使われています。どれも上の 5 つの機能を備えたプランがありますが、料金や連携できる金融機関は変わることがあるので、公式サイトで最新の内容を確認し、無料期間などで実際に試して選ぶのがおすすめです。',
+      },
+      {
+        type: 'affiliate',
+        title: '個人事業主向けのクラウド会計ソフト',
+        ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      {
+        type: 'h3',
+        text: '会計ソフトの利用料は経費になる？',
+      },
+      {
+        type: 'p',
+        text: 'なります。事業の帳簿づけのためのソフトなので、利用料は通信費や支払手数料などの科目で経費にできます。',
+      },
+      {
+        type: 'h3',
+        text: '年の途中から会計ソフトを使い始めても大丈夫？',
+      },
+      {
+        type: 'p',
+        text: '大丈夫です。多くの会計ソフトは、過去の銀行・カードの明細もさかのぼって取り込めます。年の途中から使う場合は、1 月 1 日時点の預金残高などの期首の残高を最初に入力します。12 月になってからまとめて入力すると大変なので、早めに始めるのがおすすめです。',
+      },
+      {
+        type: 'h3',
+        text: 'FreelanceOS と会計ソフトはどう違う？',
+      },
+      {
+        type: 'p',
+        text: 'FreelanceOS は案件ごとの見積・請求・入金を管理するツールで、帳簿や決算書は作りません。会計ソフトは帳簿と申告のための道具です。案件と入金の管理は FreelanceOS、帳簿と申告は会計ソフト、という併用ができます。',
+      },
+      {
+        type: 'cta',
+        title: '青色申告にするといくら得か計算する（無料ツール）',
+        text: '白色申告と比べて、青色申告（65 万・55 万・10 万円控除）で所得税・住民税・国保がいくら下がるかを計算できます。会計ソフトの費用と比べる目安に。',
+        href: '/tools/aoiro',
+        label: '青色申告の節税額シミュレーターを開く',
+      },
+      {
+        type: 'note',
+        text: '各サービスの機能・料金は 2026 年 10 月時点の一般的な内容です。最新の情報は各サービスの公式サイトでご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -3739,7 +3849,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'side-job-tax-return-200k'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k'],
   },
   {
     id: 'setup',
