@@ -759,7 +759,7 @@ export const ARTICLES: Article[] = [
       { type: 'ul', items: ['請求日（発生主義: 入金日ではなく請求日で計上）', '取引先', '内容', '金額', '入金日', '源泉徴収額（あれば）'] },
       { type: 'h3', text: '経費帳に書く項目' },
       { type: 'ul', items: ['日付', '内容と支払先', '勘定科目（通信費・消耗品費など）', '金額', '支払方法', '按分率（私用と兼用のもの）', '証憑の有無'] },
-      { type: 'links', items: ['freelance-tax-calendar', 'freelance-expenses-list', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -2127,7 +2127,7 @@ export const ARTICLES: Article[] = [
         text: '青色申告特別控除の 65 万円は、複式簿記で帳簿をつけたうえで e-Tax で提出する（または優良な電子帳簿保存をする）ことが条件です。書面提出だと 55 万円になるので、所得税・住民税・国保を合わせて数万円の差になります。',
       },
       { type: 'h2', text: '準備するもの' },
-      { type: 'links', items: ['freelance-tax-prep', 'freelance-expenses-list', 'freelance-tax-calendar'] },
+      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-expenses-list'] },
       {
         type: 'ul',
         items: [
@@ -3519,7 +3519,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '③の源泉徴収税は、確定申告で精算する所得税の前払いなので、経費ではなく「事業主貸」にします。⑫の国民年金・国保・住民税・所得税も個人の支払いなので経費にはならず、事業主貸です（年金・国保は確定申告で社会保険料控除になります）。',
       },
-      { type: 'links', items: ['freelance-expenses-list', 'freelance-withholding-tax', 'freelance-tax-prep'] },
+      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
       { type: 'h2', text: '会計ソフトと Excel、どちらでつけるか' },
       {
         type: 'table',
@@ -3637,7 +3637,7 @@ export const ARTICLES: Article[] = [
           '所得の証明が必要な人: 賃貸の審査、保育園の申し込み、ローンなどで「所得証明」「課税証明」を求められたとき、申告していないと所得が証明できない',
         ],
       },
-      { type: 'links', items: ['freelance-withholding-tax', 'freelance-etax-how-to', 'freelance-tax-prep'] },
+      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-withholding-tax', 'freelance-etax-how-to'] },
       { type: 'h2', text: '確定申告しない場合も「住民税の申告」は必要' },
       {
         type: 'p',
