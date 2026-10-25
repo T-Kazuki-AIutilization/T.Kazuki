@@ -2458,6 +2458,13 @@ export const ARTICLES: Article[] = [
       { type: 'links', items: ['freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       {
         type: 'cta',
+        title: 'iDeCo・小規模企業共済でいくら節税できるか計算する（無料ツール）',
+        text: '売上・経費と掛金を入れるだけで、下がる所得税・住民税を計算します。年末の前納を決める前に。',
+        href: '/tools/kyosai',
+        label: '節税額シミュレーターを開く',
+      },
+      {
+        type: 'cta',
         title: '今年の手取りと税額を今すぐ試算（無料・登録不要）',
         text: '売上と経費を入れるだけで、所得税・住民税・国保・年金・事業税・消費税と手取りを概算します。',
         href: '/tools/takehome',
