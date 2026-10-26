@@ -234,7 +234,7 @@ export default function LandingPage() {
             </Link>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
-            登録せずに試すなら <Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール</Link>・<Link href="/tools/takehome" className="text-primary hover:underline">手取り計算</Link>（無料・登録不要）
+            登録せずに見るなら <Link href="/demo" className="font-medium text-primary hover:underline">デモ画面（サンプルデータ）</Link>／<Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール</Link>・<Link href="/tools/takehome" className="text-primary hover:underline">手取り計算</Link>（無料・登録不要）
           </p>
           <p className="mt-4 text-sm text-muted-foreground">
             Freeプランはずっと無料 · クレジットカード登録不要 · いつでもキャンセル可
