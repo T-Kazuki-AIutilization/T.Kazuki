@@ -93,6 +93,7 @@ export default function KansanPage({ params }: { params: { amount: string } }) {
           </table>
         </div>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">ここで比べているのは「その年の手取り」だけです。会社員の有給休暇・賞与・退職金・厚生年金の上乗せ・会社負担の福利厚生まで含めて同等にしたい場合は、さらに 1〜2 割ほど上乗せした売上を目標にするのが無難です。</p>
+        <p className="mt-2 text-sm"><Link href={`/tools/takehome/${a}`} className="text-primary hover:underline">逆に、フリーランスの売上が{label}だと手取りはいくら？（会社員の年収{label}との比較つき） →</Link></p>
 
         <div className="mt-10 rounded-xl border border-primary/30 bg-primary/5 p-5 text-sm">
           <p className="font-semibold">自分の条件で計算する</p>
