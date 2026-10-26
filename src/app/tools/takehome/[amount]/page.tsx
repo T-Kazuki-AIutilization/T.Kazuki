@@ -36,7 +36,7 @@ export function generateMetadata({ params }: { params: { amount: string } }): Me
   const a = Number(params.amount)
   if (!AMOUNTS.includes(a)) return {}
   const { r, rate } = figures(a)
-  const title = `売上${a.toLocaleString('ja-JP')}万円のフリーランス・個人事業主の手取りは約${man(r.takeHome)}万円【2026年分・内訳つき】| FreelanceOS`
+  const title = `個人事業主・フリーランスの年収（売上）${a.toLocaleString('ja-JP')}万円の手取りは約${man(r.takeHome)}万円【2026年分・内訳つき】| FreelanceOS`
   const description = `売上 ${a.toLocaleString('ja-JP')} 万円のフリーランス・個人事業主の手取りは約 ${man(r.takeHome)} 万円（月 約 ${man(r.takeHome / 12)} 万円、手取り率 ${rate}%）。所得税・住民税・国民健康保険・国民年金の内訳、経費率別の手取り、インボイス登録した場合の消費税まで 2026 年分の制度で試算。`
   return {
     title,
@@ -63,7 +63,8 @@ export default function TakeHomeAmountPage({ params }: { params: { amount: strin
     <SiteShell>
       <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
         <nav className="text-xs text-muted-foreground"><Link href="/tools" className="hover:underline">無料ツール</Link> › <Link href="/tools/takehome" className="hover:underline">手取り計算</Link> › 売上{label}</nav>
-        <h1 className="mt-3 text-2xl font-bold sm:text-3xl">売上{label}のフリーランス・個人事業主の手取りはいくら？【2026年分】</h1>
+        <h1 className="mt-3 text-2xl font-bold sm:text-3xl">年収（売上）{label}のフリーランス・個人事業主の手取りはいくら？【2026年分】</h1>
+        <p className="mt-2 text-xs text-muted-foreground">個人事業主の「年収」は、一般に 1 年間の売上（税抜）を指すことが多いため、ここでは売上 {label}として計算しています。経費を引いた後の所得が {label}の場合は、売上がもっと大きくなります。</p>
         <div className="mt-6 rounded-xl border bg-white p-5">
           <p className="text-sm text-muted-foreground">売上 {label}・経費率 20%・青色申告・独身の場合の手取り（年間）</p>
           <p className="mt-1 text-4xl font-bold">約 {man(r.takeHome)} 万円</p>

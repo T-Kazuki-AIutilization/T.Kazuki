@@ -36,7 +36,7 @@ export function generateMetadata({ params }: { params: { amount: string } }): Me
   const a = Number(params.amount)
   if (!AMOUNTS.includes(a)) return {}
   const { r } = figures(a)
-  const title = `売上${a.toLocaleString('ja-JP')}万円の個人事業主・フリーランスのふるさと納税の上限は約${man(r.limit)}万円【2026年分】| FreelanceOS`
+  const title = `年収（売上）${a.toLocaleString('ja-JP')}万円の個人事業主・フリーランスのふるさと納税の上限は約${man(r.limit)}万円【2026年分】| FreelanceOS`
   const description = `売上 ${a.toLocaleString('ja-JP')} 万円の個人事業主・フリーランスがふるさと納税で自己負担 2,000 円に収まる寄附額の上限は約 ${man(r.limit)} 万円（経費率 20%・青色申告 65 万円・独身）。経費率別、iDeCo・小規模企業共済に入っている場合の上限と、確定申告での注意点。`
   return {
     title,
@@ -63,7 +63,7 @@ export default function FurusatoAmountPage({ params }: { params: { amount: strin
     <SiteShell>
       <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
         <nav className="text-xs text-muted-foreground"><Link href="/tools" className="hover:underline">無料ツール</Link> › <Link href="/tools/furusato" className="hover:underline">ふるさと納税の上限額</Link> › 売上{label}</nav>
-        <h1 className="mt-3 text-2xl font-bold sm:text-3xl">売上{label}の個人事業主・フリーランスのふるさと納税の上限は？【2026年分】</h1>
+        <h1 className="mt-3 text-2xl font-bold sm:text-3xl">年収（売上）{label}の個人事業主・フリーランスのふるさと納税の上限は？【2026年分】</h1>
         <div className="mt-6 rounded-xl border bg-white p-5">
           <p className="text-sm text-muted-foreground">売上 {label}・経費率 20%・青色申告 65 万円・独身の場合</p>
           <p className="mt-1 text-4xl font-bold">約 {yen(r.limit)} 円</p>
