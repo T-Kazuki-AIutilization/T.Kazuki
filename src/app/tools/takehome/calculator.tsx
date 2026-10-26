@@ -99,7 +99,7 @@ export function TakeHomeCalculator() {
           <p className="mt-1 text-muted-foreground">Excel 版「手取り計算シミュレーター」はパラメータを編集でき、売上別の早見表と納税資金の月割りも出ます。</p>
           <div className="mt-3 flex flex-wrap gap-3">
             <a href="https://freelancekt.booth.pm/items/8986475" target="_blank" rel="noopener noreferrer" className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">Excel 版を見る（680円）↗</a>
-            <Link href="/signup" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">FreelanceOS で売上と入金を管理（無料）</Link>
+            <Link href="/signup" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">FreelanceOS で売上と入金を管理（無料）</Link> <Link href="/demo" className="ml-3 inline-flex h-9 items-center text-sm text-primary hover:underline">デモ画面を見る</Link>
           </div>
         </div>
       </section>

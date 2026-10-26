@@ -29,7 +29,7 @@ export default function ToolsIndexPage() {
         <div className="mt-12 rounded-xl border border-primary/30 bg-primary/5 p-6">
           <p className="font-semibold">案件・売上・入金まで管理するなら FreelanceOS</p>
           <p className="mt-1 text-sm text-muted-foreground">案件から請求書を作成して「請求済み」で入金管理に登録。未入金をダッシュボードで確認できます。無料プランあり。</p>
-          <Link href="/signup" className="mt-4 inline-flex h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">無料ではじめる</Link>
+          <Link href="/signup" className="mt-4 inline-flex h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">無料ではじめる</Link> <Link href="/demo" className="ml-3 inline-flex h-9 items-center text-sm text-primary hover:underline">デモ画面を見る</Link>
         </div>
       </main>
     </SiteShell>

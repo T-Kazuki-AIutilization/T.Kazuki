@@ -51,7 +51,7 @@ export default function InvoiceToolPage() {
           <nav className="flex items-center gap-3 text-sm">
             <Link href="/blog/freelance-invoice-how-to" className="text-muted-foreground hover:text-foreground">請求書の書き方</Link>
             <Link href="/templates" className="text-muted-foreground hover:text-foreground">Excel テンプレート</Link>
-            <Link href="/signup" className="inline-flex h-8 items-center rounded-md bg-primary px-3 font-medium text-white hover:bg-primary/90">無料登録して案件と連携</Link>
+            <Link href="/signup" className="inline-flex h-8 items-center rounded-md bg-primary px-3 font-medium text-white hover:bg-primary/90">無料登録して案件と連携</Link> <Link href="/demo" className="ml-3 inline-flex h-9 items-center text-sm text-primary hover:underline">デモ画面を見る</Link>
           </nav>
         </div>
       </header>

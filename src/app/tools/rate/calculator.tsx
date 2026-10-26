@@ -86,7 +86,7 @@ export function RateCalculator() {
           <div className="mt-3 flex flex-wrap gap-3">
             <a href="https://freelancekt.booth.pm/items/8986468" target="_blank" rel="noopener noreferrer" className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">時間単価計算＋見積作成シート（780円）↗</a>
             <Link href="/tools/invoice" className="inline-flex h-9 items-center rounded-md border px-4 text-sm font-medium hover:bg-slate-50">見積書を作る（無料ツール）</Link>
-            <Link href="/signup" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">FreelanceOS で案件を管理（無料）</Link>
+            <Link href="/signup" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">FreelanceOS で案件を管理（無料）</Link> <Link href="/demo" className="ml-3 inline-flex h-9 items-center text-sm text-primary hover:underline">デモ画面を見る</Link>
           </div>
         </div>
       </section>

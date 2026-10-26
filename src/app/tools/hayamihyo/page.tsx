@@ -154,7 +154,7 @@ export default function HayamihyoPage() {
         <div className="mt-8 rounded-xl border border-primary/30 bg-primary/5 p-5 text-sm">
           <p className="font-semibold">売上と入金をまとめて管理するなら FreelanceOS</p>
           <p className="mt-1 text-muted-foreground">案件ごとの売上・請求・入金をダッシュボードで集計。今年の売上の見込みがいつでもわかるので、納税資金やふるさと納税の計算にも使えます。無料プランあり。</p>
-          <Link href="/signup" className="mt-3 inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">無料ではじめる</Link>
+          <Link href="/signup" className="mt-3 inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">無料ではじめる</Link> <Link href="/demo" className="ml-3 inline-flex h-9 items-center text-sm text-primary hover:underline">デモ画面を見る</Link>
         </div>
         <MoreTools current="/tools/hayamihyo" />
       </main>

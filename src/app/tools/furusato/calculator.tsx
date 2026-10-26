@@ -69,7 +69,7 @@ export function FurusatoCalculator() {
           <p className="font-semibold">年末に売上の着地を確認してから寄附する</p>
           <p className="mt-1 text-muted-foreground">FreelanceOS なら案件ごとの売上と入金をダッシュボードで集計できます。12 月の時点の年間売上の見込みがすぐわかります。</p>
           <div className="mt-3 flex flex-wrap gap-3">
-            <Link href="/signup" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">FreelanceOS を無料ではじめる</Link>
+            <Link href="/signup" className="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary/90">FreelanceOS を無料ではじめる</Link> <Link href="/demo" className="ml-3 inline-flex h-9 items-center text-sm text-primary hover:underline">デモ画面を見る</Link>
             <Link href="/tools/takehome" className="inline-flex h-9 items-center rounded-md border border-primary bg-white px-4 text-sm font-medium text-primary hover:bg-primary hover:text-white">手取りも計算する</Link>
           </div>
         </div>
