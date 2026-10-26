@@ -7,6 +7,7 @@ import { MoreTools } from '@/components/marketing/more-tools'
 import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { calc, furusatoLimit, TAKEHOME_AMOUNTS as AMOUNTS, type Inputs } from '@/lib/takehome'
+import { employeeTakeHome, KANSAN_SALARIES } from '@/lib/fukugyo'
 
 // 売上別の手取りページ。数値はツールと同じ計算式でビルド時に算出する。
 export const dynamicParams = false
@@ -25,7 +26,8 @@ function figures(amount: number) {
   const ideco = calc({ ...base(sales), other: 816000 })
   const idecoSaving = r.taxes + r.social - (ideco.taxes + ideco.social)
   const furusato = furusatoLimit({ sales, expenses: Math.round(sales * 0.2), aoiro: 650000, other: 0, nhiRate: 0.1 }).limit
-  return { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving, furusato }
+  const emp = employeeTakeHome(sales)
+  return { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving, furusato, emp }
 }
 
 export function generateStaticParams() {
@@ -49,7 +51,8 @@ export function generateMetadata({ params }: { params: { amount: string } }): Me
 export default function TakeHomeAmountPage({ params }: { params: { amount: string } }) {
   const a = Number(params.amount)
   if (!AMOUNTS.includes(a)) notFound()
-  const { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving, furusato } = figures(a)
+  const { sales, r, rate, byExpense, biz, ct2, ct3, idecoSaving, furusato, emp } = figures(a)
+  const gap = emp.takeHome - r.takeHome
   const label = `${a.toLocaleString('ja-JP')}万円`
   const idx = AMOUNTS.indexOf(a)
   const prev = AMOUNTS[idx - 1]
@@ -57,6 +60,7 @@ export default function TakeHomeAmountPage({ params }: { params: { amount: strin
   const faqs = [
     { q: `売上${label}のフリーランスの手取りは月いくら？`, a: `経費が売上の 20%、青色申告特別控除 65 万円、独身の場合、年間の手取りは約 ${man(r.takeHome)} 万円で、月あたり約 ${man(r.takeHome / 12)} 万円です。住民税と国民健康保険は前年の所得で決まるため、独立 1 年目は会社員時代の所得で計算され、この目安と異なります。` },
     { q: `売上${label}だと税金と保険料はいくら？`, a: `所得税（復興特別所得税込み）約 ${man(r.incomeTax)} 万円、住民税 約 ${man(r.residentTax)} 万円、国民健康保険 約 ${man(r.nhi)} 万円、国民年金 約 ${man(r.pension)} 万円で、合計 約 ${man(r.taxes + r.social)} 万円です（経費率 20%、国保は所得割 10%＋均等割 6 万円で概算）。` },
+    { q: `会社員の年収${label}と比べて手取りは多い？少ない？`, a: `会社員の年収（額面）${label}の手取りは約 ${man(emp.takeHome)} 万円（社会保険料を年収の 15% で概算、独身）です。売上${label}のフリーランス（経費率 20%）の約 ${man(r.takeHome)} 万円と比べると、${gap >= 0 ? `会社員のほうが約 ${man(gap)} 万円多く` : `フリーランスのほうが約 ${man(-gap)} 万円多く`}なります。フリーランスは経費を自分で払い、国保・国民年金を全額負担する一方、青色申告特別控除などで税金を抑えられます。将来の厚生年金・退職金・有給がない点も考えると、同じ金額なら会社員のほうが有利なことが多いです。` },
     { q: '手取りを増やすには？', a: `iDeCo の掛金を自営業の上限（年 81.6 万円）まで払うと、所得税と住民税が合わせて約 ${man(idecoSaving)} 万円下がります（国保の保険料は変わりません。掛金は老後資金として積み立てられます）。ほかに、青色申告特別控除 65 万円を受ける（e-Tax と複式簿記）、経費の計上漏れをなくす、小規模企業共済に入る、といった方法があります。` },
   ]
   return (
@@ -104,6 +108,24 @@ export default function TakeHomeAmountPage({ params }: { params: { amount: strin
             </tbody>
           </table>
         </div>
+
+        <h2 className="mt-10 text-xl font-bold">会社員の年収{label}と比べると</h2>
+        <div className="overflow-x-auto">
+          <table className="mt-3 w-full text-sm">
+            <thead><tr className="border-b text-left text-muted-foreground"><th className="py-2"></th><th className="text-right">フリーランス（売上{label}）</th><th className="text-right">会社員（年収{label}）</th></tr></thead>
+            <tbody>
+              <tr className="border-b border-slate-100"><td className="py-1.5">経費</td><td className="text-right tabular-nums">{man(sales * 0.2)} 万円</td><td className="text-right tabular-nums">―</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-1.5">社会保険料</td><td className="text-right tabular-nums">{man(r.social)} 万円</td><td className="text-right tabular-nums">{man(emp.social)} 万円</td></tr>
+              <tr className="border-b border-slate-100"><td className="py-1.5">所得税＋住民税</td><td className="text-right tabular-nums">{man(r.incomeTax + r.residentTax)} 万円</td><td className="text-right tabular-nums">{man(emp.incomeTax + emp.residentTax)} 万円</td></tr>
+              <tr className="border-b border-slate-100 font-semibold"><td className="py-1.5">手取り</td><td className="text-right tabular-nums">{man(r.takeHome)} 万円</td><td className="text-right tabular-nums">{man(emp.takeHome)} 万円</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-2 text-sm leading-relaxed">同じ「年収{label}」でも、{gap >= 0 ? <>会社員のほうが手取りが約 {man(gap)} 万円多くなります。</> : <>この条件ではフリーランスのほうが手取りが約 {man(-gap)} 万円多くなります。</>}フリーランスは仕事の経費を自分で払い、国民健康保険と国民年金を全額負担します。一方、会社員の厚生年金・健康保険は会社も同額を負担しており、将来の年金は会社員のほうが厚くなります。</p>
+        {KANSAN_SALARIES.includes(a) && (
+          <p className="mt-2 text-sm"><Link href={`/tools/kansan/${a}`} className="text-primary hover:underline">会社員の年収{label}と同じ手取りを得るのに必要な売上はいくら？ →</Link></p>
+        )}
+        <p className="mt-1 text-xs text-muted-foreground">会社員は独身・扶養なし、社会保険料を年収の 15% で概算（給与所得控除は 2026 年分）。退職金・賞与の扱いや会社の福利厚生は含みません。</p>
 
         <h2 className="mt-10 text-xl font-bold">条件によって変わるもの</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed">
