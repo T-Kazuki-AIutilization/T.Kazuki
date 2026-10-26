@@ -66,6 +66,18 @@ export default function TakeHomeToolPage() {
             ))}
           </ul>
         </section>
+        <section className="mt-12 text-sm leading-relaxed">
+          <h2 className="text-base font-semibold">フリーランスの手取りの計算方法（売上 600 万円の例）</h2>
+          <p className="mt-2 text-muted-foreground">経費 120 万円、青色申告特別控除 65 万円、独身・扶養なしの場合です。このツールは同じ手順で計算しています。</p>
+          <ol className="mt-3 list-decimal space-y-2 pl-5">
+            <li><span className="font-medium">事業所得</span>: 売上 600 万円 − 経費 120 万円 − 青色申告特別控除 65 万円 ＝ 415 万円</li>
+            <li><span className="font-medium">社会保険料</span>: 国民年金 21.5 万円（月 17,920 円 × 12）＋ 国民健康保険 43.2 万円（（415 万円 − 43 万円）× 10% ＋ 均等割 6 万円）＝ 64.7 万円</li>
+            <li><span className="font-medium">所得税</span>: 課税所得 ＝ 415 万円 − 64.7 万円 − 基礎控除 68 万円 ≒ 282.2 万円 → 税率 10%（控除額 97,500 円）＋ 復興特別所得税 2.1% で 約 18.9 万円</li>
+            <li><span className="font-medium">住民税</span>: 課税所得 ＝ 415 万円 − 64.7 万円 − 基礎控除 43 万円 ≒ 307.2 万円 → 10% − 調整控除 ＋ 均等割 5,000 円 で 約 31 万円（翌年 6 月から納付）</li>
+            <li><span className="font-medium">手取り</span>: 600 万円 − 経費 120 万円 − 社会保険料 64.7 万円 − 所得税 18.9 万円 − 住民税 31 万円 ≒ <span className="font-semibold">365.5 万円</span>（月 約 30.5 万円）</li>
+          </ol>
+          <p className="mt-3 text-muted-foreground">青色申告特別控除は経費ではないので、手取りの計算では売上から引きません（税金と国保を減らす効果だけがあります）。インボイス登録している場合は、さらに消費税の納税が加わります。</p>
+        </section>
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">計算の前提</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
