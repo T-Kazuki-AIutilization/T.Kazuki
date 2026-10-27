@@ -795,7 +795,7 @@ export const ARTICLES: Article[] = [
       { type: 'ul', items: ['請求日（発生主義: 入金日ではなく請求日で計上）', '取引先', '内容', '金額', '入金日', '源泉徴収額（あれば）'] },
       { type: 'h3', text: '経費帳に書く項目' },
       { type: 'ul', items: ['日付', '内容と支払先', '勘定科目（通信費・消耗品費など）', '金額', '支払方法', '按分率（私用と兼用のもの）', '証憑の有無'] },
-      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -2163,7 +2163,7 @@ export const ARTICLES: Article[] = [
         text: '青色申告特別控除の 65 万円は、複式簿記で帳簿をつけたうえで e-Tax で提出する（または優良な電子帳簿保存をする）ことが条件です。書面提出だと 55 万円になるので、所得税・住民税・国保を合わせて数万円の差になります。',
       },
       { type: 'h2', text: '準備するもの' },
-      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-expenses-list'] },
+      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
       {
         type: 'ul',
         items: [

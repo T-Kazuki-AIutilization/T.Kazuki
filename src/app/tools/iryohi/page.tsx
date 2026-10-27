@@ -79,6 +79,7 @@ export default function IryohiToolPage() {
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/tools/kakutei-checklist" className="text-primary hover:underline">確定申告の準備チェックリスト（医療費の明細も）</Link></li>
             <li><Link href="/blog/freelance-tax-prep" className="text-primary hover:underline">フリーランスの確定申告の準備</Link></li>
+            <li><Link href="/blog/freelance-shotoku-koujo-ichiran" className="text-primary hover:underline">フリーランスが使える所得控除一覧（節税額の目安と証明書）</Link></li>
             <li><Link href="/tools/kyosai" className="text-primary hover:underline">iDeCo・小規模企業共済の節税額シミュレーター</Link></li>
             <li><Link href="/tools/furusato" className="text-primary hover:underline">ふるさと納税の上限額シミュレーター</Link></li>
           </ul>

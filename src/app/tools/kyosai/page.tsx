@@ -38,6 +38,7 @@ export default function KyosaiToolPage() {
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/freelance-year-end-checklist" className="text-primary hover:underline">フリーランスが年内にやることチェックリスト（共済の前納など）</Link></li>
             <li><Link href="/tools/furusato" className="text-primary hover:underline">ふるさと納税の上限額（掛金を入れると上限が変わる）</Link></li>
+            <li><Link href="/blog/freelance-shotoku-koujo-ichiran" className="text-primary hover:underline">フリーランスが使える所得控除一覧（節税額の目安と証明書）</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター</Link></li>
           </ul>
           <ToolFaq items={FAQS} />
