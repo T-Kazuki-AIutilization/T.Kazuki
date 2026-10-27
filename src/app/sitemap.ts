@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/tools/anbun`, lastModified: new Date('2026-10-24'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/kakutei-checklist`, lastModified: new Date('2026-10-25'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/kyosai`, lastModified: new Date('2026-10-26'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/tools/iryohi`, lastModified: new Date('2026-10-27'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/furusato`, lastModified: new Date('2026-10-21'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/signup`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/terms`, changeFrequency: 'yearly', priority: 0.2 },
