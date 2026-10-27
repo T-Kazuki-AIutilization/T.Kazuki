@@ -48,6 +48,7 @@ export default function FurusatoToolPage() {
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/freelance-furusato-nozei" className="text-primary hover:underline">フリーランス・個人事業主のふるさと納税（上限額の計算方法と確定申告の書き方）</Link></li>
+            <li><Link href="/blog/side-job-furusato-nozei" className="text-primary hover:underline">副業がある会社員のふるさと納税（上限額とワンストップ特例の注意点）</Link></li>
             <li><Link href="/blog/freelance-year-end-checklist" className="text-primary hover:underline">フリーランスが年内にやることチェックリスト</Link></li>
             <li><Link href="/blog/freelance-tax-prep" className="text-primary hover:underline">確定申告の準備（必要書類と控除）</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター（無料）</Link></li>

@@ -41,6 +41,19 @@ export function sideJobTax(salary: number, side: number) {
   return { incomeTax, residentTax, total, keep: side - total, rate: b.rate, rule20 }
 }
 
+/**
+ * 副業がある会社員のふるさと納税の上限額（目安・独身）。
+ * 住民税所得割 × 20% ÷（90% − 所得税率 × 1.021）＋ 2,000 円。税率は住民税の課税所得 − 人的控除差 5 万円で判定。
+ */
+export function furusatoLimitEmployee(salary: number, side: number) {
+  const social = Math.round(salary * SOCIAL_RATE)
+  const taxableRes = Math.max(0, floor(kyuyoShotoku(salary) + Math.max(0, side) - social - 430000, 1000))
+  const shotokuwari = Math.max(0, taxableRes * 0.1 - 2500)
+  const base = Math.max(0, taxableRes - 50000)
+  const rate = base > 0 ? (IT_TABLE.find(([lo]) => base >= lo) ?? IT_TABLE[IT_TABLE.length - 1])[1] : 0
+  return shotokuwari > 0 ? floor((shotokuwari * 0.2) / (0.9 - rate * 1.021) + 2000, 1000) : 0
+}
+
 export const FUKUGYO_SALARIES = [300, 400, 500, 600, 700, 800, 1000]
 export const FUKUGYO_SIDES = [20, 50, 100, 200]
 

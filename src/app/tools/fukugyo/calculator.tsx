@@ -2,7 +2,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { sideJobTax } from '@/lib/fukugyo'
+import { furusatoLimitEmployee, sideJobTax } from '@/lib/fukugyo'
+import Link from 'next/link'
 
 const yen = (n: number) => new Intl.NumberFormat('ja-JP').format(n)
 const KEY = 'fos.tool.fukugyo'
@@ -15,6 +16,7 @@ export function FukugyoCalculator() {
   useEffect(() => { try { localStorage.setItem(KEY, JSON.stringify(v)) } catch {} }, [v])
   const side = Math.max(0, v.sales - v.expenses)
   const r = useMemo(() => sideJobTax(v.salary, side), [v.salary, side])
+  const furusato = useMemo(() => ({ before: furusatoLimitEmployee(v.salary, 0), after: furusatoLimitEmployee(v.salary, side) }), [v.salary, side])
   const num = (k: keyof In) => (e: React.ChangeEvent<HTMLInputElement>) => setV(s => ({ ...s, [k]: Number(e.target.value.replace(/[^\d]/g, '')) || 0 }))
   return (
     <div className="grid gap-6 lg:grid-cols-[360px_1fr]">
@@ -41,6 +43,7 @@ export function FukugyoCalculator() {
           </table>
           {r.rule20 && side > 0 && <p className="mt-3 rounded bg-amber-50 p-2 text-xs">副業の所得が 20 万円以下なので、所得税の確定申告は不要です（所得税の増加は 0 として計算）。住民税の申告は必要です。</p>}
           {!r.rule20 && <p className="mt-3 text-xs text-muted-foreground">副業の所得が 20 万円を超えるため、確定申告が必要です。所得税の税率（限界税率）は {Math.round(r.rate * 100)}% です。</p>}
+          <p className="mt-2 text-xs text-muted-foreground">ふるさと納税の上限額（目安）: 副業なし ¥{yen(furusato.before)} → 副業あり ¥{yen(furusato.after)}。副業の申告をするとワンストップ特例は無効になるので、申告書に寄附金控除を書いてください（<Link href="/blog/side-job-furusato-nozei" className="text-primary hover:underline">詳しく</Link>）。</p>
           <p className="mt-2 text-xs text-muted-foreground">会社の社会保険料（健康保険・厚生年金）は副業の所得では変わりません。会社員の社会保険料は年収の 15% で概算。扶養控除・生命保険料控除・iDeCo などは含みません。</p>
         </div>
       </section>

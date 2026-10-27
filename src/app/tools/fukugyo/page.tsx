@@ -64,6 +64,7 @@ export default function FukugyoToolPage() {
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/side-job-tax-return-200k" className="text-primary hover:underline">副業の確定申告は「20万円以下なら不要」は本当？</Link></li>
             <li><Link href="/blog/side-job-juminzei-shinkoku" className="text-primary hover:underline">副業の住民税はいくら増える？申告のやり方と「自分で納付」の選び方</Link></li>
+            <li><Link href="/blog/side-job-furusato-nozei" className="text-primary hover:underline">副業がある会社員のふるさと納税（上限額とワンストップ特例の注意点）</Link></li>
             <li><Link href="/blog/freelance-nenmatsu-chosei" className="text-primary hover:underline">年末調整と確定申告の関係（会社員と兼業の場合）</Link></li>
             <li><Link href="/blog/freelance-expenses-list" className="text-primary hover:underline">経費にできるものの一覧</Link></li>
             <li><Link href="/tools/invoice" className="text-primary hover:underline">副業の請求書を作る（無料ツール）</Link></li>

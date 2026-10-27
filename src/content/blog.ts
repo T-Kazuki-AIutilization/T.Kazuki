@@ -3152,7 +3152,7 @@ export const ARTICLES: Article[] = [
           '赤字の年や所得が少ない年は、住民税の所得割がほとんどなく、上限も小さい（所得割がなければ寄附はほぼ全額自己負担）',
         ],
       },
-      { type: 'links', items: ['freelance-year-end-checklist', 'freelance-tax-prep', 'freelance-take-home-pay'] },
+      { type: 'links', items: ['side-job-furusato-nozei', 'freelance-year-end-checklist', 'freelance-tax-prep', 'freelance-take-home-pay'] },
       { type: 'h2', text: '確定申告での書き方' },
       {
         type: 'ol',
@@ -4191,7 +4191,7 @@ export const ARTICLES: Article[] = [
           '住民税は翌年 6 月から。副業の入金のたびに 1〜2 割を取り分けておく',
         ],
       },
-      { type: 'links', items: ['side-job-tax-return-200k', 'freelance-juminzei-first-year', 'freelance-expenses-list', 'freelance-kakutei-shinkoku-ikurakara'] },
+      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-furusato-nozei', 'freelance-juminzei-first-year', 'freelance-expenses-list'] },
       {
         type: 'cta',
         title: '副業の売上と経費を記録する（確定申告準備キット・Excel）',
@@ -4203,6 +4203,130 @@ export const ARTICLES: Article[] = [
       {
         type: 'note',
         text: '本記事は 2026 年 10 月時点の一般的な取り扱いに基づく説明です。住民税の申告書の様式や普通徴収の扱いは自治体によって異なるため、詳しくはお住まいの市区町村の案内をご確認ください。',
+      },
+    ],
+  },
+  {
+    slug: 'side-job-furusato-nozei',
+    title: '副業がある会社員のふるさと納税｜上限額の目安と、ワンストップ特例が無効になる条件（20万円以下の人の選び方）【2026年分】',
+    description:
+      '副業の所得がある会社員は、ふるさと納税の上限が増える一方で、確定申告や住民税の申告をするとワンストップ特例が無効になります。年収×副業の所得別の上限額の目安、副業が 20 万円以下の人が「住民税の申告」と「確定申告」のどちらで寄附金控除を受けるべきかの判断基準をまとめました。',
+    date: '2026-10-27',
+    keywords: ['副業 ふるさと納税 ワンストップ', '副業 ふるさと納税 上限', '副業 20万以下 ふるさと納税', 'ふるさと納税 住民税申告 ワンストップ 無効', '会社員 副業 ふるさと納税 確定申告'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '会社員がふるさと納税をするときは、確定申告がいらない「ワンストップ特例」を使う人が多いはずです。ところが副業の所得があると、確定申告や住民税の申告が必要になり、ワンストップ特例の申請は無効になります。この記事では、副業がある会社員のふるさと納税の上限額の目安と、申告方法の選び方を整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '副業の所得があると、所得が増える分だけふるさと納税の上限額も少し上がる',
+          '副業の所得が 20 万円を超える人は確定申告が必要なので、ワンストップ特例は使えない。確定申告で寄附金控除を受ける',
+          '副業の所得が 20 万円以下でも住民税の申告は必要で、住民税の申告をするとワンストップ特例は無効になる。申告書に寄附金控除を必ず書く',
+          '20 万円以下の人は「住民税の申告だけ」と「確定申告」のどちらでも控除を受けられる。源泉徴収されていなければ、副業の所得と「寄附額 − 2,000 円」の小さいほうが損が少ない（下で説明）',
+        ],
+      },
+      { type: 'h2', text: '副業がある会社員のふるさと納税の上限額（目安）' },
+      {
+        type: 'table',
+        headers: ['年収（給与）', '副業なし', '副業の所得 20 万円', '50 万円', '100 万円'],
+        rows: [
+          ['300 万円', '2.8 万円', '3.2 万円', '4.0 万円', '5.5 万円'],
+          ['400 万円', '4.2 万円', '4.6 万円', '5.7 万円', '6.9 万円'],
+          ['500 万円', '6.1 万円', '6.6 万円', '7.3 万円', '9.8 万円'],
+          ['600 万円', '7.7 万円', '8.2 万円', '10.2 万円', '11.7 万円'],
+          ['700 万円', '10.8 万円', '11.3 万円', '12.2 万円', '13.6 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '独身・扶養なし、社会保険料は年収の 15% として 2026 年分の税制で概算。「副業なし」の列は総務省の目安表と同じ水準です。副業の所得は売上から経費を引いた額で、赤字の場合は上限が上がりません。iDeCo・医療費控除などがあると上限は下がります。上限ぎりぎりではなく、少し余裕を持って寄附してください。',
+      },
+      { type: 'h2', text: 'ワンストップ特例が使えない・無効になるケース' },
+      {
+        type: 'table',
+        headers: ['副業の状況', '必要な申告', 'ワンストップ特例', 'ふるさと納税の控除の受け方'],
+        rows: [
+          ['所得 20 万円超', '確定申告', '使えない（申請していても無効）', '確定申告書に寄附金控除を書く'],
+          ['所得 20 万円以下', '住民税の申告（市区町村へ）', '住民税の申告をすると無効', '住民税の申告書に寄附金控除を書く、または確定申告をする'],
+          ['副業がアルバイト（給与が 2 か所）', '多くの場合は確定申告', '確定申告をするなら使えない', '確定申告書に寄附金控除を書く'],
+          ['副業が赤字・所得なし', '原則なし', '使える（寄附先 5 自治体以内）', 'ワンストップ特例の申請書を 1 月 10 日必着で送る'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '地方税法の規定で、ワンストップ特例を申請した人が確定申告や住民税の申告をすると、特例の申請はなかったものとして扱われます。申告書に寄附金控除を書き忘れると、ふるさと納税の控除がまったく受けられず、実質負担が 2,000 円では済まなくなります。寄附先から届く「寄附金受領証明書」（またはポータルサイトの「寄附金控除に関する証明書」）は申告まで保管しておきましょう。',
+      },
+      { type: 'h2', text: '副業が 20 万円以下の人は、どちらで申告するのが得？' },
+      {
+        type: 'p',
+        text: '副業の所得が 20 万円以下なら、所得税の確定申告は不要で、住民税の申告だけで済みます。この場合、ふるさと納税の控除を受ける方法は 2 つあり、それぞれ失うものが違います。',
+      },
+      {
+        type: 'table',
+        headers: ['', 'A: 住民税の申告だけ', 'B: 確定申告をする'],
+        rows: [
+          ['ふるさと納税の控除', '住民税の分だけ（所得税の分は受けられない）', '所得税・住民税とも全額'],
+          ['副業の所得にかかる所得税', 'かからない（20 万円ルール）', 'かかる（副業の所得 × 所得税の税率）'],
+          ['ワンストップ特例と比べた損', '（寄附額 − 2,000 円）× 所得税の税率', '副業の所得 × 所得税の税率'],
+          ['年収 500 万円・副業の所得 15 万円・寄附 6 万円の例', '約 5,900 円', '約 15,300 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'どちらも「所得税の税率」をかけた額なので、比べるのは「副業の所得」と「寄附額 − 2,000 円」の大小だけです。副業の所得のほうが大きければ A（住民税の申告だけ）、寄附額 − 2,000 円のほうが大きければ B（確定申告）のほうが損が小さくなります。上の例では副業の所得 15 万円 ＞ 寄附 5.8 万円なので、A のほうが約 9,400 円有利です。',
+      },
+      {
+        type: 'note',
+        text: '原稿料・デザイン料などで副業の報酬から源泉徴収されている場合は、確定申告をすると源泉徴収された税金が精算されるため、B の負担はほぼなくなり、B のほうが有利になることが多いです。医療費控除などでどのみち確定申告をする人も B になります。税率は復興特別所得税（2.1%）を含めて計算しています。',
+      },
+      {
+        type: 'cta',
+        title: '副業込みのふるさと納税の上限額を計算する（無料ツール）',
+        text: '会社の年収と副業の売上・経費を入れると、副業で増える税金と、副業なし・副業ありのふるさと納税の上限額の目安を表示します。登録不要。',
+        href: '/tools/fukugyo',
+        label: '副業の税金計算ツールを開く',
+      },
+      { type: 'h2', text: 'スケジュール' },
+      {
+        type: 'ul',
+        items: [
+          '12 月 31 日: その年の控除の対象になる寄附の期限（クレジットカードは決済日、銀行振込は入金日が基準になることが多い）',
+          '1 月 10 日: ワンストップ特例の申請書の提出期限（副業がなく、寄附先が 5 自治体以内の人）',
+          '2 月 16 日〜3 月 15 日: 確定申告の期間（2026 年分は 2027 年 3 月 15 日まで）。住民税の申告も 3 月 15 日まで',
+          '6 月: 控除が反映された住民税の通知が届く。通知書の「寄附金税額控除」の欄で、控除されているかを確認する',
+        ],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: 'ワンストップ特例を申請した後に、副業の申告が必要だと気づいたら？' },
+      {
+        type: 'p',
+        text: '確定申告または住民税の申告で、ふるさと納税の寄附金控除もあわせて申告してください。申告をした時点でワンストップ特例は無効になるため、寄附金受領証明書をもとに、すべての寄附を申告書に記載します。申告期限を過ぎてしまった場合も、確定申告なら更正の請求などで後から直せることがあります。',
+      },
+      { type: 'h3', text: '副業の所得が 20 万円以下なら、住民税の申告をしなくてもいい？' },
+      {
+        type: 'p',
+        text: 'いいえ。20 万円以下で不要になるのは所得税の確定申告だけで、住民税の申告は必要です。住民税の申告をしないままワンストップ特例だけを使う、という方法はとれません。',
+      },
+      { type: 'h3', text: '副業の所得は上限額の計算に入る？' },
+      {
+        type: 'p',
+        text: '入ります。ふるさと納税の上限額は住民税の所得割額をもとに決まり、住民税の所得割には給与と副業の所得の合計がかかるため、副業の所得があると上限額は上がります。20 万円以下で確定申告をしない場合も同じです。',
+      },
+      { type: 'links', items: ['side-job-juminzei-shinkoku', 'side-job-tax-return-200k', 'freelance-furusato-nozei'] },
+      {
+        type: 'cta',
+        title: '副業が本業になったら: フリーランスのふるさと納税の上限額（無料ツール）',
+        text: '個人事業主として確定申告する人向け。売上・経費・青色申告特別控除から、ふるさと納税の上限額の目安を計算します。登録不要。',
+        href: '/tools/furusato',
+        label: 'ふるさと納税の上限額ツールを開く',
+      },
+      {
+        type: 'note',
+        text: '本記事は 2026 年 10 月時点の一般的な取り扱いに基づく説明です。ワンストップ特例の扱いや申告書の様式は、寄附先の自治体・お住まいの市区町村の案内、国税庁・総務省のふるさと納税のページでご確認ください。',
       },
     ],
   },
@@ -4266,7 +4390,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei'],
   },
   {
     id: 'setup',
