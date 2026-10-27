@@ -1,10 +1,11 @@
-import { BOOTH_TAX_URL, BOOTH_TAKEHOME_URL, BOOTH_RATE_URL, BOOTH_CASHFLOW_URL, BOOTH_BUNDLE_URL } from '@/content/blog'
+import { BOOTH_INVOICE_URL, BOOTH_TAX_URL, BOOTH_TAKEHOME_URL, BOOTH_RATE_URL, BOOTH_CASHFLOW_URL, BOOTH_BUNDLE_URL } from '@/content/blog'
 
 // ツールページの「Excel 版」案内（BOOTH の有料テンプレート）。内容は各商品の説明に合わせる。
 const ITEMS = {
   tax: { name: '確定申告準備キット（Excel）', price: '1,280円', href: BOOTH_TAX_URL, text: '準備〜提出までの 37 項目チェックリスト、経費帳・売上帳、勘定科目別の年間集計（青色申告決算書への転記用）、所得税の概算をひとつにまとめた Excel です。' },
   takehome: { name: '手取り計算シミュレーター（Excel）', price: '680円', href: BOOTH_TAKEHOME_URL, text: '国保の料率・均等割、控除額、消費税の特例（2 割・3 割）を自分の条件に合わせて編集でき、売上 300 万〜2,000 万円の早見表も自動で作れる Excel です。' },
   rate: { name: '時間単価計算＋見積作成シート（Excel）', price: '780円', href: BOOTH_RATE_URL, text: '目標年収・経費・稼働時間から必要な時間単価を逆算し、工程ごとの見積作成と案件ごとの実績単価の記録までできる Excel です。' },
+  invoice: { name: '請求書・見積書・納品書テンプレート（Excel）', price: '980円', href: BOOTH_INVOICE_URL, text: '設定シートに事業者情報を入れるだけで 3 帳票に反映。インボイスの記載要件、税率別の消費税、源泉徴収の表示切替に対応し、未入金・期限超過を自動判定する入金管理台帳つきの Excel です。' },
   cashflow: { name: '資金繰り表＋納税積立シート（Excel）', price: '980円', href: BOOTH_CASHFLOW_URL, text: '月ごとの入金予定と経費から 12 か月先までの月末残高と、毎月いくら納税用に取り分けるべきかを計算する Excel です。納税カレンダーつき。' },
 } as const
 

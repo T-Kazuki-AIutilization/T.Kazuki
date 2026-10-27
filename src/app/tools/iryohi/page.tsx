@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
+import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { IRYOHI_COSTS, IRYOHI_SALARIES, medicalDeduction, savingFor } from '@/lib/iryohi'
 import { IryohiCalculator } from './calculator'
@@ -83,6 +84,7 @@ export default function IryohiToolPage() {
             <li><Link href="/tools/kyosai" className="text-primary hover:underline">iDeCo・小規模企業共済の節税額シミュレーター</Link></li>
             <li><Link href="/tools/furusato" className="text-primary hover:underline">ふるさと納税の上限額シミュレーター</Link></li>
           </ul>
+          <ExcelUpsell item="tax" />
           <ToolFaq items={FAQS} />
           <p className="mt-6 text-xs">前提: 2026 年分。所得税は速算表と復興特別所得税 2.1%、基礎控除は合計所得に応じて 95 万〜58 万円、住民税は所得割 10%（調整控除 2,500 円）＋均等割 5,000 円。会社員は給与所得控除（2025 年改正後）と社会保険料（年収の 15%）、フリーランスは国保（所得割 10%＋均等割 6 万円）と国民年金で概算。扶養控除・生命保険料控除などは含みません。最終確認は確定申告書等作成コーナーや税務署でお願いします。</p>
           <MoreTools current="/tools/iryohi" />

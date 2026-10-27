@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { SiteShell } from '@/components/marketing/site-shell'
 import { ToolFaq } from '@/components/marketing/tool-faq'
 import { MoreTools } from '@/components/marketing/more-tools'
+import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { KyosaiCalculator } from './calculator'
 
@@ -41,6 +42,7 @@ export default function KyosaiToolPage() {
             <li><Link href="/blog/freelance-shotoku-koujo-ichiran" className="text-primary hover:underline">フリーランスが使える所得控除一覧（節税額の目安と証明書）</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター</Link></li>
           </ul>
+          <ExcelUpsell item="tax" />
           <ToolFaq items={FAQS} />
           <MoreTools current="/tools/kyosai" />
         </section>
