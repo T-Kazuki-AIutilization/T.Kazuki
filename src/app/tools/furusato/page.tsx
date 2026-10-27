@@ -11,7 +11,7 @@ import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 export const metadata: Metadata = {
   title: 'ふるさと納税の上限額シミュレーター（フリーランス・個人事業主向け・無料）| FreelanceOS',
   description:
-    'フリーランス・個人事業主のふるさと納税の控除上限額（自己負担 2,000 円で済む寄附額）を、売上・経費・青色申告特別控除から概算。国民年金・国保の社会保険料控除も自動で反映。2026 年分対応、登録不要。',
+    'フリーランス・個人事業主のふるさと納税の控除上限額（自己負担 2,000 円で済む寄附額）を、売上・経費・青色申告特別控除から概算。国民年金・国保の社会保険料控除も自動で反映。副業がある会社員（年収＋副業の所得）にも対応。2026 年分、登録不要。',
   alternates: { canonical: '/tools/furusato' },
   openGraph: { title: 'ふるさと納税の上限額シミュレーター（フリーランス向け・無料）| FreelanceOS', description: '売上と経費からふるさと納税の上限額を概算。', type: 'website', locale: 'ja_JP', images: [{ url: '/blog/og/tools-furusato.png', width: 1200, height: 630 }] },
 }
@@ -33,7 +33,7 @@ export default function FurusatoToolPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <div className="mb-8">
           <h1 className="text-2xl font-bold sm:text-3xl">ふるさと納税の上限額シミュレーター（フリーランス向け） <span className="ml-1 align-middle rounded bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">無料・登録不要</span></h1>
-          <p className="mt-2 text-sm text-muted-foreground">会社員向けの早見表は「給与収入」で作られているため、フリーランスにはそのまま使えません。売上・経費・青色申告特別控除から、自己負担 2,000 円で済む寄附額の上限を概算します。国民年金・国民健康保険の社会保険料控除も自動で反映します。</p>
+          <p className="mt-2 text-sm text-muted-foreground">会社員向けの早見表は「給与収入」で作られているため、フリーランスにはそのまま使えません。売上・経費・青色申告特別控除から、自己負担 2,000 円で済む寄附額の上限を概算します。国民年金・国民健康保険の社会保険料控除も自動で反映します。副業がある会社員は「会社員」に切り替えて、年収と副業の所得を入れてください。</p>
         </div>
         <FurusatoCalculator />
         <section className="mt-12 text-sm">
