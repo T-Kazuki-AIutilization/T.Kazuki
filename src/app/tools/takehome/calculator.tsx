@@ -91,7 +91,7 @@ export function TakeHomeCalculator() {
             <p className="mt-3 text-sm">源泉徴収との差額: {r.settle >= 0 ? `納付 ¥${yen(r.settle)}` : `還付 ¥${yen(-r.settle)}`}（確定申告で精算）</p>
           )}
           <p className="mt-3 text-xs text-muted-foreground">
-            所得税の基礎控除は合計所得に応じて 95 万〜58 万円（2026 年分の上乗せ特例を反映）。住民税は所得割 10%＋均等割 5,000 円、国保は（所得 − 43 万円）× 所得割率 ＋ 均等割 6 万円で概算。配偶者・扶養控除、医療費控除、国保の家族分は含みません。
+            所得税の基礎控除は合計所得に応じて 104 万〜62 万円（2026 年度改正後の 2026 年分の額）。住民税は所得割 10%＋均等割 5,000 円、国保は（所得 − 43 万円）× 所得割率 ＋ 均等割 6 万円で概算。配偶者・扶養控除、医療費控除、国保の家族分は含みません。
           </p>
         </div>
         <div className="rounded-xl border border-primary/30 bg-primary/5 p-5 text-sm">

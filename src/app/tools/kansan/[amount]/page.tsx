@@ -118,7 +118,7 @@ export default function KansanPage({ params }: { params: { amount: string } }) {
               <li key={x}><Link href={`/tools/kansan/${x}`} className={`inline-block rounded border px-2 py-1 text-xs ${x === a ? 'border-primary bg-primary/10 font-semibold' : 'hover:bg-slate-50'}`}>年収 {x}万円</Link></li>
             ))}
           </ul>
-          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分、独身・扶養なし。会社員は給与所得控除（2025 年改正後）、社会保険料を年収の 15% で概算。フリーランスは国保を（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円、個人事業税・消費税なし。概算です。</p>
+          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分、独身・扶養なし。会社員は給与所得控除（2026 年分）、社会保険料を年収の 15% で概算。フリーランスは国保を（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円、個人事業税・消費税なし。概算です。</p>
         </section>
         <MoreTools current="/tools/rate" />
       </main>

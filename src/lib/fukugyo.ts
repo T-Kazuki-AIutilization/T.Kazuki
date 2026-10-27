@@ -2,7 +2,7 @@ import { IT_TABLE, BASIC_TABLE } from '@/lib/takehome'
 
 /**
  * 会社員の副業で増える税金の概算（2026 年分）。
- * 給与所得控除は 2025 年改正後（最低 65 万円）、社会保険料は年収の 15% で概算、基礎控除は合計所得に応じた 2026 年分の額。
+ * 給与所得控除は 2026 年度改正後（最低保障額 74 万円 = 本則 69 万円＋2026・2027 年分の特例 5 万円。住民税も 2027 年度分から同じ）、社会保険料は年収の 15% で概算、基礎控除は合計所得に応じた 2026 年分の額。
  * 副業の所得（売上 − 経費）は給与と合算して課税される。会社の社会保険料は副業で変わらない。
  */
 
@@ -10,7 +10,7 @@ const floor = (n: number, unit = 1) => Math.floor(n / unit) * unit
 export const SOCIAL_RATE = 0.15
 
 export function kyuyoShotoku(s: number) {
-  if (s <= 1900000) return Math.max(0, s - 650000)
+  if (s <= 2200000) return Math.max(0, s - 740000)
   if (s <= 3600000) return Math.floor(s * 0.7 - 80000)
   if (s <= 6600000) return Math.floor(s * 0.8 - 440000)
   if (s <= 8500000) return Math.floor(s * 0.9 - 1100000)

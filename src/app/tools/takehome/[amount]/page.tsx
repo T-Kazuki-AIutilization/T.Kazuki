@@ -162,7 +162,7 @@ export default function TakeHomeAmountPage({ params }: { params: { amount: strin
               <li key={x}><Link href={`/tools/takehome/${x}`} className={`inline-block rounded border px-2 py-1 text-xs ${x === a ? 'border-primary bg-primary/10 font-semibold' : 'hover:bg-slate-50'}`}>{x.toLocaleString('ja-JP')}万円</Link></li>
             ))}
           </ul>
-          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分。所得税の基礎控除は合計所得に応じて 95 万〜58 万円（2025 年改正の上乗せ特例）、住民税は所得割 10%＋均等割 5,000 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円。概算のため、実際の税額は確定申告書等作成コーナーや自治体の試算でご確認ください。<Link href="/blog/freelance-take-home-pay" className="text-primary hover:underline">手取りの計算方法の解説はこちら</Link>。</p>
+          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分。所得税の基礎控除は合計所得に応じて 104 万〜62 万円（2026 年度改正後）、住民税は所得割 10%＋均等割 5,000 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円。概算のため、実際の税額は確定申告書等作成コーナーや自治体の試算でご確認ください。<Link href="/blog/freelance-take-home-pay" className="text-primary hover:underline">手取りの計算方法の解説はこちら</Link>。</p>
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '無料ツール', item: `${SITE_URL}/tools` }, { '@type': 'ListItem', position: 2, name: '手取り計算', item: `${SITE_URL}/tools/takehome` }, { '@type': 'ListItem', position: 3, name: `売上${label}`, item: `${SITE_URL}/tools/takehome/${a}` }] }) }} />

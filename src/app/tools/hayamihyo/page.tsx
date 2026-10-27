@@ -150,7 +150,7 @@ export default function HayamihyoPage() {
           </div>
         </section>
 
-        <p className="mt-10 text-xs text-muted-foreground">前提: 2026 年分。所得税の基礎控除は合計所得に応じて 95 万〜58 万円、住民税は所得割 10%＋均等割 5,000 円、手取りの計算では国保を（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円で概算。配偶者・扶養控除、iDeCo などは含みません。実際の税額・保険料は確定申告書等作成コーナーや自治体の試算でご確認ください。</p>
+        <p className="mt-10 text-xs text-muted-foreground">前提: 2026 年分。所得税の基礎控除は合計所得に応じて 104 万〜62 万円（2026 年度改正後）、住民税は所得割 10%＋均等割 5,000 円、手取りの計算では国保を（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円で概算。配偶者・扶養控除、iDeCo などは含みません。実際の税額・保険料は確定申告書等作成コーナーや自治体の試算でご確認ください。</p>
 
         <div className="mt-8 rounded-xl border border-primary/30 bg-primary/5 p-5 text-sm">
           <p className="font-semibold">売上と入金をまとめて管理するなら FreelanceOS</p>
