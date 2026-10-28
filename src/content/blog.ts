@@ -4468,7 +4468,7 @@ export const ARTICLES: Article[] = [
         title: '年収別: 副業で増える税金の早見表',
         items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
       },
-      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-shotoku-koujo-ichiran', 'tokutei-shinzoku-gakusei-freelance'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '住民税も下がる？' },
       {
@@ -4625,7 +4625,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '配偶者の確定申告（翌年 2〜3 月）で所得が見積額と大きくずれ、配偶者控除・配偶者特別控除の額が変わる場合は、会社員側も年末調整のやり直し（翌年 1 月末の源泉徴収票の提出前まで）か、自分の確定申告で直します。見積額を少なく書いたまま放置すると、後から税務署の指摘で追加の納税になることがあります。',
       },
-      { type: 'links', items: ['side-job-nenmatsu-chosei-2026', 'freelance-nenmatsu-chosei', 'freelance-shotoku-koujo-ichiran', 'freelance-kaigyo-todoke', 'freelance-health-insurance-pension'] },
+      { type: 'links', items: ['side-job-nenmatsu-chosei-2026', 'freelance-nenmatsu-chosei', 'freelance-shotoku-koujo-ichiran', 'freelance-kaigyo-todoke', 'freelance-health-insurance-pension', 'tokutei-shinzoku-gakusei-freelance'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '開業届を出すと配偶者控除を受けられなくなる？' },
       {
@@ -4732,7 +4732,7 @@ export const ARTICLES: Article[] = [
         href: '/tools/kyosai',
         label: 'iDeCo・共済の節税額シミュレーターを開く',
       },
-      { type: 'links', items: ['freelance-shotoku-koujo-ichiran', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'freelance-year-end-checklist'] },
+      { type: 'links', items: ['freelance-shotoku-koujo-ichiran', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'freelance-year-end-checklist', 'tokutei-shinzoku-gakusei-freelance'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '扶養親族が 23 歳の誕生日を迎えた年は？' },
       {
@@ -4752,6 +4752,151 @@ export const ARTICLES: Article[] = [
       {
         type: 'note',
         text: '本記事は 2026 年 10 月時点の情報（令和 7・8 年度税制改正）に基づく一般的な説明です。保険料控除申告書の様式と記入方法は、勤務先の案内と国税庁の「年末調整がよくわかるページ」でご確認ください。',
+      },
+    ],
+  },
+  {
+    slug: 'tokutei-shinzoku-gakusei-freelance',
+    title: '大学生の子が業務委託・フリーランスで稼いだら親の扶養は？2026 年分は「売上 − 経費」62 万・85 万・123 万円が区切り（特定親族特別控除）',
+    description:
+      '19〜22 歳の子が業務委託（ライター・デザイン・配達など）で稼いだ場合、親の特定扶養控除・特定親族特別控除は「売上 − 経費」で判定します。アルバイトの年収 136 万・159 万円と違い、給与所得控除がないので早く超えやすい点、2026 年分の控除額の表、親の税金がいくら変わるか、健康保険の扶養（150 万円未満）、年末調整の書類をまとめました。',
+    date: '2026-10-29',
+    keywords: ['特定親族特別控除 業務委託', '大学生 業務委託 扶養', '大学生 フリーランス 扶養 いくらまで', '特定扶養控除 2026 業務委託', '大学生 雑所得 扶養'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '大学生の子どもが、アルバイトではなく業務委託でお金を稼ぐケースが増えています。Web ライター、デザイン、動画編集、プログラミング、フードデリバリーの配達などです。このとき親の扶養（税金の特定扶養控除・特定親族特別控除）の判定は、アルバイトとは数え方が違います。「年収 150 万円までは大丈夫」と思っていると、業務委託ではずっと手前で控除が減ることがあります。この記事では 2026 年分のルールで整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '対象は 2026 年 12 月 31 日時点で 19〜22 歳の子（2004 年 1 月 2 日〜2008 年 1 月 1 日生まれ）',
+          '判定は子の「合計所得金額」。業務委託の所得は「売上 − 経費」で、アルバイトのような給与所得控除（最低 74 万円）はない',
+          '子の所得 62 万円以下は特定扶養控除 63 万円、62 万円超 85 万円以下は特定親族特別控除で同じく 63 万円。そこから段階的に減り、123 万円を超えると 0 円',
+          'アルバイトだけなら年収 159 万円まで満額だが、業務委託だけなら売上 − 経費 85 万円まで',
+          '控除が満額 63 万円から 0 円になると、親の税金は所得税率 10% の人で年約 11 万円、20% の人で約 17 万円増える',
+        ],
+      },
+      { type: 'h2', text: '2026 年分の控除額（子の合計所得金額別）' },
+      {
+        type: 'table',
+        headers: ['子の合計所得金額', '親の控除（所得税）', '親の控除（住民税）', '親の税金が下がる額（所得税率 10% の人）'],
+        rows: [
+          ['62 万円以下', '特定扶養控除 63 万円', '45 万円', '約 10.9 万円'],
+          ['62 万円超 85 万円以下', '特定親族特別控除 63 万円', '45 万円', '約 10.9 万円'],
+          ['85 万円超 90 万円以下', '61 万円', '45 万円', '約 10.7 万円'],
+          ['90 万円超 95 万円以下', '51 万円', '45 万円', '約 9.7 万円'],
+          ['95 万円超 100 万円以下', '41 万円', '41 万円', '約 8.3 万円'],
+          ['100 万円超 105 万円以下', '31 万円', '31 万円', '約 6.3 万円'],
+          ['105 万円超 110 万円以下', '21 万円', '21 万円', '約 4.2 万円'],
+          ['110 万円超 115 万円以下', '11 万円', '11 万円', '約 2.2 万円'],
+          ['115 万円超 120 万円以下', '6 万円', '6 万円', '約 1.2 万円'],
+          ['120 万円超 123 万円以下', '3 万円', '3 万円', '約 0.6 万円'],
+          ['123 万円超', 'なし', 'なし', '0 円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '所得税は 2026 年分の年末調整・確定申告、住民税は 2027 年度分（2026 年の所得で計算）。下がる額は「所得税の控除額 × 10.21%（復興特別所得税込み）＋ 住民税の控除額 × 10%」の目安で、所得税率 5% の人は満額で約 7.7 万円、20% の人は約 17.4 万円です。特定親族特別控除は 2025 年分から始まった制度で、2025 年分は子の所得 58 万円超が対象でした。2026 年分から扶養の基準が 62 万円に上がったのにあわせて区切りも変わっています。',
+      },
+      { type: 'h2', text: '業務委託はアルバイトより早く区切りを超える' },
+      {
+        type: 'p',
+        text: 'アルバイトの給与は、年収から給与所得控除（2026 年分は最低 74 万円）を引いた額が所得になります。業務委託の報酬は事業所得か雑所得で、所得は「売上 − 経費」です。同じ金額を稼いでも、業務委託のほうが所得が大きくなります。',
+      },
+      {
+        type: 'table',
+        headers: ['区切り（子の所得）', 'アルバイトだけの場合（年収）', '業務委託だけの場合（売上 − 経費）'],
+        rows: [
+          ['特定扶養控除（62 万円以下）', '136 万円以下', '62 万円以下'],
+          ['控除 63 万円の満額（85 万円以下）', '159 万円以下', '85 万円以下'],
+          ['控除が 0 円になる（123 万円超）', '197 万円超', '123 万円超'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'たとえば業務委託で売上 150 万円、経費 20 万円の大学生は、所得 130 万円で親の控除は 0 円です。同じ 150 万円をアルバイトで稼いだ場合は所得 76 万円なので、親は 63 万円の控除を満額受けられます。',
+      },
+      { type: 'h3', text: 'アルバイトと業務委託の両方がある場合' },
+      {
+        type: 'p',
+        text: '給与所得（アルバイトの年収 − 74 万円、年収 74 万円以下なら 0 円）と、業務委託の所得（売上 − 経費）を合計します。たとえばアルバイト年収 100 万円（給与所得 26 万円）の子なら、業務委託の所得はあと 59 万円まで（合計 85 万円）が満額の範囲です。',
+      },
+      { type: 'h3', text: '経費を正しく引くと所得が下がる' },
+      {
+        type: 'p',
+        text: '仕事用のパソコンやソフトの利用料、通信費の仕事で使った分、配達の自転車の修理代など、業務委託の仕事に必要な支出は経費になります。領収書や明細を残し、売上と経費を月ごとにまとめておくと、年末に「いま所得がいくらか」がすぐわかります。開業届を出して青色申告（65 万円控除など）をしている場合は、青色申告特別控除を引いた後の額が所得になります。',
+      },
+      {
+        type: 'note',
+        text: '特定の会社に継続して役務を提供する働き方（一部のライター・配達など）は、「家内労働者等の事業所得等の所得計算の特例」で、経費が少なくても最低 69 万円（2026 年分）を経費として計算できる場合があります。該当するかどうかは契約の内容によるため、税務署や国税庁のページで確認してください。',
+      },
+      { type: 'h2', text: '子ども自身の税金と確定申告' },
+      {
+        type: 'ul',
+        items: [
+          '所得税: 2026 年分の基礎控除は合計所得 489 万円以下なら 104 万円。所得が 104 万円以下なら子の所得税はかからない',
+          '報酬から源泉徴収（10.21%）されている場合は、確定申告をすると戻ってくることが多い',
+          'アルバイトの給与（年末調整済み）があり、業務委託の所得が 20 万円を超えて所得税がかかる場合は確定申告が必要。所得の合計が 104 万円以下で所得税がかからなければ申告の義務はないが、住民税の申告が必要になることがある',
+          '住民税は所得税より基準が低く、所得 45 万円前後からかかることがある（勤労学生控除で軽くなる。基準は自治体による）',
+        ],
+      },
+      { type: 'h2', text: '健康保険の扶養は別の基準（150 万円未満）' },
+      {
+        type: 'p',
+        text: '親が会社員で、子が親の健康保険の扶養に入っている場合、2025 年 10 月から 19 歳以上 23 歳未満の子の収入要件は「年間収入 150 万円未満」になりました。税金の扶養とは基準も数え方も別で、業務委託の収入をどう数えるか（売上で見るか、必要経費を引くか）は健康保険組合ごとに違います。青色申告特別控除は引けないのが一般的です。子が業務委託を始めたら、親の勤務先の健康保険組合に確認しておくと安心です。',
+      },
+      {
+        type: 'p',
+        text: '親がフリーランスで国民健康保険に入っている場合、国保には扶養という仕組みがなく、子も世帯の加入者として保険料（均等割など）がかかります。一方、税金の特定扶養控除・特定親族特別控除は、親が会社員でもフリーランスでも同じように受けられます。',
+      },
+      { type: 'h2', text: '親の年末調整・確定申告での書き方' },
+      {
+        type: 'ul',
+        items: [
+          '子の所得が 62 万円以下: 「扶養控除等申告書」に特定扶養親族として記入（年の途中で見込みが変わったら書き直す）',
+          '子の所得が 62 万円超 123 万円以下: 「基礎控除申告書 兼 配偶者控除等申告書 兼 特定親族特別控除申告書…」の特定親族の欄に、子の所得の見積額を記入',
+          '見積額は 12 月までの見込みで書き、実際の額とずれたら翌年 1 月末までに会社に再調整を頼むか、確定申告で直す',
+          '親がフリーランスなら、確定申告書の扶養控除欄または特定親族特別控除欄に記入する',
+          '1 人の子を控除できるのは父母のどちらか 1 人だけ',
+          '親の事業の青色事業専従者として給与を払っている子（白色の事業専従者も）は、どちらの控除の対象にもならない',
+        ],
+      },
+      {
+        type: 'cta',
+        title: '業務委託の売上と経費を、年の途中で把握する（無料）',
+        text: 'FreelanceOS は売上・経費・入金をまとめて記録し、年間の所得の目安をいつでも確認できるフリーランス向けの業務管理ツールです。大学生の業務委託にも使えます。無料プランあり。',
+        href: '/signup',
+        label: '無料で始める',
+        secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
+      },
+      { type: 'links', items: ['freelance-haigusha-koujo', 'side-job-nenmatsu-chosei-2026', 'side-job-tax-return-200k', 'freelance-kakutei-shinkoku-ikurakara'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '子の業務委託の収入が 103 万円や 130 万円を超えたら、扶養から外れる？' },
+      {
+        type: 'p',
+        text: '税金は収入（売上）ではなく所得（売上 − 経費）で判定します。2026 年分は所得 85 万円までなら親の控除は満額の 63 万円、123 万円までは段階的に減りながら控除が残ります。「103 万円」はかつてのアルバイト（給与）の目安で、業務委託には当てはまりません。健康保険の扶養は別の基準（19〜22 歳は年間収入 150 万円未満）です。',
+      },
+      { type: 'h3', text: '子が 23 歳になる年は？' },
+      {
+        type: 'p',
+        text: '年齢はその年の 12 月 31 日時点で判定します。12 月 31 日に 23 歳以上なら特定扶養控除・特定親族特別控除の対象外で、所得 62 万円以下なら一般の扶養控除（38 万円）になります。',
+      },
+      { type: 'h3', text: '親の所得が高いと受けられない？' },
+      {
+        type: 'p',
+        text: '特定扶養控除と特定親族特別控除には、配偶者控除のような親の所得による制限はありません。親が会社員でもフリーランスでも受けられます。',
+      },
+      { type: 'h3', text: '子がフリマアプリで物を売ったお金も所得に入る？' },
+      {
+        type: 'p',
+        text: '自分が使っていた服や家具など、生活用品を売ったお金は原則として所得になりません。仕入れて売る転売や、作品を継続して販売する場合は、利益（売上 − 仕入れ・経費）が所得になります。',
+      },
+      {
+        type: 'note',
+        text: '本記事は 2026 年 10 月時点の情報（令和 7・8 年度税制改正）に基づく一般的な説明です。子の所得の数え方や申告書の書き方は、勤務先の案内、国税庁の「年末調整がよくわかるページ」、お住まいの自治体のページでご確認ください。',
       },
     ],
   },
@@ -4815,7 +4960,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance'],
   },
   {
     id: 'setup',
