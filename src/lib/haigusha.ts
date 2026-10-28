@@ -55,7 +55,7 @@ export function haigushaDeduction(spouse: number, selfIncome: number, elderly = 
   return { kind: 'tokubetsu' as const, it: row[1][b], res: row[2][b], reason: null }
 }
 
-function employeeTax(salary: number, itDed: number, resDed: number) {
+export function employeeTax(salary: number, itDed: number, resDed: number) {
   const social = Math.round(salary * SOCIAL_RATE)
   const income = kyuyoShotoku(salary)
   const basic = BASIC_TABLE.find(([lo]) => income >= lo)?.[1] ?? 0
