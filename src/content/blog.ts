@@ -1150,7 +1150,7 @@ export const ARTICLES: Article[] = [
           '郵送: 控えと返信用封筒（切手貼付）を同封する。受付印つきの控えが返送される',
         ],
       },
-      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-tax-prep', 'freelance-expenses-list'] },
+      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
       { type: 'h2', text: '開業届の書き方（迷いやすい欄）' },
       {
         type: 'table',
@@ -3261,7 +3261,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '退職までの給与からは、毎月の源泉徴収で所得税が引かれていますが、年末調整で精算されていません。独立後の経費や、自分で払った国民年金・国民健康保険の控除を合わせて計算すると、引かれすぎていた分が確定申告で還付されることがあります。独立した年こそ確定申告を忘れずに。',
       },
-      { type: 'links', items: ['side-job-nenmatsu-chosei-2026', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-kaigyo-todoke'] },
+      { type: 'links', items: ['side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: 'ケース 3: 会社員を続けながら副業で事業所得がある' },
       {
         type: 'p',
@@ -4040,7 +4040,7 @@ export const ARTICLES: Article[] = [
           { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
         ],
       },
-      { type: 'links', items: ['freelance-tax-prep', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
+      { type: 'links', items: ['freelance-tax-prep', 'freelance-haigusha-koujo', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
       { type: 'h2', text: 'よくある質問' },
       {
         type: 'h3',
@@ -4468,7 +4468,7 @@ export const ARTICLES: Article[] = [
         title: '年収別: 副業で増える税金の早見表',
         items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
       },
-      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-haigusha-koujo', 'freelance-shotoku-koujo-ichiran'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '住民税も下がる？' },
       {
@@ -4488,6 +4488,156 @@ export const ARTICLES: Article[] = [
       {
         type: 'note',
         text: '本記事は 2026 年 10 月時点の情報（令和 8 年度税制改正）に基づく一般的な説明です。年末調整の書類の様式や記入方法は、会社の案内と国税庁の「年末調整がよくわかるページ」でご確認ください。',
+      },
+    ],
+  },
+  {
+    slug: 'freelance-haigusha-koujo',
+    title: '妻（夫）がフリーランス・個人事業主でも配偶者控除は受けられる？2026 年分は所得 62 万円以下、売上いくらまでかを青色・白色別に整理',
+    description:
+      '配偶者がフリーランス・個人事業主の場合、配偶者控除・配偶者特別控除は年収ではなく「売上 − 経費 − 青色申告特別控除」の所得で判定します。2026 年分は所得 62 万円以下で配偶者控除、95 万円以下まで満額 38 万円、133 万円まで配偶者特別控除。青色 65 万円・10 万円・白色ごとの売上の目安、世帯の税金がいくら下がるか、健康保険の扶養（130 万円）との違い、年末調整の書き方をまとめました。',
+    date: '2026-10-28',
+    keywords: ['配偶者控除 フリーランス', '妻 個人事業主 扶養 いくらまで', '配偶者 個人事業主 配偶者控除 青色申告', '配偶者控除 62万 2026', '配偶者特別控除 個人事業主', '扶養 フリーランス 売上'],
+    readingMinutes: 8,
+    blocks: [
+      {
+        type: 'p',
+        text: '会社員の夫（妻）の配偶者控除は、配偶者がパートなら「年収 136 万円以下」のように年収で説明されることが多いですが、配偶者がフリーランス・個人事業主の場合は売上（年収）ではなく所得で判定します。青色申告かどうかで、同じ売上でも結果が変わります。2026 年分は税制改正で所得の基準が 58 万円から 62 万円に上がったので、今年の年末調整の前に整理しておきます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '判定に使うのは配偶者の合計所得金額＝「売上 − 経費 − 青色申告特別控除」。売上（年商）ではない',
+          '2026 年分は所得 62 万円以下なら配偶者控除 38 万円、95 万円以下まで配偶者特別控除で同じ 38 万円、133 万円まで段階的に減る',
+          '青色申告特別控除 65 万円なら「売上 − 経費」127 万円まで配偶者控除、160 万円まで満額、198 万円まで配偶者特別控除の対象',
+          '世帯で見ると、62 万円を超えても控除額は 95 万円まで変わらない。税金の「壁」としては 62 万円より 95 万円のほうが重要',
+          '健康保険の扶養（年収 130 万円未満など）は税金とは別の基準で、青色申告特別控除を引けない、そもそも個人事業主を扶養に入れない健康保険組合もある',
+          '青色事業専従者として給与を払っている配偶者は、所得に関係なく配偶者控除の対象外',
+        ],
+      },
+      { type: 'h2', text: '配偶者控除・配偶者特別控除の金額（2026 年分）' },
+      {
+        type: 'table',
+        headers: ['配偶者の合計所得金額', '控除の種類', '控除額（本人の合計所得 900 万円以下）'],
+        rows: [
+          ['62 万円以下', '配偶者控除', '38 万円（70 歳以上は 48 万円）'],
+          ['62 万円超〜95 万円以下', '配偶者特別控除', '38 万円'],
+          ['95 万円超〜100 万円以下', '配偶者特別控除', '36 万円'],
+          ['100 万円超〜105 万円以下', '配偶者特別控除', '31 万円'],
+          ['105 万円超〜110 万円以下', '配偶者特別控除', '26 万円'],
+          ['110 万円超〜115 万円以下', '配偶者特別控除', '21 万円'],
+          ['115 万円超〜120 万円以下', '配偶者特別控除', '16 万円'],
+          ['120 万円超〜125 万円以下', '配偶者特別控除', '11 万円'],
+          ['125 万円超〜130 万円以下', '配偶者特別控除', '6 万円'],
+          ['130 万円超〜133 万円以下', '配偶者特別控除', '3 万円'],
+          ['133 万円超', '—', '0 円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '控除を受ける本人（会社員の夫・妻）の合計所得金額が 900 万円を超えると控除額は約 3 分の 2、950 万円超で約 3 分の 1 になり、1,000 万円（給与だけなら年収約 1,195 万円）を超えると受けられません。2025 年分までは配偶者控除の基準が 58 万円でした。95 万円・133 万円の区切りは変わっていません。',
+      },
+      { type: 'h2', text: 'フリーランスの配偶者は「売上いくらまで」？' },
+      {
+        type: 'p',
+        text: '個人事業主の所得は「売上 − 経費 − 青色申告特別控除」です。青色申告で e-Tax（または優良な電子帳簿）なら 65 万円、帳簿が簡易なら 10 万円、白色申告なら 0 円を引けます。売上から経費を引いた額（青色申告特別控除の前）で見ると、目安は次のとおりです。',
+      },
+      {
+        type: 'table',
+        headers: ['申告の種類', '配偶者控除（所得 62 万円以下）', '満額 38 万円（所得 95 万円以下）', '配偶者特別控除の上限（所得 133 万円以下）'],
+        rows: [
+          ['青色・65 万円控除', '売上 − 経費が 127 万円以下', '160 万円以下', '198 万円以下'],
+          ['青色・10 万円控除', '72 万円以下', '105 万円以下', '143 万円以下'],
+          ['白色申告', '62 万円以下', '95 万円以下', '133 万円以下'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'たとえば売上 200 万円・経費 50 万円の配偶者は、青色 65 万円控除なら所得 85 万円で配偶者特別控除が満額の 38 万円、白色なら所得 150 万円で控除なしです。配偶者が青色申告にするだけで、会社員側の控除が 38 万円変わります。',
+      },
+      {
+        type: 'cta',
+        title: '青色申告でいくら得するか計算する（無料ツール）',
+        text: '売上と経費を入れると、白色申告と比べた青色申告特別控除の節税額（所得税・住民税・国保）を計算します。登録不要。',
+        href: '/tools/aoiro',
+        label: '青色申告の節税額シミュレーターを開く',
+      },
+      { type: 'h2', text: '世帯の税金はいくら下がる？' },
+      {
+        type: 'table',
+        headers: ['会社員の年収', '所得税', '住民税', '合計（年間）'],
+        rows: [
+          ['400 万円', '約 1.9 万円', '3.3 万円', '約 5.2 万円'],
+          ['500 万円', '約 1.9 万円', '3.3 万円', '約 5.2 万円'],
+          ['600 万円', '約 3.9 万円', '3.3 万円', '約 7.2 万円'],
+          ['700 万円', '約 5.7 万円', '3.3 万円', '約 9.0 万円'],
+          ['800 万円', '約 7.8 万円', '3.3 万円', '約 11.1 万円'],
+          ['1,000 万円', '約 7.8 万円', '3.3 万円', '約 11.1 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '控除 38 万円（住民税は 33 万円）を受けた場合の、会社員本人の税金の減少額。社会保険料は年収の 15%、ほかの控除なし、2026 年分の基礎控除・給与所得控除と復興特別所得税（2.1%）で概算しています。住民税の配偶者控除の所得要件 62 万円は 2027 年度分（2026 年の所得）から適用されます。',
+      },
+      { type: 'h2', text: '「62 万円の壁」より気にしたい境目' },
+      {
+        type: 'ul',
+        items: [
+          '所得 95 万円: ここまでは配偶者控除と配偶者特別控除で控除額が同じ 38 万円。62 万円を超えても世帯の税金は増えない。95 万円を超えると少しずつ減り、133 万円で 0 になる',
+          '配偶者自身の所得税: 2026 年分の基礎控除は 104 万円なので、所得 104 万円まで（ほかの控除がなければ）配偶者自身の所得税はかからない',
+          '配偶者自身の住民税: 住民税の基礎控除は 43 万円のまま。所得がおおむね 45 万円（自治体により 38 万〜45 万円）を超えると、配偶者にも住民税がかかる',
+          '健康保険の扶養: 夫（妻）の会社の健康保険の扶養に入っている場合は、税金とは別の基準（下記）で外れるかどうかが決まる',
+        ],
+      },
+      { type: 'h2', text: '健康保険・年金の扶養は別の基準' },
+      {
+        type: 'p',
+        text: '会社の健康保険の扶養（国民年金の第 3 号被保険者）は、税金の配偶者控除とは別の制度です。一般的な基準は「今後 1 年間の収入の見込みが 130 万円未満」ですが、個人事業主の「収入」の数え方は健康保険組合ごとに違います。売上そのものを収入とする組合、売上から一部の経費を引いた額とする組合があり、青色申告特別控除は引けないのが一般的です。個人事業主の配偶者は扶養に入れないとする組合もあります。',
+      },
+      {
+        type: 'p',
+        text: '扶養から外れると、配偶者は国民健康保険と国民年金（2026 年度は月 17,920 円）を自分で払うことになり、年 30 万円前後の負担になることもあります。税金の控除より影響が大きいので、開業前・売上が増える前に、夫（妻）の会社の健康保険組合の基準を確認してください。',
+      },
+      { type: 'h2', text: '注意したいケース' },
+      {
+        type: 'ul',
+        items: [
+          '青色事業専従者給与・事業専従者控除: 夫婦の一方の事業を手伝って専従者給与を受けている（または白色の事業専従者控除の対象になっている）配偶者は、所得がいくらでも配偶者控除・配偶者特別控除の対象外',
+          '給与とフリーランスの両方がある配偶者: パートの給与所得（年収 − 給与所得控除。2026 年分は最低 74 万円）と事業所得を合計して判定する',
+          '家内労働者等の特例: 内職や、特定の 1 社に継続して役務を提供する働き方などで経費が少ない場合、経費を最低 69 万円（2026 年分から。改正前は 65 万円）とみなせる特例がある。対象かどうかは国税庁のページで確認を',
+          '年の途中で開業した・会社を辞めた: 会社員時代の給与所得と、開業後の事業所得を合計した年間の所得で判定する',
+        ],
+      },
+      { type: 'h2', text: '年末調整の「配偶者控除等申告書」の書き方' },
+      {
+        type: 'p',
+        text: '会社員の夫（妻）は、年末調整で「給与所得者の配偶者控除等申告書」に配偶者の合計所得金額の見積額を書きます。配偶者がフリーランスなら、「事業所得」の欄に 1〜12 月の売上 − 経費 − 青色申告特別控除の見込み額を書きます。12 月分の売上が未確定なら見込みで構いません。',
+      },
+      {
+        type: 'p',
+        text: '配偶者の確定申告（翌年 2〜3 月）で所得が見積額と大きくずれ、配偶者控除・配偶者特別控除の額が変わる場合は、会社員側も年末調整のやり直し（翌年 1 月末の源泉徴収票の提出前まで）か、自分の確定申告で直します。見積額を少なく書いたまま放置すると、後から税務署の指摘で追加の納税になることがあります。',
+      },
+      { type: 'links', items: ['side-job-nenmatsu-chosei-2026', 'freelance-nenmatsu-chosei', 'freelance-shotoku-koujo-ichiran', 'freelance-kaigyo-todoke', 'freelance-health-insurance-pension'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '開業届を出すと配偶者控除を受けられなくなる？' },
+      {
+        type: 'p',
+        text: '税金の配偶者控除は所得の額で判定するので、開業届を出しただけで対象外になることはありません。むしろ開業届と青色申告承認申請書を出して青色申告特別控除 65 万円を使えば、所得が下がって控除を受けやすくなります。ただし健康保険の扶養は組合ごとの規定があるので、別途確認が必要です。',
+      },
+      { type: 'h3', text: '配偶者の所得が 62 万円を少し超えそう。経費を増やすべき？' },
+      {
+        type: 'p',
+        text: '所得 95 万円までは配偶者特別控除で控除額は 38 万円のまま変わらないので、62 万円を超えないために無理に経費を使う必要はありません。95 万円を超える場合も控除は段階的に減るだけなので、売上を抑えるより稼いだほうが世帯の手取りは増えるのが一般的です。',
+      },
+      { type: 'h3', text: '夫婦ともフリーランスの場合は？' },
+      {
+        type: 'p',
+        text: '会社員と同じく、所得の多いほうが確定申告で配偶者控除・配偶者特別控除を受けられます（控除を受ける本人の合計所得 1,000 万円以下）。夫婦が互いに配偶者特別控除を受けることはできません。',
+      },
+      {
+        type: 'note',
+        text: '本記事は 2026 年 10 月時点の情報（令和 8 年度税制改正）に基づく一般的な説明です。控除額は所得税の額で、住民税の配偶者控除は 33 万円です。健康保険の扶養の基準は加入している健康保険組合に、税金の個別の判断は税務署または税理士にご確認ください。',
       },
     ],
   },
@@ -4551,7 +4701,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo'],
   },
   {
     id: 'setup',
