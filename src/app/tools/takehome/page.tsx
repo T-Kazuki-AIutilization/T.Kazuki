@@ -92,6 +92,7 @@ export default function TakeHomeToolPage() {
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/freelance-take-home-pay" className="text-primary hover:underline">フリーランスの手取りはいくら？売上別の目安と計算方法</Link></li>
             <li><Link href="/blog/freelance-health-insurance-pension" className="text-primary hover:underline">国民健康保険と国民年金はいくら？所得別の目安</Link></li>
+            <li><Link href="/tools/haigusha" className="text-primary hover:underline">配偶者控除の計算ツール（配偶者がフリーランス・2026 年分）</Link></li>
             <li><Link href="/blog/freelance-tax-calendar" className="text-primary hover:underline">税金・納付スケジュール年間カレンダー</Link></li>
             <li><Link href="/blog/freelance-expenses-list" className="text-primary hover:underline">経費になるもの・ならないもの一覧</Link></li>
             <li><Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール（無料・登録不要）</Link></li>

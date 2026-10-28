@@ -63,6 +63,8 @@ export default function FukugyoToolPage() {
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
+            <li><Link href="/blog/side-job-nenmatsu-chosei-2026" className="text-primary hover:underline">2026 年の年末調整で何が変わる？副業がある人の「合計所得 489 万円」の境目</Link></li>
+            <li><Link href="/tools/haigusha" className="text-primary hover:underline">配偶者控除の計算ツール（配偶者がフリーランスの場合）</Link></li>
             <li><Link href="/blog/side-job-tax-return-200k" className="text-primary hover:underline">副業の確定申告は「20万円以下なら不要」は本当？</Link></li>
             <li><Link href="/blog/side-job-juminzei-shinkoku" className="text-primary hover:underline">副業の住民税はいくら増える？申告のやり方と「自分で納付」の選び方</Link></li>
             <li><Link href="/blog/side-job-furusato-nozei" className="text-primary hover:underline">副業がある会社員のふるさと納税（上限額とワンストップ特例の注意点）</Link></li>
