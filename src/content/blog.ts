@@ -2798,6 +2798,11 @@ export const ARTICLES: Article[] = [
         text: '「所得」は売上から経費を引いた額です。売上 30 万円・経費 12 万円なら所得は 18 万円で、20 万円以下になります。逆に、売上 20 万円でも経費がほとんどない場合は、所得が 20 万円近くになります。',
       },
       { type: 'h2', text: 'ケース別: 申告が必要かどうか' },
+      {
+        type: 'linkgrid',
+        title: '年収別: 副業で増える税金の早見表',
+        items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
+      },
       { type: 'links', items: ['side-job-nenmatsu-chosei-2026', 'side-job-juminzei-shinkoku', 'freelance-expenses-list', 'freelance-etax-how-to', 'freelance-tax-prep'] },
       {
         type: 'table',
@@ -4457,6 +4462,11 @@ export const ARTICLES: Article[] = [
       {
         type: 'p',
         text: 'フリーランスに年末調整はありませんが、2027 年 2〜3 月の確定申告（2026 年分）で同じ基礎控除が使えます。事業所得は「売上 − 経費 − 青色申告特別控除」なので、経費が売上の 2 割で青色申告特別控除 65 万円なら、売上 690 万円前後までは合計所得 489 万円以下で 104 万円の対象になります。手取りへの影響は手取り計算ツールで確認できます。',
+      },
+      {
+        type: 'linkgrid',
+        title: '年収別: 副業で増える税金の早見表',
+        items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
       },
       { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-shotoku-koujo-ichiran'] },
       { type: 'h2', text: 'よくある質問' },
