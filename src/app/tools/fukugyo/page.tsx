@@ -6,7 +6,7 @@ import { MoreTools } from '@/components/marketing/more-tools'
 import { ExcelUpsell } from '@/components/marketing/excel-upsell'
 import { SITE_URL } from '@/lib/site'
 import { FukugyoCalculator } from './calculator'
-import { sideJobTax, FUKUGYO_SALARIES, FUKUGYO_SIDES } from '@/lib/fukugyo'
+import { sideJobTax, FUKUGYO_SALARIES, FUKUGYO_SIDES, FUKUGYO_PAGES } from '@/lib/fukugyo'
 
 export const metadata: Metadata = {
   title: '副業の税金計算ツール｜会社員の副業でいくら税金が増える？（無料・2026年分）| FreelanceOS',
@@ -47,7 +47,7 @@ export default function FukugyoToolPage() {
               <tbody>
                 {FUKUGYO_SALARIES.map((sal) => (
                   <tr key={sal} className="border-b border-slate-100">
-                    <td className="py-1.5 pr-3">{sal.toLocaleString('ja-JP')} 万円</td>
+                    <td className="py-1.5 pr-3"><Link href={`/tools/fukugyo/${sal}`} className="text-primary hover:underline">{sal.toLocaleString('ja-JP')} 万円</Link></td>
                     {FUKUGYO_SIDES.map((s) => {
                       const r = sideJobTax(sal * 10000, s * 10000)
                       return <td key={s} className="pr-3 tabular-nums">{man(r.total)} 万円 <span className="text-xs text-muted-foreground">（残 {man(r.keep)}）</span></td>
@@ -57,6 +57,7 @@ export default function FukugyoToolPage() {
               </tbody>
             </table>
           </div>
+          <p className="mt-3 text-sm">年収別の詳しい早見表（副業 10〜300 万円・基礎控除の境目・ふるさと納税の上限）: {FUKUGYO_PAGES.map((x, i) => <span key={x}>{i > 0 && '・'}<Link href={`/tools/fukugyo/${x}`} className="text-primary hover:underline">{x.toLocaleString('ja-JP')} 万円</Link></span>)}</p>
         </section>
 
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">

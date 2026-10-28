@@ -72,3 +72,13 @@ export function employeeTakeHome(salary: number) {
 
 /** 会社員の年収 → フリーランスの売上換算ページ（/tools/kansan/[万円]）の対象額 */
 export const KANSAN_SALARIES = [300, 400, 500, 600, 700, 800, 900, 1000]
+
+/** 年収別の副業の税金ページ（/tools/fukugyo/[万円]）の対象額と、表に出す副業の所得（万円） */
+export const FUKUGYO_PAGES = [300, 400, 500, 600, 700, 800, 900, 1000]
+export const FUKUGYO_PAGE_SIDES = [10, 20, 30, 50, 80, 100, 150, 200, 300]
+
+/** 合計所得がこの額を超えると基礎控除が下がる（2026 年分: 489 万円で 104→67 万円、655 万円で 67→62 万円） */
+export const BASIC_STEPS = [
+  { limit: 4890000, from: 1040000, to: 670000 },
+  { limit: 6550000, from: 670000, to: 620000 },
+]
