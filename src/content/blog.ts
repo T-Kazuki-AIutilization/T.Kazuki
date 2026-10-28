@@ -2492,7 +2492,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'すべての判断の土台になるのが「今年の所得（売上 − 経費）がいくらになりそうか」です。1〜9 月の実績に、10〜12 月の確定・見込み案件を足して年間の売上と経費を出し、所得税・住民税・国保の概算を確認します。所得が多い年ほど、年内の対策の効果が大きくなります。',
       },
-      { type: 'links', items: ['freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['seimei-hoken-koujo-2026', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       {
         type: 'cta',
         title: 'iDeCo・小規模企業共済でいくら節税できるか計算する（無料ツール）',
@@ -4040,7 +4040,7 @@ export const ARTICLES: Article[] = [
           { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
         ],
       },
-      { type: 'links', items: ['freelance-tax-prep', 'freelance-haigusha-koujo', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
+      { type: 'links', items: ['freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
       { type: 'h2', text: 'よくある質問' },
       {
         type: 'h3',
@@ -4468,7 +4468,7 @@ export const ARTICLES: Article[] = [
         title: '年収別: 副業で増える税金の早見表',
         items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
       },
-      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-haigusha-koujo', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-shotoku-koujo-ichiran'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '住民税も下がる？' },
       {
@@ -4648,6 +4648,113 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'seimei-hoken-koujo-2026',
+    title: '生命保険料控除は 2026 年分から最大いくら？23 歳未満の子がいると一般生命保険料の上限が 6 万円に（年末調整・確定申告）',
+    description:
+      '2026・2027 年分は、23 歳未満の扶養親族がいる人の一般生命保険料控除（新契約）の上限が所得税 4 万円から 6 万円に。保険料別の控除額の表、税金がいくら下がるか、全体の上限 12 万円は変わらない点、住民税は対象外、年末調整の保険料控除申告書と、フリーランスの確定申告での書き方をまとめました。',
+    date: '2026-10-29',
+    keywords: ['生命保険料控除 2026 改正', '生命保険料控除 6万 23歳未満', '一般生命保険料控除 上限 引き上げ', '保険料控除申告書 2026 書き方', '生命保険料控除 フリーランス'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '2026 年分の年末調整・確定申告では、子育て世帯の生命保険料控除が拡充されます。23 歳未満の扶養親族がいる人は、一般生命保険料控除（2012 年以後の新契約）の上限が所得税で 4 万円から 6 万円に上がります。ただし、3 つの区分を合わせた上限 12 万円は変わらないので、得になる人とならない人がいます。この記事では、保険料ごとの控除額と、税金がいくら下がるかを整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '対象は 23 歳未満の扶養親族（16 歳未満の子も含む）がいる人。2026 年分と 2027 年分の措置',
+          '一般生命保険料控除（新契約）の上限が 4 万円 → 6 万円。年間保険料 12 万円で上限に達する',
+          '介護医療保険料・個人年金保険料と合わせた上限 12 万円は変わらない。3 区分とも上限まで使っている人は増えない',
+          '住民税は対象外（各区分 2.8 万円、合計 7 万円のまま）',
+          '増える控除は最大 2 万円。税率 10% の人で所得税が年 2 千円ほど下がる',
+        ],
+      },
+      { type: 'h2', text: '保険料別の控除額（所得税・新契約の一般生命保険料）' },
+      {
+        type: 'table',
+        headers: ['年間の保険料', '通常', '23 歳未満の扶養親族がいる場合（2026・2027 年分）'],
+        rows: [
+          ['2 万円', '2 万円', '2 万円'],
+          ['4 万円', '3 万円', '3.5 万円'],
+          ['6 万円', '3.5 万円', '4.5 万円'],
+          ['8 万円', '4 万円', '5 万円'],
+          ['10 万円', '4 万円', '5.5 万円'],
+          ['12 万円以上', '4 万円', '6 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '23 歳未満の扶養親族がいる場合の計算式: 年間保険料 3 万円以下は全額、3 万円超 6 万円以下は「保険料 × 1/2 ＋ 1.5 万円」、6 万円超 12 万円以下は「保険料 × 1/4 ＋ 3 万円」、12 万円超は 6 万円。通常は 2 万円以下は全額、4 万円以下は「× 1/2 ＋ 1 万円」、8 万円以下は「× 1/4 ＋ 2 万円」、8 万円超は 4 万円です。対象は 2012 年以後に契約した新契約の一般生命保険料で、旧契約（2011 年以前）は対象外です。',
+      },
+      { type: 'h2', text: '税金はいくら下がる？' },
+      {
+        type: 'p',
+        text: '増える控除は最大 2 万円（年間保険料 12 万円以上の場合）です。下がる所得税は「増えた控除額 × 所得税の税率 × 1.021」なので、税率 5% の人で約 1 千円、10% で約 2 千円、20% で約 4 千円です。住民税は変わりません。大きな額ではありませんが、書類の該当欄に記入しないと適用されないので、子育て世帯は忘れずに書いておきたいところです。',
+      },
+      {
+        type: 'table',
+        headers: ['ケース', '2025 年分の控除', '2026 年分の控除', '増える控除'],
+        rows: [
+          ['一般の保険料 10 万円だけ', '4 万円', '5.5 万円', '1.5 万円'],
+          ['一般 12 万円＋介護医療 2 万円', '6 万円（4＋2）', '8 万円（6＋2）', '2 万円'],
+          ['一般 12 万円＋介護医療 8 万円＋個人年金 8 万円', '12 万円', '12 万円（上限）', '0 円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '介護医療保険料と個人年金保険料の控除はそれぞれ最大 4 万円で、変更はありません。3 区分を合わせた所得税の上限は 12 万円なので、すでに 12 万円に届いている人は増えません。',
+      },
+      { type: 'h2', text: '年末調整（会社員）の書き方' },
+      {
+        type: 'p',
+        text: '2026 年分の「給与所得者の保険料控除申告書」には、一般生命保険料の欄に 23 歳未満の扶養親族の有無を記入する欄が加わっています。該当する人は「有」にして、扶養親族の氏名などを書きます。年末調整ソフトや会社のシステムで入力する場合も、同じ項目があるはずです。保険会社から届く控除証明書の金額（12 月までの見込み額）を転記し、証明書を添付します。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '扶養親族の年齢は、原則として 12 月 31 日時点で判定する',
+          '16 歳未満の子は扶養控除の対象ではないが、扶養親族には含まれるので、この特例の判定には入る',
+          '年末調整で書き忘れたら、翌年 1 月末までなら会社にやり直しを頼めるほか、確定申告（還付申告）で直せる',
+        ],
+      },
+      { type: 'h2', text: 'フリーランス・個人事業主の確定申告では' },
+      {
+        type: 'p',
+        text: 'フリーランスは 2027 年 2〜3 月の確定申告（2026 年分）で、生命保険料控除の欄に入力します。e-Tax（確定申告書等作成コーナー）や会計ソフトでは、保険料の入力画面で 23 歳未満の扶養親族の有無を選ぶ形になるはずです。生命保険料は事業の経費にはならず、所得控除として差し引きます。また、所得控除なので国民健康保険料は下がりません。',
+      },
+      {
+        type: 'cta',
+        title: '控除がいくらあると税金がいくら下がるかを計算する（無料ツール）',
+        text: 'iDeCo・小規模企業共済の掛金で下がる税金を、売上・経費から計算します。所得税の税率の目安を確認するのにも使えます。登録不要。',
+        href: '/tools/kyosai',
+        label: 'iDeCo・共済の節税額シミュレーターを開く',
+      },
+      { type: 'links', items: ['freelance-shotoku-koujo-ichiran', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'freelance-year-end-checklist'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '扶養親族が 23 歳の誕生日を迎えた年は？' },
+      {
+        type: 'p',
+        text: '年齢は原則として 12 月 31 日時点で判定するため、その年の 12 月 31 日に 23 歳になっていれば対象外です。19〜22 歳の子（特定扶養親族など）は対象になります。',
+      },
+      { type: 'h3', text: '2012 年より前に契約した保険（旧契約）だけの場合は？' },
+      {
+        type: 'p',
+        text: '今回の上限の引き上げは新契約の一般生命保険料が対象で、旧契約の控除額（上限 5 万円）は変わりません。新旧の両方の契約がある場合の計算は、国税庁の「生命保険料控除」のページや保険料控除申告書の記載例で確認してください。',
+      },
+      { type: 'h3', text: '2028 年分以降はどうなる？' },
+      {
+        type: 'p',
+        text: '2025 年度の税制改正で 2026 年分の措置として作られ、2026 年度の税制改正で 2027 年分まで延長されました。2028 年分以降は今後の税制改正で決まります。',
+      },
+      {
+        type: 'note',
+        text: '本記事は 2026 年 10 月時点の情報（令和 7・8 年度税制改正）に基づく一般的な説明です。保険料控除申告書の様式と記入方法は、勤務先の案内と国税庁の「年末調整がよくわかるページ」でご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -4708,7 +4815,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026'],
   },
   {
     id: 'setup',
