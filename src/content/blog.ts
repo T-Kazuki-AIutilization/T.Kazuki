@@ -798,7 +798,7 @@ export const ARTICLES: Article[] = [
       { type: 'ul', items: ['請求日（発生主義: 入金日ではなく請求日で計上）', '取引先', '内容', '金額', '入金日', '源泉徴収額（あれば）'] },
       { type: 'h3', text: '経費帳に書く項目' },
       { type: 'ul', items: ['日付', '内容と支払先', '勘定科目（通信費・消耗品費など）', '金額', '支払方法', '按分率（私用と兼用のもの）', '証憑の有無'] },
-      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -2168,7 +2168,7 @@ export const ARTICLES: Article[] = [
         text: '青色申告特別控除の 65 万円は、複式簿記で帳簿をつけたうえで e-Tax で提出する（または優良な電子帳簿保存をする）ことが条件です。書面提出だと 55 万円になるので、所得税・住民税・国保を合わせて数万円の差になります。なお 2027 年分からは、書面提出だと 10 万円に下がり、e-Tax＋優良な電子帳簿などで 75 万円の区分ができます（令和 8 年度税制改正）。',
       },
       { type: 'h2', text: '準備するもの' },
-      { type: 'links', items: ['aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
       {
         type: 'ul',
         items: [
@@ -3596,7 +3596,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '③の源泉徴収税は、確定申告で精算する所得税の前払いなので、経費ではなく「事業主貸」にします。⑫の国民年金・国保・住民税・所得税も個人の支払いなので経費にはならず、事業主貸です（年金・国保は確定申告で社会保険料控除になります）。',
       },
-      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
       { type: 'h2', text: '会計ソフトと Excel、どちらでつけるか' },
       {
         type: 'table',
@@ -5029,7 +5029,7 @@ export const ARTICLES: Article[] = [
         href: '/tools/aoiro',
         label: '青色申告の節税額シミュレーターを開く',
       },
-      { type: 'links', items: ['freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
+      { type: 'links', items: ['aoiro-kessansho-kakikata', 'freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '2026 年分の確定申告（2027 年 2〜3 月）から変わる？' },
       {
@@ -5349,6 +5349,163 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'aoiro-kessansho-kakikata',
+    title: '青色申告決算書の書き方（4 ページ）。フリーランスが迷う欄と作る順番【2026 年分】',
+    description:
+      'フリーランス・個人事業主の青色申告決算書（一般用）の書き方。1 ページ目の損益計算書、2 ページ目の月別売上・地代家賃・青色申告特別控除額、3 ページ目の売上の明細・減価償却費、4 ページ目の貸借対照表で何を書くか、作る順番、事業主貸・事業主借・元入金、源泉徴収された売上の書き方まで。2026 年分の提出は 2027 年 2 月 16 日〜3 月 15 日。',
+    date: '2026-10-30',
+    keywords: ['青色申告決算書 書き方', '青色申告決算書 フリーランス', '青色申告決算書 貸借対照表 書き方', '事業主貸 事業主借 元入金', '青色申告決算書 減価償却 書き方'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '青色申告をしているフリーランス・個人事業主は、確定申告書と一緒に「青色申告決算書（一般用）」を出します。4 ページあり、どこに何を書くのかが分かりにくい書類です。国税庁の「青色申告決算書（一般用）の書き方」（令和 7 年分）をもとに、各ページの中身と、フリーランスが迷いやすい欄、作る順番をまとめました。2026 年分の確定申告の期間は 2027 年 2 月 16 日（火）〜3 月 15 日（月）です。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '1 ページ目が損益計算書、2・3 ページ目がその内訳、4 ページ目が貸借対照表。内訳（2・3 ページ目）を先に作ってから 1 ページ目に転記すると迷わない',
+          '売上は源泉徴収される前の金額で書く。引かれた源泉徴収税額は確定申告書のほうで精算する',
+          '所得税・住民税・国民健康保険料・国民年金は経費ではなく、貸借対照表の「事業主貸」',
+          '損益計算書と貸借対照表の「青色申告特別控除前の所得金額」は必ず一致する。合わなければ帳簿のどこかが間違っている',
+          '65 万円控除は、複式簿記・貸借対照表の添付・期限内申告に加えて、e-Tax での提出（または優良な電子帳簿保存）が条件',
+        ],
+      },
+      { type: 'h2', text: '4 ページの中身' },
+      {
+        type: 'table',
+        headers: ['ページ', '書くこと', 'フリーランスが主に使う欄'],
+        rows: [
+          ['1 ページ目', '損益計算書（売上・売上原価・経費・所得）', '売上（収入）金額、経費の各科目、青色申告特別控除額、所得金額'],
+          ['2 ページ目', '月別売上（収入）金額及び仕入金額、給料賃金・専従者給与の内訳、地代家賃の内訳、貸倒引当金、青色申告特別控除額の計算', '月別の売上、地代家賃（自宅兼事務所の家賃）、青色申告特別控除額の計算'],
+          ['3 ページ目', '売上（収入）金額の明細、仕入金額の明細、減価償却費の計算、利子割引料・税理士等の報酬の内訳など', '主な売上先、減価償却費（パソコンなど 10 万円以上のもの）'],
+          ['4 ページ目', '貸借対照表（資産負債調）、製造原価の計算', '期首・期末の預金・売掛金、事業主貸・事業主借、元入金'],
+        ],
+      },
+      { type: 'h2', text: '作る順番' },
+      {
+        type: 'ol',
+        items: [
+          '帳簿の決算整理をする: 12 月分までの記帳、未入金の売上（売掛金）の計上、減価償却費、家事按分（家賃・通信費・電気代など）',
+          '2 ページ目: 月別の売上を 1〜12 月で書き、地代家賃の内訳を書く',
+          '3 ページ目: 主な売上先と、減価償却費の計算を書く',
+          '1 ページ目: 売上と経費の各科目を転記し、青色申告特別控除前の所得金額を出す',
+          '2 ページ目の「青色申告特別控除額の計算」で控除額を決め、1 ページ目に転記して所得金額を出す',
+          '4 ページ目: 1 月 1 日と 12 月 31 日の残高で貸借対照表を作り、青色申告特別控除前の所得金額が 1 ページ目と一致するか確かめる',
+          '確定申告書の「事業（営業等）」の収入金額と所得金額に転記する',
+        ],
+      },
+      {
+        type: 'p',
+        text: '会計ソフトや国税庁の確定申告書等作成コーナーを使えば、帳簿や入力した数字から決算書が作られ、転記や計算は自動です。手で作る場合も、この順番で進めると戻り作業が少なくなります。',
+      },
+      { type: 'h2', text: '1 ページ目（損益計算書）で迷う欄' },
+      { type: 'h3', text: '売上（収入）金額' },
+      {
+        type: 'p',
+        text: '2 ページ目の「月別売上（収入）金額」の計を転記します。源泉徴収された報酬は、引かれる前の金額（請求額）で計上します。振込額だけを売上にすると、売上が少なくなり、源泉徴収税額の精算もできません。12 月に納品して 1 月に入金される報酬も、原則として納品した年の売上（売掛金）です。',
+      },
+      { type: 'h3', text: '経費の科目' },
+      {
+        type: 'p',
+        text: '経費帳の科目ごとに、決算整理後の金額を書きます。給料賃金の欄には青色事業専従者の給与は入れず、「専従者給与」の欄に書きます。減価償却費は 3 ページ目の「本年分の必要経費算入額」の計を転記します。決算書に印刷されていない科目（たとえば「研修費」）は、空いている欄に科目名を書き足して使えます。',
+      },
+      { type: 'h3', text: '租税公課' },
+      {
+        type: 'p',
+        text: '個人事業税、事業用の固定資産税、印紙代などは租税公課として経費になります。所得税・住民税は経費にならないので、ここには入れません。消費税の課税事業者で税込経理なら、納めた消費税もここに入れます。',
+      },
+      { type: 'h2', text: '2・3 ページ目で迷う欄' },
+      { type: 'h3', text: '月別売上（収入）金額' },
+      {
+        type: 'p',
+        text: '1 月 1 日〜12 月 31 日の売上を月ごとに書きます。20 日締めなどで帳簿を締めている場合は、2〜11 月は帳簿の月計をそのまま書き、1 月と 12 月の欄で調整しても構いません。',
+      },
+      { type: 'h3', text: '地代家賃の内訳' },
+      {
+        type: 'p',
+        text: '自宅の一部を仕事場にしている場合は、支払先・物件と 1 年の家賃の総額を書き、そのうち事業で使う割合を掛けた額を「必要経費算入額」に書きます。1 ページ目の地代家賃には、按分した後の額を転記します。',
+      },
+      { type: 'h3', text: '減価償却費の計算' },
+      {
+        type: 'p',
+        text: '10 万円以上のパソコンやカメラなどを資産ごとに書きます。事業で使う割合（事業専用割合）の欄があり、按分した後の額が「本年分の必要経費算入額」です。一括償却資産は償却率の欄に「1/3」と書きます。青色申告の少額減価償却資産の特例を使ったものは、摘要欄に「措法 28 の 2」と書きます（まとめて「パソコン他」と書き、明細を別に保管する書き方も国税庁の記載例にあります）。',
+      },
+      {
+        type: 'linkgrid',
+        title: '減価償却費の額を計算する（無料・登録不要）',
+        items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール' }, { href: '/tools/anbun', label: '家事按分の計算ツール' }],
+      },
+      { type: 'h3', text: '青色申告特別控除額の計算' },
+      {
+        type: 'p',
+        text: '65 万円（または 55 万円・10 万円）と、青色申告特別控除前の所得金額の少ないほうが控除額です。所得が 40 万円なら控除は 40 万円までで、赤字なら 0 円です。ここで出した額を 1 ページ目に転記します。',
+      },
+      { type: 'h2', text: '4 ページ目（貸借対照表）で迷う欄' },
+      {
+        type: 'table',
+        headers: ['欄', '書くもの'],
+        rows: [
+          ['現金・預金', '1 月 1 日（期首）と 12 月 31 日（期末）の事業用の残高。生活用の口座と分けていれば、事業用口座の残高'],
+          ['売掛金', '期末時点でまだ入金されていない売上（12 月納品・1 月入金の報酬など）'],
+          ['事業主貸', '事業のお金から生活費や所得税・住民税・国保・国民年金などに使った額、源泉徴収された税額の合計'],
+          ['事業主借', '生活用のお金から事業の支払いをした額、事業用口座についた預金利息など、事業以外のお金が事業に入った額の合計'],
+          ['元入金', '期首と期末に同じ額を書く'],
+          ['青色申告特別控除前の所得金額', '1 ページ目の青色申告特別控除前の所得金額と同じ額'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '翌年の元入金は「期首の元入金 ＋ 青色申告特別控除前の所得金額 ＋ 事業主借 − 事業主貸」で計算し、翌年の期首に書きます。開業した年の元入金は、開業時の事業用の資産から負債を引いた額です。左右（資産の部と負債・資本の部）の合計が合わないときは、帳簿の記帳漏れや二重記帳、転記の間違いを探します。',
+      },
+      {
+        type: 'note',
+        text: '貸借対照表を添付しないと、青色申告特別控除は最高 10 万円になります。65 万円・55 万円控除を受けるには、複式簿記で記帳して貸借対照表を添付する必要があります。',
+      },
+      { type: 'h2', text: '65 万円控除の条件（2026 年分）' },
+      {
+        type: 'table',
+        headers: ['控除額', '条件'],
+        rows: [
+          ['65 万円', '複式簿記で記帳、貸借対照表と損益計算書を添付、期限内に申告、e-Tax で提出（または優良な電子帳簿保存）'],
+          ['55 万円', '65 万円の条件のうち、e-Tax・優良な電子帳簿保存がない（書面で提出）'],
+          ['10 万円', '簡易な記帳（損益計算書は添付する）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '還付申告でも、65 万円・55 万円控除を受けるには確定申告期限までの提出が必要です。2027 年分からは控除の区分が 75 万円・65 万円・10 万円に変わり、書面での提出は 10 万円になります。',
+      },
+      { type: 'affiliate', title: '帳簿から青色申告決算書まで自動で作るなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '損益計算書と貸借対照表の所得金額が合わない' },
+      { type: 'p', text: '複式簿記で正しく記帳していれば、両方の「青色申告特別控除前の所得金額」は必ず一致します。合わない場合は、期首の残高の入力ミス、売掛金の計上漏れ、事業主貸・事業主借の振り分け、二重記帳などを確認します。' },
+      { type: 'h3', text: '源泉徴収された税額は決算書のどこに書く？' },
+      { type: 'p', text: '決算書には、売上を源泉徴収される前の額で計上するだけです。引かれた税額は帳簿では事業主貸として処理し、確定申告書の「源泉徴収税額」の欄に書いて精算します。支払調書が届かなくても、請求書と入金記録から計算できます。' },
+      { type: 'h3', text: '赤字でも決算書は出す？' },
+      { type: 'p', text: '青色申告をしている人は、赤字でも青色申告決算書を添付して申告します。赤字の年に申告しておけば、赤字（純損失）を翌年以後 3 年間繰り越して、翌年以後の所得から差し引けます（その後も毎年の確定申告が必要です）。' },
+      { type: 'h3', text: '白色申告の場合は？' },
+      { type: 'p', text: '白色申告の人は青色申告決算書ではなく「収支内訳書」を出します。2 ページで、貸借対照表はありません。' },
+      { type: 'h3', text: '決算書の控えは保存する？' },
+      { type: 'p', text: '青色申告の帳簿や決算関係の書類は、原則 7 年間の保存が必要です。決算書の控えも一緒に保存しておくと、翌年の期首の残高や元入金を書くときに使えます。' },
+      {
+        type: 'cta',
+        title: '科目別の年間集計から決算書に転記する（確定申告準備キット）',
+        text: '経費帳（科目プルダウン・家事按分の自動計算）、売上帳（入金・源泉徴収・未入金の管理）、青色申告決算書への転記用の科目別年間集計をまとめた Excel キット。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
+      },
+      { type: 'links', items: ['freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
+      {
+        type: 'note',
+        text: '国税庁「令和 7 年分 青色申告決算書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -5409,7 +5566,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata'],
   },
   {
     id: 'setup',
