@@ -88,6 +88,7 @@ export default function GenkaToolPage() {
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
+            <li><Link href="/blog/shogaku-genka-shokyaku-40man" className="text-primary hover:underline">少額減価償却資産の特例が 40 万円未満に（2026 年 4 月以後の取得）。償却資産税の申告と決算書の書き方</Link></li>
             <li><Link href="/blog/freelance-expenses-list" className="text-primary hover:underline">フリーランスの経費にできるもの一覧</Link></li>
             <li><Link href="/blog/freelance-year-end-checklist" className="text-primary hover:underline">フリーランスの年末にやることチェックリスト</Link></li>
             <li><Link href="/tools/anbun" className="text-primary hover:underline">家事按分の計算ツール</Link></li>

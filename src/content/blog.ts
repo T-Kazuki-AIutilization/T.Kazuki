@@ -733,6 +733,7 @@ export const ARTICLES: Article[] = [
       { type: 'h3', text: '10 万円以上のパソコンはどうなる？' },
       { type: 'p', text: '1 つ（1 組）10 万円以上の備品は、原則として買った年に全額ではなく、耐用年数（パソコンは 4 年）に分けて減価償却します。青色申告をしている人は「少額減価償却資産の特例」で、2026 年 4 月 1 日以後に取得した 40 万円未満の資産（3 月 31 日までの取得は 30 万円未満）を、使い始めた年に全額経費にできます（年 300 万円まで）。20 万円未満なら白色申告でも 3 年で 1/3 ずつ経費にできます（一括償却資産）。' },
       { type: 'linkgrid', title: '方法ごとに今年の経費を比べる（無料）', items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール' }] },
+      { type: 'links', items: ['shogaku-genka-shokyaku-40man'] },
       { type: 'h3', text: '経費にしてはいけないものを入れてしまったら？' },
       { type: 'p', text: '確定申告の期限後に気づいた場合は、修正申告をして不足分の税金を納めます。税務調査で指摘されてから修正すると、過少申告加算税や延滞税がかかることがあります。迷うものは、家事按分の割合を控えめにするか、税務署や税理士に確認するのが安全です。' },
       { type: 'affiliate', title: '経費の記録を自動化するなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
@@ -2552,6 +2553,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       { type: 'linkgrid', title: '年内に買う備品の経費を計算する（無料）', items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール' }] },
+      { type: 'links', items: ['shogaku-genka-shokyaku-40man'] },
       { type: 'h2', text: '所得控除を使い切る: 共済・iDeCo・ふるさと納税' },
       {
         type: 'table',
@@ -5227,6 +5229,126 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shogaku-genka-shokyaku-40man',
+    title: '少額減価償却資産の特例が 40 万円未満に。2026 年 4 月以後に買ったパソコンは一括で経費にできる（個人事業主・青色申告）',
+    description:
+      '令和 8 年度の税制改正で、青色申告の個人事業主が使える少額減価償却資産の特例が、2026 年 4 月 1 日以後の取得から 40 万円未満（それまでは 30 万円未満）に。年 300 万円まで・2029 年 3 月 31 日まで。10 万円未満・一括償却資産・通常の減価償却との違い、12 月に買う場合の経費、償却資産税の申告、決算書の書き方まで。',
+    date: '2026-10-30',
+    keywords: ['少額減価償却資産 40万円', '少額減価償却資産の特例 2026', 'パソコン 経費 30万円以上', '減価償却 個人事業主 パソコン', '一括償却資産 少額減価償却資産 違い'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '仕事用のパソコンやカメラを買ったとき、10 万円以上だと原則は「減価償却」で、何年かに分けて経費にします。ただし青色申告をしている個人事業主には、一定額未満なら買った年に全額を経費にできる「少額減価償却資産の特例」があります。この上限が、令和 8 年度の税制改正で 30 万円未満から 40 万円未満に引き上げられました。いつ買ったものから 40 万円になるのか、ほかの方法とどう違うのかを整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '2026 年 4 月 1 日以後に取得した資産は、取得価額 40 万円未満まで特例の対象（2026 年 3 月 31 日までの取得は 30 万円未満）',
+          '使えるのは青色申告の個人事業主。白色申告では使えない',
+          'その年に特例で経費にできる合計は 300 万円まで。2029 年 3 月 31 日までに取得した資産が対象',
+          '経費になるのは「業務に使い始めた年」。12 月に使い始めても全額を経費にできる（通常の減価償却なら 1 か月分）',
+          '特例を使った資産は、市区町村の償却資産税（固定資産税）の申告の対象になる。20 万円未満なら一括償却資産を選ぶと対象外',
+        ],
+      },
+      { type: 'h2', text: '取得価額ごとの経費にする方法' },
+      {
+        type: 'table',
+        headers: ['取得価額', '青色申告', '白色申告'],
+        rows: [
+          ['10 万円未満', '使い始めた年に全額経費（消耗品費など）', '同じ'],
+          ['10 万円以上 20 万円未満', '少額減価償却資産の特例で全額、一括償却資産（3 年で 1/3 ずつ）、通常の減価償却から選ぶ', '一括償却資産か通常の減価償却'],
+          ['20 万円以上 40 万円未満', '少額減価償却資産の特例で全額（2026 年 3 月 31 日までの取得は 30 万円未満）か通常の減価償却', '通常の減価償却'],
+          ['40 万円以上', '通常の減価償却', '通常の減価償却'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '国税庁のタックスアンサー（No.2100 減価償却のあらまし）では、特例の対象を「平成 18 年 4 月 1 日から令和 11 年 3 月 31 日までに取得した取得価額 10 万円以上 40 万円未満（令和 8 年 3 月 31 日までに取得した場合は 10 万円以上 30 万円未満）の減価償却資産」としています。判定は取得した日で行うので、2026 年 1〜3 月に買った 35 万円のパソコンは、使い始めたのが 4 月以後でも対象外です。',
+      },
+      {
+        type: 'note',
+        text: '取得価額には、本体の代金のほか送料や設置費用など、使えるようにするための費用も含めます。消費税を含めるかどうかは経理方式によります。税込経理なら税込の額、税抜経理なら税抜の額で判定し、免税事業者は税込経理です。',
+      },
+      { type: 'h2', text: '例: 25 万円のパソコンを 2026 年 12 月に使い始めた場合' },
+      {
+        type: 'table',
+        headers: ['方法', '2026 年の経費', '2027 年以後'],
+        rows: [
+          ['少額減価償却資産の特例（青色）', '25 万円', 'なし'],
+          ['通常の減価償却（定額法・耐用年数 4 年）', '5,208 円（12 月の 1 か月分）', '2027〜2029 年は 62,500 円ずつ、2030 年に残り 57,291 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '25 万円は 20 万円以上なので一括償却資産は使えず、白色申告なら通常の減価償却だけです。所得税と住民税の税率が合わせて 20% の人なら、特例を使うと通常の減価償却より 2026 年分の税金が約 4.9 万円少なくなります（その分 2027 年以後の経費はなくなるので、何年かの合計で見た経費はほぼ同じです）。',
+      },
+      {
+        type: 'linkgrid',
+        title: '自分の金額で計算する（無料・登録不要）',
+        items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール（方法別に今年の経費を比較）' }],
+      },
+      { type: 'h2', text: '年末に買うときの注意' },
+      {
+        type: 'ul',
+        items: [
+          '経費にできるのは「業務に使い始めた年」。12 月に注文して届くのが 1 月なら、来年の経費になる',
+          '税金が減る額は払った額より小さい。必要のないものを買うと、手元のお金は減る',
+          '所得が少ない年は、あえて通常の減価償却で何年かに分けたほうが、所得税の税率が低い区分に収まりやすいこともある',
+          'プライベートでも使うものは、事業で使う割合（家事按分）を掛けた額だけ経費にする。10 万・20 万・40 万円未満の判定は、割合を掛ける前の取得価額で行う',
+        ],
+      },
+      { type: 'h2', text: '償却資産税の申告に注意' },
+      {
+        type: 'p',
+        text: '事業用の機械や備品は、市区町村の固定資産税（償却資産）の対象で、毎年 1 月 1 日時点で持っている資産を 1 月 31 日ごろまでに申告します。申告が要らない「少額資産」は、10 万円未満で一度に経費にしたものと、20 万円未満で一括償却資産にしたものだけです。少額減価償却資産の特例で経費にした資産は申告の対象になります。',
+      },
+      {
+        type: 'p',
+        text: '課税標準額の合計が 150 万円未満なら税金はかかりませんが、それでも申告は必要としている市区町村が多いです。自動車税・軽自動車税がかかる車やソフトウエアは、償却資産の申告の対象外です。10 万円以上 20 万円未満のものなら、一括償却資産を選ぶと償却資産の申告が要らなくなります。',
+      },
+      { type: 'h2', text: '確定申告での書き方' },
+      {
+        type: 'ol',
+        items: [
+          '青色申告決算書の 3 ページ目「減価償却費の計算」欄に、資産の名称・取得年月・取得価額などを書く',
+          '特例を使ったものは、摘要欄に「措法 28 条の 2」と書き、その年の特例の合計額が 300 万円以内であることを確認する',
+          '経費にした額（事業割合を掛けた後）を、損益計算書の「減価償却費」に入れる',
+        ],
+      },
+      {
+        type: 'p',
+        text: '会計ソフトを使っている場合は、固定資産として登録するときに償却方法で特例を選ぶのが一般的です。消耗品費にしてしまうと、償却資産の申告や決算書の記載と合わなくなるので注意してください。',
+      },
+      { type: 'affiliate', title: '固定資産の登録から決算書まで作るなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '2026 年 3 月に買って 4 月に使い始めたものは 40 万円未満で判定する？' },
+      { type: 'p', text: '取得した日で判定するので、2026 年 3 月 31 日までに取得したものは 30 万円未満が上限です。経費にする年は、業務に使い始めた年です。' },
+      { type: 'h3', text: '白色申告でも使える？' },
+      { type: 'p', text: '少額減価償却資産の特例は青色申告者だけです。白色申告では、10 万円未満なら全額、10 万円以上 20 万円未満なら一括償却資産（3 年で 1/3 ずつ）、それ以上は通常の減価償却です。来年から青色申告にするなら、その年の 3 月 15 日まで（1 月 16 日以後に開業した場合は開業から 2 か月以内）に青色申告承認申請書を出します。' },
+      { type: 'h3', text: '中古のパソコンでも使える？' },
+      { type: 'p', text: '使えます。中古かどうかではなく、取得価額で判定します。通常の減価償却をする場合は、中古資産の耐用年数（簡便法など）を使えます。' },
+      { type: 'h3', text: 'パソコンとモニターを一緒に買ったら合計で判定する？' },
+      { type: 'p', text: '1 個・1 組ごと（通常の取引の単位ごと）に判定します。パソコン本体とモニターのように、それぞれ単独で使えるものは別々に判定するのが一般的です。応接セットのように、まとめて 1 組で使うものは合計で判定します。' },
+      { type: 'h3', text: '300 万円を超えたら？' },
+      { type: 'p', text: 'その年に特例で経費にできるのは、取得価額の合計 300 万円までです。超えた分の資産は、一括償却資産（20 万円未満の場合）か通常の減価償却で経費にします。' },
+      {
+        type: 'cta',
+        title: '買ったものの経費を方法別に比べる（無料ツール）',
+        text: '種類・取得価額・使い始めた月・事業割合を入れると、少額減価償却資産の特例・一括償却資産・通常の減価償却で今年の経費と節税の目安を比較し、年ごとの償却費の表も出します。登録不要。',
+        href: '/tools/genka-shokyaku',
+        label: '減価償却の計算ツールを開く',
+        secondary: { href: '/signup', label: 'FreelanceOS で売上と経費を管理する（無料）' },
+      },
+      { type: 'links', items: ['freelance-expenses-list', 'freelance-year-end-checklist', 'aoiro-koujo-75man-2027', 'freelance-boki-shiwake'] },
+      {
+        type: 'note',
+        text: '2026 年 10 月時点の国税庁タックスアンサー No.2100・No.2106 と、市区町村の償却資産申告の手引きに基づく一般的な説明です。特例には従業員数などの要件があります。個別の判断は税務署・市区町村の税務課や税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -5287,7 +5409,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man'],
   },
   {
     id: 'setup',
