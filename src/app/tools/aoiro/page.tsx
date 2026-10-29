@@ -19,6 +19,7 @@ export const metadata: Metadata = {
 
 const FAQS = [
   { q: '青色申告 65 万円控除の条件は？', a: '青色申告の承認を受けたうえで、①複式簿記（正規の簿記）で記帳し、②貸借対照表と損益計算書を確定申告書に添付して、③期限内に申告することに加え、④e-Tax で申告するか、帳簿を優良な電子帳簿として保存することが条件です。④を満たさず書面で提出すると 55 万円、簡易簿記なら 10 万円の控除になります。' },
+  { q: '2027 年分から青色申告特別控除はどう変わる？', a: '令和 8 年度税制改正で、2027 年分からは「複式簿記＋e-Tax＋優良な電子帳簿（またはデジタルシームレス保存）＋届出書」で 75 万円、「複式簿記＋e-Tax」で 65 万円、「複式簿記＋書面」で 10 万円になり、55 万円の区分はなくなります。簡易簿記の 10 万円は、前々年の収入が 1,000 万円を超えると 0 円です。このツールは 2026 年分の区分で計算しています。' },
   { q: '青色申告の承認申請はいつまで？', a: '青色申告をしたい年の 3 月 15 日までに「所得税の青色申告承認申請書」を税務署に出します。その年の 1 月 16 日以後に開業した場合は、開業日から 2 か月以内です。2027 年分から青色にしたいなら、2027 年 3 月 15 日が期限です。開業届と同時に出すのが一般的です。' },
   { q: '控除以外のメリットは？', a: '赤字（純損失）を翌年以降 3 年間繰り越せる、家族に払う給与を届け出たうえで経費にできる（青色事業専従者給与）、といった特典があります。このツールの節税額には、控除による効果だけを含めています。' },
   { q: '国民健康保険も安くなるの？', a: 'はい。国民健康保険料は、青色申告特別控除を引いた後の所得をもとに計算されるため、控除額 × 国保の所得割率（10% 前後）の分だけ保険料も下がります。所得税・住民税と合わせると、65 万円控除の効果は所得によって年 10 万〜30 万円程度になります。' },
@@ -70,6 +71,7 @@ export default function AoiroToolPage() {
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
+            <li><Link href="/blog/aoiro-koujo-75man-2027" className="text-primary hover:underline">青色申告特別控除は 2027 年分から 75 万・65 万・10 万円に（書面の 55 万円は廃止）</Link></li>
             <li><Link href="/blog/freelance-kaigyo-todoke" className="text-primary hover:underline">開業届と青色申告承認申請書の出し方</Link></li>
             <li><Link href="/blog/freelance-etax-how-to" className="text-primary hover:underline">初めての e-Tax 確定申告（65 万円控除の条件）</Link></li>
             <li><Link href="/blog/freelance-tax-prep" className="text-primary hover:underline">確定申告の準備と帳簿のつけ方</Link></li>

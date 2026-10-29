@@ -1150,7 +1150,7 @@ export const ARTICLES: Article[] = [
           '郵送: 控えと返信用封筒（切手貼付）を同封する。受付印つきの控えが返送される',
         ],
       },
-      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
+      { type: 'links', items: ['aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
       { type: 'h2', text: '開業届の書き方（迷いやすい欄）' },
       {
         type: 'table',
@@ -2164,7 +2164,7 @@ export const ARTICLES: Article[] = [
         text: '青色申告特別控除の 65 万円は、複式簿記で帳簿をつけたうえで e-Tax で提出する（または優良な電子帳簿保存をする）ことが条件です。書面提出だと 55 万円になるので、所得税・住民税・国保を合わせて数万円の差になります。',
       },
       { type: 'h2', text: '準備するもの' },
-      { type: 'links', items: ['freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
       {
         type: 'ul',
         items: [
@@ -2330,7 +2330,7 @@ export const ARTICLES: Article[] = [
         text: 'フリーランスが必ず対応するのは 3 つ目の「電子取引データ保存」です。紙で受け取ったものは、これまでどおり紙で保存して構いません。',
       },
       { type: 'h2', text: '対象になる「電子取引」の例' },
-      { type: 'links', items: ['freelance-invoice-how-to', 'freelance-expenses-list', 'freelance-tax-prep'] },
+      { type: 'links', items: ['aoiro-koujo-75man-2027', 'freelance-invoice-how-to', 'freelance-expenses-list', 'freelance-tax-prep'] },
       {
         type: 'ul',
         items: [
@@ -3778,7 +3778,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '確定申告書等作成コーナーは申告書を作る道具で、1 年間の帳簿をつける道具ではありません。帳簿は Excel や会計ソフトでつけ、年末に集計した数字を作成コーナーに入れる、という使い分けになります。',
       },
-      { type: 'links', items: ['freelance-boki-shiwake', 'freelance-etax-how-to', 'freelance-tax-prep'] },
+      { type: 'links', items: ['aoiro-koujo-75man-2027', 'freelance-boki-shiwake', 'freelance-etax-how-to', 'freelance-tax-prep'] },
       { type: 'h2', text: '会計ソフトがなくてもいい人' },
       {
         type: 'ul',
@@ -4907,6 +4907,133 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'aoiro-koujo-75man-2027',
+    title: '青色申告特別控除は 2027 年分から 75 万・65 万・10 万円に。書面提出の 55 万円はなくなる（フリーランスが今から準備すること）',
+    description:
+      '令和 8 年度税制改正で、青色申告特別控除は 2027 年分から「75 万円（e-Tax＋優良な電子帳簿など）・65 万円（e-Tax）・10 万円」に。複式簿記でも書面提出なら 55 万円 → 10 万円、簡易簿記は前々年の収入 1,000 万円超で 0 円。区分別の要件、税金への影響、2026 年中にやっておくことをまとめました。',
+    date: '2026-10-29',
+    keywords: ['青色申告特別控除 75万円', '青色申告特別控除 改正 2027', '青色申告 55万円 廃止', '青色申告 書面 10万円', '優良な電子帳簿 75万円 要件'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '2026 年度（令和 8 年度）の税制改正で、青色申告特別控除の区分が変わります。2027 年分（2028 年 2〜3 月に申告する分）からは最大 75 万円の区分ができる一方、複式簿記で帳簿をつけていても紙で申告すると控除が 10 万円まで下がります。いまの 2026 年分の確定申告はこれまでどおりですが、準備に時間がかかる項目もあるので、変更点と今からやっておくことを整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '2027 年分から、複式簿記の青色申告は「e-Tax＋優良な電子帳簿（またはデジタルシームレス保存）＋届出書」で 75 万円、「e-Tax」で 65 万円、「書面」で 10 万円',
+          '書面提出の 55 万円の区分はなくなる。紙で申告している人は控除が 45 万円減る',
+          '簡易簿記の 10 万円控除は、前々年分の事業（と不動産）の収入金額が 1,000 万円を超えると 0 円',
+          '2026 年分（2027 年 2〜3 月の申告）は今までどおり 65 万・55 万・10 万円',
+          '75 万円を狙うなら、2027 年 1 月の記帳の最初から要件を満たす会計ソフトで帳簿をつける必要がある',
+        ],
+      },
+      { type: 'h2', text: '2026 年分まで → 2027 年分からの比較' },
+      {
+        type: 'table',
+        headers: ['記帳と申告の方法', '2026 年分まで', '2027 年分から'],
+        rows: [
+          ['複式簿記＋e-Tax＋優良な電子帳簿またはデジタルシームレス保存（届出書を提出）', '65 万円', '75 万円'],
+          ['複式簿記＋e-Tax', '65 万円', '65 万円'],
+          ['複式簿記＋書面で提出', '55 万円', '10 万円'],
+          ['簡易簿記（前々年の収入 1,000 万円以下）', '10 万円', '10 万円'],
+          ['簡易簿記（前々年の収入 1,000 万円超）', '10 万円', '0 円'],
+          ['白色申告', 'なし', 'なし'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '65 万円・75 万円の区分は、これまでと同じく複式簿記での記帳、貸借対照表と損益計算書の添付、期限内の申告が前提です。所得税は 2027 年分から、住民税は 2028 年度分（2027 年の所得で計算）から反映されます。「前々年分の収入金額」は、2027 年分なら 2025 年分の事業所得・不動産所得の収入（売上）で判定します。',
+      },
+      { type: 'h2', text: '税金はどのくらい変わる？' },
+      {
+        type: 'p',
+        text: '控除が増減すると、所得税（復興特別所得税を含む）と住民税（10%）が変わります。国民健康保険料も所得をもとに計算するので、あわせて動きます。所得税と住民税だけの目安は次のとおりです。',
+      },
+      {
+        type: 'table',
+        headers: ['所得税の税率', '65 万 → 75 万円（＋10 万円）', '55 万 → 10 万円（−45 万円）'],
+        rows: [
+          ['5%', '約 1.5 万円 下がる', '約 6.8 万円 上がる'],
+          ['10%', '約 2.0 万円 下がる', '約 9.1 万円 上がる'],
+          ['20%', '約 3.0 万円 下がる', '約 13.7 万円 上がる'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '影響が大きいのは、複式簿記で帳簿をつけているのに紙で申告している人です。e-Tax に切り替えるだけで 65 万円を受けられるので、2027 年分を待たずに、2026 年分の申告から e-Tax にしておくのがおすすめです（2026 年分でも書面の 55 万円より 10 万円多く控除されます）。',
+      },
+      { type: 'h2', text: '75 万円の要件: 優良な電子帳簿かデジタルシームレス保存' },
+      {
+        type: 'p',
+        text: '75 万円を受けるには、65 万円の要件（複式簿記＋e-Tax）に加えて、次のどちらかと、所定の届出書の提出が必要です。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '優良な電子帳簿: 仕訳帳と総勘定元帳を、訂正・削除の履歴が残る、帳簿と請求書などの関連がたどれる、日付・金額・取引先で検索できる、といった要件を満たす会計ソフトで作成・保存する',
+          'デジタルシームレス保存: 請求書などの電子取引データ（デジタルインボイスや口座の明細データなど）を、国税庁の基準に合ったシステムで受け取りから記帳・保存まで一貫して扱う',
+          '届出書: 適用を受ける年分の確定申告期限までに提出（一度出せば、取りやめるまで有効）。様式の名称は 2027 年に向けて改められる予定',
+        ],
+      },
+      {
+        type: 'p',
+        text: '注意したいのは、優良な電子帳簿はその年の帳簿を最初から要件どおりにつけている必要があり、年の途中や申告の直前に切り替えても間に合わない点です。2027 年分で 75 万円を受けたいなら、2026 年中に会計ソフトを選び、2027 年 1 月の記帳から使い始められるようにしておきます。ソフトが要件を満たすかどうかは、各社の公式サイトや、日本文書情報マネジメント協会（JIIMA）の「電子帳簿ソフト法的要件認証」で確認できます。同じソフトでもプランや設定によって対応が違うことがあるので、申し込む前に確認してください。',
+      },
+      {
+        type: 'affiliate',
+        title: '2027 年分の 75 万円控除に向けて会計ソフトを選ぶなら',
+        ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'],
+      },
+      { type: 'h2', text: '2026 年中にやっておくこと' },
+      {
+        type: 'ol',
+        items: [
+          'e-Tax の準備: マイナンバーカードとスマホ（または IC カードリーダー）を用意し、2026 年分の確定申告から e-Tax で出す',
+          '紙で申告している人は、2026 年分の申告から e-Tax に切り替える（2027 年分以降は書面だと 10 万円に下がる）',
+          '簡易簿記の人は、2025 年分の売上が 1,000 万円を超えていたら、2027 年分の控除が 0 円になる。複式簿記（会計ソフト）への切り替えを検討する',
+          '75 万円を狙う人は、優良な電子帳簿の要件に対応した会計ソフトを決め、2027 年 1 月 1 日の取引から入力する',
+          'まだ白色申告の人は、2027 年分から青色にするなら 2027 年 3 月 15 日までに青色申告承認申請書を出す（新規開業の場合は開業日から 2 か月以内）',
+        ],
+      },
+      {
+        type: 'cta',
+        title: '青色申告にすると税金がいくら下がるか計算する（無料ツール）',
+        text: '売上と経費から、白色申告と比べた青色申告（10 万・55 万・65 万円控除）の節税額を、所得税・住民税・国民健康保険まで含めて計算します。75 万円の場合は 65 万円の結果に 10 万円 × 税率を足した額が目安です。登録不要。',
+        href: '/tools/aoiro',
+        label: '青色申告の節税額シミュレーターを開く',
+      },
+      { type: 'links', items: ['freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '2026 年分の確定申告（2027 年 2〜3 月）から変わる？' },
+      {
+        type: 'p',
+        text: '変わりません。2026 年分は、複式簿記＋e-Tax（または優良な電子帳簿）で 65 万円、複式簿記＋書面で 55 万円、簡易簿記で 10 万円です。新しい区分は 2027 年分（2028 年 2〜3 月の申告）からです。',
+      },
+      { type: 'h3', text: '2027 年の途中から会計ソフトを変えても 75 万円を受けられる？' },
+      {
+        type: 'p',
+        text: '優良な電子帳簿は、その年分の帳簿を最初から要件どおりに作成・保存していることが前提とされています。年の途中から切り替えた場合は、その年は 65 万円（e-Tax）になると考えて、翌年分から 75 万円を目指すのが確実です。',
+      },
+      { type: 'h3', text: '事業所得が 65 万円未満でも 75 万円控除になる？' },
+      {
+        type: 'p',
+        text: '青色申告特別控除は、控除前の所得（不動産所得と事業所得の合計）が上限です。たとえば売上 − 経費が 50 万円なら、控除は 50 万円までです。',
+      },
+      { type: 'h3', text: 'FreelanceOS は優良な電子帳簿に対応している？' },
+      {
+        type: 'p',
+        text: 'FreelanceOS は案件・請求書・入金を管理するツールで、仕訳帳や総勘定元帳を作る会計ソフトではありません。帳簿は会計ソフトでつけ、FreelanceOS では請求と入金の状況を管理する、という使い分けを想定しています。',
+      },
+      {
+        type: 'note',
+        text: '本記事は 2026 年 10 月時点の情報（令和 8 年度税制改正）に基づく一般的な説明です。優良な電子帳簿とデジタルシームレス保存の詳しい要件、届出書の様式と提出期限は、国税庁の「電子帳簿保存法関係」のページと、今後公表される案内でご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -4967,7 +5094,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027'],
   },
   {
     id: 'setup',
