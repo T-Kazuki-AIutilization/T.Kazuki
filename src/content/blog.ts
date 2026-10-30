@@ -803,7 +803,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -1756,7 +1756,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '国民健康保険は 6〜7 月に保険料が決まり、年 8〜10 回の分割で払います（自治体により異なる）。国民年金は毎月定額で、前納すると割引があります。どちらも社会保険料控除の対象なので、払った額は確定申告で全額控除できます。',
       },
-      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'yotei-nozei-gengaku-shinsei', 'freelance-tax-prep', 'freelance-health-insurance-pension', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'yotei-nozei-gengaku-shinsei', 'freelance-tax-prep', 'freelance-health-insurance-pension', 'freelance-withholding-tax'] },
       { type: 'h2', text: '納税資金はいくら積み立てればよい？' },
       {
         type: 'p',
@@ -2183,7 +2183,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
       {
         type: 'ul',
         items: [
@@ -5524,7 +5524,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
       },
-      { type: 'links', items: ['shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
       {
         type: 'note',
         text: '国税庁「令和 7 年分 青色申告決算書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
@@ -5842,6 +5842,159 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kakutei-shinkoku-kigengo-shusei',
+    title: '確定申告の期限に間に合わない・間違えたときの対処（期限後申告・修正申告・更正の請求）。フリーランスのペナルティと青色 65 万円控除【2026 年分】',
+    description:
+      'フリーランス・個人事業主が確定申告の期限（2026 年分は 2027 年 3 月 15 日）に遅れたとき、出した後に間違いに気づいたときの手続きを整理。無申告加算税（自主的なら 5%）・延滞税（2026 年は年 2.8%）・過少申告加算税の割合、加算税がかからない「1 か月以内」の条件、青色申告特別控除が 10 万円になる点、更正の請求で税金を取り戻す方法まで。',
+    date: '2026-10-31',
+    keywords: ['確定申告 期限 過ぎた', '確定申告 間に合わない フリーランス', '期限後申告 ペナルティ', '確定申告 間違えた 修正申告', '更正の請求 やり方', '無申告加算税 5%'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '確定申告の期限に間に合わなかった、出した後で計算の間違いや控除の漏れに気づいた。どちらも、気づいた時点で自分から直せば、ペナルティは小さく済みます。この記事では、フリーランス・個人事業主が使う 3 つの手続き（期限後申告・修正申告・更正の請求）と、それぞれにかかる税金を国税庁のタックスアンサーに沿って整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '期限に遅れたら、気づいた時点ですぐ「期限後申告」をする。作り方・出し方は期限内と同じ（作成コーナー・e-Tax で可）',
+          '自主的な期限後申告なら、無申告加算税は納める税金の 5%。期限から 1 か月以内で、納める税金を期限までに全額納めていた場合などはかからない',
+          '遅れた日数分の延滞税もかかる（2026 年中は年 2.8%、納期限から 2 か月を過ぎると年 9.1%）',
+          '期限後の申告では、青色申告特別控除は 65 万円・55 万円が使えず 10 万円になる（還付になる申告でも同じ）',
+          '税金が少なすぎた間違いは「修正申告」。税務署から調査の連絡が来る前に自分で出せば、過少申告加算税はかからない',
+          '税金を払いすぎた・控除を忘れた間違いは「更正の請求」。期限から 5 年以内なら取り戻せる',
+          '期限内（3 月 15 日まで）に間違いに気づいたら、正しい申告書を出し直すだけでよい（後から出したものが有効）',
+        ],
+      },
+      { type: 'h2', text: 'どの手続きを使うか' },
+      {
+        type: 'table',
+        headers: ['状況', '手続き', '期限', 'かかる税金'],
+        rows: [
+          ['期限（3 月 15 日）までに申告しなかった', '期限後申告', 'できるだけ早く', '無申告加算税・延滞税（納める税金がある場合）'],
+          ['期限内に出したが、出し直したい', '申告書を出し直す（訂正申告）', '3 月 15 日まで', 'なし'],
+          ['期限後に、税金が少なすぎたと気づいた（売上の計上漏れなど）', '修正申告', 'できるだけ早く', '延滞税（自主的なら過少申告加算税はなし）'],
+          ['期限後に、税金を払いすぎたと気づいた（経費・控除の漏れなど）', '更正の請求', '法定申告期限から 5 年以内', 'なし（認められると還付）'],
+          ['還付になる人が申告していなかった', '還付申告', '翌年 1 月 1 日から 5 年間', 'なし'],
+        ],
+      },
+      { type: 'h2', text: '期限に間に合わないとき（期限後申告）' },
+      {
+        type: 'p',
+        text: '2026 年分の所得税の確定申告の期限は 2027 年 3 月 15 日（月）です。過ぎてしまっても、申告書の作り方と出し方は変わりません。国税庁の確定申告書等作成コーナーで作り、e-Tax で送るか、印刷して税務署に出します。期限後申告で納める税金は、申告書を出した日が納期限なので、その日に納めます。',
+      },
+      { type: 'h3', text: '無申告加算税の割合' },
+      {
+        type: 'table',
+        headers: ['期限後申告をしたタイミング', '納める税金 50 万円まで', '50 万円超〜300 万円', '300 万円超'],
+        rows: [
+          ['税務署から調査の事前通知が来る前（自主的）', '5%', '5%', '5%'],
+          ['事前通知の後、調査で決定されると予知する前', '10%', '15%', '25%'],
+          ['調査を受けた後・税務署が決定した場合', '15%', '20%', '30%'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '自主的に出せば一律 5% です。たとえば納める税金が 10 万円なら、無申告加算税は 5,000 円です。過去に無申告加算税を課されたことがある場合や、調査で帳簿を出せなかった場合などは、割合が上乗せされます。',
+      },
+      { type: 'h3', text: '無申告加算税がかからない「1 か月以内」の条件' },
+      {
+        type: 'p',
+        text: '次の条件をすべて満たすと、期限後申告でも無申告加算税はかかりません。申告書は間に合わなかったが、納める税金は期限までに払っていた、という人が対象です。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '期限後申告を、法定申告期限から 1 か月以内に自主的に出している',
+          '納める税金の全額を、法定納期限（口座振替の手続きをした場合は期限後申告書を出した日）までに納めている',
+          '過去 5 年以内に無申告加算税・重加算税を課されておらず、この「1 か月以内」の扱いも受けていない',
+        ],
+      },
+      { type: 'h3', text: '延滞税' },
+      {
+        type: 'p',
+        text: '納める税金がある場合は、法定納期限の翌日から納めた日までの日数に応じて延滞税がかかります。割合は毎年見直され、2026 年 1 月 1 日〜12 月 31 日の期間は、納期限の翌日から 2 か月までが年 2.8%、それ以降は年 9.1% です。10 万円を 1 か月遅れて納めると、2.8% の日割りで 230 円ほどの計算です。延滞税は 1,000 円未満なら全額切り捨てられる（国税通則法 119 条）ので、この場合は納めずに済みます。延滞税は本税だけにかかり、加算税にはかかりません。',
+      },
+      { type: 'h3', text: '青色申告特別控除は 10 万円になる' },
+      {
+        type: 'p',
+        text: '65 万円・55 万円の青色申告特別控除は、期限内に申告書を出すことが条件です。期限後申告では 10 万円しか引けないため、所得税・住民税・国民健康保険料が増えます。国税庁のタックスアンサー（No.2072）は、還付になる申告でも 65 万円・55 万円の控除を受けるには期限内に出す必要があるとしています。加算税や延滞税よりも、こちらの影響のほうが大きくなりがちです。',
+      },
+      {
+        type: 'linkgrid',
+        title: '65 万円控除が 10 万円になると税金がいくら増えるか（無料）',
+        items: [{ href: '/tools/aoiro', label: '青色申告の節税額シミュレーター' }],
+      },
+      { type: 'h2', text: '出した後に間違いに気づいたとき' },
+      { type: 'h3', text: '期限内なら出し直すだけ' },
+      {
+        type: 'p',
+        text: '3 月 15 日までに気づいたら、正しい内容で申告書を作り直して出し直します（訂正申告）。後から出したものが有効になり、加算税もかかりません。e-Tax なら作成コーナーで作り直して送信します。',
+      },
+      { type: 'h3', text: '税金が少なすぎた → 修正申告' },
+      {
+        type: 'p',
+        text: '売上の計上漏れ、経費にできないものを入れていた、控除の要件を満たしていなかった、などで税金が少なすぎたときは修正申告をします。税務署から調査の事前通知が来る前に自分で出せば、過少申告加算税はかかりません。新たに納める税金は修正申告書を出した日が納期限で、延滞税も一緒に納めます。作成コーナーの「更正の請求書・修正申告書作成コーナー」で作れます。',
+      },
+      {
+        type: 'table',
+        headers: ['修正申告のタイミング', '過少申告加算税'],
+        rows: [
+          ['調査の事前通知の前（自主的）', 'なし'],
+          ['事前通知の後、更正を予知する前', '5%（当初の申告納税額と 50 万円のいずれか多い額を超える部分は 10%）'],
+          ['調査を受けた後・税務署が更正した場合', '10%（同じく超える部分は 15%）'],
+        ],
+      },
+      { type: 'h3', text: '税金を払いすぎた → 更正の請求' },
+      {
+        type: 'p',
+        text: '経費の入れ忘れ、医療費控除・ふるさと納税・iDeCo などの控除の漏れ、源泉徴収税額の書き漏れで税金を払いすぎたときは、更正の請求書を出します。税務署が内容を確認し、認められると減額の通知があって還付されます。期限は原則として法定申告期限から 5 年以内です。所得や控除が変わっても、最終的な税額が変わらない場合は更正の請求はできません。',
+      },
+      { type: 'h2', text: '住民税・国民健康保険料はどうなる？' },
+      {
+        type: 'p',
+        text: '所得税の確定申告をすれば、その内容が市区町村に送られ、住民税と国民健康保険料が計算されます。期限後申告や修正申告でも、あとから反映されて、金額が変われば通知が届きます。申告が遅れると住民税・国保の通知も遅れたり、いったん所得なしで計算された額が後から変わったりするので、なるべく早く出しておきます。',
+      },
+      { type: 'h2', text: '来年は期限に間に合わせるために' },
+      {
+        type: 'ul',
+        items: [
+          '売上・経費は月ごとに締めて、12 月にまとめて集計しない',
+          '源泉徴収税額は支払調書を待たず、請求ごとに記録しておく',
+          '控除証明書（社会保険料・生命保険料・iDeCo・ふるさと納税）は届いたら 1 か所にまとめる',
+          '1 月中に一度、作成コーナーか会計ソフトで仮の申告書を作っておく（還付になる人は 1 月から出せる）',
+        ],
+      },
+      { type: 'affiliate', title: '来年は期限内に 65 万円控除で出すなら、帳簿と申告書をまとめて作れる会計ソフト', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '期限を 1 日過ぎただけでもペナルティはある？' },
+      { type: 'p', text: '期限後申告になります。ただし、期限から 1 か月以内に自主的に出し、納める税金を期限までに全額納めていた場合などは、無申告加算税はかかりません。青色申告特別控除は期限後なので 10 万円になります。' },
+      { type: 'h3', text: '還付になる人も期限に遅れるとペナルティがある？' },
+      { type: 'p', text: '納める税金がないので、無申告加算税と延滞税はかかりません。還付申告は翌年 1 月 1 日から 5 年間出せます。ただし青色申告の人は、期限後だと 65 万円・55 万円の控除が使えず 10 万円になるので、還付額が減ります。' },
+      { type: 'h3', text: '何年前の分までさかのぼって申告できる？' },
+      { type: 'p', text: '還付申告と更正の請求は 5 年以内です。納める税金がある年の期限後申告は、気づいた時点で何年前の分でも出してください。税務署が決定できる期間は原則 5 年（偽りなど不正がある場合は 7 年）です。' },
+      { type: 'h3', text: '消費税の申告が遅れた場合も同じ？' },
+      { type: 'p', text: '個人事業者の消費税の期限は翌年 3 月 31 日です。遅れた場合は所得税と同じように、期限後申告をして無申告加算税と延滞税の対象になります。' },
+      { type: 'h3', text: '期限までに納められないときは？' },
+      { type: 'p', text: '申告書は期限までに出したうえで、納付については税務署に相談します。一時に納めることが難しい場合は、申請により納税の猶予（分割納付）が認められることがあります。申告書を出さないままにすると、無申告加算税と青色申告特別控除の減額が重なるので、申告だけは期限内に済ませます。' },
+      {
+        type: 'cta',
+        title: '来年の確定申告を期限内に終わらせる（確定申告準備キット）',
+        text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別の集計、所得税の概算までセットにした Excel テンプレートです。年内から記帳しておけば、期限前に慌てずに済みます。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/kakutei-checklist', label: '無料の確定申告チェックリストを使う' },
+      },
+      { type: 'links', items: ['freelance-etax-how-to', 'freelance-tax-prep', 'freelance-tax-calendar', 'aoiro-kessansho-kakikata'] },
+      {
+        type: 'note',
+        text: '国税庁タックスアンサー No.2024（確定申告を忘れたとき）・No.2026（確定申告を間違えたとき）・No.2030（還付申告）・No.2072（青色申告特別控除）・No.9205（延滞税について）（いずれも令和 8 年 4 月 1 日現在法令等）に基づく一般的な説明です。個別の事情（調査の連絡を受けた場合など）は税務署か税理士に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -5902,7 +6055,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei'],
   },
   {
     id: 'setup',
