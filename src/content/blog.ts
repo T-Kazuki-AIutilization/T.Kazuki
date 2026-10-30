@@ -2575,7 +2575,7 @@ export const ARTICLES: Article[] = [
         headers: ['制度', '年内の期限', '控除', '注意点'],
         rows: [
           ['小規模企業共済', '12/31 までの引き落とし分（前納すれば翌年分まで当年の控除にできる）', '掛金全額が所得控除（月 1,000〜70,000 円）', '20 年未満の任意解約は元本割れの可能性。廃業時の退職金として使う制度'],
-          ['iDeCo', '1〜12 月に引き落とされた分（前年 12 月分〜当年 11 月分）がその年の控除', '掛金全額が所得控除（自営業は国民年金基金等と合算で月 6.8 万円まで）', '12 月分の掛金は翌年 1 月の引き落としで翌年の控除になる。原則 60 歳まで引き出せない'],
+          ['iDeCo', '1〜12 月に引き落とされた分（前年 12 月分〜当年 11 月分）がその年の控除', '掛金全額が所得控除（自営業は国民年金基金等と合算で月 6.8 万円まで。2026 年 12 月分〔2027 年 1 月引き落とし〕からは月 7.5 万円）', '12 月分の掛金は翌年 1 月の引き落としで翌年の控除になる。原則 60 歳まで引き出せない'],
           ['ふるさと納税', '12/31 の決済分まで', '自己負担 2,000 円を除く寄附額が所得税・住民税から控除（上限は所得による）', '確定申告する人はワンストップ特例が使えないので、受領証明書を保管して申告する'],
           ['国民年金・国保', '12/31 までに納めた分', '社会保険料控除（全額）', '国民年金は前納（翌年 3 月分まで）もその年の控除にできる'],
         ],
@@ -2632,7 +2632,7 @@ export const ARTICLES: Article[] = [
           '75 万円を狙うなら、優良な電子帳簿の要件に対応した会計ソフトを選び、2027 年 1 月 1 日の取引から入力する（対応状況はプランごとに公式サイトで確認）',
         ],
       },
-      { type: 'links', items: ['uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
       { type: 'affiliate', title: '1 月から会計ソフトで帳簿をつけるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '12 月に買ったパソコンは今年の経費になる？' },
@@ -3199,7 +3199,7 @@ export const ARTICLES: Article[] = [
           '赤字の年や所得が少ない年は、住民税の所得割がほとんどなく、上限も小さい（所得割がなければ寄附はほぼ全額自己負担）',
         ],
       },
-      { type: 'links', items: ['side-job-furusato-nozei', 'freelance-year-end-checklist', 'freelance-tax-prep', 'freelance-take-home-pay'] },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'side-job-furusato-nozei', 'freelance-year-end-checklist', 'freelance-tax-prep', 'freelance-take-home-pay'] },
       { type: 'h2', text: '確定申告での書き方' },
       {
         type: 'ol',
@@ -4088,7 +4088,7 @@ export const ARTICLES: Article[] = [
           { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
         ],
       },
-      { type: 'links', items: ['freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
       { type: 'h2', text: 'よくある質問' },
       {
         type: 'h3',
@@ -5054,7 +5054,7 @@ export const ARTICLES: Article[] = [
         href: '/tools/aoiro',
         label: '青色申告の節税額シミュレーターを開く',
       },
-      { type: 'links', items: ['aoiro-kessansho-kakikata', 'freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'aoiro-kessansho-kakikata', 'freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '2026 年分の確定申告（2027 年 2〜3 月）から変わる？' },
       {
@@ -6128,6 +6128,155 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'ideco-jogen-75000-freelance',
+    title: 'iDeCo の上限が月 7.5 万円に（2026 年 12 月分から）。フリーランス・自営業の節税額はいくら増える？手続きと控除の年',
+    description:
+      '自営業・フリーランス（国民年金の第 1 号被保険者）の iDeCo の掛金の上限が、2026 年 12 月分（2027 年 1 月引き落とし分）から国民年金基金などと合わせて月 6.8 万円から 7.5 万円に上がります。控除はその年に支払った掛金なので、増えるのは 2027 年分から。売上別に増える節税額、掛金の変更手続き、会社員・60 歳以上の変更点も厚生労働省の資料に沿って整理しました。',
+    date: '2026-10-31',
+    keywords: ['iDeCo 上限 7.5万 自営業', 'iDeCo 拠出限度額 引き上げ 2026年12月', 'iDeCo フリーランス 節税額', 'iDeCo 掛金 変更 手続き', '小規模企業共済等掛金控除 iDeCo いつの年'],
+    readingMinutes: 5,
+    blocks: [
+      {
+        type: 'p',
+        text: 'iDeCo（個人型確定拠出年金）の掛金の上限が、2026 年 12 月分から引き上げられます。自営業・フリーランスは月 6.8 万円から 7.5 万円になり、満額なら年 90 万円まで所得控除にできます。いつから、いくら節税額が増えるのか、何の手続きが必要かを、厚生労働省のリーフレットと国税庁のタックスアンサーに沿って整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '自営業・フリーランス（国民年金の第 1 号被保険者）の上限は、国民年金基金・付加保険料と合わせて月 6.8 万円 → 7.5 万円（0.7 万円増）',
+          '始まるのは 2026 年 12 月分の掛金（2027 年 1 月の口座引き落とし分）から',
+          '所得控除はその年に支払った掛金なので、引き上げ後の額で控除できるのは 2027 年分から。2026 年分の上限は 6.8 万円 × 12 か月 ＝ 81.6 万円のまま',
+          '掛金を増やすには、加入している金融機関（運営管理機関）で変更の手続きが必要。自動では増えない',
+          '満額の年 90 万円にすると、売上 500 万円で年 13.6 万円、800 万円で年 27.4 万円ほど税金が下がる（いまの満額 81.6 万円より 1.3〜2.6 万円ほど多い）',
+        ],
+      },
+      { type: 'h2', text: '何が変わる？区分ごとの上限' },
+      {
+        type: 'table',
+        headers: ['加入者の区分', '2026 年 12 月引き落とし分まで', '2027 年 1 月引き落とし分から'],
+        rows: [
+          ['自営業・フリーランス・学生（第 1 号）、60 歳以上の任意加入（第 4 号）', '国民年金基金などと合計で月 6.8 万円', '国民年金基金などと合計で月 7.5 万円'],
+          ['会社員・公務員（第 2 号）で企業年金あり', 'iDeCo は月 2.0 万円（企業年金などと合計 5.5 万円）', 'iDeCo と企業年金などの合計で月 6.2 万円'],
+          ['会社員・公務員（第 2 号）で企業年金なし', '月 2.3 万円', '月 6.2 万円'],
+          ['会社員・公務員の扶養の配偶者（第 3 号）', '月 2.3 万円', '月 2.3 万円（変わらない）'],
+          ['60〜69 歳で国民年金の被保険者でない人（第 5 号・新設）', '加入できない', '一定の要件で加入でき、月 6.2 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '第 1 号の上限は、国民年金基金の掛金と国民年金の付加保険料（月 400 円）を合わせた額です。国民年金基金に入っている人や付加保険料を払っている人は、その分を引いた残りが iDeCo に使える枠になります。',
+      },
+      {
+        type: 'p',
+        text: '60 歳以上の人の加入（第 5 号）は、iDeCo の加入者・運用指図者や、企業年金から iDeCo に資産を移す人などで、老齢基礎年金や iDeCo の老齢給付金を受け取っていない人が対象です。細かい要件は加入先で確認してください。',
+      },
+      { type: 'h2', text: '控除が増えるのは 2027 年分から' },
+      {
+        type: 'p',
+        text: 'iDeCo の掛金は「小規模企業共済等掛金控除」として、その年に支払った掛金の全額が所得控除になります（国税庁 タックスアンサー No.1135）。iDeCo は前月分の掛金が翌月に引き落とされるので、12 月分の掛金は翌年 1 月に払うことになり、翌年の控除です。',
+      },
+      {
+        type: 'table',
+        headers: ['年分', '控除の対象になる掛金', '第 1 号の上限（満額の場合）'],
+        rows: [
+          ['2026 年分', '2026 年 1〜12 月の引き落とし分（2025 年 12 月分〜2026 年 11 月分）', '6.8 万円 × 12 ＝ 81.6 万円'],
+          ['2027 年分', '2027 年 1〜12 月の引き落とし分（2026 年 12 月分〜2027 年 11 月分）', '7.5 万円 × 12 ＝ 90 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '年内に掛金を増やしても、2026 年分の確定申告の控除は増えません。2026 年分の節税を増やしたいなら、12 月中に払えばその年の控除になる小規模企業共済の前納のほうが向いています。',
+      },
+      { type: 'h2', text: '売上別: 節税額はいくら増える？' },
+      {
+        type: 'table',
+        headers: ['年間売上', '掛金 年 81.6 万円（月 6.8 万円）', '掛金 年 90 万円（月 7.5 万円）', '増える節税額'],
+        rows: [
+          ['300 万円', '約 9.7 万円', '約 10.4 万円', '約 0.7 万円'],
+          ['500 万円', '約 12.3 万円', '約 13.6 万円', '約 1.3 万円'],
+          ['800 万円', '約 24.8 万円', '約 27.4 万円', '約 2.6 万円'],
+          ['1,000 万円', '約 24.8 万円', '約 27.4 万円', '約 2.6 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '所得税（復興特別所得税を含む）と住民税の減少額の合計。経費は売上の 20%、青色申告特別控除 65 万円、独身・扶養なし、国民年金 月 17,920 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円で概算しています（2026 年分の税率・控除）。売上 300 万円は課税所得が掛金より少ないため、所得税はほぼゼロになり、増えるのは住民税の分だけです。',
+      },
+      {
+        type: 'p',
+        text: '節税額は「掛金 × 所得税と住民税の税率」でおおよそ決まります。所得税率 5% の人は掛金の約 15%、10% の人は約 20%、20% の人は約 30% が戻る計算です。国民健康保険料は所得控除の影響を受けないので、iDeCo では下がりません。',
+      },
+      {
+        type: 'linkgrid',
+        title: '自分の売上で計算する（無料・登録不要）',
+        items: [
+          { href: '/tools/kyosai', label: 'iDeCo・小規模企業共済の節税額シミュレーター（2027 年分の上限 7.5 万円にも対応）' },
+          { href: '/tools/furusato', label: 'ふるさと納税の上限額（iDeCo を増やすと上限は下がる）' },
+        ],
+      },
+      { type: 'h2', text: '掛金を増やす手続き' },
+      {
+        type: 'ul',
+        items: [
+          '上限が上がっても掛金は自動では増えない。増やしたい人は、加入している金融機関（運営管理機関）で掛金額の変更を届け出る',
+          '2026 年 12 月分（2027 年 1 月引き落とし分）からの変更は、2026 年 9 月ごろから受付の予定（厚生労働省のリーフレット）。受付の時期と方法は加入先の案内で確認する',
+          'オンラインの手続きサービス「e-iDeCo」では、2026 年 12 月 1〜24 日に手続きできる（使えるかどうかは加入先による）',
+          '手続きの内容によっては 12 月分に間に合わないことがある。早めに出すほうが確実',
+        ],
+      },
+      {
+        type: 'p',
+        text: '掛金を増やすと、その分は原則 60 歳まで引き出せません。売上が不安定な年は、生活費と納税資金（所得税・住民税・国保・消費税）を先に確保し、残りで掛金を決めるのが安全です。',
+      },
+      { type: 'h2', text: '小規模企業共済とどちらを増やす？' },
+      {
+        type: 'table',
+        headers: ['', 'iDeCo', '小規模企業共済'],
+        rows: [
+          ['掛金の上限（月）', '7.5 万円（国民年金基金などと合計、2026 年 12 月分から）', '7 万円（1,000 円から 500 円単位）'],
+          ['控除', '小規模企業共済等掛金控除（全額）', '小規模企業共済等掛金控除（全額）'],
+          ['年内の前納', '原則は毎月の拠出', '1 年分以内の前納ができ、12 月中に払えばその年の控除'],
+          ['引き出し', '原則 60 歳まで引き出せない', '廃業時・65 歳以上で受け取り。掛金の範囲内で貸付あり（短期の任意解約は元本割れの可能性）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '両方の満額（iDeCo 年 90 万円 ＋ 共済 年 84 万円）で年 174 万円まで所得控除にできます。手元資金とのバランスで、どちらから増やすかを決めましょう。',
+      },
+      { type: 'h2', text: '確定申告での書き方' },
+      {
+        type: 'p',
+        text: '確定申告書の「小規模企業共済等掛金控除」の欄に、その年に支払った掛金の合計を書きます。掛金を個人で払っている人には、国民年金基金連合会から「小規模企業共済等掛金払込証明書」が届くので、その金額を使います。国税庁によると、2026 年分以後の確定申告書を 2027 年 1 月 1 日以後に出す場合は、証明書の添付・提示の代わりに、一定の事項を書いた明細書を添付することもできます。',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: 'いま月 6.8 万円払っている。何もしないとどうなる？' },
+      { type: 'p', text: '月 6.8 万円のまま続きます。上限が上がっても掛金は自動では変わらないので、7.5 万円にしたい場合は加入先で掛金額の変更の手続きをします。' },
+      { type: 'h3', text: '2026 年分の確定申告で控除が増える？' },
+      { type: 'p', text: '増えません。7.5 万円になるのは 2026 年 12 月分の掛金で、引き落としは 2027 年 1 月なので 2027 年分の控除です。2026 年分は 2026 年 1〜12 月に引き落とされた分（最大 81.6 万円）です。' },
+      { type: 'h3', text: '国民年金基金に入っている場合は？' },
+      { type: 'p', text: '国民年金基金の掛金と iDeCo の掛金を合わせて月 7.5 万円までです。国民年金基金の掛金が月 3 万円なら、iDeCo は残りの範囲になります。付加保険料（月 400 円）を払っている人も合算します。' },
+      { type: 'h3', text: '副業で会社員の場合は？' },
+      { type: 'p', text: '会社員・公務員（第 2 号）の上限も 2027 年 1 月引き落とし分から上がり、企業年金がない人は月 2.3 万円から 6.2 万円、企業年金がある人は iDeCo と企業年金などの合計で月 6.2 万円になります。企業年金などの掛金相当額は勤務先で確認します。' },
+      { type: 'h3', text: '国民健康保険料も下がる？' },
+      { type: 'p', text: '下がりません。国保料は所得控除を引く前の所得をもとに計算されるため、iDeCo で下がるのは所得税と住民税です。' },
+      {
+        type: 'cta',
+        title: '控除と税額をまとめて管理する（確定申告準備キット）',
+        text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別の集計、所得税の概算までセットにしたテンプレートです。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/kyosai', label: '無料の節税額シミュレーターを使う' },
+      },
+      { type: 'links', items: ['freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
+      {
+        type: 'note',
+        text: '厚生労働省「2026 年 12 月（2027 年 1 月引き落とし分）から iDeCo の拠出限度額と加入可能年齢が引き上げられます」リーフレット、国税庁 タックスアンサー No.1135「小規模企業共済等掛金控除」に基づく一般的な説明です。上限の計算や手続きの締切は加入状況と加入先によって違うので、加入している金融機関（運営管理機関）で確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -6188,7 +6337,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance'],
   },
   {
     id: 'setup',
