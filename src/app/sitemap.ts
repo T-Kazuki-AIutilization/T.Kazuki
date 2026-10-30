@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/tools/invoice`, lastModified: new Date('2026-10-18'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/takehome`, lastModified: new Date('2026-10-18'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/rate`, lastModified: new Date('2026-10-18'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE}/tools/kanpu`, lastModified: new Date('2026-10-30'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/withholding`, lastModified: new Date('2026-10-18'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/tools/nhi`, lastModified: new Date('2026-10-20'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/tools/hayamihyo`, lastModified: new Date('2026-10-22'), changeFrequency: 'monthly', priority: 0.8 },

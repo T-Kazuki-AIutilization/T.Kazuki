@@ -38,6 +38,7 @@ export default function WithholdingToolPage() {
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/freelance-withholding-tax" className="text-primary hover:underline">フリーランスの源泉徴収とは？対象になる報酬・計算方法・確定申告での還付</Link></li>
+            <li><Link href="/tools/kanpu" className="text-primary hover:underline">確定申告の還付金の計算ツール（源泉徴収された分がいくら戻るか）</Link></li>
             <li><Link href="/blog/freelance-invoice-how-to" className="text-primary hover:underline">請求書の書き方（インボイス対応・源泉徴収の計算）</Link></li>
             <li><Link href="/tools/invoice" className="text-primary hover:underline">請求書作成ツール（無料）</Link></li>
           </ul>
