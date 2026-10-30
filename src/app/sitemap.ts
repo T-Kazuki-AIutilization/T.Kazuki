@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/tools/haigusha`, lastModified: new Date('2026-10-28'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/tokutei-shinzoku`, lastModified: new Date('2026-10-29'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/jigyozei`, lastModified: new Date('2026-10-29'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/tools/shohizei`, lastModified: new Date('2026-10-30'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/genka-shokyaku`, lastModified: new Date('2026-10-30'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/tools/furusato`, lastModified: new Date('2026-10-21'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE}/signup`, changeFrequency: 'monthly', priority: 0.6 },

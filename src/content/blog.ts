@@ -2975,6 +2975,11 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '増えるのは売上にかかる消費税の 10% 分、税抜売上の 1% 分です。月の積立額で考えると、2 割特例なら税込入金額の約 1.8%、3 割特例なら約 2.7% を消費税用に取り分けておけば足ります。',
       },
+      {
+        type: 'linkgrid',
+        title: '自分の売上で 2 割特例・3 割特例・簡易課税を比べる（無料）',
+        items: [{ href: '/tools/shohizei', label: '消費税の計算ツール' }],
+      },
       { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-registration', 'freelance-tax-calendar'] },
       { type: 'h2', text: '3 割特例を使える人・使えない人' },
       {
@@ -5748,8 +5753,8 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'linkgrid',
-        title: '消費税を含めた手取りを計算する（無料・登録不要）',
-        items: [{ href: '/tools/takehome', label: '手取り計算ツール（2 割特例・3 割特例・簡易課税を選べる）' }],
+        title: '自分の売上で計算する（無料・登録不要）',
+        items: [{ href: '/tools/shohizei', label: '消費税の計算ツール（付表 6・申告書に書く額）' }, { href: '/tools/takehome', label: '手取り計算ツール（消費税を含めた手取り）' }],
       },
       { type: 'h2', text: '手順 3: 申告書（第二表・第一表）に転記する' },
       {
