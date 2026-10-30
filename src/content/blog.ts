@@ -1057,7 +1057,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '2割特例が使えるのは 2026 年分までです。令和 8 年度税制改正で、2027 年分と 2028 年分は個人事業者向けの「3割特例」（納税額＝売上にかかる消費税 × 30%）が使えるようになりました。2029 年分からは簡易課税か本則課税です。詳しくは「インボイスの 2 割特例は 2026 年分で終了。2027 年からの 3 割特例」の記事にまとめています。',
       },
-      { type: 'links', items: ['freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-invoice-how-to'] },
+      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-invoice-how-to'] },
       { type: 'h2', text: '登録しないと何が起きるか' },
       {
         type: 'p',
@@ -1746,7 +1746,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '国民健康保険は 6〜7 月に保険料が決まり、年 8〜10 回の分割で払います（自治体により異なる）。国民年金は毎月定額で、前納すると割引があります。どちらも社会保険料控除の対象なので、払った額は確定申告で全額控除できます。',
       },
-      { type: 'links', items: ['yotei-nozei-gengaku-shinsei', 'freelance-tax-prep', 'freelance-health-insurance-pension', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'yotei-nozei-gengaku-shinsei', 'freelance-tax-prep', 'freelance-health-insurance-pension', 'freelance-withholding-tax'] },
       { type: 'h2', text: '納税資金はいくら積み立てればよい？' },
       {
         type: 'p',
@@ -2168,7 +2168,7 @@ export const ARTICLES: Article[] = [
         text: '青色申告特別控除の 65 万円は、複式簿記で帳簿をつけたうえで e-Tax で提出する（または優良な電子帳簿保存をする）ことが条件です。書面提出だと 55 万円になるので、所得税・住民税・国保を合わせて数万円の差になります。なお 2027 年分からは、書面提出だと 10 万円に下がり、e-Tax＋優良な電子帳簿などで 75 万円の区分ができます（令和 8 年度税制改正）。',
       },
       { type: 'h2', text: '準備するもの' },
-      { type: 'links', items: ['shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
       {
         type: 'ul',
         items: [
@@ -2975,7 +2975,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '増えるのは売上にかかる消費税の 10% 分、税抜売上の 1% 分です。月の積立額で考えると、2 割特例なら税込入金額の約 1.8%、3 割特例なら約 2.7% を消費税用に取り分けておけば足ります。',
       },
-      { type: 'links', items: ['freelance-invoice-touroku-yarikata', 'freelance-invoice-registration', 'freelance-tax-calendar'] },
+      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-registration', 'freelance-tax-calendar'] },
       { type: 'h2', text: '3 割特例を使える人・使えない人' },
       {
         type: 'p',
@@ -3915,7 +3915,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '取引先が求めている時期に合わせて登録日を決めるのが基本です。必要もないのに早く登録すると、その分だけ消費税の負担が早く始まります。',
       },
-      { type: 'links', items: ['freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-invoice-how-to'] },
+      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-registration', 'freelance-invoice-3wari-tokurei', 'freelance-invoice-how-to'] },
       { type: 'h2', text: '公表サイトに載る情報（本名に注意）' },
       {
         type: 'p',
@@ -5670,6 +5670,153 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shohizei-shinkoku-2wari-yarikata',
+    title: '消費税の確定申告のやり方（2 割特例・個人事業主）。付表 6 と申告書の書き方、期限 3 月 31 日と納付【2026 年分が最後】',
+    description:
+      'インボイス登録したフリーランス・個人事業主の消費税の確定申告を、2 割特例で行う手順。売上の集計、付表 6（簡易版）の計算、申告書第一表・第二表への転記、2 割特例の付記、確定申告書等作成コーナーと e-Tax、期限（2026 年分は 2027 年 3 月 31 日）と振替納税まで。売上 500 万円の計算例つき。',
+    date: '2026-10-30',
+    keywords: ['消費税 確定申告 やり方 個人事業主', '2割特例 申告 やり方', '2割特例 付表6 書き方', '消費税 申告 期限 個人', 'インボイス 消費税 申告 フリーランス'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: 'インボイス登録をしたフリーランス・個人事業主は、所得税とは別に消費税の確定申告が必要です。免税事業者から登録した人の多くは「2 割特例」で申告でき、売上を集計するだけで納税額が計算できます。2 割特例を使えるのは 2026 年分（2027 年 3 月に申告する分）が最後です。国税庁の「2 割特例用 消費税及び地方消費税の確定申告の手引き」をもとに、手順と書き方をまとめました。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '2026 年分の消費税の申告・納付の期限は 2027 年 3 月 31 日（水）。所得税の期限（3 月 15 日）とは別',
+          '納税額は「売上にかかる消費税 × 20%」。税抜売上 500 万円なら、国税と地方税を合わせて 10 万円',
+          '出す書類は、申告書第一表・第二表と付表 6。第一表の「税額控除に係る経過措置の適用（2 割特例）」に ○ を付ける。事前の届出は要らない',
+          '個人は国税庁の確定申告書等作成コーナーで、金額を入れるだけで申告書が作れ、e-Tax で出せる',
+          '申告書を出しても納付書は届かない。期限までに自分で納付するか、振替納税を申し込んでおく',
+        ],
+      },
+      { type: 'h2', text: '申告が必要な人と 2 割特例を使える人' },
+      {
+        type: 'p',
+        text: 'インボイス発行事業者の登録をしている人は、売上が少なくても消費税の確定申告が必要です。2 割特例を使えるのは、インボイス登録をきっかけに免税事業者から課税事業者になった人です。基準期間（2 年前、2026 年分なら 2024 年）の課税売上高が 1,000 万円を超えているなど、登録と関係なく課税事業者になる年は使えません。一般課税・簡易課税のどちらを選んでいても、申告のときに 2 割特例を選べます。',
+      },
+      {
+        type: 'note',
+        text: '2 割特例を使って（または使わずに）申告した後に、修正申告や更正の請求で「やはり使わない（使う）」に変えることは、原則としてできません。簡易課税の届出をしていて、物販の割合が大きい人などは、申告の前にどちらが少ないか比べておきましょう。',
+      },
+      { type: 'h2', text: '手順 1: 売上（課税売上げ）を集計する' },
+      {
+        type: 'p',
+        text: '1 月 1 日〜12 月 31 日の売上を、税率ごとに集計します。フリーランスの報酬はほとんどが標準税率（10%）です。源泉徴収される報酬は、引かれる前の金額（請求額）で集計します。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '含める: 報酬・売上（未入金でもその年に納品したもの）、事業用のパソコンなどを売った代金',
+          '含めない: 給与収入、登録日より前の売上（年の途中で登録した場合）',
+          '値引き・返品をした場合は、その額も税率ごとに集計する（売上から直接引いて記帳しているなら不要）',
+        ],
+      },
+      { type: 'h2', text: '手順 2: 付表 6 で納税額を計算する' },
+      {
+        type: 'p',
+        text: '付表 6（税率別消費税額計算表）で、売上にかかる消費税と、その 80% の「特別控除税額」を計算します。貸倒れがなければ簡易版を使えます。税込売上 550 万円（税抜 500 万円）、全て 10% の場合の計算は次のとおりです。',
+      },
+      {
+        type: 'table',
+        headers: ['欄', '計算', '金額'],
+        rows: [
+          ['① 課税資産の譲渡等の対価の額', '税込 5,500,000 円 × 100/110', '5,000,000 円'],
+          ['② 課税標準額', '① の千円未満を切り捨て', '5,000,000 円'],
+          ['③ 課税標準額に対する消費税額', '② × 7.8%（国税の税率）', '390,000 円'],
+          ['④ 売上対価の返還等に係る消費税額', '値引き・返品がなければ 0', '0 円'],
+          ['⑤ ③ − ④', '', '390,000 円'],
+          ['⑥ 特別控除税額', '⑤ × 80%', '312,000 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '消費税（国税）の納付税額は ③ − ⑥ ＝ 78,000 円（百円未満切り捨て）、地方消費税はその 22/78 で 22,000 円、合計 100,000 円です。税抜売上の約 2%、税込入金額の約 1.8% にあたります。',
+      },
+      {
+        type: 'table',
+        headers: ['税抜売上', '消費税（国税）', '地方消費税', '納税額の合計'],
+        rows: [
+          ['300 万円', '46,800 円', '13,200 円', '60,000 円'],
+          ['500 万円', '78,000 円', '22,000 円', '100,000 円'],
+          ['800 万円', '124,800 円', '35,200 円', '160,000 円'],
+        ],
+      },
+      {
+        type: 'linkgrid',
+        title: '消費税を含めた手取りを計算する（無料・登録不要）',
+        items: [{ href: '/tools/takehome', label: '手取り計算ツール（2 割特例・3 割特例・簡易課税を選べる）' }],
+      },
+      { type: 'h2', text: '手順 3: 申告書（第二表・第一表）に転記する' },
+      {
+        type: 'table',
+        headers: ['書類', '書くこと'],
+        rows: [
+          ['申告書第二表（課税標準額等の内訳書）', '付表 6 の課税標準額、税率別の対価の額、消費税額、返還等対価に係る税額を転記'],
+          ['申告書第一表', '課税標準額・消費税額、控除対象仕入税額（付表 6 の特別控除税額）、差引税額、地方消費税の額、納付税額。「税額控除に係る経過措置の適用（2 割特例）」に ○'],
+          ['第一表の様式', '簡易課税の届出をしている人は簡易課税用、していない人は一般用'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '確定申告書等作成コーナーでは、「消費税」の申告書作成で、インボイス登録後の売上（収入）金額などを画面の案内に沿って入れると、付表 6・第二表・第一表が自動で作られ、そのまま e-Tax で送信できます。所得税の申告と同じマイナンバーカードで続けて作ると楽です。',
+      },
+      { type: 'h2', text: '手順 4: 期限までに提出・納付する' },
+      {
+        type: 'ul',
+        items: [
+          '期限: 個人事業者は翌年 3 月 31 日。2026 年分は 2027 年 3 月 31 日（水）が申告・納付の期限',
+          '提出: e-Tax、郵送、税務署の受付のいずれか',
+          '納付: 振替納税（口座引き落とし。引き落とし日は 4 月下旬ごろで、国税庁が毎年公表）、ダイレクト納付、クレジットカード、スマホアプリ、金融機関や税務署の窓口',
+          '申告書を出しても納付書は送られてこない。振替納税は事前に申し込んでおく',
+        ],
+      },
+      {
+        type: 'p',
+        text: '税込経理で帳簿をつけている場合、2026 年分として納める消費税は、原則として申告書を出した 2027 年の経費（租税公課）になります。2026 年の未払金に計上して 2026 年分の経費にすることもできます。',
+      },
+      { type: 'h2', text: '2027 年分からはどうなる？' },
+      {
+        type: 'p',
+        text: '2 割特例は 2026 年分で終わり、個人事業者は 2027・2028 年分に「3 割特例」（売上にかかる消費税 × 30%）を使えます。税抜売上 500 万円なら納税額は 10 万円から 15 万円になります。物販など簡易課税のほうが有利な人は、3 割特例・2 割特例を使った年の翌年分の確定申告期限までに簡易課税制度選択届出書を出せば、その翌年分から簡易課税を使えます。',
+      },
+      {
+        type: 'linkgrid',
+        title: '2027 年分からの消費税',
+        items: [{ href: '/blog/freelance-invoice-3wari-tokurei', label: '2 割特例は 2026 年分で終了。3 割特例で消費税はいくら増える？' }],
+      },
+      { type: 'affiliate', title: '売上の集計から申告書づくりまでまとめるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '2 割特例を使うのに届出は必要？' },
+      { type: 'p', text: '事前の届出は要りません。申告書第一表の「税額控除に係る経過措置の適用（2 割特例）」に ○ を付け、付表 6 を添付すれば適用されます。作成コーナーなら、画面で 2 割特例を選ぶだけです。' },
+      { type: 'h3', text: '経費の消費税は計算しなくていい？' },
+      { type: 'p', text: '2 割特例では、仕入れや経費にかかった消費税を集計する必要はありません。売上にかかる消費税の 80% を差し引くので、納税額は売上にかかる消費税の 20% になります。ただし売上は税率ごとに分けて集計します。' },
+      { type: 'h3', text: '所得税の確定申告と一緒に出せる？' },
+      { type: 'p', text: '別の申告書ですが、同じ時期に作成コーナーで続けて作り、e-Tax で送れます。期限は所得税が 3 月 15 日、消費税が 3 月 31 日です。消費税の納税額は所得税の計算にも関わる（税込経理の場合の租税公課）ので、売上の集計は一度で両方に使えるようにしておくと効率的です。' },
+      { type: 'h3', text: '期限に遅れたらどうなる？' },
+      { type: 'p', text: '期限後の申告になり、無申告加算税や延滞税がかかることがあります。期限内に納付できない事情がある場合は、申請により猶予が認められることがあるので、早めに税務署に相談します。' },
+      { type: 'h3', text: '年の途中でインボイス登録した場合は？' },
+      { type: 'p', text: '登録日から 12 月 31 日までの売上だけで計算します。登録日より前の免税事業者だった期間の売上は含めません。' },
+      {
+        type: 'cta',
+        title: '税率別の売上を請求書から集計する（インボイス対応 請求書テンプレート）',
+        text: '登録番号の表示、10%／8% の税率別集計、源泉徴収の表示切替に対応。見積書・納品書と入金管理台帳つきの Excel テンプレート。',
+        href: BOOTH_INVOICE_URL,
+        label: 'BOOTH で見る（980円）',
+        external: true,
+        secondary: { href: '/tools/invoice', label: '無料の請求書作成ツールを使う' },
+      },
+      { type: 'links', items: ['freelance-invoice-3wari-tokurei', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration'] },
+      {
+        type: 'note',
+        text: '国税庁「2 割特例用 消費税及び地方消費税の確定申告の手引き（個人事業者・法人共通）」（令和 7 年 11 月版）と消費税の Q&A（問 117-3）に基づく一般的な説明です。2026 年分の申告書の様式や作成コーナーの画面は変わる場合があります。個別の判断は税務署や税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -5730,7 +5877,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata'],
   },
   {
     id: 'setup',
