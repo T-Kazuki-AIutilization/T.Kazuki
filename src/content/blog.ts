@@ -272,7 +272,7 @@ export const ARTICLES: Article[] = [
           ['入金済', '入金日を記入', '通帳の金額と一致するか確認'],
         ],
       },
-      { type: 'links', items: ['freelance-invoice-email-template', 'freelance-invoice-how-to', 'freelance-tax-calendar'] },
+      { type: 'links', items: ['uriage-keijo-jiki-nenmatsu', 'freelance-invoice-email-template', 'freelance-invoice-how-to', 'freelance-tax-calendar'] },
       { type: 'h2', text: '仕組み3: 月初に「今月の入金予定」を確認する' },
       {
         type: 'p',
@@ -803,7 +803,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -2632,7 +2632,7 @@ export const ARTICLES: Article[] = [
           '75 万円を狙うなら、優良な電子帳簿の要件に対応した会計ソフトを選び、2027 年 1 月 1 日の取引から入力する（対応状況はプランごとに公式サイトで確認）',
         ],
       },
-      { type: 'links', items: ['aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
+      { type: 'links', items: ['uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
       { type: 'affiliate', title: '1 月から会計ソフトで帳簿をつけるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '12 月に買ったパソコンは今年の経費になる？' },
@@ -3616,7 +3616,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '③の源泉徴収税は、確定申告で精算する所得税の前払いなので、経費ではなく「事業主貸」にします。⑫の国民年金・国保・住民税・所得税も個人の支払いなので経費にはならず、事業主貸です（年金・国保は確定申告で社会保険料控除になります）。',
       },
-      { type: 'links', items: ['aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['uriage-keijo-jiki-nenmatsu', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
       { type: 'h2', text: '会計ソフトと Excel、どちらでつけるか' },
       {
         type: 'table',
@@ -5995,6 +5995,139 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'uriage-keijo-jiki-nenmatsu',
+    title: '12 月の仕事で 1 月入金の売上はどっちの年？フリーランスの売上・経費の計上時期（年末年始の判断と現金主義の特例）',
+    description:
+      'フリーランス・個人事業主の売上は、入金日ではなく納品・役務の提供が終わった日の年に計上するのが原則（所得税基本通達 36-8）。12 月納品・1 月入金、月額報酬、前受け、12 月に使って 1 月に払う経費、クレジットカード、年額のサーバー代などの例を表で整理し、青色申告の現金主義の特例（前々年の所得 300 万円以下・控除は 10 万円）もまとめました。',
+    date: '2026-10-31',
+    keywords: ['フリーランス 売上 計上 時期', '12月 売上 1月 入金 確定申告', '売掛金 年またぎ 個人事業主', '経費 計上時期 12月 1月払い', '現金主義 個人事業主 条件'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '12 月に納品した仕事の報酬が 1 月末に振り込まれる。フリーランスにはよくある流れですが、この売上は今年と来年のどちらの確定申告に入れるのでしょうか。答えは原則「今年」です。所得税では、お金が入った日ではなく、仕事が終わった日（売上が確定した日）で年を分けます。年末年始をまたぐ売上と経費の扱いを、国税庁の通達に沿って整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '売上は、入金日ではなく「納品した日」「役務の提供を終えた日」の年に入れる（12 月納品・1 月入金なら今年の売上）',
+          '月額の報酬（顧問・保守・運用など）は、その月の分をその月の売上にする',
+          '先に受け取った前受金は、仕事が終わった年の売上にする',
+          '経費は、支払った日ではなく「サービスを受けた・物を受け取った日」の年に入れる（12 月分の外注費を 1 月に払うなら今年の経費）',
+          '前々年の所得が 300 万円以下の青色申告者は、届出をすれば入金・支払いの日で計算する「現金主義」も選べるが、青色申告特別控除は 10 万円までになる',
+          'どの日で計上するか（納品日・検収日など）は、毎年同じ基準で続ける',
+        ],
+      },
+      { type: 'h2', text: '売上はいつの年に入れる？' },
+      {
+        type: 'p',
+        text: '国税庁の所得税基本通達 36-8 は、事業所得の売上を入れる日を次のように定めています。フリーランスの仕事の多くは「請負」か「人的役務の提供」にあたります。',
+      },
+      {
+        type: 'table',
+        headers: ['取引', '売上に入れる日'],
+        rows: [
+          ['物の引渡しがある請負（デザインのデータ納品、記事の原稿、Web サイトの制作など）', '目的物の全部を完成して相手に引き渡した日'],
+          ['物の引渡しがない請負', '約束した役務の提供を完了した日'],
+          ['人的役務の提供（講師、通訳、コンサルティングなど）', '役務の提供を完了した日'],
+          ['期間に応じて報酬を受け取る契約（月額の顧問・保守・運用など）', 'その期間が経過した日（毎月の分をその月に）'],
+          ['物の販売', '引き渡した日（出荷日・着荷日・検収日など、合理的な日を継続して使う）'],
+        ],
+      },
+      { type: 'h3', text: '年末年始の例' },
+      {
+        type: 'table',
+        headers: ['ケース', '2026 年分の売上？', '理由'],
+        rows: [
+          ['12 月 20 日に納品、請求書は 12 月末、入金は 1 月 31 日', '入れる', '納品（引渡し）が 2026 年'],
+          ['12 月に作業し、1 月 10 日に納品', '入れない（2027 年分）', '完成・引渡しが 2027 年'],
+          ['12 月 25 日に納品、相手の検収が 1 月 8 日', '継続して使っている基準による', '検収日を基準にしているなら 2027 年。毎年同じ基準で'],
+          ['月額の保守契約の 12 月分を 1 月に入金', '入れる', '12 月の期間が経過している'],
+          ['1 月開始の案件の着手金を 12 月に受け取った', '入れない（2027 年分）', '前受金。仕事が終わった年に売上にする'],
+          ['11 月に納品したが、入金がまだない', '入れる', '入金がなくても売上は確定している（未入金は売掛金）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '大きな案件で、工程ごとに納品・検収して代金を受け取る契約になっている場合は、引き渡した部分ごとにその日の売上にします。請求書の日付ではなく、納品・完了の日で判断する点に注意してください。',
+      },
+      { type: 'h3', text: '帳簿のつけ方' },
+      {
+        type: 'p',
+        text: '12 月に納品して入金が 1 月になる売上は、12 月に「売掛金 / 売上高」で記帳し、1 月の入金時に「普通預金 / 売掛金」で消し込みます。源泉徴収される報酬は、売上を源泉徴収される前の額で入れ、入金時に差し引かれた額を「事業主貸」にします。年末に、納品済みで入金がまだの請求をリストにしておくと、計上漏れを防げます。',
+      },
+      { type: 'h2', text: '経費はいつの年に入れる？' },
+      {
+        type: 'p',
+        text: '経費も支払った日ではなく、その年の 12 月 31 日までに支払う義務が確定したもの（サービスを受けた、物を受け取った）をその年の経費にします。払っていない分は「未払金」として計上します。',
+      },
+      {
+        type: 'table',
+        headers: ['ケース', '2026 年分の経費？'],
+        rows: [
+          ['12 月に外注した作業の代金を 1 月に支払う', '入れる（12 月に未払金で計上）'],
+          ['12 月にクレジットカードで買った消耗品（引き落としは 1〜2 月）', '入れる（カードの利用日の年）'],
+          ['12 月分の通信費・電気代が 1 月に引き落とされる', '入れる（家事按分した事業分）'],
+          ['12 月に買ったパソコンを 1 月から使う', '入れない（使い始めた年の経費。10 万円以上なら減価償却など）'],
+          ['サーバー代 1 年分を 12 月に前払い', '原則は期間に応じて分ける。1 年以内の前払いで毎年同じ扱いを続けるなら、払った年の経費にできる（短期前払費用）'],
+        ],
+      },
+      {
+        type: 'linkgrid',
+        title: '年末に買う備品を今年いくら経費にできるか（無料）',
+        items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール' }],
+      },
+      { type: 'h2', text: '現金主義の特例（入金・支払いの日で計算する）' },
+      {
+        type: 'p',
+        text: '青色申告者で、前々年分の事業所得と不動産所得の合計（青色事業専従者給与を経費に入れずに計算した額）が 300 万円以下の人は、「現金主義による所得計算の特例を受けることの届出書」を出すと、入金した日・支払った日で売上と経費を計算できます。届出の期限は適用を受けたい年の 3 月 15 日（その年の 1 月 16 日以後に開業した場合は開業日から 2 か月以内、土日祝なら翌日）です。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '売掛金・未払金の管理がいらず、通帳と記帳が一致するので楽になる',
+          'その代わり、青色申告特別控除は 65 万円・55 万円が使えず、最高 10 万円になる',
+          '一度やめて再び使うときは、別の承認申請（その年の 1 月 31 日まで）が必要',
+        ],
+      },
+      {
+        type: 'p',
+        text: '65 万円控除との差は大きいので、会計ソフトで売掛金を管理できるなら、原則の方法（発生主義）で 65 万円控除を受けるほうが有利なことが多いです。会社員の副業などで業務に係る雑所得として申告している人は、前々年のその収入が 300 万円以下なら、届出なしで入金・支払いの日で計算できます。',
+      },
+      { type: 'h2', text: '消費税・インボイスとの関係' },
+      {
+        type: 'p',
+        text: 'インボイス登録をして消費税を申告する人も、売上の年は原則として同じく引渡し・役務の提供の日で判断します。2 割特例を使う最後の年（2026 年分）と、3 割特例になる 2027 年分の境目の売上は、納品日で年を分けておきましょう。',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '請求書の日付を 1 月にすれば来年の売上にできる？' },
+      { type: 'p', text: 'できません。売上の年は請求書の日付ではなく、納品・役務の提供が終わった日で決まります。12 月に納品したものは、請求書の日付が 1 月でも今年の売上です。' },
+      { type: 'h3', text: '支払調書の金額と自分の売上が合わない' },
+      { type: 'p', text: '支払調書はクライアントが支払った年で作るため、12 月納品・1 月入金の報酬は翌年分の支払調書に載ります。自分の売上は納品日の年で計上するので、ずれるのは普通です。申告では自分の帳簿（請求ごとの記録）で集計し、源泉徴収税額をどちらの年分で差し引くか迷う場合は税務署に確認してください。' },
+      { type: 'h3', text: '去年の売上を入れ忘れていた' },
+      { type: 'p', text: '前年の申告で売上が漏れていたら、前年分の修正申告をします。今年の売上に入れて済ませるのは正しくありません。税務署から連絡が来る前に自分で修正申告をすれば、過少申告加算税はかかりません。' },
+      { type: 'h3', text: '入金されないまま相手と連絡が取れなくなった' },
+      { type: 'p', text: '納品した年の売上に入れたうえで、回収できないことが確定した年に貸倒れとして経費にします。請求・督促の記録を残しておきます。' },
+      { type: 'h3', text: '白色申告でも同じ？' },
+      { type: 'p', text: '同じです。現金主義の特例は青色申告者だけの制度なので、白色申告の人は納品・役務の提供の日で売上を計上します。' },
+      {
+        type: 'cta',
+        title: '納品日・請求日・入金日をまとめて管理する（インボイス対応 請求書テンプレート）',
+        text: '請求書・見積書・納品書と入金管理台帳がつながった Excel テンプレート。入金管理台帳で、年末に未入金（売掛金）の請求を確認できます。',
+        href: BOOTH_INVOICE_URL,
+        label: 'BOOTH で見る（980円）',
+        external: true,
+        secondary: { href: '/tools/invoice', label: '無料の請求書作成ツールを使う' },
+      },
+      { type: 'links', items: ['freelance-boki-shiwake', 'freelance-year-end-checklist', 'freelance-payment-tracking', 'kakutei-shinkoku-kigengo-shusei'] },
+      {
+        type: 'note',
+        text: '所得税基本通達 36-8（事業所得の総収入金額の収入すべき時期）、国税庁「現金主義による所得計算の特例を受けるための手続」「帳簿の記帳のしかた（事業所得者用）」に基づく一般的な説明です。契約の内容によって判断が変わることがあるので、迷う場合は税務署か税理士に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -6055,7 +6188,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu'],
   },
   {
     id: 'setup',
