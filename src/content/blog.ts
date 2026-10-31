@@ -733,7 +733,7 @@ export const ARTICLES: Article[] = [
       { type: 'h3', text: '10 万円以上のパソコンはどうなる？' },
       { type: 'p', text: '1 つ（1 組）10 万円以上の備品は、原則として買った年に全額ではなく、耐用年数（パソコンは 4 年）に分けて減価償却します。青色申告をしている人は「少額減価償却資産の特例」で、2026 年 4 月 1 日以後に取得した 40 万円未満の資産（3 月 31 日までの取得は 30 万円未満）を、使い始めた年に全額経費にできます（年 300 万円まで）。20 万円未満なら白色申告でも 3 年で 1/3 ずつ経費にできます（一括償却資産）。' },
       { type: 'linkgrid', title: '方法ごとに今年の経費を比べる（無料）', items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール' }] },
-      { type: 'links', items: ['shogaku-genka-shokyaku-40man'] },
+      { type: 'links', items: ['kaji-anbun-freelance', 'shogaku-genka-shokyaku-40man'] },
       { type: 'h3', text: '経費にしてはいけないものを入れてしまったら？' },
       { type: 'p', text: '確定申告の期限後に気づいた場合は、修正申告をして不足分の税金を納めます。税務調査で指摘されてから修正すると、過少申告加算税や延滞税がかかることがあります。迷うものは、家事按分の割合を控えめにするか、税務署や税理士に確認するのが安全です。' },
       { type: 'affiliate', title: '経費の記録を自動化するなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
@@ -803,7 +803,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['kakutei-shinkoku-2026-kaisei', 'iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['kaji-anbun-freelance', 'kakutei-shinkoku-2026-kaisei', 'iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -3616,7 +3616,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '③の源泉徴収税は、確定申告で精算する所得税の前払いなので、経費ではなく「事業主貸」にします。⑫の国民年金・国保・住民税・所得税も個人の支払いなので経費にはならず、事業主貸です（年金・国保は確定申告で社会保険料控除になります）。',
       },
-      { type: 'links', items: ['uriage-keijo-jiki-nenmatsu', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['kaji-anbun-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
       { type: 'h2', text: '会計ソフトと Excel、どちらでつけるか' },
       {
         type: 'table',
@@ -5524,7 +5524,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
       },
-      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
+      { type: 'links', items: ['kaji-anbun-freelance', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
       {
         type: 'note',
         text: '国税庁「令和 7 年分 青色申告決算書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
@@ -7095,6 +7095,199 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kaji-anbun-freelance',
+    title: 'フリーランスの家事按分のやり方｜家賃・電気代・スマホ・車は何％経費にできる？白色申告の 50% の基準、実家・持ち家の場合、仕訳と決算書の書き方',
+    description:
+      '自宅で仕事をするフリーランス・個人事業主・副業の人向けに、家事按分（家賃・電気代・ネット・スマホ・車の一部を経費にする方法）を、所得税法施行令 96 条と所得税基本通達 45-2 に沿って解説。費目ごとの割合の決め方、按分でいくら税金が下がるか（売上別）、実家の親に家賃を払う場合（所得税法 56 条）、持ち家と住宅ローン控除、仕訳と青色申告決算書への書き方、根拠の残し方まで。',
+    date: '2026-11-01',
+    keywords: ['家事按分 やり方', '家事按分 割合 家賃', 'フリーランス 家賃 経費 何割', '家事按分 白色申告 50%', '家事按分 実家 家賃', '家事按分 持ち家 住宅ローン控除', '家事按分 仕訳'],
+    readingMinutes: 8,
+    blocks: [
+      {
+        type: 'p',
+        text: '自宅で仕事をしていると、家賃・電気代・ネット回線・スマホ代のように、仕事とプライベートの両方に使う支出が出てきます。このうち仕事に使った分だけを経費にするのが「家事按分」です。何％までと決まった上限はない一方で、割合の根拠を説明できることが条件になります。法令のルール、費目ごとの割合の決め方、実家や持ち家の場合の注意点、帳簿と決算書への書き方を順に整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '仕事と私用の両方に使う支出（家事関連費）は、仕事に必要な部分を「明らかに区分できる」ときに、その部分だけ経費にできる（国税庁 タックスアンサー No.2210）',
+          '青色申告なら、取引の記録などで仕事に直接必要だったことが明らかな部分は経費にできる。白色申告は、仕事に使う部分が 50% を超えるかで判定するが、50% 以下でも明らかに区分できれば経費にしてよい（所得税基本通達 45-2）',
+          '割合の上限はない。家賃は面積、電気代は時間、スマホは通話・通信の明細、車は走行距離など、説明できる基準で決めて根拠を残す',
+          '例: 家賃 9 万円・電気代 9,000 円・ネット 5,000 円・スマホ 6,000 円を按分すると年 約 39 万円の経費。所得税・住民税・国保が年 約 9〜15 万円下がる（売上 300〜1,000 万円の目安）',
+          '実家の親など生計を一にする親族に払う家賃は、事業所得の経費にならない（所得税法 56 条）。代わりに、親が払う固定資産税などのうち仕事で使う部分を経費にできる',
+          '持ち家は、家賃の代わりに減価償却費・固定資産税・住宅ローンの利息などを按分する。住宅ローン控除は、居住用の部分だけが対象になる（居住用がおおむね 90% 以上なら全体）',
+        ],
+      },
+      { type: 'h2', text: '家事按分のルール（青色申告と白色申告の違い）' },
+      {
+        type: 'p',
+        text: '個人の生活費（家事費）は経費になりません。ただし、1 つの支出が生活と仕事の両方にかかわるもの（家事関連費）は、取引の記録などに基づいて、仕事に直接必要だったことが明らかに区分できる部分だけ経費にできる、というのが国税庁の説明です（タックスアンサー No.2210）。条文（所得税法施行令 96 条）と通達では、青色申告と白色申告で書き方が少し違います。',
+      },
+      {
+        type: 'table',
+        headers: ['', '経費にできる部分', '根拠'],
+        rows: [
+          ['すべての人（白色申告・副業の雑所得を含む）', '支出の主たる部分が仕事に必要で、その部分を明らかに区分できる場合の、その部分', '所得税法施行令 96 条 1 号'],
+          ['「主たる部分」の判定', '仕事に必要な部分が 50% を超えるか。ただし 50% 以下でも、必要な部分を明らかに区分できればその分を経費にしてよい', '所得税基本通達 45-2'],
+          ['青色申告の人（上に加えて）', '取引の記録などに基づいて、仕事に直接必要だったことが明らかにされる部分', '所得税法施行令 96 条 2 号'],
+          ['判定の考え方', '仕事の内容、経費の内容、家族や従業員の構成、自宅の使い方などを総合して判定', '所得税基本通達 45-1'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'つまり、白色申告だから 50% 以下は経費にできない、というわけではありません。どちらの申告でも大事なのは「仕事に使った部分を区分して説明できるか」で、そのための根拠（面積・時間・明細・記録）を残しておくことです。',
+      },
+      { type: 'h2', text: '費目ごとの割合の決め方' },
+      {
+        type: 'p',
+        text: '割合に決まった計算式はなく、実態に合った説明のつく基準を選びます。よく使われる基準と、残しておくとよい根拠は次のとおりです。',
+      },
+      {
+        type: 'table',
+        headers: ['費目', '割合の基準の例', '残しておく根拠'],
+        rows: [
+          ['家賃（賃貸）', '仕事専用の部屋・スペースの面積 ÷ 住居の面積', '間取り図（面積入り）、仕事スペースの写真'],
+          ['電気代', '仕事をする時間 ÷ 起きている時間、または仕事で使う機器の割合', '1 週間の作業時間の記録、使っている機器のメモ'],
+          ['ガス・水道', '仕事でほとんど使わないなら按分しない', '（使う場合はその理由と割合のメモ）'],
+          ['ネット回線', '仕事で使う時間・通信の割合', '作業時間の記録、家族の利用状況のメモ'],
+          ['スマホ・携帯電話', '通話・データ通信のうち仕事の割合', '通話明細、仕事専用のアプリ・連絡先'],
+          ['車（ガソリン・保険・自動車税・減価償却）', '走行距離のうち仕事で走った割合', '走行記録（日付・行き先・距離）'],
+          ['パソコン・カメラなど', '仕事で使う時間の割合（減価償却の事業専用割合）', '使い方のメモ'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '仕事専用の部屋がなく、リビングの一角で作業している場合は、作業スペースの面積に、そのスペースを仕事で使う時間の割合を掛けるなど、面積と時間を組み合わせる方法もあります。どの方法でも、なぜその割合にしたかを第三者に説明できることが大切です。',
+      },
+      { type: 'h2', text: '計算例: 在宅のフリーランスの場合' },
+      {
+        type: 'p',
+        text: '40㎡の賃貸で 10㎡の部屋を仕事部屋にしていて、週 40 時間仕事をする（起きている時間は週 112 時間）人の例です。',
+      },
+      {
+        type: 'table',
+        headers: ['費目', '月額', '割合', '年間の経費'],
+        rows: [
+          ['家賃', '90,000 円', '25%（10㎡ ÷ 40㎡）', '270,000 円'],
+          ['電気代', '9,000 円', '約 36%（40 時間 ÷ 112 時間）', '約 38,600 円'],
+          ['ネット回線', '5,000 円', '80%', '48,000 円'],
+          ['スマホ', '6,000 円', '50%', '36,000 円'],
+          ['合計', '', '', '約 392,600 円'],
+        ],
+      },
+      { type: 'h2', text: '按分するといくら税金が下がる？' },
+      {
+        type: 'p',
+        text: '経費が増えると、所得税（復興特別所得税を含む）・住民税・国民健康保険料が下がります。上の例の約 39.3 万円を経費にした場合の目安を、当サイトの手取り計算と同じ式で計算しました（青色申告 65 万円控除、ほかの経費は売上の 10%、国保の所得割 10% で計算）。',
+      },
+      {
+        type: 'table',
+        headers: ['売上', '所得税', '住民税', '国保', '合計'],
+        rows: [
+          ['300 万円', '約 1.8 万円', '約 3.5 万円', '約 3.9 万円', '約 9.3 万円'],
+          ['500 万円', '約 3.0 万円', '約 3.5 万円', '約 3.9 万円', '約 10.5 万円'],
+          ['800 万円', '約 7.2 万円', '約 3.5 万円', '約 3.9 万円', '約 14.7 万円'],
+          ['1,000 万円', '約 7.2 万円', '約 3.5 万円', '約 3.9 万円', '約 14.7 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '国保の保険料率と上限は市区町村によって違い、上限に達している人は国保は下がりません。個人事業税の対象業種なら、事業税も下がります。自分の家賃や割合での額は、家事按分の計算ツールで確認できます。',
+      },
+      {
+        type: 'cta',
+        title: '家賃・電気代・ネット・スマホの按分を計算する（無料ツール）',
+        text: '面積・時間・使用割合を入れると、年間の経費額と、所得税・住民税・国保が下がる目安を表示します。登録不要。',
+        href: '/tools/anbun',
+        label: '家事按分の計算ツールを開く',
+      },
+      { type: 'h2', text: '実家の親に家賃を払っている場合' },
+      {
+        type: 'p',
+        text: '生計を一にする配偶者や親などの親族に事業から対価を払っても、その額は事業所得の経費になりません。その代わり、親族がその対価を得るためにかかった費用は、事業をしている本人の経費になります（所得税法 56 条）。実家の一室を仕事場にして親に家賃を払っている場合、家賃そのものは経費にならず、親が払っている固定資産税などのうち仕事で使う部分を経費にする、という考え方です。',
+      },
+      {
+        type: 'p',
+        text: '同じ家に住んでいる親族は、明らかに互いに独立した生活をしている場合を除き「生計を一にする」とされます（所得税基本通達 2-47）。実家暮らしでも生活費を完全に分けている場合などは判断が分かれるため、迷うときは税務署に確認してください。',
+      },
+      { type: 'h2', text: '持ち家の場合と住宅ローン控除' },
+      {
+        type: 'p',
+        text: '持ち家では自分に家賃を払うことはできないため、家に関する次の費用を、仕事で使う面積の割合で按分して経費にします。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '建物の減価償却費（土地は減価償却しない）',
+          '固定資産税（土地・建物）',
+          '住宅ローンの利息（元本の返済分は経費にならない）',
+          '火災保険料、マンションの管理費など',
+        ],
+      },
+      {
+        type: 'p',
+        text: '住宅ローン控除を受けている場合は、居住用の部分だけが控除の対象になります。控除を受けるには床面積の 2 分の 1 以上を専ら自分の居住用に使っていることが必要で（国税庁 タックスアンサー No.1211-1）、居住用の部分がおおむね 90% 以上なら家全体を居住用として扱えます（租税特別措置法関係通達 41-29）。仕事で使う割合を大きくすると、控除額が減る場合があります。住んでいた家を途中から仕事にも使う場合の減価償却の計算は複雑なので、税務署か税理士に確認すると安心です。',
+      },
+      { type: 'h2', text: '帳簿のつけ方と決算書への書き方' },
+      {
+        type: 'p',
+        text: '帳簿のつけ方は、払うたびに仕事の分だけ経費にする方法と、1 年分をいったん全額経費にして年末に私用の分を戻す方法があります。どちらでも結果は同じです。',
+      },
+      {
+        type: 'table',
+        headers: ['方法', '仕訳の例（家賃 9 万円・事業割合 25%）'],
+        rows: [
+          ['払うたびに按分する', '地代家賃 22,500 ・事業主貸 67,500 ／ 普通預金 90,000'],
+          ['年末にまとめて戻す', '毎月: 地代家賃 90,000 ／ 普通預金 90,000。12 月 31 日: 事業主貸 810,000 ／ 地代家賃 810,000（年 108 万円のうち 75%）'],
+        ],
+      },
+      {
+        type: 'ul',
+        items: [
+          '青色申告決算書: 3 ページの「地代家賃の内訳」に、支払先・賃借物件・1 年の家賃と、そのうち必要経費に入れた額を書く。1 ページの地代家賃は按分した後の額',
+          'パソコン・車などの減価償却: 「減価償却費の計算」の事業専用割合の欄に割合を書き、按分した後の額が「本年分の必要経費算入額」',
+          '白色申告の収支内訳書: 経費の各欄に按分した後の額を書く',
+        ],
+      },
+      { type: 'h2', text: '根拠の残し方と注意点' },
+      {
+        type: 'ul',
+        items: [
+          '按分した費目・割合・その理由を 1 枚のメモにまとめ、帳簿と一緒に保存する（間取り図、作業時間の記録、通話明細、走行記録など）',
+          '仕事の仕方が変わらないのに、年によって割合を大きく変えない。引っ越しや働き方が変わったときは、新しい根拠で割合を決め直す',
+          '家族と住んでいて共用の部屋を使っている場合は、家族が使う時間も考えて割合を控えめにする',
+          '家賃や光熱費の契約者が家族名義の場合は、誰が実際に払っているかの記録（口座からの引き落とし・振込）を残し、扱いに迷うときは税務署に確認する',
+        ],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '家賃の 50% 以上を経費にしてもいい？' },
+      { type: 'p', text: '割合に上限はないため、仕事専用の部屋が住居の半分以上を占めているなど実態に合っていれば問題ありません。ただし割合が大きいほど説明を求められやすいので、間取り図や仕事スペースの写真など、根拠をしっかり残しておきましょう。' },
+      { type: 'h3', text: '白色申告だと家事按分はできない？' },
+      { type: 'p', text: 'できます。白色申告では仕事に使う部分が 50% を超えるかで判定するのが原則ですが、50% 以下でも仕事に必要な部分を明らかに区分できれば、その部分を経費にしてよいとされています（所得税基本通達 45-2）。' },
+      { type: 'h3', text: '実家暮らしで親に家賃を払っている。経費になる？' },
+      { type: 'p', text: '親と生計を一にしている場合、親に払う家賃は事業所得の経費になりません（所得税法 56 条）。代わりに、親が払っている固定資産税などのうち仕事で使う部分を経費にできます。生計を一にしているかの判断に迷うときは税務署に確認してください。' },
+      { type: 'h3', text: '持ち家で住宅ローン控除を受けていても按分できる？' },
+      { type: 'p', text: '按分できます。ただし住宅ローン控除は居住用の部分だけが対象になるため、仕事で使う割合によっては控除額が減ります。居住用がおおむね 90% 以上なら家全体を居住用として扱えます（租税特別措置法関係通達 41-29）。' },
+      { type: 'h3', text: '会社員の副業（雑所得）でも家事按分できる？' },
+      { type: 'p', text: 'できます。家事関連費の扱い（所得税法施行令 96 条 1 号）は雑所得も対象です。副業に使う部分を明らかに区分できれば、その部分を経費にできます。副業の所得が 20 万円以下かどうかも、按分した後の経費を引いて判定します。' },
+      {
+        type: 'cta',
+        title: '按分率つきの経費帳で、確定申告の準備をまとめて（確定申告準備キット）',
+        text: '勘定科目をプルダウンで選ぶと家事按分率の既定値が入る経費帳、売上帳、科目別の集計、所得税の概算までを 1 つの Excel で。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/anbun', label: '家事按分の計算ツールを使う' },
+      },
+      { type: 'links', items: ['freelance-expenses-list', 'freelance-boki-shiwake', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shogaku-genka-shokyaku-40man', 'side-job-tax-return-200k', 'freelance-tax-prep', 'kakutei-shinkoku-2026-kaisei'] },
+      {
+        type: 'note',
+        text: '国税庁 タックスアンサー No.2210・No.1211-1、所得税法 56 条、所得税法施行令 96 条、所得税基本通達 2-47・45-1・45-2、租税特別措置法関係通達 41-29 に基づく一般的な説明です（2026 年 11 月時点）。税額は概算で、実際の額は所得控除や市区町村の国保の料率によって変わります。個別の状況は税務署に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -7155,7 +7348,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',
