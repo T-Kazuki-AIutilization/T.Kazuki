@@ -175,7 +175,7 @@ export const ARTICLES: Article[] = [
           ['消費税の端数処理', '税率ごとに1回（切り捨てが一般的）', '同左'],
         ],
       },
-      { type: 'links', items: ['freelance-withholding-tax', 'freelance-invoice-email-template', 'freelance-invoice-registration'] },
+      { type: 'links', items: ['furikomi-tesuryo-sashihiki', 'freelance-withholding-tax', 'freelance-invoice-email-template', 'freelance-invoice-registration'] },
       { type: 'h2', text: '源泉徴収がある場合の計算' },
       {
         type: 'p',
@@ -272,7 +272,7 @@ export const ARTICLES: Article[] = [
           ['入金済', '入金日を記入', '通帳の金額と一致するか確認'],
         ],
       },
-      { type: 'links', items: ['hoshu-mibarai-taishoho', 'uriage-keijo-jiki-nenmatsu', 'freelance-invoice-email-template', 'freelance-invoice-how-to', 'freelance-tax-calendar'] },
+      { type: 'links', items: ['furikomi-tesuryo-sashihiki', 'hoshu-mibarai-taishoho', 'uriage-keijo-jiki-nenmatsu', 'freelance-invoice-email-template', 'freelance-invoice-how-to', 'freelance-tax-calendar'] },
       { type: 'h2', text: '仕組み3: 月初に「今月の入金予定」を確認する' },
       {
         type: 'p',
@@ -2706,7 +2706,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '日本の企業間取引では「月末締め翌月末払い」が最も一般的です。締め日の直前に納品すると入金が早く、締め日の直後に納品すると最長で約 2 か月待つことになります。',
       },
-      { type: 'links', items: ['hoshu-mibarai-taishoho', 'freelance-invoice-how-to', 'freelance-contract-checklist', 'freelance-payment-tracking'] },
+      { type: 'links', items: ['furikomi-tesuryo-sashihiki', 'hoshu-mibarai-taishoho', 'freelance-invoice-how-to', 'freelance-contract-checklist', 'freelance-payment-tracking'] },
       { type: 'h2', text: 'フリーランス新法の「60 日ルール」' },
       {
         type: 'p',
@@ -3616,7 +3616,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '③の源泉徴収税は、確定申告で精算する所得税の前払いなので、経費ではなく「事業主貸」にします。⑫の国民年金・国保・住民税・所得税も個人の支払いなので経費にはならず、事業主貸です（年金・国保は確定申告で社会保険料控除になります）。',
       },
-      { type: 'links', items: ['kaji-anbun-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['furikomi-tesuryo-sashihiki', 'kaji-anbun-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-expenses-list', 'freelance-withholding-tax'] },
       { type: 'h2', text: '会計ソフトと Excel、どちらでつけるか' },
       {
         type: 'table',
@@ -7428,10 +7428,146 @@ export const ARTICLES: Article[] = [
         label: 'BOOTH で無料ダウンロード',
         external: true,
       },
-      { type: 'links', items: ['freelance-contract-checklist', 'freelance-invoice-how-to', 'freelance-payment-tracking', 'freelance-payment-terms', 'freelance-invoice-email-template', 'uriage-keijo-jiki-nenmatsu'] },
+      { type: 'links', items: ['furikomi-tesuryo-sashihiki', 'freelance-contract-checklist', 'freelance-invoice-how-to', 'freelance-payment-tracking', 'freelance-payment-terms', 'freelance-invoice-email-template', 'uriage-keijo-jiki-nenmatsu'] },
       {
         type: 'note',
         text: 'フリーランス新法（2 条・4〜6 条）、民法（150 条・166 条・404 条・419 条）、法務省の法定利率の告示、裁判所の「支払督促」「少額訴訟」「民事調停」の案内、フリーランス・トラブル110番の案内に基づく一般的な説明です（2026 年 11 月時点）。個別の事案は、フリーランス・トラブル110番や弁護士に相談してください。',
+      },
+    ],
+  },
+  {
+    slug: 'furikomi-tesuryo-sashihiki',
+    title: '振込手数料を差し引かれて入金されたら？フリーランスの仕訳（支払手数料か売上値引きか）、インボイスの対応（1 万円未満は返還インボイス不要）、本来はどちらが負担するか',
+    description:
+      '請求額から振込手数料を差し引いて振り込まれたときの、フリーランス・個人事業主の処理をまとめました。本来の負担者（民法では特約がなければ支払う側）、仕訳の 2 つの方法（支払手数料・売上値引き）、源泉徴収と手数料が両方引かれた場合の仕訳例、インボイス登録している人の消費税の対応（国税庁インボイス Q&A 問 29・30：売上値引きなら 1 万円未満は返還インボイス不要、少額特例）、次から差し引かれないための請求書の書き方。',
+    date: '2026-11-01',
+    keywords: ['振込手数料 差し引かれた 仕訳', '振込手数料 差し引き 入金 フリーランス', '振込手数料 売上値引き インボイス', '振込手数料 先方負担 当方負担', '返還インボイス 振込手数料 1万円未満'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '10 万円を請求したのに、99,560 円しか振り込まれていない。取引先が振込手数料を差し引いて支払ったケースです。金額は小さくても、帳簿の入金額が請求額と合わなくなり、インボイス登録をしている人は消費税の処理も必要になります。本来どちらが負担するものか、帳簿のつけ方、インボイスの対応、次から差し引かれないための請求書の書き方を順にまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '振込手数料は、契約などで決めていなければ支払う側（取引先）の負担（民法 485 条）。差し引かれたくなければ、見積書・契約・請求書に「振込手数料は貴社ご負担」と書いておく',
+          '差し引かれた手数料の仕訳は、「支払手数料」（経費）か「売上値引き」（売上から引く）のどちらか。所得税の額は同じ',
+          'インボイス登録をしている人が売上値引きにする場合、本来は返還インボイスが必要だが、1 万円未満なら交付しなくてよい（国税庁 インボイス Q&A 問 29）',
+          '支払手数料（取引先から決済のサービスを受けた対価）として処理し、仕入税額控除を受けるなら、取引先のインボイスか、取引先に確認を受けた仕入明細書が要る。ただし基準期間の課税売上高が 1 億円以下などの事業者は、1 万円未満なら帳簿だけで控除できる（少額特例、2029 年 9 月 30 日まで）',
+          'インボイス登録をしていない人（免税事業者）は消費税の対応は要らない。帳簿で差額の理由がわかるようにしておけば十分',
+        ],
+      },
+      { type: 'h2', text: '振込手数料は本来どちらが負担する？' },
+      {
+        type: 'p',
+        text: '民法では、支払い（弁済）にかかる費用は、特に決めていなければ支払う側（債務者）の負担とされています（民法 485 条）。報酬の振込手数料もこれにあたるため、見積書や契約で決めていないのに差し引かれた場合は、取引先に確認してかまいません。',
+      },
+      {
+        type: 'p',
+        text: 'ただし、取引先の支払規定で「振込手数料は受取人負担」と決まっていることもあり、契約書にその条項があればそれに従います。数百円のために関係をこじらせるより、次の取引から条件をはっきりさせるほうが現実的です。',
+      },
+      { type: 'h2', text: '仕訳の 2 つの方法' },
+      {
+        type: 'p',
+        text: '差し引かれた手数料の処理は、経費の「支払手数料」にする方法と、売上から差し引く「売上値引き」にする方法があります。どちらでも利益（所得）は同じなので、所得税・住民税の額は変わりません。毎回同じ方法で処理します。',
+      },
+      {
+        type: 'table',
+        headers: ['方法', '入金時の仕訳（10 万円の請求に 99,560 円が入金）', '考え方'],
+        rows: [
+          ['支払手数料にする', '普通預金 99,560 ・支払手数料 440 ／ 売掛金 100,000', '売手が、取引先から代金の決済のサービスを受けた費用と考える'],
+          ['売上値引きにする', '普通預金 99,560 ・売上値引（または売上高）440 ／ 売掛金 100,000', '請求額から 440 円を値引きしたと考える'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '源泉徴収と振込手数料が両方引かれることもあります。報酬 10 万円＋消費税 1 万円（請求額 11 万円）で、源泉徴収 10,210 円（報酬額と消費税額を分けて書いた請求書なら、報酬額 10 万円に 10.21%）と手数料 440 円が引かれた場合、入金は 99,350 円です。',
+      },
+      {
+        type: 'table',
+        headers: ['借方（左）', '貸方（右）'],
+        rows: [
+          ['普通預金 99,350', '売掛金 110,000'],
+          ['事業主貸 10,210（源泉徴収された所得税）', ''],
+          ['支払手数料 440', ''],
+        ],
+      },
+      {
+        type: 'p',
+        text: '入金額だけを見ると、源泉徴収分なのか手数料なのかが分からなくなります。請求額・入金額・差額とその内訳（源泉徴収・手数料）を請求ごとに記録しておくと、確定申告のときに支払調書や源泉徴収の合計と照らし合わせやすくなります。',
+      },
+      { type: 'links', items: ['freelance-boki-shiwake', 'freelance-withholding-tax'] },
+      { type: 'h2', text: 'インボイス登録している人の消費税の対応' },
+      {
+        type: 'p',
+        text: '国税庁のインボイス Q&A（問 29・問 30）では、売手が負担した振込手数料相当額の扱いを、取引先との契約関係などに応じて次の 2 つに分けています。',
+      },
+      {
+        type: 'table',
+        headers: ['', '① 売上値引きとする', '② 取引先から受けた決済サービスの対価とする'],
+        rows: [
+          ['消費税の扱い', '売上げに係る対価の返還等（売上の消費税が減る）', '取引先への課税仕入れ（仕入税額控除の対象）'],
+          ['必要な書類', '原則は取引先に返還インボイス（適格返還請求書）を交付。ただし 1 万円未満なら交付義務は免除', '取引先から交付を受けたインボイス、または自分で作って取引先の確認を受けた仕入明細書'],
+          ['少額の場合', '振込手数料は通常 1 万円未満なので、返還インボイスは不要', '基準期間の課税売上高が 1 億円以下などの事業者は、2029 年 9 月 30 日までの 1 万円未満の課税仕入れは帳簿だけで控除できる（少額特例）'],
+        ],
+      },
+      {
+        type: 'ul',
+        items: [
+          '①なら、取引先とのやり取りは要らず、帳簿に売上の値引きとして記録すればよい。手数料の処理で迷ったら、①がいちばん手間が少ない',
+          '帳簿の科目は「支払手数料」のままにして、消費税の計算上は売上の対価の返還等として扱うこともできる。その場合は、通常の支払手数料と区別できるように帳簿に書く（国税庁 インボイス Q&A 問 30）',
+          '値引きに使う税率は、元の売上の税率と同じ（通常は 10%）',
+          '自分で振込をしたときに銀行に払う振込手数料は、これとは別の話。銀行の手数料は通帳と銀行のインボイスで仕入税額控除する（同 問 103-2）',
+        ],
+      },
+      {
+        type: 'p',
+        text: '消費税の申告で 2 割特例や簡易課税を使う人は、控除する仕入れの消費税を売上の消費税から計算するため、②として処理しても納める税額は変わりません。①にすると、値引き分だけ売上の消費税が減ります。',
+      },
+      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-registration'] },
+      { type: 'h2', text: '次から差し引かれないための書き方' },
+      {
+        type: 'ul',
+        items: [
+          '見積書の備考や契約書に「お振込手数料は貴社にてご負担ください」と書き、発注の前に合意しておく',
+          '請求書の振込先の近くにも同じ一文を入れる',
+          '取引先の支払規定で受取人負担と決まっている場合は、その分を見込んで見積もる',
+          'それでも差し引かれたら、請求書番号と金額を書いて「振込手数料はご負担いただくお約束でした」と確認する。次回の請求に差額を上乗せする場合も、先に取引先の了承を取る',
+        ],
+      },
+      {
+        type: 'cta',
+        title: '振込先と支払条件を書いた請求書を作る（無料・登録不要）',
+        text: '請求日・支払期限・振込先・消費税・源泉徴収を入れて PDF 保存できる請求書作成ツールです。インボイスの登録番号にも対応。',
+        href: '/tools/invoice',
+        label: '請求書作成ツールを開く',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '振込手数料を差し引かれたら、取引先に請求できる？' },
+      { type: 'p', text: '契約などで決めていなければ、振込手数料は支払う側の負担です（民法 485 条）。差額を請求すること自体はできますが、数百円のことなので、まず次回からの条件を確認し、合意のうえで次の請求に含める形が穏やかです。' },
+      { type: 'h3', text: '支払手数料と売上値引きのどちらで処理すればいい？' },
+      { type: 'p', text: '所得税の額はどちらでも同じです。インボイス登録をしている人は、売上値引きにすれば 1 万円未満の返還インボイスが不要なので手間が少なくなります。どちらにするか決めたら、毎回同じ方法で処理します。' },
+      { type: 'h3', text: 'インボイス登録していなくても何かする必要がある？' },
+      { type: 'p', text: '免税事業者は消費税の申告をしないため、インボイスの対応は要りません。帳簿で、請求額と入金額の差が振込手数料であることが分かるように記録しておけば十分です。' },
+      { type: 'h3', text: '返還インボイスが必要になるのはどんなとき？' },
+      { type: 'p', text: '売上値引きとして処理する額が 1 万円以上のときです。振込手数料の差し引きで 1 万円以上になることは通常ないため、手数料の処理で返還インボイスが必要になることはほとんどありません。' },
+      { type: 'h3', text: '銀行振込の手数料を自分で払ったときは？' },
+      { type: 'p', text: '自分が支払う側になって銀行に払った振込手数料は、支払手数料として経費になります。インボイス登録をしていて仕入税額控除をする場合は、通帳や入出金明細と、その銀行のインボイス（1 回分）を保存する方法が国税庁の Q&A で示されています（問 103-2）。少額特例の対象なら、帳簿だけで控除できます。' },
+      {
+        type: 'cta',
+        title: '請求額・入金額・差額を請求ごとに記録する（無料の入金管理台帳）',
+        text: '請求番号・支払期限・入金日を記録するだけで、期限を過ぎた請求を赤く表示する Excel 台帳です。',
+        href: BOOTH_LEDGER_FREE_URL,
+        secondary: { href: LEDGER_DOWNLOAD_URL, label: '登録不要で直接ダウンロード（xlsx）', download: true },
+        label: 'BOOTH で無料ダウンロード',
+        external: true,
+      },
+      { type: 'links', items: ['hoshu-mibarai-taishoho', 'freelance-payment-tracking', 'freelance-invoice-how-to', 'freelance-payment-terms', 'freelance-boki-shiwake', 'freelance-invoice-3wari-tokurei'] },
+      {
+        type: 'note',
+        text: '民法 485 条、国税庁「インボイス制度に関する Q&A」問 29・問 30・問 103-2（令和 8 年 4 月改訂版など）に基づく一般的な説明です（2026 年 11 月時点）。個別の状況は税務署に確認してください。',
       },
     ],
   },
@@ -7483,7 +7619,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'billing',
     name: '請求・入金',
     description: '請求書の書き方、送付メール、未入金の防ぎ方、源泉徴収',
-    slugs: ['freelance-invoice-how-to', 'freelance-payment-tracking', 'freelance-invoice-email-template', 'freelance-withholding-tax', 'freelance-payment-terms', 'hoshu-mibarai-taishoho'],
+    slugs: ['freelance-invoice-how-to', 'freelance-payment-tracking', 'freelance-invoice-email-template', 'freelance-withholding-tax', 'freelance-payment-terms', 'hoshu-mibarai-taishoho', 'furikomi-tesuryo-sashihiki'],
   },
   {
     id: 'pricing',
