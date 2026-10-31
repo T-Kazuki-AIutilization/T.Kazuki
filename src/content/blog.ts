@@ -2632,7 +2632,7 @@ export const ARTICLES: Article[] = [
           '75 万円を狙うなら、優良な電子帳簿の要件に対応した会計ソフトを選び、2027 年 1 月 1 日の取引から入力する（対応状況はプランごとに公式サイトで確認）',
         ],
       },
-      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
+      { type: 'links', items: ['shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
       { type: 'affiliate', title: '1 月から会計ソフトで帳簿をつけるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '12 月に買ったパソコンは今年の経費になる？' },
@@ -2643,7 +2643,7 @@ export const ARTICLES: Article[] = [
       { type: 'h3', text: '小規模企業共済は 12 月に加入しても今年の控除になる？' },
       {
         type: 'p',
-        text: 'その年に払い込んだ掛金が控除の対象です。加入手続きと初回の引き落としの時期によっては年内に間に合わないため、11 月中に手続きするのが安全です。前納した掛金は、1 年以内の分であれば払った年の控除にできます。',
+        text: 'その年に払い込んだ掛金が控除の対象です。中小機構によると、オンライン申込は初回の引き落としが翌々月になるため、2026 年分に間に合うのは 10 月中の申込まで。11〜12 月に加入して今年の控除にするには、委託機関の窓口で現金をその場で納付する方法で手続きします。前納した掛金は、1 年以内の分であれば払った年の控除にできます（詳しくは「小規模企業共済は入るべき？」の記事）。',
       },
       { type: 'h3', text: '経費を増やせば税金は減る？' },
       {
@@ -4088,7 +4088,7 @@ export const ARTICLES: Article[] = [
           { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
         ],
       },
-      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
+      { type: 'links', items: ['shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
       { type: 'h2', text: 'よくある質問' },
       {
         type: 'h3',
@@ -6187,7 +6187,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'note',
-        text: '年内に掛金を増やしても、2026 年分の確定申告の控除は増えません。2026 年分の節税を増やしたいなら、12 月中に払えばその年の控除になる小規模企業共済の前納のほうが向いています。',
+        text: '年内に掛金を増やしても、2026 年分の確定申告の控除は増えません。2026 年分の節税を増やしたいなら、12 月中に払えばその年の控除になる小規模企業共済の前納のほうが向いています（加入済みの人の一括納付は希望月の前月 20 日が申請の締切。新規加入はオンライン申込だと 2026 年分に間に合わず、11〜12 月は窓口で現金納付が必要です）。',
       },
       { type: 'h2', text: '売上別: 節税額はいくら増える？' },
       {
@@ -6270,7 +6270,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kyosai', label: '無料の節税額シミュレーターを使う' },
       },
-      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
+      { type: 'links', items: ['shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
       {
         type: 'note',
         text: '厚生労働省「2026 年 12 月（2027 年 1 月引き落とし分）から iDeCo の拠出限度額と加入可能年齢が引き上げられます」リーフレット、国税庁 タックスアンサー No.1135「小規模企業共済等掛金控除」に基づく一般的な説明です。上限の計算や手続きの締切は加入状況と加入先によって違うので、加入している金融機関（運営管理機関）で確認してください。',
@@ -6594,10 +6594,208 @@ export const ARTICLES: Article[] = [
         label: 'BOOTH で見る（980円）',
         external: true,
       },
-      { type: 'links', items: ['ideco-jogen-75000-freelance', 'freelance-year-end-checklist', 'freelance-shotoku-koujo-ichiran', 'freelance-health-insurance-pension'] },
+      { type: 'links', items: ['shokibo-kyosai-freelance', 'ideco-jogen-75000-freelance', 'freelance-year-end-checklist', 'freelance-shotoku-koujo-ichiran', 'freelance-health-insurance-pension'] },
       {
         type: 'note',
         text: '中小企業基盤整備機構「経営セーフティ共済」の案内（掛金・加入資格・解約・魅力）と租税特別措置法第 28 条に基づく一般的な説明です（2026 年 10 月時点）。加入の可否や解約手当金の課税は個別の状況で変わるので、加入窓口・税務署・税理士に確認してください。',
+      },
+    ],
+  },
+  {
+    slug: 'shokibo-kyosai-freelance',
+    title: 'フリーランスの小規模企業共済は入るべき？節税額、2026 年分の控除に間に合う加入方法（11 月以降は窓口で現金）、受け取るときの税金',
+    description:
+      '小規模企業共済の掛金（月 1,000〜70,000 円）は全額が所得控除になり、1 年以内の前納分も払った年の控除にできます。2026 年分に間に合わせるには、オンライン申込は 10 月まで、11〜12 月は委託機関の窓口で現金で納付して加入する必要があります。会社員の副業は加入できないこと、売上別の節税額、受け取るときの税金（一括は退職所得、65 歳未満の任意解約は一時所得）、20 年未満の解約は元本割れになる点を中小機構の案内に沿って整理しました。',
+    date: '2026-10-31',
+    keywords: ['小規模企業共済 フリーランス', '小規模企業共済 節税 いくら', '小規模企業共済 年内 加入 間に合う', '小規模企業共済 前納 年末', '小規模企業共済 受け取り 税金'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '小規模企業共済は、個人事業主や小さな会社の役員のための「退職金の積み立て」です。掛金は全額が所得控除になるので、フリーランスの節税の定番として iDeCo と並べて紹介されます。ただし、今年（2026 年分）の控除に間に合わせるには加入の方法と時期に締切があり、途中でやめると元本割れになることもあります。運営する中小機構（中小企業基盤整備機構）の案内に沿って、フリーランスが加入前に知っておきたいことをまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '掛金は月 1,000〜70,000 円（500 円単位）。全額が「小規模企業共済等掛金控除」として所得から引かれ、1 年以内の前納分も払った年の控除になる',
+          '2026 年分の控除に間に合わせるなら、オンライン申込は 10 月中が締切。11〜12 月に加入するなら、委託機関（団体・金融機関などの窓口）で現金を納付する方法で手続きする',
+          '加入できるのは、開業届を出して事業所得で確定申告をしている個人事業主など。会社に雇われて給与をもらっている人の副業は加入できない',
+          '所得控除なので下がるのは所得税と住民税。国民健康保険料は下がらない',
+          '共済金を一括で受け取ると退職所得、65 歳未満で任意解約すると一時所得。任意解約で掛金以上が戻るのは 20 年（240 か月）以上納めてから、12 か月未満の解約は 0',
+        ],
+      },
+      { type: 'h2', text: '2026 年分の控除に間に合わせるには（10 月と 11 月で方法が変わる）' },
+      {
+        type: 'p',
+        text: '控除できるのは、その年に実際に払った（口座から引き落とされた）掛金です。中小機構によると、オンラインで加入を申し込むと、掛金の初回の請求は申込の翌々月になります。このため、10 月 31 日を過ぎてからオンラインで申し込むと、初回の引き落としが 2027 年 1 月以降になり、2026 年に払った掛金がなくなります。',
+      },
+      {
+        type: 'table',
+        headers: ['加入の方法と時期', '初回の掛金', '2026 年分の控除'],
+        rows: [
+          ['オンライン申込（10 月中）', '12 月に請求', '12 月に払った分が対象'],
+          ['オンライン申込（11 月・12 月）', '2027 年 1 月・2 月に請求', 'なし（2027 年分から）'],
+          ['委託機関の窓口で、現金をその場で納付して加入（11 月・12 月）', '窓口で納付', '納付した分が対象'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '中小機構のお知らせ（2026 年 10 月 16 日）では「11 月、12 月加入申込で、令和 8 年分の所得控除の対象とするには、委託機関（団体・代理店）の窓口で、現金あり（現金をその場で納付する方法）で加入手続き」をするよう案内しています。委託機関は、中小機構と業務委託契約を結んでいる団体や金融機関で、中小機構のサイトで探せます。この場合の掛金控除証明書は 2027 年 2 月中旬に届く予定です。',
+      },
+      {
+        type: 'p',
+        text: 'すでに加入している人が年内に多めに払いたいときは、掛金の増額や「一括納付（まとめ払い）」を使います。一括納付の申請は「希望月の前月 20 日（12 月は 15 日、土日祝日の場合は前営業日）」が締切で、中小機構も年末に合わせる場合は注意するよう書いています。12 月に引き落としてもらうつもりなら 11 月中旬までに手続きし、間に合うかは窓口で確認してください。',
+      },
+      { type: 'h2', text: 'どんな制度？' },
+      {
+        type: 'table',
+        headers: ['項目', '内容'],
+        rows: [
+          ['掛金', '月 1,000〜70,000 円（500 円単位）。加入後も増額・減額できる（同じ月の再変更は不可）'],
+          ['払い方', '口座振替（本人名義の口座）。月払い・半年払い・年払いから選ぶ。引き落としは毎月 18 日（土日祝日は翌営業日）'],
+          ['税金', '掛金は全額が所得控除。1 年以内の前納分も控除できる。事業の経費にはできない'],
+          ['受け取れるとき', '廃業したとき（共済金 A）、65 歳以上で 180 か月以上納めたとき（共済金 B、仕事を続けたまま）、任意解約（解約手当金）など'],
+          ['貸付', '納めた掛金の範囲内で、事業資金などを借りられる'],
+        ],
+      },
+      { type: 'h2', text: 'フリーランスは加入できる？' },
+      {
+        type: 'p',
+        text: '中小機構は、加入が認められるかの判断基準として、税務署に開業届を出して事業所得で確定申告をしていること、会社と雇用関係がない（給与所得を得ていない）こと、完全歩合制で固定給に近い報酬を得ていないことなどを挙げています。経営セーフティ共済のような「1 年以上事業を続けている」という条件は案内にありませんが、開業したばかりでまだ確定申告をしていない人は、加入できるかと必要書類を窓口で確認してください。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '加入できない人: 法人や個人事業主と常時雇用関係にある給与所得者の副業（例: アパート経営をしている会社員）、中小企業退職金共済（中退共）などの被共済者、生命保険の外務員など',
+          '従業員数の条件: 常時使用する従業員が、商業（卸売・小売）とサービス業（宿泊業・娯楽業を除く）は 5 人以下、それ以外の多くの業種は 20 人以下。本人・家族従業員・パート・アルバイトは数えない',
+          '加入後に資格がなかったとわかると、契約は取り消されて掛金は返還され、受けた控除は修正申告が必要になる',
+        ],
+      },
+      { type: 'h2', text: 'いくら税金が下がる？' },
+      {
+        type: 'table',
+        headers: ['年間売上', '月 1 万円（年 12 万円）', '月 3 万円（年 36 万円）', '月 5 万円（年 60 万円）', '月 7 万円（年 84 万円）'],
+        rows: [
+          ['300 万円', '約 1.8 万円', '約 5.1 万円', '約 7.5 万円', '約 9.9 万円'],
+          ['500 万円', '約 1.8 万円', '約 5.4 万円', '約 9.1 万円', '約 12.7 万円'],
+          ['800 万円', '約 3.7 万円', '約 11.0 万円', '約 18.3 万円', '約 25.6 万円'],
+          ['1,000 万円', '約 3.7 万円', '約 11.0 万円', '約 18.3 万円', '約 25.6 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: 'その年の所得税（復興特別所得税を含む）と住民税の減少額の合計。経費は売上の 20%、青色申告特別控除 65 万円、独身・扶養なし、国民年金 月 17,920 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円で社会保険料控除に入れて概算しています（2026 年分）。所得税は 2026 年分の基礎控除の段階によって差が出ます。国保料は所得控除の影響を受けないので変わりません。',
+      },
+      {
+        type: 'p',
+        text: '同じ売上 800 万円で、小規模企業共済（月 7 万円）と iDeCo（2026 年分の上限 月 6.8 万円）を両方満額にすると、この概算では合計で約 43.4 万円下がります。どちらも所得控除なので、所得が少ない年は下がる額も小さくなります。売上 300 万円では、両方満額にしても約 10.4 万円です。',
+      },
+      { type: 'h2', text: '受け取るときの税金' },
+      {
+        type: 'table',
+        headers: ['受け取り方', '税金の扱い'],
+        rows: [
+          ['共済金・準共済金を一括で受け取る（死亡を除く）', '退職所得'],
+          ['共済金を分割で受け取る', '公的年金等の雑所得'],
+          ['65 歳以上で任意解約する', '退職所得'],
+          ['65 歳未満で任意解約する', '一時所得'],
+          ['掛金を 12 か月以上滞納して解約される（機構解約）', '一時所得'],
+          ['遺族が受け取る（死亡）', 'みなし相続財産（相続税）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '退職所得は、収入から退職所得控除を引いた残りの 2 分の 1 に課税され、ほかの所得と分けて計算するので、税金はかなり軽くなります。廃業や 65 歳以降に一括で受け取るのが、税金の面ではいちばん有利な出口です。なお、分割で受け取れるのは共済金 A・B で、請求事由が生じた日に 60 歳以上、共済金が 300 万円以上などの条件があります。',
+      },
+      {
+        type: 'note',
+        text: '退職所得控除の年数の数え方や、同じ時期に iDeCo の一時金やほかの退職金を受け取る場合の計算は、状況によって変わります。受け取る年が近づいたら、税務署か税理士に確認してください。',
+      },
+      { type: 'h2', text: '途中でやめると元本割れ: 解約手当金' },
+      {
+        type: 'table',
+        headers: ['掛金を納めた期間（月 1 万円の例）', '掛金の合計', '任意解約の解約手当金', '廃業時の共済金 A'],
+        rows: [
+          ['5 年', '60 万円', '48 万円', '62.14 万円'],
+          ['10 年', '120 万円', '102 万円', '129.06 万円'],
+          ['15 年', '180 万円', '166.5 万円', '201.1 万円'],
+          ['20 年', '240 万円', '240 万円', '278.64 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '中小機構によると、解約手当金は納めた掛金の 80〜120% で、掛金以上になるのは 240 か月（20 年）以上納めてからです。12 か月未満で解約すると何も戻りません。廃業時の共済金 A は基本共済金に付加共済金が上乗せされることがあり、上の表は基本共済金の例です。途中で掛金を増額・減額すると、区分ごとに月数を数えるため、20 年以上でも解約手当金が掛金の合計を下回ることがあります。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '掛金は「その月に払えなくなっても困らない額」にする。払えない月が続くと滞納になり、12 か月以上で契約が解除される',
+          '苦しい時期は解約ではなく減額（最低 1,000 円）や、納めた掛金の範囲内の貸付を先に考える',
+          '法人成りしても、条件を満たせば契約を続けられる場合がある（通算の手続き）',
+        ],
+      },
+      { type: 'h2', text: 'iDeCo・経営セーフティ共済との違い' },
+      {
+        type: 'table',
+        headers: ['', '小規模企業共済', 'iDeCo', '経営セーフティ共済'],
+        rows: [
+          ['税金の扱い', '所得控除', '所得控除', '必要経費'],
+          ['国保料', '下がらない', '下がらない', '下がる'],
+          ['掛金の上限', '月 7 万円', '月 6.8 万円（2026 年 12 月分から 7.5 万円。国民年金基金などと合計）', '月 20 万円（総額 800 万円まで）'],
+          ['引き出し', '廃業時・65 歳以上など。任意解約もできる', '原則 60 歳まで引き出せない', '任意解約できる（40 か月以上で 100%）'],
+          ['借入れ', '掛金の範囲内でできる', 'できない', '取引先の倒産時などにできる'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '小規模企業共済と iDeCo は併用でき、どちらも満額まで控除できます。廃業時や 65 歳以降に受け取る退職金として使えるのが小規模企業共済、60 歳まで引き出せない代わりに運用で増やすのが iDeCo です。手元資金に余裕がない時期は、いざというときに借入れや解約ができる小規模企業共済を先に検討する人もいます。',
+      },
+      {
+        type: 'linkgrid',
+        title: '自分の売上で計算する（無料・登録不要）',
+        items: [
+          { href: '/tools/kyosai', label: 'iDeCo・小規模企業共済の節税額シミュレーター' },
+          { href: '/tools/furusato', label: 'ふるさと納税の上限額（共済を増やすと上限は下がる）' },
+        ],
+      },
+      { type: 'h2', text: '確定申告での書き方' },
+      {
+        type: 'p',
+        text: '確定申告書の「小規模企業共済等掛金控除」の欄に、その年に払った掛金の合計を書きます。中小機構から届く「小規模企業共済掛金控除証明書」の控除額を使います。2026 年分は、9 月までに掛金を払っている人には 11 月中旬に、10〜12 月に初めて払った人には 2027 年 2 月中旬に届く予定です。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '11 月に届く証明書は、10〜12 月分が「お払込み予定額」で書かれている。中小機構は、10〜12 月の払込状況について、払い込んだことが記帳された通帳の写しを添付して申請するよう案内している',
+          '一括納付や月額変更で証明書に年間の控除額が書かれていない場合は、年内に払った掛金の合計から、その年に受け取った前納減額金を差し引いて申告する',
+          '「小規模企業共済オンライン手続きポータル」で利用者登録をして e-私書箱と連携すると、証明書を電子データで受け取れ、e-Tax でそのまま添付できる',
+        ],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '今からオンラインで申し込んでも今年の控除になる？' },
+      { type: 'p', text: 'なりません。中小機構によると、オンライン申込は掛金の初回の請求が翌々月になるため、2026 年分の控除にするには 10 月中の手続きが必要でした。11 月・12 月に加入して今年の控除にしたい場合は、委託機関の窓口で現金をその場で納付する方法で手続きします。' },
+      { type: 'h3', text: '会社員の副業でも入れる？' },
+      { type: 'p', text: '入れません。中小機構は、法人や個人事業主と常時雇用関係にある給与所得者が事業を兼業している場合は加入できないとしています。会社を辞めて個人事業主として開業届を出し、事業所得で確定申告をするようになってから検討します。' },
+      { type: 'h3', text: '開業 1 年目でも入れる？' },
+      { type: 'p', text: '経営セーフティ共済のような「1 年以上事業を続けている」という条件は、中小機構の案内にはありません。ただし、開業届を出して事業所得で確定申告をしていることが判断基準に挙げられているので、まだ確定申告をしていない人は、加入できるかと必要書類を窓口で確認してください。' },
+      { type: 'h3', text: '年末に 1 年分まとめて払えば今年の控除になる？' },
+      { type: 'p', text: '1 年以内の前納分は払った年の控除になります。すでに加入している人は一括納付で前納できますが、申請の締切は「希望月の前月 20 日（12 月は 15 日）」です。年内に引き落としてもらうなら、11 月中旬までに窓口で手続きと締切を確認してください。' },
+      { type: 'h3', text: '国民健康保険料は下がる？' },
+      { type: 'p', text: '下がりません。国保料は「所得 − 43 万円」をもとに計算され、小規模企業共済や iDeCo などの所得控除は差し引かれないためです。国保まで下げたい場合は、経費になる経営セーフティ共済などを別に検討します（税金の先送りになる点に注意）。' },
+      {
+        type: 'cta',
+        title: '控除と税額をまとめて管理する（確定申告準備キット）',
+        text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別の集計、所得税の概算まで、確定申告の準備を 1 つの Excel で。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/kyosai', label: '無料の節税額シミュレーターを使う' },
+      },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist'] },
+      {
+        type: 'note',
+        text: '中小企業基盤整備機構の小規模企業共済の案内（掛金・加入資格・共済金等請求・一括納付）とお知らせ（2026 年 10 月 16 日・10 月 30 日）、国税庁タックスアンサー No.1135・No.1420 に基づく一般的な説明です（2026 年 10 月時点）。加入の可否や受け取るときの税金は個別の状況で変わるので、加入窓口・税務署・税理士に確認してください。',
       },
     ],
   },
@@ -6661,7 +6859,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance'],
   },
   {
     id: 'setup',
