@@ -803,7 +803,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -2632,7 +2632,7 @@ export const ARTICLES: Article[] = [
           '75 万円を狙うなら、優良な電子帳簿の要件に対応した会計ソフトを選び、2027 年 1 月 1 日の取引から入力する（対応状況はプランごとに公式サイトで確認）',
         ],
       },
-      { type: 'links', items: ['ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
+      { type: 'links', items: ['iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
       { type: 'affiliate', title: '1 月から会計ソフトで帳簿をつけるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '12 月に買ったパソコンは今年の経費になる？' },
@@ -2839,7 +2839,7 @@ export const ARTICLES: Article[] = [
         title: '年収別: 副業で増える税金の早見表',
         items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
       },
-      { type: 'links', items: ['shushi-uchiwakesho-kakikata', 'side-job-nenmatsu-chosei-2026', 'side-job-juminzei-shinkoku', 'freelance-expenses-list', 'freelance-etax-how-to', 'freelance-tax-prep'] },
+      { type: 'links', items: ['iryohi-koujo-freelance', 'shushi-uchiwakesho-kakikata', 'side-job-nenmatsu-chosei-2026', 'side-job-juminzei-shinkoku', 'freelance-expenses-list', 'freelance-etax-how-to', 'freelance-tax-prep'] },
       {
         type: 'table',
         headers: ['ケース', '所得税の確定申告', '住民税の申告'],
@@ -4088,7 +4088,7 @@ export const ARTICLES: Article[] = [
           { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
         ],
       },
-      { type: 'links', items: ['ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
+      { type: 'links', items: ['iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
       { type: 'h2', text: 'よくある質問' },
       {
         type: 'h3',
@@ -6277,6 +6277,168 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'iryohi-koujo-freelance',
+    title: 'フリーランスの医療費控除はいくら戻る？10 万円以下でも使える条件、年内の支払い、セルフメディケーション税制との選び方【2026 年分】',
+    description:
+      'フリーランス・個人事業主の医療費控除を国税庁の説明に沿って整理。控除額は医療費 − 保険金などの補填 − 10 万円（総所得金額等が 200 万円未満なら 5%）。青色申告特別控除で所得が下がると 10 万円以下でも使えることがあります。売上別の戻る額、対象になる・ならない費用、年内の支払いと家族の合算、明細書と医療費通知、セルフメディケーション税制（2027 年分以後の見直し）まで。',
+    date: '2026-10-31',
+    keywords: ['医療費控除 フリーランス', '医療費控除 10万円以下 個人事業主', '医療費控除 いくら戻る 自営業', 'セルフメディケーション税制 医療費控除 どっち', '医療費控除 年末 支払い'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '1 年間に払った医療費が多い年は、確定申告で医療費控除を受けると所得税と住民税が下がります。会社員の還付申告の話として紹介されることが多い制度ですが、フリーランス・個人事業主も毎年の確定申告にそのまま含められます。いくら戻るのか、10 万円を超えなくても使えるのはどんなときか、年末に何をしておくとよいかを、国税庁のタックスアンサーに沿ってまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '医療費控除額 ＝ 1〜12 月に払った医療費 − 保険金などで補填される額 − 10 万円（総所得金額等が 200 万円未満なら、その 5%）。上限 200 万円',
+          'フリーランスは青色申告特別控除などを引いた後の所得で判定するので、売上 300 万円でも所得が 200 万円未満なら、医療費が 10 万円以下でも控除できることがある',
+          '戻る額は「控除額 ×（所得税の税率 × 1.021 ＋ 住民税 10%）」が目安。所得税率 10% の人なら控除額の約 20%',
+          'その年に実際に払った分だけが対象。12 月の治療費を 1 月に払うなら来年の分になる',
+          '自分や家族の病院代は事業の経費にはできない。医療費控除で扱う',
+          '市販薬が中心の年は、セルフメディケーション税制（1.2 万円を超えた分、上限 8.8 万円）と比べてどちらか一方を選ぶ',
+        ],
+      },
+      { type: 'h2', text: '医療費控除の計算方法' },
+      {
+        type: 'table',
+        headers: ['手順', '内容'],
+        rows: [
+          ['1. 医療費を合計する', '自分と、生計を一にする配偶者・親族のために、その年の 1 月 1 日〜12 月 31 日に払った医療費'],
+          ['2. 補填される額を引く', '生命保険の入院給付金、健康保険の高額療養費・家族療養費・出産育児一時金など（その給付の対象になった医療費が限度）'],
+          ['3. 10 万円を引く', '総所得金額等が 200 万円未満の人は、10 万円の代わりに総所得金額等の 5%'],
+          ['4. 控除額', '残りが医療費控除額（最高 200 万円）。所得控除として、所得税と翌年度の住民税の計算に使う'],
+        ],
+      },
+      { type: 'h2', text: '10 万円以下でも使えるのはどんなとき？' },
+      {
+        type: 'p',
+        text: '引く額が 10 万円より小さくなるのは、総所得金額等が 200 万円未満の人です。フリーランスの総所得金額等は、売上から経費と青色申告特別控除を引いた事業所得（ほかの所得があれば合計）なので、売上が 300 万円前後でも 200 万円未満になることがあります。',
+      },
+      {
+        type: 'table',
+        headers: ['例（売上 300 万円・経費 60 万円）', '総所得金額等', '引く額', '医療費 10 万円の場合の控除額'],
+        rows: [
+          ['青色申告（65 万円控除）', '175 万円', '8 万 7,500 円（5%）', '1 万 2,500 円'],
+          ['白色申告', '240 万円', '10 万円', '0 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '家族の医療費をまとめる場合も、引く額は申告する人の所得で決まります。所得の低い家族が申告すると 10 万円より少ない額で済むことがある一方、税率が低いので戻る額は小さくなります。両方の条件で計算して比べてみてください。',
+      },
+      { type: 'h2', text: 'フリーランスの売上別: いくら戻る？' },
+      {
+        type: 'table',
+        headers: ['年間売上', '医療費 10 万円', '医療費 15 万円', '医療費 20 万円', '医療費 30 万円'],
+        rows: [
+          ['300 万円', '約 1,800 円', '約 9,400 円', '約 1.7 万円', '約 3.2 万円'],
+          ['500 万円', '0 円', '約 7,600 円', '約 1.5 万円', '約 3 万円'],
+          ['800 万円', '0 円', '約 1.5 万円', '約 3 万円', '約 6.1 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '所得税（復興特別所得税を含む）と住民税の減少額の合計。経費は売上の 20%、青色申告特別控除 65 万円、独身・扶養なし、保険金などの補填なし、国民年金 月 17,920 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円で概算しています（2026 年分）。売上 300 万円は総所得金額等が 175 万円なので、引く額は 8 万 7,500 円です。',
+      },
+      {
+        type: 'linkgrid',
+        title: '自分の売上と医療費で計算する（無料・登録不要）',
+        items: [
+          { href: '/tools/iryohi', label: '医療費控除の還付額シミュレーター（セルフメディケーション税制との比較つき）' },
+          { href: '/tools/kanpu', label: '確定申告の還付金の計算ツール（源泉徴収された税金も含めて）' },
+        ],
+      },
+      {
+        type: 'p',
+        text: '国民健康保険料は、所得控除を引く前の所得をもとに計算されるので、医療費控除では下がりません。下がるのは所得税と住民税です。',
+      },
+      { type: 'h2', text: '対象になる医療費・ならない費用' },
+      {
+        type: 'table',
+        headers: ['対象になる', '対象にならない'],
+        rows: [
+          ['医師・歯科医師の診療・治療代', '健康診断・人間ドックの費用（原則）、医師へのお礼'],
+          ['治療のための薬（風邪薬などの市販薬も含む）', 'ビタミン剤など、予防や健康増進のための薬'],
+          ['通院の電車・バス代（子どもの通院の付き添いの交通費も）', '自家用車のガソリン代・駐車場代'],
+          ['入院代と病院で出る食事', '寝巻き・洗面具、自分の都合で選んだ個室の差額ベッド代、出前・外食'],
+          ['あん摩マッサージ指圧師・はり師・きゅう師・柔道整復師の治療としての施術', '疲れを癒す、体調を整えるための施術'],
+          ['子どもの不正咬合の矯正など、必要と認められる歯列矯正', '容ぼうを美しくするための歯列矯正'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '国税庁 タックスアンサー No.1122・1126・1128 の例をもとにしています。金やポーセレンを使った歯の治療は対象になりますが、一般的な水準を著しく超える特殊なものは対象になりません。健康診断の費用は「原則として含まれません」とされています（No.1122）。例外の扱いは国税庁の Q&A「人間ドック・健康診断等の費用」で確認してください。',
+      },
+      { type: 'h2', text: '年末までにしておくこと' },
+      {
+        type: 'ul',
+        items: [
+          '控除の対象は、その年に実際に払った医療費。未払いの医療費は、払った年の分になる。今年の分に入れたい治療費は 12 月 31 日までに払う',
+          '歯科ローンで払う治療費は、信販会社が立て替えた年（ローン契約が成立した年）の医療費になる（No.1128）',
+          '通院の交通費は領収書が出ないので、日付・区間・金額を記録しておく',
+          '入院給付金や高額療養費を受け取る予定なら、金額を控えておく（申告までに確定しなければ見込額を引き、あとで修正申告・更正の請求で直す）',
+          '家族の分もまとめるなら、誰の申告に入れるかを決めておく',
+        ],
+      },
+      { type: 'h2', text: '確定申告での手続き' },
+      {
+        type: 'p',
+        text: '確定申告書に「医療費控除の明細書」を添付します。領収書の提出は不要ですが、税務署から求められた場合に備えて、確定申告期限から 5 年間は保存します。健康保険組合や市区町村の国保から届く「医療費のお知らせ（医療費通知）」を添付すると、その分は明細書の記入を省略できます。',
+      },
+      {
+        type: 'p',
+        text: '領収書が多い人は、国税庁の「医療費集計フォーム」（Excel）に入力しておくと、確定申告書等作成コーナーで読み込めます。e-Tax で申告する場合は、マイナポータル連携で医療費通知の情報を取り込む方法もあります。',
+      },
+      { type: 'h2', text: 'セルフメディケーション税制とどちらを選ぶ？' },
+      {
+        type: 'table',
+        headers: ['', '通常の医療費控除', 'セルフメディケーション税制'],
+        rows: [
+          ['対象', '医療費全般', '対象の市販薬（スイッチ OTC 医薬品など、パッケージに識別マークがあるものが多い）'],
+          ['控除額', '医療費 − 補填 − 10 万円（または所得の 5%）、上限 200 万円', '対象医薬品の購入費 − 1.2 万円、上限 8.8 万円'],
+          ['条件', 'なし', '申告する本人が、その年に健康診断・予防接種・がん検診などを受けている'],
+          ['添付', '医療費控除の明細書', 'セルフメディケーション税制の明細書'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '両方を同時には使えず、どちらかを選びます。選んだ後に、更正の請求や修正申告でもう一方に変えることはできません。病院代が少なく市販薬が多い年はセルフメディケーション税制、病院代が多い年は通常の医療費控除が有利になりやすいので、申告前に両方を計算して選びます。',
+      },
+      {
+        type: 'p',
+        text: 'セルフメディケーション税制は 2026 年 12 月 31 日までの購入分が対象とされてきましたが、令和 8 年度税制改正の大綱で、スイッチ OTC 医薬品の分は期限を撤廃し、それ以外の医薬品の分は 5 年延長、対象医薬品の範囲も 2027 年分から見直すとされました。2027 年分以後は対象品目一覧（厚生労働省）で確認してください。',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '自分の病院代を事業の経費にできる？' },
+      { type: 'p', text: 'できません。自分や家族の診療代・薬代は事業のための支出ではないので、経費ではなく医療費控除で扱います。事業用の口座やカードで払った場合も、帳簿では事業主貸として処理します。' },
+      { type: 'h3', text: '医療費が 10 万円に届かなくても申告したほうがいい？' },
+      { type: 'p', text: '総所得金額等が 200 万円未満なら、その 5% を超えた分が控除になります。確定申告はどのみちするので、明細書を付けるだけで控除を受けられます。200 万円以上なら 10 万円を超えた分だけが対象です。' },
+      { type: 'h3', text: '家族の医療費はまとめられる？' },
+      { type: 'p', text: '生計を一にする配偶者や親族のために払った医療費は、払った人がまとめて控除できます。国税庁の質疑応答事例では、郷里で一人暮らしの母親でも、仕送りで生活しているなど生計を一にしていれば、医療費を払った子の控除の対象になるとしています。' },
+      { type: 'h3', text: '去年の分を申告し忘れた' },
+      { type: 'p', text: '確定申告をしていた場合は、法定申告期限から 5 年以内なら更正の請求で医療費控除を追加できます。' },
+      { type: 'h3', text: 'セルフメディケーション税制の健康診断は家族も受ける必要がある？' },
+      { type: 'p', text: '必要なのは申告する本人だけです。生計を一にする家族の分の市販薬もまとめられますが、健康診断や予防接種などの取組は申告する人が受けている必要があります。' },
+      {
+        type: 'cta',
+        title: '控除の書類と帳簿をまとめて準備する（確定申告準備キット）',
+        text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別の集計、所得税の概算までセットにしたテンプレートです。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/iryohi', label: '無料の医療費控除シミュレーターを使う' },
+      },
+      { type: 'links', items: ['freelance-shotoku-koujo-ichiran', 'freelance-tax-prep', 'freelance-year-end-checklist', 'kakutei-shinkoku-kigengo-shusei'] },
+      {
+        type: 'note',
+        text: '国税庁 タックスアンサー No.1120「医療費を支払ったとき（医療費控除）」・No.1122・1126・1128・1129・1132、質疑応答事例「同居していない母親の医療費を子供が負担した場合」、財務省「令和 8 年度税制改正の大綱」に基づく一般的な説明です。個別の費用が対象になるかは、症状や目的によって判断が変わるので、迷う場合は税務署に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -6337,7 +6499,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance'],
   },
   {
     id: 'setup',
