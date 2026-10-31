@@ -803,7 +803,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['kakutei-shinkoku-2026-kaisei', 'iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -4516,7 +4516,7 @@ export const ARTICLES: Article[] = [
         title: '年収別: 副業で増える税金の早見表',
         items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
       },
-      { type: 'links', items: ['side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-shotoku-koujo-ichiran', 'tokutei-shinzoku-gakusei-freelance'] },
+      { type: 'links', items: ['kakutei-shinkoku-2026-kaisei', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'freelance-nenmatsu-chosei', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-shotoku-koujo-ichiran', 'tokutei-shinzoku-gakusei-freelance'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '住民税も下がる？' },
       {
@@ -5054,7 +5054,7 @@ export const ARTICLES: Article[] = [
         href: '/tools/aoiro',
         label: '青色申告の節税額シミュレーターを開く',
       },
-      { type: 'links', items: ['ideco-jogen-75000-freelance', 'aoiro-kessansho-kakikata', 'freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
+      { type: 'links', items: ['kakutei-shinkoku-2026-kaisei', 'ideco-jogen-75000-freelance', 'aoiro-kessansho-kakikata', 'freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '2026 年分の確定申告（2027 年 2〜3 月）から変わる？' },
       {
@@ -5367,7 +5367,7 @@ export const ARTICLES: Article[] = [
         label: '減価償却の計算ツールを開く',
         secondary: { href: '/signup', label: 'FreelanceOS で売上と経費を管理する（無料）' },
       },
-      { type: 'links', items: ['freelance-expenses-list', 'freelance-year-end-checklist', 'aoiro-koujo-75man-2027', 'freelance-boki-shiwake'] },
+      { type: 'links', items: ['kakutei-shinkoku-2026-kaisei', 'freelance-expenses-list', 'freelance-year-end-checklist', 'aoiro-koujo-75man-2027', 'freelance-boki-shiwake'] },
       {
         type: 'note',
         text: '2026 年 10 月時点の国税庁タックスアンサー No.2100・No.2106 と、市区町村の償却資産申告の手引きに基づく一般的な説明です。特例には従業員数などの要件があります。個別の判断は税務署・市区町村の税務課や税理士にご確認ください。',
@@ -6959,6 +6959,142 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kakutei-shinkoku-2026-kaisei',
+    title: '2026 年分（令和 8 年分）の確定申告で変わること【フリーランス・個人事業主】基礎控除 104 万円・少額減価償却 40 万円・2 割特例は最後、2027 年分からの青色 75 万円まで',
+    description:
+      '2027 年 2〜3 月に出す 2026 年分の確定申告で、フリーランス・個人事業主に関係する改正をまとめました。所得税の基礎控除（合計所得 489 万円以下は 104 万円）、配偶者・扶養の所得要件 62 万円、少額減価償却資産の 40 万円未満への拡大、消費税の 2 割特例は 2026 年分が最後、国民年金・iDeCo などの控除証明書の代わりに明細書を添付できること。2027 年分からの青色申告特別控除 75 万円・3 割特例・iDeCo 7.5 万円も、今年中に準備すべき順に整理しています。',
+    date: '2026-10-31',
+    keywords: ['確定申告 2026年分 変更点', '令和8年分 確定申告 改正', '確定申告 2027 変わること フリーランス', '個人事業主 税制改正 2026', '基礎控除 104万 確定申告'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '2026 年分の確定申告（2027 年 2 月 16 日〜3 月 15 日）は、2025 年度と 2026 年度の税制改正の影響が重なり、基礎控除の額や減価償却のルール、消費税の特例などが前の年と変わります。さらに 2027 年分からは青色申告特別控除の区分が変わるため、2026 年中に準備しておくと得をすることもあります。フリーランス・個人事業主に関係する主な改正を、詳しく解説した記事へのリンクと一緒にまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '所得税の基礎控除は、合計所得 489 万円以下なら 104 万円、655 万円以下なら 67 万円、それを超えると 62 万円（2026・2027 年分）。住民税の基礎控除は 43 万円のまま',
+          '配偶者控除・扶養控除の対象になる家族の所得は 62 万円以下（2025 年分は 58 万円以下）',
+          '青色申告の少額減価償却資産の特例は、2026 年 4 月 1 日以後の取得から 40 万円未満に（それまでは 30 万円未満）',
+          '消費税の 2 割特例は 2026 年分が最後。申告・納付の期限は 2027 年 3 月 31 日',
+          '国民年金・国民年金基金・iDeCo・小規模企業共済の控除証明書は、2027 年 1 月 1 日以後に出す申告なら明細書で代用できる',
+          '2027 年分からは青色申告特別控除が 75 万・65 万・10 万円に変わり、書面提出の 55 万円がなくなる。75 万円を狙うなら 2027 年 1 月の記帳から準備が必要',
+        ],
+      },
+      { type: 'h2', text: '2026 年分の確定申告で変わること' },
+      {
+        type: 'table',
+        headers: ['項目', '2025 年分', '2026 年分'],
+        rows: [
+          ['基礎控除（合計所得 132 万円以下）', '95 万円', '104 万円'],
+          ['基礎控除（132 万〜336 万円）', '88 万円', '104 万円'],
+          ['基礎控除（336 万〜489 万円）', '68 万円', '104 万円'],
+          ['基礎控除（489 万〜655 万円）', '63 万円', '67 万円'],
+          ['基礎控除（655 万〜2,350 万円）', '58 万円', '62 万円'],
+          ['給与所得控除の最低額（給与もある人）', '65 万円', '74 万円（年収 220 万円以下）'],
+          ['配偶者控除・扶養控除の所得要件', '58 万円以下', '62 万円以下'],
+          ['少額減価償却資産の特例（青色）', '30 万円未満', '40 万円未満（2026 年 4 月 1 日以後の取得）'],
+          ['消費税の 2 割特例', '使える', '使える（2026 年分が最後）'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '基礎控除の 104 万円・67 万円のうち上乗せ分は 2026・2027 年分の時限措置です。合計所得 2,350 万円超の人の基礎控除は 48 万・32 万・16 万円と段階的に減り、2,500 万円超は 0 円（ここは変更なし）。住民税の基礎控除は 43 万円のままなので、住民税はほとんど変わりません。',
+      },
+      { type: 'h3', text: '1. 基礎控除: 所得 489 万円が境目' },
+      {
+        type: 'p',
+        text: 'フリーランスの合計所得は「売上 − 経費 − 青色申告特別控除」です。たとえば売上 800 万円・経費 160 万円・青色 65 万円なら合計所得は 575 万円で、基礎控除は 67 万円。489 万円以下に収まる人は 104 万円になり、2025 年分より所得税が下がります。所得が 489 万円の前後にある人は、経費の計上漏れや iDeCo などの控除で数万円変わることがあります（基礎控除は合計所得で判定するので、所得控除では境目は動きません。動くのは経費と青色申告特別控除）。',
+      },
+      { type: 'h3', text: '2. 家族の控除: 所得 62 万円以下、19〜22 歳の子は 85 万円まで満額' },
+      {
+        type: 'p',
+        text: '配偶者や家族がフリーランス・業務委託で稼いでいる場合は、売上ではなく「売上 − 経費（− 青色申告特別控除）」の所得で判定します。2026 年分は所得 62 万円以下で配偶者控除・扶養控除、配偶者は 95 万円以下まで配偶者特別控除で満額 38 万円です。19〜22 歳の子は、所得 85 万円以下まで特定扶養控除または特定親族特別控除で 63 万円を受けられます。',
+      },
+      { type: 'h3', text: '3. 少額減価償却資産: 40 万円未満のパソコンも一括で経費に' },
+      {
+        type: 'p',
+        text: '青色申告の個人事業主は、2026 年 4 月 1 日以後に取得した 40 万円未満の資産を、使い始めた年に全額経費にできます（年 300 万円まで、2029 年 3 月 31 日までの取得）。判定は取得した日なので、2026 年 1〜3 月に買った 30 万円以上の資産は対象外です。特例を使った資産は償却資産税の申告の対象になる点にも注意します。',
+      },
+      { type: 'h3', text: '4. 消費税: 2 割特例は 2026 年分が最後' },
+      {
+        type: 'p',
+        text: 'インボイス登録をきっかけに課税事業者になった個人は、2026 年分の消費税も「売上にかかる消費税 × 20%」で申告できます。期限は 2027 年 3 月 31 日（水）で、所得税の期限とは別です。2027・2028 年分は「3 割特例」（売上にかかる消費税 × 30%）に変わり、2029 年分からは簡易課税か本則課税を選びます。',
+      },
+      { type: 'h3', text: '5. 控除証明書の代わりに明細書を添付できる' },
+      {
+        type: 'p',
+        text: '国税庁によると、2026 年分以後の確定申告書を 2027 年 1 月 1 日以後に出す場合は、国民年金の保険料・国民年金基金の掛金（社会保険料控除）と、iDeCo・小規模企業共済の掛金（小規模企業共済等掛金控除）について、証明書の添付・提示の代わりに、一定の事項を書いた明細書を添付できます。証明書をなくしても申告はできますが、金額は正確に書く必要があるので、届いた証明書は保管しておきましょう。',
+      },
+      { type: 'h2', text: '2027 年分から変わること（2026 年中に準備するもの）' },
+      {
+        type: 'table',
+        headers: ['項目', '2026 年分まで', '2027 年分から', '今からやること'],
+        rows: [
+          ['青色申告特別控除', '65 万・55 万・10 万円', '75 万・65 万・10 万円（書面提出の 55 万円はなくなる）', 'e-Tax の準備。75 万円を狙うなら 1 月から要件を満たす会計ソフトで記帳'],
+          ['消費税（インボイス登録した個人）', '2 割特例', '3 割特例（2028 年分まで）', '3 割特例と簡易課税のどちらが少ないか比べる'],
+          ['iDeCo の上限（自営業者）', '月 6.8 万円', '月 7.5 万円（2026 年 12 月分の掛金から）', '増やすなら加入先で掛金の変更手続き'],
+          ['セルフメディケーション税制', '2026 年 12 月 31 日までの購入分', '令和 8 年度税制改正の大綱で延長（対象の医薬品は 2027 年分から見直し）とされた', 'レシートと健康診断などの記録を残す'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '影響がいちばん大きいのは青色申告特別控除です。紙で申告している人は 2027 年分から控除が 55 万円 → 10 万円に減り、所得税と住民税、国民健康保険料が上がります。2027 年分の申告（2028 年 2〜3 月）を e-Tax で出せば 65 万円を受けられるので、2026 年分の申告で e-Tax に切り替えて慣れておくと安心です。',
+      },
+      {
+        type: 'note',
+        text: '2027 年分からは防衛特別所得税が創設され、同時に復興特別所得税の税率が引き下げられます。国税庁は、改正の前後で両方を合わせた税率に変更はないとしています。',
+      },
+      {
+        type: 'linkgrid',
+        title: '2026 年分の税額を計算する（無料・登録不要）',
+        items: [
+          { href: '/tools/takehome', label: 'フリーランスの手取り計算（2026 年分の基礎控除に対応）' },
+          { href: '/tools/aoiro', label: '青色申告の節税額シミュレーター（65 万・10 万円の差）' },
+          { href: '/tools/genka-shokyaku', label: '減価償却の計算ツール（40 万円未満の特例）' },
+          { href: '/tools/shohizei', label: '消費税の計算ツール（2 割特例・3 割特例・簡易課税）' },
+        ],
+      },
+      { type: 'h2', text: '2026 年分の確定申告のスケジュール' },
+      {
+        type: 'table',
+        headers: ['手続き', '期限'],
+        rows: [
+          ['所得税の確定申告・納付', '2027 年 2 月 16 日（火）〜3 月 15 日（月）'],
+          ['消費税の確定申告・納付', '2027 年 3 月 31 日（水）'],
+          ['還付申告（源泉徴収で払いすぎた人など）', '2027 年 1 月 1 日から出せる'],
+        ],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '2026 年分の確定申告から何が変わる？' },
+      { type: 'p', text: '主な変更は、所得税の基礎控除（合計所得 489 万円以下は 104 万円）、配偶者・扶養の所得要件 62 万円、青色申告の少額減価償却資産の特例の 40 万円未満への拡大（2026 年 4 月 1 日以後の取得）です。消費税の 2 割特例は 2026 年分が最後になります。' },
+      { type: 'h3', text: '青色申告特別控除 75 万円はいつから？' },
+      { type: 'p', text: '2027 年分からです。2026 年分（2027 年 2〜3 月の申告）は今までどおり 65 万・55 万・10 万円です。75 万円は、複式簿記・e-Tax に加えて、優良な電子帳簿（またはデジタルシームレス保存）と届出書が必要で、2027 年 1 月の記帳の最初から要件を満たす必要があります。' },
+      { type: 'h3', text: '住民税も下がる？' },
+      { type: 'p', text: '住民税の基礎控除は 43 万円のままで、今回の基礎控除の引き上げは所得税だけです。住民税はほとんど変わりません。' },
+      { type: 'h3', text: '2026 年 3 月に買ったパソコン（35 万円）は一括で経費にできる？' },
+      { type: 'p', text: 'できません。40 万円未満の特例は 2026 年 4 月 1 日以後の取得が対象で、それより前の取得は 30 万円未満が上限です。判定は使い始めた日ではなく取得した日で行います。35 万円なら通常の減価償却で数年に分けて経費にします。' },
+      { type: 'h3', text: '控除証明書をなくしたら申告できない？' },
+      { type: 'p', text: '国民年金・国民年金基金・iDeCo・小規模企業共済は、2027 年 1 月 1 日以後に出す 2026 年分の申告なら、証明書の代わりに明細書を添付できます。ほかの控除（生命保険料控除など）は発行元に再発行を依頼してください。' },
+      {
+        type: 'cta',
+        title: '2026 年分の確定申告の準備をまとめて進める（確定申告準備キット）',
+        text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別の集計、所得税の概算まで、確定申告の準備を 1 つの Excel で。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/kakutei-checklist', label: '無料の確定申告チェックリストを使う' },
+      },
+      { type: 'links', items: ['side-job-nenmatsu-chosei-2026', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man', 'freelance-invoice-3wari-tokurei', 'freelance-haigusha-koujo', 'tokutei-shinzoku-gakusei-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep'] },
+      {
+        type: 'note',
+        text: '2025 年度・2026 年度の税制改正と、国税庁 タックスアンサー（No.1130・No.1135・No.1420・No.2100 など）に基づく一般的な説明です（2026 年 10 月時点）。2026 年分の確定申告の手引きや様式は、国税庁が年末から順に公表します。個別の状況は税務署に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -7019,7 +7155,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei'],
   },
   {
     id: 'setup',
