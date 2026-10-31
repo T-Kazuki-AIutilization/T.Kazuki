@@ -1302,7 +1302,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ポイントは「前年の所得」で決まることです。独立 1 年目は会社員時代の給与所得で計算されるため高くなりがちで、2 年目は 1 年目の事業所得で決まります。売上が伸びた翌年に保険料が跳ね上がるので、資金繰りの計画に入れておく必要があります。',
       },
-      { type: 'links', items: ['freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
+      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '国民年金の保険料' },
       {
         type: 'p',
@@ -2632,7 +2632,7 @@ export const ARTICLES: Article[] = [
           '75 万円を狙うなら、優良な電子帳簿の要件に対応した会計ソフトを選び、2027 年 1 月 1 日の取引から入力する（対応状況はプランごとに公式サイトで確認）',
         ],
       },
-      { type: 'links', items: ['iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
+      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
       { type: 'affiliate', title: '1 月から会計ソフトで帳簿をつけるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '12 月に買ったパソコンは今年の経費になる？' },
@@ -4088,7 +4088,7 @@ export const ARTICLES: Article[] = [
           { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
         ],
       },
-      { type: 'links', items: ['iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
+      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
       { type: 'h2', text: 'よくある質問' },
       {
         type: 'h3',
@@ -6270,7 +6270,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kyosai', label: '無料の節税額シミュレーターを使う' },
       },
-      { type: 'links', items: ['freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
+      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
       {
         type: 'note',
         text: '厚生労働省「2026 年 12 月（2027 年 1 月引き落とし分）から iDeCo の拠出限度額と加入可能年齢が引き上げられます」リーフレット、国税庁 タックスアンサー No.1135「小規模企業共済等掛金控除」に基づく一般的な説明です。上限の計算や手続きの締切は加入状況と加入先によって違うので、加入している金融機関（運営管理機関）で確認してください。',
@@ -6439,6 +6439,168 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'keiei-safety-kyosai-freelance',
+    title: 'フリーランスの経営セーフティ共済（倒産防止共済）は節税になる？掛金を経費にできる条件、年末の前納、解約時の税金と国保',
+    description:
+      '経営セーフティ共済（中小企業倒産防止共済）の掛金は、個人事業主なら事業所得の必要経費になり、1 年以内の前納分は払った年の経費にできます。所得税・住民税に加えて国民健康保険料も下がる一方、解約手当金を受け取ると課税されるので「税金の先送り」です。加入資格（1 年以上の事業）、解約手当金の支給率、2024 年 10 月以降の再加入 2 年ルール、小規模企業共済・iDeCo との違いを中小機構の案内に沿って整理しました。',
+    date: '2026-10-31',
+    keywords: ['経営セーフティ共済 個人事業主 節税', '倒産防止共済 フリーランス', '倒産防止共済 前納 年末', '倒産防止共済 解約手当金 税金', '経営セーフティ共済 国民健康保険'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '年末が近づくと「経営セーフティ共済（倒産防止共済）の前納で節税」という話を目にします。掛金は個人事業主でも事業所得の必要経費にでき、iDeCo や小規模企業共済と違って国民健康保険料まで下がるのが特徴です。ただし、解約して戻ってくるお金には税金がかかるため、税金をなくす制度ではなく「先送りする」制度です。フリーランスが使う前に知っておきたい条件と注意点を、運営する中小機構（中小企業基盤整備機構）の案内に沿ってまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '掛金は月 5,000〜20 万円（5,000 円単位）、積立は 800 万円まで。個人事業主は事業所得の必要経費になる',
+          '前納（前払い）した掛金は、前納の期間が 1 年以内なら払った年の経費にできる。年末に 1 年分を前納すると、その年の経費が最大 240 万円増える',
+          '経費なので、所得税・住民税だけでなく国民健康保険料も下がる（iDeCo・小規模企業共済は所得控除なので国保は下がらない）',
+          '解約手当金は 12 か月未満だと 0、40 か月以上で掛金の 100%。受け取ると課税されるので、所得が低い年や廃業の年に受け取れるかが大事',
+          '2024 年 10 月 1 日以後に解約して再加入すると、解約から 2 年間に払う掛金は経費にできない',
+          '加入できるのは 1 年以上事業を続けている個人事業主など。開業 1 年目は入れない',
+        ],
+      },
+      { type: 'h2', text: 'どんな制度？' },
+      {
+        type: 'p',
+        text: '経営セーフティ共済は、取引先が倒産して売掛金が回収できなくなったときに、無担保・無保証人で共済金を借りられる国の制度です。借りられるのは「回収困難になった売掛金などの額」か「掛金総額の 10 倍（最高 8,000 万円）」の少ないほうです。本来は連鎖倒産を防ぐための備えで、掛金を経費にできるのはその制度の一部です。',
+      },
+      {
+        type: 'table',
+        headers: ['項目', '内容'],
+        rows: [
+          ['掛金', '月 5,000〜20 万円（5,000 円単位）。途中で増額でき、減額には一定の理由が必要'],
+          ['積立の上限', '800 万円'],
+          ['引き落とし', '毎月 27 日（土日祝日は翌営業日）の口座振替'],
+          ['前納', 'できる（前納減額金を受け取れる）'],
+          ['掛止め', '掛金の総額が掛金月額の 40 倍以上になれば、払い込みを止められる'],
+          ['税金', '個人は事業所得の必要経費（不動産所得などの必要経費にはできない）。確定申告書に「特定の基金に対する負担金等の必要経費算入に関する明細書」を添付'],
+        ],
+      },
+      { type: 'h2', text: 'フリーランスは加入できる？' },
+      {
+        type: 'ul',
+        items: [
+          '継続して 1 年以上事業を行っている個人事業主（開業 1 年未満は加入できない）',
+          '事業所得（または不動産所得）で確定申告をしている',
+          '業種ごとの常時使用する従業員数の要件（サービス業は 100 人以下など）を満たす。フリーランス本人や家族従業員は従業員数に含めない',
+          '所得税を滞納していない、すでに契約者になっていない（重複加入はできない）など',
+        ],
+      },
+      {
+        type: 'note',
+        text: '中小機構は「一般消費者を取引先とする事業者」など、取引先に対する売掛金が生じない業種は、共済金の貸付けの対象にならない場合があるとしています。会社やほかの事業者から仕事を受けるフリーランスは売掛金が生じますが、個人向けの販売が中心の人は加入前に確認してください。',
+      },
+      { type: 'h2', text: 'いくら税金が下がる？（国保を含む）' },
+      {
+        type: 'table',
+        headers: ['年間売上', '掛金 年 60 万円（月 5 万円）', '掛金 年 120 万円（月 10 万円）', '掛金 年 240 万円（月 20 万円）'],
+        rows: [
+          ['500 万円', '約 14.2 万円', '約 28.3 万円', '約 54.5 万円'],
+          ['800 万円', '約 22.4 万円', '約 47.5 万円', '約 80.3 万円'],
+          ['1,000 万円', '約 22.4 万円', '約 45.9 万円', '約 90.7 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: 'その年の所得税（復興特別所得税を含む）・住民税・国民健康保険料の減少額の合計。経費は売上の 20%（＋共済の掛金）、青色申告特別控除 65 万円、独身・扶養なし、国民年金 月 17,920 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）で概算しています（2026 年分）。所得税は 2026 年分の基礎控除の段階によって差が出ます。個人事業税がかかる業種は、その分も下がります。',
+      },
+      {
+        type: 'p',
+        text: '同じ金額でも、所得控除の iDeCo や小規模企業共済より下がる額が大きいのは、国保料（この概算では所得の 10%）も下がるからです。ただし、この差の多くは後で解約手当金を受け取ったときに戻ってきます。',
+      },
+      { type: 'h2', text: '年末の前納で今年の経費にする' },
+      {
+        type: 'p',
+        text: '中小機構によると、前納した掛金は、前納の期間が 1 年以内なら支払った年の必要経費にでき、1 年を超える分は期間の経過に応じて経費にします。12 月に 12 か月分を前納すれば、その年の経費にできます。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '加入したその年から前納分を経費にできるかは、加入の時期と前納の手続きの締切で決まる。掛金に関する手続きの締切は毎月 5 日（中小機構必着）で、窓口の金融機関などを通して届くので、12 月に間に合わせるなら早めに相談する',
+          '前納した掛金は、充当する月が来るまでは解約手当金の計算に入らない（解約すると未充当分は過払い金として返金される）',
+          '納税資金や生活費まで前納に回さない。掛金は 12 か月未満で解約すると戻らない',
+        ],
+      },
+      { type: 'h2', text: '解約手当金と税金: 「先送り」と考える' },
+      {
+        type: 'table',
+        headers: ['掛金を納めた月数', '任意解約', 'みなし解約（死亡など）', '機構解約（滞納など）'],
+        rows: [
+          ['1〜11 か月', '0%', '0%', '0%'],
+          ['12〜23 か月', '80%', '85%', '75%'],
+          ['24〜29 か月', '85%', '90%', '80%'],
+          ['30〜35 か月', '90%', '95%', '85%'],
+          ['36〜39 か月', '95%', '100%', '90%'],
+          ['40 か月以上', '100%', '100%', '95%'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '掛金を経費にしてきた分、解約手当金を受け取った年はその分の所得が増えて、所得税・住民税・国保がかかります。たとえば 800 万円を積み立てて、売上が多い年に解約すると、その年の税率と国保の上限まで一気に上がります。前納で下げた税金がそのまま戻ってくるだけでなく、受け取る年の税率によっては多く払うこともあります。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '向いている使い方: 売上が大きい年に積み立て、売上が落ちた年・設備投資や赤字の年・廃業する年など、所得が低い年に解約する',
+          '向いていない使い方: 毎年の所得が同じくらいで、近いうちに解約するつもりで積み立てる（税率が同じなら先送りの効果だけで、12〜39 か月の解約では元本割れ）',
+          '解約手当金の所得の区分（事業所得になるかなど）や廃業後に受け取る場合の扱いは、状況によって変わるので、受け取る前に税務署か税理士に確認する',
+        ],
+      },
+      {
+        type: 'note',
+        text: '2024 年 10 月 1 日以後に解約して再び加入した場合、解約の日から 2 年を経過する日までに払う掛金は必要経費にできません。「解約手当金を受け取ってすぐ入り直す」ことはできなくなっています。',
+      },
+      { type: 'h2', text: '小規模企業共済・iDeCo との違い' },
+      {
+        type: 'table',
+        headers: ['', '経営セーフティ共済', '小規模企業共済', 'iDeCo'],
+        rows: [
+          ['税金の扱い', '必要経費（事業所得が減る）', '所得控除', '所得控除'],
+          ['国保料', '下がる', '下がらない', '下がらない'],
+          ['掛金の上限', '月 20 万円（総額 800 万円まで）', '月 7 万円', '月 7.5 万円（2026 年 12 月分から、国民年金基金などと合計）'],
+          ['戻るとき', '解約手当金（40 か月以上で 100%）。受け取ると課税', '共済金（廃業時・65 歳以上など）。退職所得などの扱い', '原則 60 歳以降。退職所得・公的年金等の扱い'],
+          ['向いている人', '売上の波が大きく、資金を数年寝かせられる人', '退職金を用意したい個人事業主', '老後資金を積み立てたい人'],
+        ],
+      },
+      {
+        type: 'linkgrid',
+        title: '所得控除の節税額も計算する（無料・登録不要）',
+        items: [
+          { href: '/tools/kyosai', label: 'iDeCo・小規模企業共済の節税額シミュレーター' },
+          { href: '/tools/nhi', label: '国民健康保険料の計算ツール（経費が増えると国保はいくら下がる？）' },
+        ],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '開業したばかりでも入れる？' },
+      { type: 'p', text: '入れません。個人事業主は継続して 1 年以上事業を行っていることが加入の条件です。開業 1 年目の節税には、青色申告特別控除や、青色申告で 40 万円未満（2026 年 4 月 1 日以後の取得分）の備品を一括で経費にできる少額減価償却資産の特例などを使います。' },
+      { type: 'h3', text: '白色申告でも経費にできる？' },
+      { type: 'p', text: '中小機構の案内では、個人事業主の掛金は事業所得の必要経費に算入できるとされ、青色申告に限るという記載はありません。確定申告書に「特定の基金に対する負担金等の必要経費算入に関する明細書」を添付します。' },
+      { type: 'h3', text: '副業（雑所得）でも使える？' },
+      { type: 'p', text: '掛金を経費にできるのは事業所得です。加入資格も事業所得（または不動産所得）で確定申告をしている個人事業主などが対象なので、副業の所得が雑所得の場合は対象外と考えてください。' },
+      { type: 'h3', text: '年末に 240 万円前納すれば得？' },
+      { type: 'p', text: 'その年の税金と国保は下がりますが、解約手当金を受け取る年に課税されます。12 か月未満で解約すると 0、40 か月未満の任意解約は元本割れです。少なくとも 40 か月以上は解約しなくてよい余裕資金で、受け取る年の所得が低くなる見込みがあるときに検討しましょう。' },
+      { type: 'h3', text: '帳簿にはどう書く？' },
+      { type: 'p', text: '「倒産防止共済掛金」など、内容がわかる科目を作って記帳しておくと、確定申告書に付ける明細書を書くときに集計しやすくなります。前納分は、前納の期間が 1 年以内ならその年の経費です。' },
+      {
+        type: 'cta',
+        title: '前納や解約の年を決める前に、資金繰りを見える化する（Excel）',
+        text: '月ごとの入金予定と経費を入れると、12 か月先までの月末残高と毎月の納税積立額を自動計算。所得税・住民税・国保・年金の支払月カレンダーつき。',
+        href: BOOTH_CASHFLOW_URL,
+        label: 'BOOTH で見る（980円）',
+        external: true,
+      },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'freelance-year-end-checklist', 'freelance-shotoku-koujo-ichiran', 'freelance-health-insurance-pension'] },
+      {
+        type: 'note',
+        text: '中小企業基盤整備機構「経営セーフティ共済」の案内（掛金・加入資格・解約・魅力）と租税特別措置法第 28 条に基づく一般的な説明です（2026 年 10 月時点）。加入の可否や解約手当金の課税は個別の状況で変わるので、加入窓口・税務署・税理士に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -6499,7 +6661,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance'],
   },
   {
     id: 'setup',

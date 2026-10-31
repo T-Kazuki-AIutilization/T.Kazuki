@@ -39,6 +39,7 @@ export default function KyosaiToolPage() {
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/ideco-jogen-75000-freelance" className="text-primary hover:underline">iDeCo の上限が月 7.5 万円に（2026 年 12 月分から）。節税額はいくら増える？</Link></li>
+            <li><Link href="/blog/keiei-safety-kyosai-freelance" className="text-primary hover:underline">経営セーフティ共済（倒産防止共済）は節税になる？掛金を経費にする条件と解約時の税金</Link></li>
             <li><Link href="/blog/freelance-year-end-checklist" className="text-primary hover:underline">フリーランスが年内にやることチェックリスト（共済の前納など）</Link></li>
             <li><Link href="/tools/furusato" className="text-primary hover:underline">ふるさと納税の上限額（掛金を入れると上限が変わる）</Link></li>
             <li><Link href="/blog/freelance-shotoku-koujo-ichiran" className="text-primary hover:underline">フリーランスが使える所得控除一覧（節税額の目安と証明書）</Link></li>
