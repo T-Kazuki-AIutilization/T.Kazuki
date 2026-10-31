@@ -46,6 +46,7 @@ export default function NhiToolPage() {
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/freelance-health-insurance-pension" className="text-primary hover:underline">フリーランスの国民健康保険と国民年金はいくら？所得別の目安・負担を抑える方法</Link></li>
+            <li><Link href="/blog/shakai-hokenryo-koujo-freelance" className="text-primary hover:underline">社会保険料控除: 国保・国民年金はいくら引ける？家族の分・前納・控除証明書</Link></li>
             <li><Link href="/blog/freelance-tax-calendar" className="text-primary hover:underline">税金・納付スケジュール年間カレンダー</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター（無料ツール）</Link></li>
           </ul>

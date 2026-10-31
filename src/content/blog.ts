@@ -1302,7 +1302,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ポイントは「前年の所得」で決まることです。独立 1 年目は会社員時代の給与所得で計算されるため高くなりがちで、2 年目は 1 年目の事業所得で決まります。売上が伸びた翌年に保険料が跳ね上がるので、資金繰りの計画に入れておく必要があります。',
       },
-      { type: 'links', items: ['keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
+      { type: 'links', items: ['shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '国民年金の保険料' },
       {
         type: 'p',
@@ -2632,7 +2632,7 @@ export const ARTICLES: Article[] = [
           '75 万円を狙うなら、優良な電子帳簿の要件に対応した会計ソフトを選び、2027 年 1 月 1 日の取引から入力する（対応状況はプランごとに公式サイトで確認）',
         ],
       },
-      { type: 'links', items: ['shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
+      { type: 'links', items: ['shakai-hokenryo-koujo-freelance', 'shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
       { type: 'affiliate', title: '1 月から会計ソフトで帳簿をつけるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '12 月に買ったパソコンは今年の経費になる？' },
@@ -3517,7 +3517,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '国民年金保険料は全額が社会保険料控除になり、所得税・住民税が下がります。2 年前納した場合は、「納めた年に全額を控除する」か「各年分に相当する額をそれぞれの年に控除する」かを選べます。所得の高い年にまとめて控除すると節税効果が大きくなることがあります。各年に分ける場合は、内訳の明細書を申告書に添付します。手続きの詳細は国税庁の案内（2 年前納された国民年金保険料の社会保険料控除について）で確認してください。',
       },
-      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-year-end-checklist', 'freelance-take-home-pay'] },
+      { type: 'links', items: ['shakai-hokenryo-koujo-freelance', 'freelance-health-insurance-pension', 'freelance-year-end-checklist', 'freelance-take-home-pay'] },
       { type: 'h2', text: '月 400 円で年金を増やせる「付加年金」' },
       {
         type: 'ul',
@@ -4064,7 +4064,7 @@ export const ARTICLES: Article[] = [
         type: 'table',
         headers: ['控除', '必要なもの', '届く時期'],
         rows: [
-          ['社会保険料控除（国民年金）', '社会保険料（国民年金保険料）控除証明書', '11 月上旬（1 月以降に納付を始めた人は翌年 2 月）'],
+          ['社会保険料控除（国民年金）', '社会保険料（国民年金保険料）控除証明書', '10 月下旬〜11 月上旬（10〜12 月に初めて払った人は翌年 2 月上旬）'],
           ['社会保険料控除（国保）', '証明書は不要（納付額を自分で集計。自治体の納付済額通知があれば確認に使う）', '―'],
           ['小規模企業共済等掛金控除', '掛金払込証明書（iDeCo は国民年金基金連合会、共済は中小機構から）', '10〜11 月'],
           ['生命保険料控除・地震保険料控除', '各保険会社の控除証明書', '10〜11 月'],
@@ -4088,7 +4088,7 @@ export const ARTICLES: Article[] = [
           { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト' },
         ],
       },
-      { type: 'links', items: ['shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
+      { type: 'links', items: ['shakai-hokenryo-koujo-freelance', 'shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'freelance-tax-prep', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'freelance-year-end-checklist', 'freelance-kokumin-nenkin-zennou'] },
       { type: 'h2', text: 'よくある質問' },
       {
         type: 'h3',
@@ -6799,6 +6799,166 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shakai-hokenryo-koujo-freelance',
+    title: 'フリーランスの社会保険料控除: 国保・国民年金はいくら引ける？家族の分・前納・控除証明書（2026 年分はいつ届く？）',
+    description:
+      'フリーランスが払う国民健康保険料と国民年金保険料は、その年に実際に払った全額が社会保険料控除になります。生計を一にする配偶者や子の国民年金を払うと自分の控除にでき、過去の未納分も払った年の控除です。2 年前納の扱い、2026 年分の控除証明書の送付時期（1〜9 月に払った人は 11 月上旬まで、10〜12 月に初めて払った人は 2027 年 2 月上旬）、国保は証明書が不要なこと、明細書での代用までを国税庁と日本年金機構の案内に沿って整理しました。',
+    date: '2026-10-31',
+    keywords: ['社会保険料控除 フリーランス', '国民年金 控除証明書 いつ届く 2026', '社会保険料控除 家族 国民年金', '国民健康保険 控除 証明書 確定申告', '国民年金 2年前納 控除'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '会社員は社会保険料が給与から天引きされ、年末調整で自動的に控除されます。フリーランスは国民健康保険料と国民年金保険料を自分で払うので、確定申告で「社会保険料控除」として書かないと、税金が下がりません。金額が大きく、家族の分を含められることもあるので、所得控除の中でも節税への影響が大きい項目です。国税庁と日本年金機構の案内に沿って、フリーランスが確認しておきたいことをまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '控除できるのは、その年（1 月 1 日〜12 月 31 日）に実際に払った社会保険料の全額。上限はない',
+          '過去の年の未納分でも、今年払えば今年の控除になる。年内に払えば 2026 年分に入る',
+          '生計を一にする配偶者や子の国民年金・国民健康保険を自分が払えば、自分の控除にできる',
+          '国民年金を前納した場合は、払った年にまとめて控除するか、各年分に分けて控除するかを選べる（2 年前納も同じ）',
+          '国民年金の控除証明書は、2026 年 1〜9 月に払った人には 10 月下旬〜11 月上旬に届く（電子データは 10 月中旬〜下旬）。10〜12 月に初めて払った人は 2027 年 2 月上旬',
+          '証明書の添付・提示が必要なのは国民年金と国民年金基金。2027 年 1 月 1 日以後に出す 2026 年分の確定申告からは、明細書を添付すれば証明書の代わりにできる',
+        ],
+      },
+      { type: 'h2', text: 'フリーランスが控除できる社会保険料' },
+      {
+        type: 'table',
+        headers: ['保険料', '控除の対象', '証明書の添付・提示'],
+        rows: [
+          ['国民年金保険料（付加保険料を含む）', '払った全額', '必要（日本年金機構の控除証明書）'],
+          ['国民健康保険料（国民健康保険税）', '払った全額', '国税庁の案内では必要とされていない'],
+          ['国民年金基金の掛金', '払った全額', '必要（国民年金基金の証明書）'],
+          ['介護保険料（40 歳以上は国保と一緒に払う）', '払った全額', '国税庁の案内では必要とされていない'],
+          ['家族の国民年金・国保を自分が払った分', '生計を一にする親族の分なら対象', '国民年金は家族あての控除証明書を使う'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '国税庁 タックスアンサー No.1130 では、社会保険料控除の金額を「その年に実際に支払った金額」とし、保険料の金額を証する書類の添付・提示が必要なものとして国民年金の保険料と国民年金基金の掛金を挙げています。国保は添付・提示が必要なものとして挙げられていませんが、払った額は領収書・通帳・自治体の通知などで確認できるようにしておきましょう。iDeCo や小規模企業共済の掛金は社会保険料控除ではなく「小規模企業共済等掛金控除」の欄に書きます。',
+      },
+      { type: 'h2', text: '「払った年」で控除する: 未納分は年内に払う' },
+      {
+        type: 'p',
+        text: '社会保険料控除は、保険料がどの年度の分かではなく、いつ払ったかで決まります。国税庁は、生計を一にする子の国民年金保険料を過去 3 年分まとめて払った例について、本年中に払ったものであれば過去の年分のものでも本年分の控除の対象になると説明しています。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '国保や国民年金に未納がある場合、12 月 31 日までに払えば 2026 年分の控除に入る。年明けに払うと 2027 年分',
+          '口座振替やクレジットカード払いは、引き落とし・決済の時期によって年をまたぐことがあるので、12 月分がいつ払ったことになるかを納付書や明細で確認する',
+          '国保は年度（4 月〜翌年 3 月）で計算され、納期は自治体ごとに違う。控除の額は年度の保険料ではなく、1〜12 月に実際に払った額',
+        ],
+      },
+      { type: 'h2', text: '家族の分も控除できる' },
+      {
+        type: 'p',
+        text: '社会保険料控除は、自分の分だけでなく、自分と生計を一にする配偶者やその他の親族が負担すべき社会保険料を自分が払った場合にも受けられます。フリーランスの配偶者は国民年金の第 1 号被保険者になることが多いので、配偶者の国民年金を自分の口座から払えば、その分も自分の控除です。20 歳以上の学生の子の国民年金を親が払う場合も同じです。',
+      },
+      {
+        type: 'table',
+        headers: ['年間売上', '家族 1 人の国民年金 1 年分（約 21.5 万円）を払う', '家族 2 人分（約 43 万円）'],
+        rows: [
+          ['300 万円', '約 3.3 万円', '約 5.8 万円'],
+          ['500 万円', '約 3.3 万円', '約 6.5 万円'],
+          ['800 万円', '約 6.5 万円', '約 13.1 万円'],
+          ['1,000 万円', '約 6.5 万円', '約 13.1 万円'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '自分の所得税（復興特別所得税を含む）と住民税の減少額の合計。国民年金は月 17,920 円（2026 年度）× 12 か月で計算。経費は売上の 20%、青色申告特別控除 65 万円、独身・扶養なし、本人の国民年金と国保（（所得 − 43 万円）× 10% ＋ 均等割 6 万円）を控除済みとして概算しています（2026 年分）。国保料は所得控除の影響を受けないので変わりません。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '「生計を一にする」かは保険料を払った時点で判定する。国税庁の例では、4 月に子が引っ越して生計が別になった場合、親が控除できるのは 1〜3 月に払った分だけ',
+          '家族の公的年金から天引き（特別徴収）された介護保険料などは、払ったのはその家族なので、自分の控除にはできない',
+          '国民年金の控除証明書は被保険者本人あてに届く。家族の分を控除するときは、家族あての証明書を使う',
+          '同じ保険料を家族の側でも控除しないようにする（払った人が控除する）',
+        ],
+      },
+      { type: 'h2', text: '国民年金を前納したとき' },
+      {
+        type: 'p',
+        text: '国税庁によると、前納した期間が 1 年以内のものは払った年の控除にでき、国民年金の「2 年前納」も、全額を払った年の控除にして差し支えありません。どちらも、各年分の保険料に相当する額を各年に控除する方法を選ぶこともできます。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '所得が多い年にまとめて控除するか、毎年に分けるかを選べる。所得が毎年同じくらいなら、分けたほうが税率の高い部分を毎年削れることもある',
+          '日本年金機構は、13 か月以上前納した人に各年に分けた控除証明書（最大 3 年分 3 枚）を送る。まとめて控除するなら全部を切り離さずに添付し、分けるならその年の 1 枚を使う',
+          '2 年前納の申込みや割引額は日本年金機構の案内で確認する（前納の時期と方法については「国民年金の前納」の記事も参考に）',
+        ],
+      },
+      { type: 'h2', text: '控除証明書はいつ届く？（2026 年分）' },
+      {
+        type: 'table',
+        headers: ['2026 年に国民年金を払った時期', '書面（郵送）', '電子データ'],
+        rows: [
+          ['1 月 1 日〜9 月 30 日に払った', '10 月 23 日から 11 月上旬にかけて順次', '10 月 16 日から 10 月下旬にかけて順次'],
+          ['10 月 1 日〜12 月 31 日に初めて払った', '2027 年 2 月上旬', '2027 年 1 月下旬から順次'],
+        ],
+      },
+      {
+        type: 'ul',
+        items: [
+          '電子データ（マイナポータル経由）の送付対象の人には、書面は郵送されない',
+          '10〜11 月に届くハガキには、1〜9 月の「納付済額」と、10〜12 月に払う見込みの「見込額」、その「合計額」が書かれている。見込みどおり払えなかった月があれば、実際に払った額で申告する',
+          'なくしたときは「ねんきんネット」の通知書の再交付申請から再発行でき、発送まで 1 週間程度。電話の自動音声でも受け付けている',
+          '国税庁と日本年金機構によると、2026 年分の確定申告書を 2027 年 1 月 1 日以後に出す場合は、証明書の添付・提示の代わりに、一定の事項を書いた明細書を添付することもできる（年末調整では使えない）',
+        ],
+      },
+      {
+        type: 'linkgrid',
+        title: '国保・年金の額と手取りを計算する（無料・登録不要）',
+        items: [
+          { href: '/tools/nhi', label: '国民健康保険料の計算ツール' },
+          { href: '/tools/takehome', label: 'フリーランスの手取り計算（所得税・住民税・国保・年金）' },
+        ],
+      },
+      { type: 'h2', text: '確定申告での書き方' },
+      {
+        type: 'p',
+        text: '確定申告書の「社会保険料控除」の欄に、保険料の種類と、1〜12 月に払った額を書きます。家族の分を払った場合は、その分も合わせて書きます。日本年金機構によると、マイナポータル経由で受け取った電子データの控除証明書は、e-Tax での確定申告に使えます。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '国保の額は、口座振替の通帳、納付書の領収書、自治体から届く通知（自治体による）で確認する。わからないときは自治体の国保の窓口で 1〜12 月の納付額を確認する',
+          '年の途中で会社員になり、会社の年末調整で国民年金の分も申告する場合は、年末調整では明細書で代用できないので、控除証明書を出す',
+        ],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '国民健康保険料の控除証明書が届かない' },
+      { type: 'p', text: '国民年金のような控除証明書は、国保にはないことがほとんどです。国税庁の案内で証明書の添付・提示が必要とされているのは国民年金と国民年金基金で、国保は 1〜12 月に実際に払った額を確定申告書に書きます。額は領収書や通帳、自治体の通知で確認してください。' },
+      { type: 'h3', text: '親の国保や配偶者の国民年金を払ったら控除できる？' },
+      { type: 'p', text: '生計を一にする親族の社会保険料を自分が払った場合は、自分の控除にできます。生計を一にするかは払った時点で判定します。ただし、親の年金から天引きされている保険料は親が払ったものなので、自分の控除にはできません。' },
+      { type: 'h3', text: '去年の未納分を今年払った。どの年の控除？' },
+      { type: 'p', text: '今年払ったなら今年の控除です。社会保険料控除は保険料がどの期間の分かではなく、実際に払った年で決まります。' },
+      { type: 'h3', text: '2 年前納した。今年にまとめて控除と、2 年に分けるのはどちらが得？' },
+      { type: 'p', text: '所得税は所得が多いほど税率が上がるので、今年の所得が来年より多い見込みなら今年にまとめるほうが、同じくらいなら分けるほうが有利なことが多いです。分ける場合は、日本年金機構から届いた年ごとの控除証明書のうち、その年の分を使います。' },
+      { type: 'h3', text: '国保は社会保険料控除で下がる？' },
+      { type: 'p', text: '社会保険料控除で下がるのは所得税と住民税です。国保料は「所得 − 43 万円」をもとに計算され、社会保険料控除などの所得控除は差し引かれないため、国保料そのものは下がりません。' },
+      {
+        type: 'cta',
+        title: '控除と税額をまとめて管理する（確定申告準備キット）',
+        text: 'やることチェックリスト 37 項目、経費帳・売上帳、科目別の集計、所得税の概算まで、確定申告の準備を 1 つの Excel で。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+        secondary: { href: '/tools/nhi', label: '無料の国保計算ツールを使う' },
+      },
+      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-kokumin-nenkin-zennou', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist'] },
+      {
+        type: 'note',
+        text: '国税庁 タックスアンサー No.1130「社会保険料控除」とその質疑応答（Q1〜Q5）、日本年金機構「令和 8 年分社会保険料（国民年金保険料）控除証明書の発行について」（2026 年 10 月 9 日更新）に基づく一般的な説明です（2026 年 10 月時点）。個別の状況は税務署・日本年金機構・お住まいの自治体に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -6859,7 +7019,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance'],
   },
   {
     id: 'setup',
