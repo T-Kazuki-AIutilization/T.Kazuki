@@ -803,7 +803,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['kaji-anbun-freelance', 'kakutei-shinkoku-2026-kaisei', 'iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['freelance-shotoku-shomei', 'kaji-anbun-freelance', 'kakutei-shinkoku-2026-kaisei', 'iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -2183,7 +2183,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['freelance-shotoku-shomei', 'kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
       {
         type: 'ul',
         items: [
@@ -3399,7 +3399,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '独立直後は売上が安定しないうえ、同じ時期に国民健康保険（これも前年の所得で計算）の通知も届きます。前年の年収が 600 万円なら、住民税と国保で年 70 万円以上になることもあります。退職前から、この 2 つの分の資金を取り分けておくと安心です。',
       },
-      { type: 'links', items: ['saishushoku-teate-kaigyo', 'freelance-health-insurance-pension', 'freelance-tax-calendar', 'freelance-nenmatsu-chosei'] },
+      { type: 'links', items: ['freelance-shotoku-shomei', 'saishushoku-teate-kaigyo', 'freelance-health-insurance-pension', 'freelance-tax-calendar', 'freelance-nenmatsu-chosei'] },
       { type: 'h2', text: '退職した月で変わる、残りの住民税の払い方' },
       {
         type: 'p',
@@ -5524,7 +5524,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
       },
-      { type: 'links', items: ['kaji-anbun-freelance', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
+      { type: 'links', items: ['freelance-shotoku-shomei', 'kaji-anbun-freelance', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
       {
         type: 'note',
         text: '国税庁「令和 7 年分 青色申告決算書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
@@ -7747,6 +7747,126 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'freelance-shotoku-shomei',
+    title: 'フリーランスの収入証明はどれを出す？確定申告書の控え（2025 年から受付印なし）、納税証明書その 2、課税証明書の違いと取り方・取れる時期',
+    description:
+      '賃貸の審査、保育園の申し込み、ローンなどでフリーランスが収入（所得）の証明を求められたときの書類をまとめました。2025 年 1 月から税務署が申告書の控えに受付印を押さなくなったこと、e-Tax の受信通知、申告書等情報取得サービス、納税証明書（その 1・その 2）の取り方と手数料（オンライン 370 円・書面 400 円）、市区町村の課税証明書が新年度分に切り替わる時期（6 月ごろ）を、国税庁と自治体の案内で確認しました。',
+    date: '2026-11-01',
+    keywords: ['フリーランス 収入証明', '確定申告 控え 受付印 なくなった', '納税証明書 その2 取り方', 'フリーランス 所得証明 賃貸', '課税証明書 いつから 確定申告'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '会社員なら源泉徴収票を出せば済む収入の証明も、フリーランスは自分で書類を選んで用意する必要があります。しかも 2025 年 1 月から、税務署は申告書の控えに受付印（収受日付印）を押さなくなりました。賃貸の審査、保育園の申し込み、ローンなどで「収入が分かる書類」を求められたときに出せる書類と、それぞれの取り方・取れる時期を、国税庁と自治体の案内をもとに整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '使える書類は主に 4 つ。確定申告書の控え（e-Tax なら受信通知とセット）、申告書等情報取得サービスで取る申告書の PDF、税務署の納税証明書（所得金額は「その 2」）、市区町村の課税（所得）証明書',
+          '2025 年 1 月から、書面で出した申告書の控えに受付印は押されない。国税庁は金融機関などに、受付印のある控えを求めないよう周知している',
+          'e-Tax で申告すれば、メッセージボックスの受信通知で、氏名・受付番号・受付日時を示せる。いちばん手間が少ない',
+          '納税証明書は確定申告の後なら随時取れる。オンライン請求は 1 年度 1 税目 370 円、書面請求は 400 円',
+          '課税証明書は、確定申告した年の 6 月ごろに新年度分（前年の所得）に切り替わる。それまでは前々年の所得の証明になるので、2〜5 月に最新の所得を示すなら控えか納税証明書',
+          'どの書類でよいかは提出先が決める。出す前に「どの書類の、どの年分か」を確認する',
+        ],
+      },
+      { type: 'h2', text: '4 つの書類の違い' },
+      {
+        type: 'table',
+        headers: ['書類', '分かること', '取り方・費用', '取れる時期'],
+        rows: [
+          ['確定申告書の控え（＋e-Tax の受信通知）', '申告した売上・所得・税額。受信通知で受付日時と受付番号', '自分で保管。e-Tax なら受信通知はメッセージボックスに届く。無料', '申告した直後から'],
+          ['申告書等情報取得サービス（申告書・決算書の PDF）', '税務署に出した確定申告書、青色申告決算書・収支内訳書の内容', 'e-Tax でオンライン申請（マイナンバーカードが必要）。無料。取得まで数日', '直近年分は原則として翌年 5 月 1 日以降'],
+          ['納税証明書 その 1・その 2（税務署）', 'その 1 は納付すべき税額・納付した税額・未納額、その 2 は所得金額', 'e-Tax でオンライン請求（370 円）、または窓口・郵送（400 円）。1 年度・1 税目あたり', '申告の後いつでも（申告や納税の直後は当日に出せないこともある）'],
+          ['課税（所得）証明書（市区町村）', '前年の所得をもとにした住民税の額など（記載内容は市区町村による）', '市区町村の窓口・郵送・オンライン、マイナンバーカードでコンビニ交付できる自治体も。手数料は市区町村ごと（横浜市は 300 円）', '新年度分は 6 月ごろから（自分で納める普通徴収の人の場合）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '会社員の源泉徴収票にあたるものはフリーランスにはありません。確定申告書の控えと納税証明書は税務署（国税）、課税証明書は市区町村（住民税）の書類です。提出先が「所得証明」「課税証明」と書いている場合は、たいてい市区町村の課税（所得）証明書を指しますが、確実なのは提出先に確認することです。',
+      },
+      { type: 'h2', text: '申告書の控えに受付印が押されなくなった（2025 年 1 月から）' },
+      {
+        type: 'p',
+        text: '国税庁は、2025 年 1 月から、書面で提出された申告書等の控えに収受日付印を押さないことにしました。書面で提出するときは正本（提出用）だけを出し、控えは必要に応じて自分で作って、提出した日を記録しておくよう案内しています。',
+      },
+      {
+        type: 'ul',
+        items: [
+          'e-Tax で申告した場合: 送信後にメッセージボックスに届く受信通知で、提出した人の氏名・受付番号・受付日時を確認できる（確認にはマイナンバーカードなどの電子証明書が必要）。受信通知から電子申請等証明書の交付を請求することもできる',
+          '書面で申告した場合: 当分の間、窓口で希望すれば、受付の日付と税務署名を書いたリーフレットをもらえる。郵送なら、切手を貼った返信用封筒を同封すると同じリーフレットが返送される',
+          'あとから提出の事実を確かめる方法: 申告書等情報取得サービス（無料・オンライン）、保有個人情報の開示請求（手数料 300 円、オンラインは 200 円。写しの交付まで 1 か月程度）、税務署での申告書等の閲覧、納税証明書の交付請求（提出年月日までは確認できない）',
+        ],
+      },
+      {
+        type: 'p',
+        text: '国税庁は、金融機関や補助金・助成金を担当する行政機関などに対して、2025 年 1 月以降は受付印のある控えを求めないよう周知していると説明しています（国税庁 Q&A 問 4）。それでも受付印のある控えを求められたら、e-Tax の受信通知や納税証明書で代わりにならないか、提出先に相談します。',
+      },
+      { type: 'links', items: ['freelance-etax-how-to'] },
+      { type: 'h2', text: 'いつ、どの書類を出せばいいか（2026 年分の所得の場合）' },
+      {
+        type: 'table',
+        headers: ['時期', '2026 年の所得を示せる書類'],
+        rows: [
+          ['2027 年 1〜3 月（申告した直後）', '確定申告書の控え＋e-Tax の受信通知（書面申告なら日付入りのリーフレット）、納税証明書 その 1・その 2'],
+          ['2027 年 5 月 1 日以降', '上の書類に加えて、申告書等情報取得サービスで取った申告書・決算書の PDF'],
+          ['2027 年 6 月ごろ以降', '上の書類に加えて、市区町村の課税（所得）証明書（2027 年度分＝2026 年の所得）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '課税証明書の新年度分が出る日は市区町村によって違います。たとえば横浜市の 2026 年度分（2025 年の所得）は、給与から住民税が引かれている人と非課税の人が 5 月 18 日から、自分で納める普通徴収の人や公的年金から引かれる人が 6 月 1 日からでした。フリーランスは普通徴収の人が多いので、6 月を目安にします。それより前に課税証明書を取ると、前年度分（前々年の所得）の証明になります。',
+      },
+      { type: 'h2', text: '納税証明書の取り方' },
+      {
+        type: 'ol',
+        items: [
+          '種類を選ぶ。所得の証明なら「その 2」（申告所得税及復興特別所得税の所得金額）。納めた税額や未納がないことの証明なら「その 1」や「その 3」',
+          'オンラインなら e-Tax ソフト（WEB 版）から請求する。受け取り方は 3 つ: 電子納税証明書（PDF・XML、電子証明書が必要）、郵送（電子証明書が必要）、税務署の窓口（電子証明書は不要）',
+          '書面なら、納税証明書交付請求書に記入し、収入印紙（または現金）とマイナンバーカード（ない人は本人確認書類と番号確認書類）を持って、住所地の税務署へ。郵送で請求することもできる',
+          '手数料は、その 1・その 2 は 税目数 × 年度数 × 枚数 × 370 円（オンライン）または 400 円（書面）',
+        ],
+      },
+      {
+        type: 'p',
+        text: '税務署の窓口で受け取る場合、2026 年 10 月 1 日から、すべての税務署で総合窓口の受付時間が原則 9 時から 15 時までになりました（開庁時間は 8 時 30 分から 17 時まで）。電子納税証明書の PDF は自宅やコンビニで印刷できますが、電子ファイルや印刷したものを受け付けるかどうかは、先に提出先に確認しておきます。',
+      },
+      { type: 'h2', text: '証明されるのは「売上」ではなく「所得」' },
+      {
+        type: 'p',
+        text: '納税証明書その 2 が証明するのは所得金額、課税証明書も所得をもとにした住民税の額です。フリーランスの所得は、売上から経費を引き、青色申告なら青色申告特別控除も引いた額なので、売上よりかなり小さくなります。売上の大きさも示したいときは、確定申告書と一緒に出した青色申告決算書や収支内訳書（申告書等情報取得サービスでも取れる）を添えます。',
+      },
+      {
+        type: 'p',
+        text: '提出先から月々の収入を聞かれることもあります。請求書と入金の記録を月別にまとめておくと、決算書と合わせて説明しやすくなります。',
+      },
+      {
+        type: 'cta',
+        title: '売上と入金を月別に記録しておく',
+        text: 'FreelanceOS は、案件・請求・入金をまとめて管理し、ダッシュボードで直近 6 か月の月別の売上と入金をグラフで確認できます。無料で始められます。',
+        href: '/signup',
+        label: '無料で始める',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '書面で申告した控えに受付印がない。賃貸の審査で使える？' },
+      { type: 'p', text: '国税庁は、金融機関や行政機関などに対し、2025 年 1 月以降は受付印のある控えを求めないよう周知しています。控えだけで足りないと言われたら、窓口でもらえる日付入りのリーフレット、納税証明書（その 2）、申告書等情報取得サービスの PDF で代わりにならないか、提出先に確認します。次の申告から e-Tax にすれば、受信通知で受付日時を示せます。' },
+      { type: 'h3', text: '開業 1 年目で、まだ確定申告をしていない' },
+      { type: 'p', text: '確定申告をする前は、税務署や市区町村の書類でフリーランスの所得を証明することはできません。課税証明書は会社員時代の所得の証明になります。業務委託契約書や、請求書・入金の記録など、提出先が認める書類を確認してください。' },
+      { type: 'h3', text: '課税証明書と非課税証明書の違いは？' },
+      { type: 'p', text: '住民税がかかっている人には課税証明書、かかっていない人には非課税証明書が出ます。前年に所得がなかった人でも、証明書を出してもらうには住民税の申告が必要な場合があります（横浜市の案内など）。所得が少なくて確定申告をしていない人は、住んでいる市区町村に確認します。' },
+      { type: 'h3', text: '納税証明書は何年分まで取れる？' },
+      { type: 'p', text: '納税証明書の手数料は年度数で計算するので、複数年分をまとめて請求できます。何年前の分まで出せるかは種類によって違うことがあるため、必要な年度が古い場合は税務署に確認してください。' },
+      { type: 'h3', text: '家族や代理人が取りに行ける？' },
+      { type: 'p', text: '納税証明書は、本人の委任状を持った代理人が窓口で請求できます。e-Tax で請求する場合も、電子委任状を添付すれば代理人が受け取ることができます。課税証明書の代理請求は、市区町村ごとの手続きを確認します。' },
+      { type: 'links', items: ['freelance-etax-how-to', 'freelance-tax-prep', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'freelance-juminzei-first-year', 'freelance-kaigyo-todoke'] },
+      {
+        type: 'note',
+        text: '国税庁「令和 7 年 1 月からの申告書等の控えへの収受日付印の押なつについて」とその Q&A、タックスアンサー No.9208、「納税証明書の交付請求手続」、横浜市の課税（非課税）証明書の案内に基づく一般的な説明です（2026 年 11 月時点）。どの書類が必要かは提出先に、課税証明書の発行時期・手数料は住んでいる市区町村に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -7807,7 +7927,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',
