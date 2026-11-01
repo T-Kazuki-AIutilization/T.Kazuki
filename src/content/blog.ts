@@ -1756,7 +1756,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '国民健康保険は 6〜7 月に保険料が決まり、年 8〜10 回の分割で払います（自治体により異なる）。国民年金は毎月定額で、前納すると割引があります。どちらも社会保険料控除の対象なので、払った額は確定申告で全額控除できます。',
       },
-      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'yotei-nozei-gengaku-shinsei', 'freelance-tax-prep', 'freelance-health-insurance-pension', 'freelance-withholding-tax'] },
+      { type: 'links', items: ['kakutei-shinkoku-nofu-hoho', 'kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'yotei-nozei-gengaku-shinsei', 'freelance-tax-prep', 'freelance-health-insurance-pension', 'freelance-withholding-tax'] },
       { type: 'h2', text: '納税資金はいくら積み立てればよい？' },
       {
         type: 'p',
@@ -2183,7 +2183,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['freelance-shotoku-shomei', 'kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['kakutei-shinkoku-nofu-hoho', 'freelance-shotoku-shomei', 'kakutei-shinkoku-kigengo-shusei', 'shohizei-shinkoku-2wari-yarikata', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-tax-prep', 'freelance-shotoku-koujo-ichiran'] },
       {
         type: 'ul',
         items: [
@@ -5226,7 +5226,7 @@ export const ARTICLES: Article[] = [
         label: '無料で始める',
         secondary: { href: '/tools/takehome', label: '売上から所得税・住民税を計算する' },
       },
-      { type: 'links', items: ['freelance-tax-calendar', 'freelance-withholding-tax', 'freelance-year-end-checklist', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'links', items: ['kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-withholding-tax', 'freelance-year-end-checklist', 'freelance-shotoku-koujo-ichiran'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '予定納税の通知が来なかったのはなぜ？' },
       {
@@ -5988,7 +5988,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '無料の確定申告チェックリストを使う' },
       },
-      { type: 'links', items: ['freelance-etax-how-to', 'freelance-tax-prep', 'freelance-tax-calendar', 'aoiro-kessansho-kakikata'] },
+      { type: 'links', items: ['kakutei-shinkoku-nofu-hoho', 'freelance-etax-how-to', 'freelance-tax-prep', 'freelance-tax-calendar', 'aoiro-kessansho-kakikata'] },
       {
         type: 'note',
         text: '国税庁タックスアンサー No.2024（確定申告を忘れたとき）・No.2026（確定申告を間違えたとき）・No.2030（還付申告）・No.2072（青色申告特別控除）・No.9205（延滞税について）（いずれも令和 8 年 4 月 1 日現在法令等）に基づく一般的な説明です。個別の事情（調査の連絡を受けた場合など）は税務署か税理士に確認してください。',
@@ -8207,6 +8207,131 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kakutei-shinkoku-nofu-hoho',
+    title: 'フリーランスの所得税の納め方 7 つ（振替納税・ダイレクト納付・クレジットカード・スマホアプリ・コンビニ・ネットバンキング・窓口）の比較と、2026 年分の納期限・振替日、延納のしかた',
+    description:
+      '確定申告や予定納税で所得税を納める方法を、手数料、上限額、事前準備で比較しました。振替納税なら 2026 年分の確定申告の税金の引き落としは 2027 年 4 月 23 日、予定納税第 2 期は 2026 年 11 月 30 日。クレジットカードは 1 万円ごとに 99 円の決済手数料、スマホアプリ納付とコンビニ納付は 30 万円以下、半分を期限までに納めれば残りを 5 月 31 日まで延ばせる延納（利子税）まで、国税庁の案内と所得税法で確認しました。',
+    date: '2026-11-02',
+    keywords: ['確定申告 納付方法', '所得税 振替納税 引き落とし日 2027', '予定納税 第2期 納付方法', '確定申告 クレジットカード 手数料', '所得税 延納 利子税'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '確定申告で所得税を納めることになったフリーランスは、申告書を出すだけでなく、期限までに税金を納める必要があります。納め方は口座引き落とし、クレジットカード、スマホ決済、コンビニなど 7 通りあり、手数料、上限額、引き落とされる日がそれぞれ違います。11 月は予定納税の第 2 期の納付月でもあります。国税庁の案内と所得税法をもとに、所得税の納め方を比較します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '手間と資金繰りの両面でおすすめは振替納税（口座引き落とし）。2026 年分の確定申告の税金は、期限の 2027 年 3 月 15 日ではなく 4 月 23 日に引き落とされる（国税庁「主な国税の納期限及び振替日」）',
+          '予定納税第 2 期（2026 年 11 月 30 日）も振替納税の対象。まだ口座を登録していないなら、e-Tax で振替依頼書をオンラインで出すか、納期限までに税務署か金融機関へ書面で出す',
+          'クレジットカード納付は決済手数料がかかる（1 万円ごとに 99 円＝約 1%、国の収入にはならない）。スマホアプリ納付とコンビニ納付は 30 万円以下の場合だけ使える',
+          '手数料が無料なのは振替納税、ダイレクト納付、スマホアプリ納付、コンビニ納付、窓口納付。インターネットバンキングは金融機関の手数料がかかる場合がある',
+          'キャッシュレスの納付では領収証書は出ない。領収証書が必要なら金融機関か税務署の窓口で納める',
+          '納める税額の半分以上を 3 月 15 日までに納め、延納届出をすれば、残りを 5 月 31 日まで延ばせる（延納。所得税法 131 条）。延ばした分には利子税がかかる',
+        ],
+      },
+      { type: 'h2', text: '7 つの納め方の比較' },
+      {
+        type: 'table',
+        headers: ['納め方', '手数料', '上限額', '事前準備'],
+        rows: [
+          ['振替納税（口座引き落とし）', '無料', '制限なし', '振替依頼書を提出（e-Tax でオンライン提出、または税務署・金融機関に書面）。期限内に申告した分だけが対象'],
+          ['ダイレクト納付', '無料', '金融機関ごとに確認', 'e-Tax の利用開始手続と、ダイレクト納付利用届出書（オンライン可。書面は使えるまで 1 か月程度）'],
+          ['インターネットバンキング・ATM（ペイジー）', '金融機関の手数料がかかる場合あり', 'ペイジー対応の金融機関ごとに確認', 'e-Tax の利用開始手続、ネットバンキングの口座'],
+          ['クレジットカード', '1 万円ごとに 99 円（税込）', '1 回 1,000 万円未満、かつカードの決済可能額まで', 'なし（国税クレジットカードお支払サイトから納付）'],
+          ['スマホアプリ納付', '無料', '30 万円以下', 'e-Tax で申告などをした後の受信通知などから手続き。決済アプリの残高へのチャージが必要'],
+          ['コンビニ納付（QR コード）', '無料', '30 万円以下', '確定申告書等作成コーナーなどで QR コードを作成。ローソン・ミニストップ（Loppi）とファミリーマート（マルチコピー機）'],
+          ['金融機関・税務署の窓口', '無料', '制限なし', '納付書（税務署などで入手する）。領収証書が出るのはこの方法だけ'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'クレジットカードの決済手数料は、1 円〜10,000 円で 99 円、10,001 円〜20,000 円で 198 円と、1 万円ごとに 99 円ずつ増えます。国税庁は、決済手数料は国の収入にならないと案内しています。カードで納付した後は、手続きの取消しや、納付した国税について納税の猶予などは受けられません。コンビニの窓口やキオスク端末では、クレジットカードや電子マネーは使えません。',
+      },
+      {
+        type: 'note',
+        text: 'スマホアプリ納付で使える決済アプリや、各サイトのメンテナンス日程は変わることがあります。国税庁の各納付手続のページで最新の情報を確認してください。国税庁は、所定のアクセス方法以外から納付サイトに入らないよう、フィッシング詐欺への注意を呼びかけています。',
+      },
+      { type: 'h2', text: '2026 年分の納期限と振替日' },
+      {
+        type: 'table',
+        headers: ['区分', '納期限', '振替納税の引き落とし日'],
+        rows: [
+          ['予定納税第 1 期', '2026 年 7 月 31 日', '2026 年 7 月 31 日'],
+          ['予定納税第 2 期', '2026 年 11 月 30 日', '2026 年 11 月 30 日'],
+          ['確定申告（所得税）', '2027 年 3 月 15 日', '2027 年 4 月 23 日'],
+          ['確定申告の延納分', '2027 年 5 月 31 日', '2027 年 5 月 31 日'],
+          ['消費税（個人事業者の確定申告）', '2027 年 3 月 31 日', '2027 年 4 月 30 日'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '振替納税では、確定申告の税金の引き落とし日が納期限の 1 か月以上後になります。期限内に申告していれば、税金はこの振替日に口座から引き落とされます。ただし、残高不足などで引き落とせなかった場合は、法定納期限の翌日から延滞税がかかります（国税庁の振替納税の案内）。引き落とし日の前日までに口座の残高を確認しておきます。振替納税は期限内に申告した確定申告分と延納分、予定納税分が対象なので、期限を過ぎて申告した場合は使えません。',
+      },
+      { type: 'links', items: ['yotei-nozei-gengaku-shinsei', 'freelance-tax-calendar'] },
+      { type: 'h2', text: '振替納税の始め方' },
+      {
+        type: 'ol',
+        items: [
+          'e-Tax ソフト（WEB 版）にログインし、振替依頼書をオンラインで提出する。スマートフォンからも出せる。自分名義の口座しか使えない',
+          '書面で出す場合は「預貯金口座振替依頼書兼納付書送付依頼書」に記入し、使いたい国税の納期限までに、納税地の税務署か、依頼書に書いた金融機関へ出す。金融機関の届出印が必要',
+          '一度登録すれば、翌年以後の確定申告や予定納税も同じ口座から引き落とされる。引っ越しで納税地の税務署が変わる場合の手続きは、国税庁の振替納税のページで確認する',
+          '口座を変えるときは新しい振替依頼書を出す。やめるときは「振替納税の取りやめ申出書」を税務署に出す',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'インターネット専用銀行やインターネット支店など、一部の金融機関・店舗では振替納税を使えないことがあります。使えるかどうかは、事前に金融機関に問い合わせます。引き落とし後、納付済みの納税証明書を出せるようになるまで 1 週間程度かかる場合があります。',
+      },
+      { type: 'h2', text: '一度に払えないときの延納' },
+      {
+        type: 'p',
+        text: '確定申告で納める所得税は、その半分以上を納期限（2026 年分は 2027 年 3 月 15 日）までに納め、納期限までに延納届出書を出せば、残りを 5 月 31 日まで延ばせます（所得税法 131 条 1 項・2 項）。手続きは、確定申告書第一表の「延納の届出」欄に、延納届出額（納める税金の 2 分の 1 以下、千円未満切り捨て）と、申告期限までに納付する金額を書きます（国税庁の確定申告の手引き）。振替納税を使っている場合は、半分以上を振替日に引き落とすことで延納できます。',
+      },
+      {
+        type: 'p',
+        text: '延ばした分には利子税がかかります。法律上は年 7.3% ですが、特例で利子税特例基準割合が使われ、2026 年中の割合は年 1.3% です（国税庁「延滞税の割合」の参考欄）。2027 年の割合は、2026 年 11 月 30 日までに財務大臣が告示する割合をもとに決まります。振替納税を使っている場合、延納した残りは 2027 年 5 月 31 日に引き落とされます。',
+      },
+      {
+        type: 'note',
+        text: '延納をせずに納期限を過ぎると延滞税がかかります。2026 年中の延滞税の割合は、納期限の翌日から 2 か月以内が年 2.8%、2 か月を過ぎると年 9.1% です。延納でも払いきれないほど納税資金が足りないときは、早めに税務署に相談してください。',
+      },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'freelance-etax-how-to'] },
+      {
+        type: 'cta',
+        title: '納税の月に現金が足りない、を防ぐ資金繰り表（Excel）',
+        text: '月ごとの入金予定と経費を入れると、12 か月先までの月末残高と毎月の納税積立額を自動計算。所得税・住民税・国保・年金の支払月カレンダーつき。',
+        href: BOOTH_CASHFLOW_URL,
+        label: 'BOOTH で見る（980円）',
+        external: true,
+      },
+      {
+        type: 'cta',
+        title: '入金を記録して、納税の準備をする',
+        text: 'FreelanceOS は、案件・請求・入金をまとめて管理し、ダッシュボードで直近 6 か月の月別の売上と入金をグラフで確認できます。無料で始められます。',
+        href: '/signup',
+        label: '無料で始める',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '確定申告をした後で、振替納税に申し込んでも間に合う？' },
+      { type: 'p', text: '国税庁は、振替納税を使う国税の納期限までに振替依頼書を出すよう案内しています。2026 年分の確定申告なら、2027 年 3 月 15 日までに出します。e-Tax ソフト（WEB 版）から振替依頼書をオンラインで出すこともできます。' },
+      { type: 'h3', text: 'クレジットカードで払うとポイントの分だけ得になる？' },
+      { type: 'p', text: '決済手数料が 1 万円ごとに 99 円（約 1%）かかるので、ポイントの還元率と手数料を比べて判断します。カードの種類によっては、税金の支払いがポイントの対象外だったり還元率が下がったりすることもあるので、カード会社の条件を確認してください。' },
+      { type: 'h3', text: '30 万円を超える税金を、スマホアプリやコンビニで何回かに分けて払える？' },
+      { type: 'p', text: 'コンビニ納付（QR コード）の利用可能額は 30 万円以下です。スマホアプリ納付について国税庁は、30 万円を超える税額をアプリで納めるために何回かに分けて納付するのは控えるよう求めています。30 万円を超える場合は、振替納税、ダイレクト納付、インターネットバンキングなどを使います。' },
+      { type: 'h3', text: '住民税や国民健康保険料も同じ方法で払える？' },
+      { type: 'p', text: 'この記事で紹介したのは、所得税や消費税などの国税の納め方です。住民税、個人事業税、国民健康保険料は市区町村や都道府県に納めるもので、使える納付方法は自治体ごとに違います。納付書や自治体の案内で確認してください。' },
+      { type: 'h3', text: '納付した証明が必要なときは？' },
+      { type: 'p', text: 'キャッシュレスで納めた場合、領収証書は発行されません。納税証明書は税務署に請求できますが、クレジットカード納付やコンビニ納付の後は、納付受託者が国に納めるまで（最大 3 週間程度）、納税証明書に「クレジットカード納付（コンビニ納付）が行われている」と記載されます。融資の申込みなどで急ぐときは、余裕をもって納付します。' },
+      { type: 'links', items: ['yotei-nozei-gengaku-shinsei', 'freelance-tax-calendar', 'freelance-etax-how-to', 'kakutei-shinkoku-kigengo-shusei', 'freelance-tax-prep', 'freelance-shotoku-shomei'] },
+      {
+        type: 'note',
+        text: '国税庁「主な国税の納期限（法定納期限）及び振替日」、振替納税・ダイレクト納付・インターネットバンキング等・クレジットカード納付・スマホアプリ納付・コンビニ納付（QR コード）の各手続の案内、「延滞税の割合」、「確定申告の手引き（延納の届出）」、所得税法 131 条（e-Gov の現行条文）に基づく一般的な説明です（2026 年 11 月時点）。手数料や利用条件は変わることがあるので、納付の前に国税庁の案内で確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -8267,7 +8392,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',
