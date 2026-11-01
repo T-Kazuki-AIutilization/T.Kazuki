@@ -1302,7 +1302,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ポイントは「前年の所得」で決まることです。独立 1 年目は会社員時代の給与所得で計算されるため高くなりがちで、2 年目は 1 年目の事業所得で決まります。売上が伸びた翌年に保険料が跳ね上がるので、資金繰りの計画に入れておく必要があります。',
       },
-      { type: 'links', items: ['saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
+      { type: 'links', items: ['kokuho-keigen-freelance', 'saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '国民年金の保険料' },
       {
         type: 'p',
@@ -6952,7 +6952,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/nhi', label: '無料の国保計算ツールを使う' },
       },
-      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-kokumin-nenkin-zennou', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist'] },
+      { type: 'links', items: ['kokuho-keigen-freelance', 'freelance-health-insurance-pension', 'freelance-kokumin-nenkin-zennou', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist'] },
       {
         type: 'note',
         text: '国税庁 タックスアンサー No.1130「社会保険料控除」とその質疑応答（Q1〜Q5）、日本年金機構「令和 8 年分社会保険料（国民年金保険料）控除証明書の発行について」（2026 年 10 月 9 日更新）に基づく一般的な説明です（2026 年 10 月時点）。個別の状況は税務署・日本年金機構・お住まいの自治体に確認してください。',
@@ -7740,7 +7740,7 @@ export const ARTICLES: Article[] = [
         href: '/tools/takehome',
         label: '手取り計算ツールを開く',
       },
-      { type: 'links', items: ['kaigyohi-freelance', 'freelance-kaigyo-todoke', 'freelance-health-insurance-pension', 'freelance-take-home-pay', 'freelance-juminzei-first-year', 'freelance-contract-checklist', 'freelance-invoice-how-to'] },
+      { type: 'links', items: ['kokuho-keigen-freelance', 'kaigyohi-freelance', 'freelance-kaigyo-todoke', 'freelance-health-insurance-pension', 'freelance-take-home-pay', 'freelance-juminzei-first-year', 'freelance-contract-checklist', 'freelance-invoice-how-to'] },
       {
         type: 'note',
         text: '雇用保険法（10 条・10 条の 4・12 条・20 条の 2・22 条・33 条・56 条の 3）、雇用保険法施行規則（31 条の 4〜6・82 条・82 条の 2）、厚生労働省「再就職手当のご案内」（2026 年 8 月版）・「雇用保険受給期間の特例」リーフレット・基本手当と再就職手当の Q&A、厚生労働省「雇用保険に関する業務取扱要領（就職促進給付）」（2026 年 8 月版）、岡山労働局「自営開始を予定している方へ」に基づく一般的な説明です（2026 年 11 月時点）。支給の可否や必要書類は、住所地を管轄するハローワークに確認してください。',
@@ -8084,10 +8084,126 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: '純損失の繰戻し還付は、前年分も青色申告書を出していて、赤字の年分の青色申告書を期限内に出した場合に限られます（所得税法 140 条 4 項）。前年に青色申告をしていない開業 1 年目の人は使えないので、翌年以後への繰越しを選びます。' },
       { type: 'h3', text: '申告期限を過ぎてしまった。赤字の繰越しはできる？' },
       { type: 'p', text: '所得税法の「確定申告書」には期限後申告書も含まれるため（所得税法 2 条 1 項 37 号）、繰越しの条件は期限後に申告して満たせる場合があります。ただし、繰戻し還付は期限内の申告が条件です。期限を過ぎたときは、早めに申告して、扱いを税務署に確認してください。' },
-      { type: 'links', items: ['kaigyohi-freelance', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-tax-prep', 'freelance-etax-how-to', 'aoiro-kessansho-kakikata', 'freelance-juminzei-first-year'] },
+      { type: 'links', items: ['kokuho-keigen-freelance', 'kaigyohi-freelance', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-tax-prep', 'freelance-etax-how-to', 'aoiro-kessansho-kakikata', 'freelance-juminzei-first-year'] },
       {
         type: 'note',
         text: '所得税法 2 条・69 条・70 条・123 条・140 条、地方税法 313 条・317 条の 3、国税庁「令和 7 年分 所得税及び復興特別所得税の確定申告の手引き（損失申告用）」、タックスアンサー No.2070・No.2072（令和 8 年 4 月 1 日現在法令等）に基づく一般的な説明です（2026 年 11 月時点）。個々のケースの計算や、国民健康保険料での扱いは、税務署・市区町村に確認してください。',
+      },
+    ],
+  },
+  {
+    slug: 'kokuho-keigen-freelance',
+    title: 'フリーランスの国民健康保険料の軽減（7 割・5 割・2 割）はいくらの所得から？2026 年度の基準（43 万円・31 万円・57 万円）、売上の目安、申告が必要な理由、会社都合で辞めた人の軽減',
+    description:
+      '所得が少ないフリーランスの国民健康保険料は、均等割・平等割が 7 割・5 割・2 割軽減されます。2026 年度の判定基準（43 万円、被保険者 1 人あたり 31 万円・57 万円）、1 人世帯・2 人世帯の所得の目安と売上への換算、判定は前年の所得で行うこと、所得の申告がないと判定できないこと、倒産・解雇などで離職した人の給与所得を 30/100 とする軽減を、国民健康保険法施行令・厚生労働省・自治体の案内で確認しました。',
+    date: '2026-11-01',
+    keywords: ['国民健康保険 軽減 フリーランス', '国保 7割軽減 所得 いくら', '国民健康保険 2割軽減 基準 2026', '国保 軽減 申告 しないと', '非自発的失業者 国保 軽減'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '独立したばかりで売上が少ない年は、国民健康保険料の負担が重く感じられます。国民健康保険には、世帯の所得が一定以下なら、保険料のうち加入者の人数や世帯ごとにかかる部分（均等割・平等割）を 7 割・5 割・2 割減らす仕組みがあります。2026 年度の基準と、フリーランスの売上に直すといくらくらいか、軽減を受けるために必要なことを、国民健康保険法施行令と厚生労働省・自治体の案内をもとに整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '軽減されるのは、均等割・平等割（応益分）だけ。所得割は軽減の対象ではない',
+          '2026 年度の基準: 世帯の所得の合計が 43 万円以下なら 7 割、43 万円＋31 万円×加入者数以下なら 5 割、43 万円＋57 万円×加入者数以下なら 2 割（国民健康保険法施行令 29 条の 7）。給与・年金の所得がある人が 2 人以上いる世帯は、1 人増えるごとに 10 万円を足す',
+          '判定は前年の所得で行う。2026 年度の保険料は 2025 年の所得で決まる。会社を辞めた翌年度は、在職中の給与で判定されるので軽減されにくい',
+          '判定には、世帯主（国保に入っていない世帯主も含む）と加入者全員の所得が分かっている必要がある。所得がない人も、確定申告か住民税の申告をしておく',
+          '倒産・解雇などで離職し、雇用保険の特定受給資格者・特定理由離職者に当たる人は、前年の給与所得を 30/100 として計算する軽減がある。申請が必要',
+          '保険料の額と細かい扱いは市区町村ごとに違うので、住んでいる市区町村の案内で確認する',
+        ],
+      },
+      { type: 'h2', text: '2026 年度の判定基準' },
+      {
+        type: 'table',
+        headers: ['軽減', '世帯の所得の合計（前年）', '1 人世帯の目安', '2 人世帯（2 人とも国保）の目安'],
+        rows: [
+          ['7 割', '43 万円以下', '43 万円以下', '43 万円以下'],
+          ['5 割', '43 万円＋31 万円×加入者数 以下', '74 万円以下', '105 万円以下'],
+          ['2 割', '43 万円＋57 万円×加入者数 以下', '100 万円以下', '157 万円以下'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '目安は、給与・年金の所得がある人（給与収入が 55 万円を超える人など）が 1 人以下の世帯の場合です。2 人以上いる世帯は、基準に「10 万円 ×（その人数 − 1）」を足します。「加入者数」には、後期高齢者医療制度に移ったことで国保から抜けた同じ世帯の人（特定同一世帯所属者）も含みます。基準の金額は年度によって変わることがあり、江東区の 2026 年度の案内も同じ金額（43 万円・31 万円・57 万円）です。',
+      },
+      { type: 'h2', text: 'フリーランスの売上に直すと' },
+      {
+        type: 'p',
+        text: '判定に使うのは、売上ではなく所得です。事業所得は「売上 − 経費 − 青色申告特別控除」なので、青色申告で 65 万円の控除を受ける人なら、1 人世帯で 7 割軽減になるのは「売上 − 経費」がおおむね 108 万円以下（108 万 − 65 万 ＝ 43 万円）の年です。同じ 1 人世帯で、5 割は 139 万円以下、2 割は 165 万円以下が目安になります。白色申告なら控除がないので、「売上 − 経費」そのものが所得です。',
+      },
+      {
+        type: 'p',
+        text: '家族に青色事業専従者給与を払っている場合、軽減の判定では、専従者給与を経費にしなかったものとして所得を計算します（国民健康保険法施行令 29 条の 7。所得税法 57 条の例によらないで計算する）。専従者給与で所得を分けても、軽減の判定では世帯の所得の合計は変わりません。',
+      },
+      {
+        type: 'note',
+        text: '65 万円の青色申告特別控除には、複式簿記での記帳、貸借対照表の添付、期限内の申告、e-Tax での申告または電子帳簿保存などの条件があります。条件を満たさない場合は 55 万円または 10 万円です。',
+      },
+      { type: 'links', items: ['freelance-health-insurance-pension', 'freelance-take-home-pay'] },
+      { type: 'h2', text: '軽減を受けるために必要なこと' },
+      {
+        type: 'ol',
+        items: [
+          '前年の所得を申告する。確定申告をすれば住民税の申告をしたことになる（地方税法 317 条の 3）。所得が基礎控除以下で確定申告が要らない人も、住民税の申告をしておく。江東区の案内は「世帯主と国保加入者全員の所得が判明していないと均等割額の減額判定ができません」としている',
+          '世帯の全員分を確認する。国保に入っていない世帯主（会社員の親など）の所得も判定に入る。家族の誰かが申告していないと、世帯として軽減が判定できないことがある',
+          '会社都合などで辞めた人は、非自発的失業者の軽減を申請する（下の表）',
+          '保険料の通知書で、均等割・平等割に軽減が反映されているか確認する。反映されていないときは市区町村の国保の窓口に問い合わせる',
+        ],
+      },
+      { type: 'h2', text: '倒産・解雇などで離職した人の軽減' },
+      {
+        type: 'table',
+        headers: ['項目', '内容'],
+        rows: [
+          ['対象', '雇用保険の特定受給資格者（倒産・解雇などで離職）と、特定理由離職者（雇い止め、正当な理由のある自己都合退職など）で受給資格のある人'],
+          ['軽減の内容', '前年の給与所得を 30/100 として保険料を計算する。7 割・5 割・2 割の軽減の判定でも同じように計算する'],
+          ['期間', '離職の翌日の属する年度の翌年度末まで（国民健康保険法施行令 29 条の 7 の 2）'],
+          ['手続き', '市区町村への申請が必要（雇用保険受給資格者証などで離職理由を確認）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '正当な理由のない自己都合で退職した人は対象外です。独立のために自分から会社を辞めた人の多くは当てはまらないので、退職した翌年度の保険料は、在職中の給与をもとに計算されます。会社の健康保険の任意継続とどちらが安いかは、市区町村に保険料を試算してもらって比べます。',
+      },
+      { type: 'links', items: ['saishushoku-teate-kaigyo', 'freelance-health-insurance-pension'] },
+      { type: 'h2', text: '保険料がいくらになるか試算する' },
+      {
+        type: 'p',
+        text: '国民健康保険料は、所得割の料率、均等割・平等割の額、上限額が市区町村ごとに違います。FreelanceOS の国民健康保険料の計算ツールでは、住んでいる市区町村の料率を入れて、所得から保険料を試算できます（7 割・5 割・2 割の軽減は含まないため、軽減に当たりそうな人は、均等割・平等割の部分を軽減の割合だけ差し引いて考えてください）。',
+      },
+      {
+        type: 'cta',
+        title: '国民健康保険料を試算する',
+        text: '世帯の所得（売上 − 経費 − 青色控除）と、住んでいる市区町村の料率を入れると、医療分・後期高齢者支援金分・介護分と 2026 年度からの子ども・子育て支援金分の保険料を計算します。無料・登録不要です。',
+        href: '/tools/nhi',
+        label: '国保の計算ツールを使う',
+      },
+      {
+        type: 'cta',
+        title: '売上と入金を月別に記録する',
+        text: 'FreelanceOS は、案件・請求・入金をまとめて管理し、ダッシュボードで直近 6 か月の月別の売上と入金をグラフで確認できます。来年度の所得の見込みを立てるのにも使えます。無料で始められます。',
+        href: '/signup',
+        label: '無料で始める',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '軽減の申請は必要？' },
+      { type: 'p', text: '7 割・5 割・2 割の軽減は、市区町村が把握している所得をもとに判定されます。そのため、世帯の全員の所得が申告されていることが前提です。倒産・解雇などで離職した人の軽減は、別に申請が必要です。手続きの細かい扱いは市区町村ごとに確認してください。' },
+      { type: 'h3', text: '赤字の年はどうなる？' },
+      { type: 'p', text: '赤字の年も、確定申告か住民税の申告をして、所得が判明している状態にしておきます。赤字や、青色申告の赤字の繰越しが国民健康保険料の計算・軽減の判定でどう扱われるかは、市区町村に確認してください。' },
+      { type: 'h3', text: '会社員の家族と同じ世帯にいる。家族の給与も判定に入る？' },
+      { type: 'p', text: '国保に入っていない家族の所得は、その人が世帯主でなければ判定に入りません。世帯主（国保に入っていなくても）の所得は判定に入ります。住民票上の世帯主が会社員の親などの場合は、その所得も合計されます。' },
+      { type: 'h3', text: '軽減とは別に、保険料を減らしてもらえる制度はある？' },
+      { type: 'p', text: '災害やその他特別の事情で保険料を納めるのが難しい場合は、市区町村の減免や納付の猶予を受けられることがあります（厚生労働省の案内）。未就学児の均等割の 5 割軽減や、出産の前後の保険料の免除もあります。いずれも市区町村に確認してください。' },
+      { type: 'h3', text: '国民健康保険組合（文芸美術国保など）に入っている場合は？' },
+      { type: 'p', text: 'この記事は市区町村の国民健康保険についての説明です。国民健康保険組合の保険料と軽減の有無は、組合ごとの規約で決まるので、加入している組合に確認してください。' },
+      { type: 'links', items: ['freelance-health-insurance-pension', 'saishushoku-teate-kaigyo', 'akaji-kurikoshi-freelance', 'shakai-hokenryo-koujo-freelance', 'freelance-juminzei-first-year', 'freelance-take-home-pay'] },
+      {
+        type: 'note',
+        text: '国民健康保険法施行令 29 条の 7・29 条の 7 の 2、地方税法 314 条の 2・317 条の 3（いずれも e-Gov の現行条文）、厚生労働省「国民健康保険の保険料・保険税について」、江東区の国民健康保険料の減額の案内（2026 年度）に基づく一般的な説明です（2026 年 11 月時点）。保険料の額、判定の細かい扱い、申請の方法は、住んでいる市区町村に確認してください。',
       },
     ],
   },
@@ -8157,7 +8273,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'setup',
     name: '開業・制度・ツール',
     description: '開業届、国保と年金、案件管理ツールの選び方',
-    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'freelance-kokumin-nenkin-zennou', 'freelance-project-management-tools'],
+    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'freelance-kokumin-nenkin-zennou', 'freelance-project-management-tools'],
   },
 ]
 
