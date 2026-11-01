@@ -81,6 +81,7 @@ export default function HaigushaToolPage() {
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/freelance-haigusha-koujo" className="text-primary hover:underline">妻（夫）がフリーランスでも配偶者控除は受けられる？（健康保険の扶養との違い・年末調整の書き方）</Link></li>
+            <li><Link href="/blog/fuyou-130man-freelance" className="text-primary hover:underline">フリーランスでも健康保険の扶養に入れる？年収 130 万円の数え方（売上 − 必要経費）</Link></li>
             <li><Link href="/blog/side-job-nenmatsu-chosei-2026" className="text-primary hover:underline">2026 年の年末調整で何が変わる？基礎控除 104 万円と 136 万円の扶養</Link></li>
             <li><Link href="/tools/aoiro" className="text-primary hover:underline">青色申告の節税額シミュレーター</Link></li>
             <li><Link href="/tools/tokutei-shinzoku" className="text-primary hover:underline">特定親族特別控除の計算ツール（大学生の子のバイト・業務委託）</Link></li>
