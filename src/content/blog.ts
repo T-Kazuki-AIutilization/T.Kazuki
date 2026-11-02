@@ -5269,6 +5269,7 @@ export const ARTICLES: Article[] = [
     description:
       '令和 8 年度の税制改正で、青色申告の個人事業主が使える少額減価償却資産の特例が、2026 年 4 月 1 日以後の取得から 40 万円未満（それまでは 30 万円未満）に。年 300 万円まで・2029 年 3 月 31 日まで。10 万円未満・一括償却資産・通常の減価償却との違い、12 月に買う場合の経費、償却資産税の申告、決算書の書き方まで。',
     date: '2026-10-30',
+    updated: '2026-11-03',
     keywords: ['少額減価償却資産 40万円', '少額減価償却資産の特例 2026', 'パソコン 経費 30万円以上', '減価償却 個人事業主 パソコン', '一括償却資産 少額減価償却資産 違い'],
     readingMinutes: 6,
     blocks: [
@@ -5341,7 +5342,7 @@ export const ARTICLES: Article[] = [
       },
       {
         type: 'p',
-        text: '課税標準額の合計が 150 万円未満なら税金はかかりませんが、それでも申告は必要としている市区町村が多いです。自動車税・軽自動車税がかかる車やソフトウエアは、償却資産の申告の対象外です。10 万円以上 20 万円未満のものなら、一括償却資産を選ぶと償却資産の申告が要らなくなります。',
+        text: '課税標準額の合計が免税点（150 万円。2027 年 1 月 1 日時点の資産を申告する 2027 年度分からは 180 万円）未満なら税金はかかりませんが、それでも申告を求めている市区町村があります。自動車税・軽自動車税がかかる車やソフトウエアは、償却資産の申告の対象外です。10 万円以上 20 万円未満のものなら、一括償却資産を選ぶと償却資産の申告が要らなくなります。',
       },
       { type: 'h2', text: '確定申告での書き方' },
       {
@@ -5376,7 +5377,7 @@ export const ARTICLES: Article[] = [
         label: '減価償却の計算ツールを開く',
         secondary: { href: '/signup', label: 'FreelanceOS で売上と経費を管理する（無料）' },
       },
-      { type: 'links', items: ['kaigyohi-freelance', 'kakutei-shinkoku-2026-kaisei', 'freelance-expenses-list', 'freelance-year-end-checklist', 'aoiro-koujo-75man-2027', 'freelance-boki-shiwake'] },
+      { type: 'links', items: ['shokyaku-shisan-shinkoku-freelance', 'kaigyohi-freelance', 'kakutei-shinkoku-2026-kaisei', 'freelance-expenses-list', 'freelance-year-end-checklist', 'aoiro-koujo-75man-2027', 'freelance-boki-shiwake'] },
       {
         type: 'note',
         text: '2026 年 10 月時点の国税庁タックスアンサー No.2100・No.2106 と、市区町村の償却資産申告の手引きに基づく一般的な説明です。特例には従業員数などの要件があります。個別の判断は税務署・市区町村の税務課や税理士にご確認ください。',
@@ -9507,6 +9508,169 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shokyaku-shisan-shinkoku-freelance',
+    title: 'フリーランス・個人事業主の償却資産申告は必要？対象になるパソコン・機材、免税点 180 万円（2027 年度から）、期限 1 月 31 日と評価額の計算',
+    description:
+      '事業用のパソコンや機材を持つフリーランス・個人事業主は、毎年 1 月 1 日時点の資産を市区町村に申告します（償却資産の申告、地方税法 383 条）。申告の対象になる資産とならない資産、少額減価償却資産の特例で経費にした資産が対象になる理由、2027 年度から 180 万円に上がる免税点、評価額と税額の計算例、申告しないとどうなるかをまとめました。',
+    date: '2026-11-03',
+    keywords: ['償却資産 申告 個人事業主', '償却資産税 フリーランス', '償却資産 免税点 180万', '償却資産申告 必要か', '償却資産 パソコン 申告', '償却資産 申告しないと'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '年末年始に、市区町村から「償却資産申告書」が届いて戸惑うフリーランス・個人事業主は少なくありません。償却資産は、土地・家屋以外の事業用の資産（パソコン、機材、備品など）にかかる固定資産税です。所得税の確定申告とは別の手続きで、毎年 1 月 1 日時点で持っている資産を、資産のある市区町村に 1 月 31 日までに申告します（地方税法 383 条）。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '対象: 事業に使うパソコン・カメラ・機材・机・椅子・内装工事など、所得税で減価償却する資産。ソフトウエア、自動車税・軽自動車税がかかる車は対象外',
+          '少額減価償却資産の特例（青色申告で 30 万円未満、2026 年 4 月以後の取得は 40 万円未満）で全額経費にした資産も対象。対象外になるのは「10 万円未満で一度に経費」と「20 万円未満で一括償却資産（3 年で均等に経費）」にしたものだけ',
+          '課税標準額の合計が免税点未満なら税金はかからない。免税点は 150 万円で、2027 年 1 月 1 日時点の資産を申告する 2027 年度分からは 180 万円',
+          '免税点未満でも、資産があれば申告を求める市区町村がある。届いた申告書の案内に従う',
+          '期限は 1 月 31 日。2027 年は 31 日が日曜日なので、2 月 1 日（月）になる見込み。郵送・窓口のほか eLTAX で電子申告もできる',
+        ],
+      },
+      { type: 'h2', text: '申告の対象になる資産・ならない資産' },
+      {
+        type: 'table',
+        headers: ['区分', '主な例'],
+        rows: [
+          ['対象になる', 'パソコン、モニター（個別に減価償却したもの）、カメラ・撮影機材、音響機器、コピー機、事務机・椅子、キャビネット、看板、エアコン、借りている事務所や店舗に自分でした内装工事、業務用の太陽光パネル'],
+          ['対象になる（見落としやすい）', '耐用年数を過ぎても使い続けている資産、いまは使っていないが使える状態の資産、帳簿に載せていない資産、少額減価償却資産の特例で全額経費にした資産'],
+          ['対象外', 'ソフトウエアなどの無形の資産、自動車税・軽自動車税がかかる車、商品などの棚卸資産、開業費などの繰延資産'],
+          ['対象外（少額資産）', '取得価額 10 万円未満で一度に経費にしたもの、20 万円未満で一括償却資産にしたもの'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '少額の資産が対象になるかどうかは、金額ではなく「確定申告でどの方法で経費にしたか」で決まります。同じ 15 万円のモニターでも、一括償却資産にすれば対象外、少額減価償却資産の特例で全額経費にすれば対象です。',
+      },
+      {
+        type: 'table',
+        headers: ['経費にした方法', '10 万円未満', '10 万〜20 万円未満', '20 万〜40 万円未満', '40 万円以上'],
+        rows: [
+          ['一度に全額経費（10 万円未満の消耗品）', '対象外', '―', '―', '―'],
+          ['一括償却資産（3 年で均等）', '―', '対象外', '―', '―'],
+          ['少額減価償却資産の特例（青色申告）', '対象', '対象', '対象', '―'],
+          ['通常の減価償却', '対象', '対象', '対象', '対象'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '少額減価償却資産の特例は、2026 年 3 月 31 日までの取得は 30 万円未満、2026 年 4 月 1 日以後の取得は 40 万円未満が対象です。10 万円以上 20 万円未満の資産なら、一括償却資産を選ぶと償却資産の申告が要らなくなります（その代わり経費になるのは 3 年に分かれます）。',
+      },
+      { type: 'h2', text: '免税点は 150 万円 → 2027 年度から 180 万円' },
+      {
+        type: 'p',
+        text: '償却資産は、市区町村ごとに課税標準額（評価額）の合計が免税点に満たなければ課税されません。令和 8 年度の税制改正で、償却資産の免税点は 150 万円から 180 万円に引き上げられました。2027 年度（2027 年 1 月 1 日時点の資産を 2027 年 1 月に申告する分）から適用されます。',
+      },
+      {
+        type: 'p',
+        text: 'ノートパソコンや撮影機材を数点持っている程度なら、評価額の合計が 180 万円を超えることはあまりなく、税金はかからないことが多いです。ただし免税点は「税金がかからない」基準で、「申告しなくてよい」基準ではありません。資産を持っていれば免税点未満でも申告を求めている市区町村があるので（たとえば郡山市の手引き）、申告書が届いたら案内に従って出しましょう。',
+      },
+      { type: 'h2', text: '評価額と税額の計算' },
+      {
+        type: 'p',
+        text: '評価額は市区町村が計算するので、自分で計算する必要はありません。ただ、仕組みを知っておくと税金がかかるかどうかの見当がつきます。所得税の減価償却とは計算方法が違い、取得した月に関係なく、最初の年は半年分だけ価値が減ったものとして計算します。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '前の年に取得した資産: 取得価額 ×（1 − r ÷ 2）',
+          'それより前に取得した資産: 前年度の評価額 ×（1 − r）',
+          'r は耐用年数ごとの減価率。最低でも取得価額の 5% は評価額として残る（使っている限り）',
+          '税額 = 課税標準額の合計 × 1.4%（標準税率）',
+        ],
+      },
+      {
+        type: 'table',
+        headers: ['耐用年数', '主な資産', '前の年に取得（1 − r ÷ 2）', 'それより前（1 − r）'],
+        rows: [
+          ['4 年', 'パソコン', '0.781', '0.562'],
+          ['5 年', 'カメラ・撮影機材、コピー機など', '0.815', '0.631'],
+          ['8 年', '木製の机・椅子など', '0.875', '0.750'],
+          ['15 年', '金属製の机・キャビネットなど', '0.929', '0.858'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '耐用年数は所得税の減価償却と同じものを使います。2026 年中に取得した資産だけを持っている場合の、2027 年度（2027 年 1 月申告分）の目安は次のとおりです。',
+      },
+      {
+        type: 'table',
+        headers: ['持っている資産（2026 年中に取得）', '評価額の合計', '2027 年度の税額'],
+        rows: [
+          ['パソコン 35 万円（4 年）', '27.3 万円', '0 円（免税点未満）'],
+          ['撮影機材 200 万円（5 年）', '163 万円', '0 円（免税点 180 万円未満。150 万円のままなら約 2.3 万円）'],
+          ['撮影機材 250 万円（5 年）＋ パソコン 40 万円（4 年）', '235 万円', '約 3.3 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '最後の例でも、翌年度は評価額が約 146 万円に下がるので、新たに資産を買わなければ税金はかからなくなります。評価額の合計は市区町村ごとに計算するので、事務所が複数の市区町村にある場合は、それぞれで免税点を判定します。',
+      },
+      { type: 'h2', text: '所得税の減価償却との違い' },
+      {
+        type: 'table',
+        headers: ['項目', '償却資産（固定資産税）', '所得税'],
+        rows: [
+          ['基準日', '1 月 1 日', '12 月 31 日（年末）'],
+          ['償却方法', '定率法（旧定率法の減価率）', '個人は原則として定額法'],
+          ['取得した年', '月に関係なく半年分', '使い始めた月から月割り'],
+          ['最低の評価額', '取得価額の 5%', '1 円'],
+          ['少額減価償却資産の特例', '対象（評価して課税）', '全額をその年の経費にできる'],
+          ['一括償却資産（20 万円未満）', '対象外', '3 年で均等に経費'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '「所得税で全額経費にしたから、もう資産ではない」と考えがちですが、償却資産の申告では少額減価償却資産の特例を使った資産も残ります。決算書の「減価償却費の計算」欄に書いた資産の一覧が、償却資産の申告の元になります。',
+      },
+      { type: 'h2', text: '申告のしかた' },
+      {
+        type: 'ol',
+        items: [
+          '前の年に申告した人や、市区町村が事業用の資産を持っている可能性があると把握した人には、申告の時期の前に申告書が届く。届いていなくても、対象の資産があれば申告の義務がある',
+          '初めての年は、1 月 1 日時点で持っている対象の資産をすべて明細書に書く（資産の名称・取得年月・取得価額・耐用年数）。2 年目からは、前の年に増えた資産と減った資産だけを書く',
+          '提出先は資産がある市区町村（東京 23 区は都税事務所）。郵送・窓口のほか、eLTAX（地方税ポータルシステム）で電子申告できる',
+          '資産がない、廃業した、増減がない場合も、その旨を申告書の備考欄に書いて出すよう求めている市区町村がある（郡山市など）',
+        ],
+      },
+      {
+        type: 'p',
+        text: '取得価額は、所得税の経理と同じく、税込経理なら消費税込み、税抜経理なら税抜きの金額で書きます。消費税の免税事業者は税込経理なので、税込みの金額です。',
+      },
+      { type: 'h2', text: '申告しないとどうなる？' },
+      {
+        type: 'p',
+        text: '正当な理由なく申告しなかった場合は、条例による過料などの対象になることがあります。申告漏れが後から見つかった場合は、さかのぼって課税されることがあり（郡山市の手引きでは最大 5 年）、過年度分はまとめて納めることになります。評価額が免税点未満なら税額は 0 円なので、届いた申告書は放置せずに出しておくのが安全です。',
+      },
+      {
+        type: 'cta',
+        title: '買ったものの経費を方法別に比べる（無料ツール）',
+        text: '取得価額・種類・使い始めた月を入れると、少額減価償却資産の特例・一括償却資産・通常の減価償却で今年の経費を比較します。償却資産の申告の対象になるかどうかも、どの方法を選ぶかで変わります。登録不要。',
+        href: '/tools/genka-shokyaku',
+        label: '減価償却の計算ツールを開く',
+        secondary: { href: '/signup', label: 'FreelanceOS で売上と経費を管理する（無料）' },
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '自宅で仕事に使っているパソコンも対象？' },
+      { type: 'p', text: '事業に使っていて、所得税で減価償却している（または少額減価償却資産の特例で経費にした）パソコンは対象です。仕事とプライベートで兼用している資産を按分して申告するかどうかは市区町村によって案内が異なることがあるため、資産のある市区町村の資産税の担当に確認してください。' },
+      { type: 'h3', text: '耐用年数が過ぎたパソコンも申告する？' },
+      { type: 'p', text: '使える状態で持っている限り、耐用年数を過ぎても申告の対象です。評価額は取得価額の 5% で下げ止まります。捨てたり売ったりした場合は、減った資産として申告します。' },
+      { type: 'h3', text: 'リースやレンタルの機材は？' },
+      { type: 'p', text: 'リース資産は、原則として所有者であるリース会社が申告します。リース期間が終わると借りた人に譲渡される契約などは、借りた人が申告することがあります。' },
+      { type: 'h3', text: '開業したばかりで、まだ確定申告をしていない場合は？' },
+      { type: 'p', text: '確定申告の前でも、1 月 1 日時点で事業用の資産を持っていれば対象です。たとえば 2026 年中に開業してパソコンや機材を買った場合は、2027 年 1 月に申告します。耐用年数や経費にする方法は、確定申告と同じ前提で書きます。' },
+      { type: 'links', items: ['shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'kaigyohi-freelance', 'freelance-tax-calendar', 'freelance-year-end-checklist', 'freelance-expenses-list'] },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の地方税法（383 条ほか）と、市区町村の償却資産申告の手引き（郡山市「令和 8 年度 償却資産（固定資産税）申告の手引き」）、免税点の引き上げに関する市の案内（さいたま市・仙台市）に基づく一般的な説明です。申告書の様式・期限・免税点未満の扱い・兼用資産の扱いは市区町村によって異なることがあるため、資産のある市区町村（東京 23 区は都税事務所）の案内で確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -9567,7 +9731,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',
