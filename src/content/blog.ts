@@ -1157,7 +1157,7 @@ export const ARTICLES: Article[] = [
           '郵送: 控えと返信用封筒（切手貼付）を同封する。受付印つきの控えが返送される',
         ],
       },
-      { type: 'links', items: ['jigyo-shotoku-zatsu-shotoku', 'akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
+      { type: 'links', items: ['freelance-rousai-tokubetsu-kanyu', 'jigyo-shotoku-zatsu-shotoku', 'akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
       { type: 'h2', text: '開業届の書き方（迷いやすい欄）' },
       {
         type: 'table',
@@ -1302,7 +1302,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ポイントは「前年の所得」で決まることです。独立 1 年目は会社員時代の給与所得で計算されるため高くなりがちで、2 年目は 1 年目の事業所得で決まります。売上が伸びた翌年に保険料が跳ね上がるので、資金繰りの計画に入れておく必要があります。',
       },
-      { type: 'links', items: ['fuyou-130man-freelance', 'kokuho-keigen-freelance', 'saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
+      { type: 'links', items: ['freelance-rousai-tokubetsu-kanyu', 'fuyou-130man-freelance', 'kokuho-keigen-freelance', 'saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '国民年金の保険料' },
       {
         type: 'p',
@@ -6952,7 +6952,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/nhi', label: '無料の国保計算ツールを使う' },
       },
-      { type: 'links', items: ['kokuho-keigen-freelance', 'freelance-health-insurance-pension', 'freelance-kokumin-nenkin-zennou', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist'] },
+      { type: 'links', items: ['freelance-rousai-tokubetsu-kanyu', 'kokuho-keigen-freelance', 'freelance-health-insurance-pension', 'freelance-kokumin-nenkin-zennou', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist'] },
       {
         type: 'note',
         text: '国税庁 タックスアンサー No.1130「社会保険料控除」とその質疑応答（Q1〜Q5）、日本年金機構「令和 8 年分社会保険料（国民年金保険料）控除証明書の発行について」（2026 年 10 月 9 日更新）に基づく一般的な説明です（2026 年 10 月時点）。個別の状況は税務署・日本年金機構・お住まいの自治体に確認してください。',
@@ -8830,7 +8830,7 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: 'パンフレットでは、単に仲介しているだけの事業者は特定業務委託事業者に当たらないものの、フリーランスに再委託をしている場合などは該当しうると説明されています。誰が発注者になっているかは契約形態によるので、利用規約や契約書で確認してください。' },
       { type: 'h3', text: '契約期間が 3 か月の案件を更新しないと言われた。30 日前予告は必要？' },
       { type: 'p', text: '30 日前予告の義務は、6 か月以上の業務委託（更新によって 6 か月以上継続することになるものを含む）が対象です。3 か月の契約でも、更新を重ねて通算 6 か月以上続いている場合は対象になりえます。判断に迷う場合は、都道府県労働局やフリーランス・トラブル 110 番に相談してください。' },
-      { type: 'links', items: ['freelance-contract-checklist', 'freelance-payment-terms', 'hoshu-mibarai-taishoho', 'freelance-rate-negotiation', 'furikomi-tesuryo-sashihiki', 'freelance-invoice-how-to'] },
+      { type: 'links', items: ['freelance-rousai-tokubetsu-kanyu', 'freelance-contract-checklist', 'freelance-payment-terms', 'hoshu-mibarai-taishoho', 'freelance-rate-negotiation', 'furikomi-tesuryo-sashihiki', 'freelance-invoice-how-to'] },
       {
         type: 'note',
         text: '特定受託事業者に係る取引の適正化等に関する法律（2 条〜6 条・12 条〜19 条・24 条）、同法施行令、公正取引委員会関係・厚生労働省関係の施行規則、公正取引委員会・中小企業庁・厚生労働省のパンフレット「フリーランス・事業者間取引適正化等法」、公正取引委員会の勧告の公表資料と「令和 7 年度におけるフリーランス・事業者間取引適正化等法第 2 章の運用状況」、フリーランス・トラブル 110 番の案内に基づく一般的な説明です（2026 年 11 月時点）。個別の取引が違反に当たるかの判断は、申出先の行政機関や弁護士に相談してください。',
@@ -9002,6 +9002,144 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'freelance-rousai-tokubetsu-kanyu',
+    title: 'フリーランスの労災保険（特別加入）とは？対象になる人、保険料は年 3,831 円〜（給付基礎日額 × 365 × 0.3%）、休業補償の計算例、加入方法と特別加入団体',
+    description:
+      '2024 年 11 月から、企業などから業務委託を受けるフリーランスは業種を問わず労災保険に特別加入できるようになりました（特定フリーランス事業）。対象になる人・ならない人、IT フリーランスなど別の区分との違い、給付基礎日額（3,500〜25,000 円の 16 段階）と年間保険料の早見表、休業（補償）等給付の計算例、特別加入団体を通じた手続き、保険料が社会保険料控除になることを、厚生労働省と国税庁の資料で確認しました。',
+    date: '2026-11-02',
+    keywords: ['フリーランス 労災 特別加入', '特定フリーランス事業 労災', 'フリーランス 労災保険 保険料', '個人事業主 労災 加入', '特別加入団体 フリーランス', '労災 特別加入 社会保険料控除'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '会社員なら仕事中や通勤中のケガは労災保険で補償されますが、フリーランスは労働者ではないので、そのままでは対象になりません。2024 年 11 月 1 日からは、企業などから業務委託を受けるフリーランスが、業種・職種を問わず労災保険に「特別加入」できるようになりました（特定フリーランス事業）。厚生労働省の案内をもとに、対象になる人、保険料、受けられる補償、加入の手続きを整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '企業など（発注事業者）から業務委託を受けている、従業員を使わないフリーランスは、業種を問わず特別加入できる（受ける見込みがある場合を含む）',
+          '消費者だけから仕事を受けている人は対象外。IT フリーランスや芸能、アニメーション制作、自転車配達などは、それぞれ別の区分の団体から加入する',
+          '年間保険料は「給付基礎日額 × 365 日 × 0.3%」。給付基礎日額は 3,500〜25,000 円の 16 段階から選び、年 3,831〜27,375 円',
+          '仕事中・通勤中のケガや病気の治療費、休業 4 日目以降の休業補償（給付基礎日額の 60%＋特別支給金 20%）、障害・遺族への給付などが受けられる',
+          '加入は、都道府県労働局長の承認を受けた「特別加入団体」を通じて申し込む。住んでいる地域に関係なく申し込める',
+          '自分で払った特別加入の保険料は、所得税の社会保険料控除の対象（国税庁タックスアンサー No.1130）',
+        ],
+      },
+      { type: 'h2', text: '対象になる人・ならない人' },
+      {
+        type: 'p',
+        text: '特定フリーランス事業の対象は、フリーランス・事業者間取引適正化等法（フリーランス新法）でいう「特定受託事業者」、つまり業務委託の相手方である事業者で、従業員を使用しない人です。企業など（発注事業者）から業務委託を受けて行う事業と、同じ種類の仕事を消費者から受ける場合が対象になります。',
+      },
+      {
+        type: 'table',
+        headers: ['ケース', '特定フリーランス事業の対象'],
+        rows: [
+          ['企業から業務委託を受けて、翻訳・講師・デザイン・コンサルティング・営業代行などをしている', '対象'],
+          ['企業から宣材写真の撮影を受けているカメラマンが、消費者から家族写真の撮影も受ける', '消費者からの撮影も含めて対象'],
+          ['消費者だけから仕事を受けている（企業から受ける見込みもない）', '対象外'],
+          ['企業から受けている仕事（例: 雑誌の編集）とは別の種類の仕事（例: 個人向けパーソナルトレーナー）を消費者だけから受けている', '消費者だけから受けている仕事は対象外'],
+          ['IT フリーランス、芸能関係、アニメーション制作、自転車やバイクの配達、建設業の一人親方など', '特定フリーランス事業ではなく、それぞれの区分の特別加入団体から加入'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '厚生労働省のリーフレットでは、IT フリーランス（情報処理システムの設計などの作業）の人は「IT フリーランス」の特別加入団体へ、通訳の人は「特定フリーランス事業」の特別加入団体へ申請する、という例が示されています。両方の業務で補償を受けたい場合は、それぞれに特別加入する必要があります。',
+      },
+      {
+        type: 'note',
+        text: '契約の形式にかかわらず、実態として労働者と認められる場合は、特別加入しなくても労災保険が適用されます（その場合、保険料は事業主が納めます）。働き方が会社員に近い場合は、労働基準監督署に相談してください。',
+      },
+      { type: 'h2', text: '保険料: 給付基礎日額 × 365 日 × 0.3%' },
+      {
+        type: 'p',
+        text: '保険料と給付額の基礎になるのが「給付基礎日額」です。所得水準に見合った額を 3,500 円から 25,000 円までの 16 段階から選んで特別加入団体が申請し、都道府県労働局長が承認します。年間保険料は、給付基礎日額に 365 を掛けた額に、第二種特別加入保険料率 1,000 分の 3 を掛けた額です（特定フリーランス事業・IT フリーランス・芸能関係・アニメーション制作はいずれも 1,000 分の 3）。',
+      },
+      {
+        type: 'table',
+        headers: ['給付基礎日額', '年間保険料', '給付基礎日額', '年間保険料'],
+        rows: [
+          ['3,500 円', '3,831 円', '12,000 円', '13,140 円'],
+          ['4,000 円', '4,380 円', '14,000 円', '15,330 円'],
+          ['5,000 円', '5,475 円', '16,000 円', '17,520 円'],
+          ['6,000 円', '6,570 円', '18,000 円', '19,710 円'],
+          ['7,000 円', '7,665 円', '20,000 円', '21,900 円'],
+          ['8,000 円', '8,760 円', '22,000 円', '24,090 円'],
+          ['9,000 円', '9,855 円', '24,000 円', '26,280 円'],
+          ['10,000 円', '10,950 円', '25,000 円', '27,375 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '給付基礎日額を後から変更できるかどうかや、その時期のルールは特別加入団体に確認してください。保険料のほかに特別加入団体の入会金や会費が必要かどうかは団体ごとに違うので、申し込む前に各団体の案内で確認してください。',
+      },
+      { type: 'h2', text: '受けられる補償と計算例' },
+      {
+        type: 'table',
+        headers: ['給付', '内容'],
+        rows: [
+          ['療養（補償）等給付', '仕事・通勤によるケガや病気の治療。労災病院や労災指定医療機関なら無料で治療を受けられる'],
+          ['休業（補償）等給付', '療養のため働けず収入を得られないとき、休業 4 日目から 1 日につき給付基礎日額の 60%（特別支給金 20% と合わせて 80%）'],
+          ['障害（補償）等給付', '治ゆ（症状固定）後に障害が残ったとき、等級に応じて年金（第 1〜7 級）または一時金（第 8〜14 級）'],
+          ['傷病（補償）等年金', '療養開始から 1 年 6 か月たっても治らず、傷病等級に当たるとき'],
+          ['遺族（補償）等給付・葬祭料', '仕事・通勤が原因で亡くなったとき、遺族に年金または一時金、葬祭を行う人に葬祭料'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '計算例: 給付基礎日額 10,000 円（年間保険料 10,950 円）で加入している人が、打ち合わせに向かう途中のケガで 14 日間働けなかった場合。休業 4 日目からの 11 日分が対象になり、10,000 円 × 80% × 11 日 = 88,000 円（休業給付 60% の 66,000 円＋特別支給金 20% の 22,000 円）が目安です。治療費は療養給付で別にカバーされます。',
+      },
+      {
+        type: 'p',
+        text: '国民健康保険にも傷病手当金を設けることはできますが、法律上は市町村などが条例で定めれば支給できる任意の給付です（国民健康保険法 58 条 2 項）。会社員の健康保険と同じ休業時の給付を前提にできないフリーランスにとって、労災の休業補償は仕事中・通勤中のケガや病気に備える手段の 1 つになります。',
+      },
+      {
+        type: 'cta',
+        title: '働けない月に備えて、手元資金を見える化',
+        text: '月ごとの入金予定と経費を入れると、12 か月先までの月末残高と毎月の納税積立額を自動計算する Excel。入金予定を 0 にした月を作れば、収入が止まった場合の残高も確認できます。',
+        href: BOOTH_CASHFLOW_URL,
+        label: 'BOOTH で見る（980円）',
+        external: true,
+      },
+      { type: 'h2', text: '加入の手続き' },
+      {
+        type: 'ol',
+        items: [
+          '自分の仕事が「特定フリーランス事業」か、IT フリーランスなど別の区分かを確認する（迷ったら都道府県労働局か労働基準監督署に問い合わせる）',
+          '厚生労働省のページに載っている特別加入団体から申し込む団体を選ぶ。特定フリーランス事業の団体は、住んでいる地域に関係なく申し込める',
+          '団体の申込方法に従って申し込み、給付基礎日額を選ぶ。加入申請書は団体が所轄の労働基準監督署長を経由して都道府県労働局長に提出する',
+          'ケガなどをしたら、療養の給付は労災指定医療機関を通じて、そのほかの給付は特別加入団体の所在地を管轄する労働基準監督署に請求する',
+        ],
+      },
+      { type: 'h2', text: '保険料は社会保険料控除になる' },
+      {
+        type: 'p',
+        text: '国税庁のタックスアンサー No.1130（社会保険料控除）では、控除の対象になる社会保険料の 1 つに「労働者災害補償保険の特別加入者の規定により負担する保険料」が挙げられています。自分が払った特別加入の保険料は、国民健康保険料や国民年金保険料と同じく、確定申告で社会保険料控除として差し引けます。経費として扱えるかは国税庁の資料で確認できなかったため、扱いに迷う場合は税務署に確認してください。',
+      },
+      {
+        type: 'cta',
+        title: '税金・保険料を引いた手取りを試算',
+        text: '売上と経費から、所得税・住民税・国民健康保険・国民年金を差し引いた手取りを計算する無料ツール（登録不要）。',
+        href: '/tools/takehome',
+        label: '手取りを計算する',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '副業で業務委託を受けている会社員も加入できる？' },
+      { type: 'p', text: '特定フリーランス事業の対象は、フリーランス新法の特定受託事業者が企業などから業務委託を受けて行う事業です。フリーランス新法では、副業で事業者として業務委託を受けている人も特定受託事業者に当たるとされています。ただし、本業の会社での仕事は会社の労災保険の対象で、特別加入の対象は副業の業務委託の部分です。加入できるかは特別加入団体や労働基準監督署に確認してください。' },
+      { type: 'h3', text: '在宅で仕事をしているフリーランスにも意味はある？' },
+      { type: 'p', text: '補償の対象は、業務や通勤が原因のケガや病気です。打ち合わせや取材への移動、講師やインストラクターの仕事中のケガなど、在宅の仕事でも外に出る場面はあります。どこまでが業務上と認められるかは個別に判断されるため、加入前に団体や労働基準監督署に確認してください。' },
+      { type: 'h3', text: '給付基礎日額はいくらにすればいい？' },
+      { type: 'p', text: '所得水準に見合った額を選ぶことになっています。高くすると休業補償などの給付は増えますが、保険料も上がります。たとえば年間の所得が 365 万円なら 1 日あたり約 1 万円が目安の 1 つです。選べる額や変更のルールは特別加入団体に確認してください。' },
+      { type: 'h3', text: 'IT フリーランスはどの団体に申し込む？' },
+      { type: 'p', text: '情報処理システムの設計などの作業に従事する IT フリーランスは、特定フリーランス事業ではなく「IT フリーランス」の区分の特別加入団体から加入します。厚生労働省の特別加入団体一覧表で確認できます。保険料率は特定フリーランス事業と同じ 1,000 分の 3 です。' },
+      { type: 'links', items: ['freelance-shinpo-wakariyasuku', 'freelance-health-insurance-pension', 'shakai-hokenryo-koujo-freelance', 'kokuho-keigen-freelance', 'freelance-kaigyo-todoke', 'freelance-take-home-pay'] },
+      {
+        type: 'note',
+        text: '厚生労働省「令和 6 年 11 月 1 日から「フリーランス」が労災保険の「特別加入」の対象となりました」「労災保険への特別加入」のページ、リーフレット「フリーランスの皆さまへ」「フリーランスの皆さまも、特別加入により労災保険の補償を受けられます！」、特別加入保険料率表（令和 6 年 11 月 1 日施行）、国税庁タックスアンサー No.1130、国民健康保険法 58 条に基づく一般的な説明です（2026 年 11 月時点）。加入の可否や給付の要件は、特別加入団体、都道府県労働局、労働基準監督署に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -9068,7 +9206,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'setup',
     name: '開業・制度・ツール',
     description: '開業届、国保と年金、案件管理ツールの選び方',
-    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'fuyou-130man-freelance', 'freelance-kokumin-nenkin-zennou', 'freelance-project-management-tools'],
+    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'fuyou-130man-freelance', 'freelance-rousai-tokubetsu-kanyu', 'freelance-kokumin-nenkin-zennou', 'freelance-project-management-tools'],
   },
 ]
 
