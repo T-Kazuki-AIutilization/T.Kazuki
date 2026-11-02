@@ -1128,6 +1128,7 @@ export const ARTICLES: Article[] = [
     description:
       '開業届と青色申告承認申請書の提出先・期限・書き方を手順で解説。出さない場合の不利益、屋号や事業の概要欄の書き方、e-Tax での提出、提出後にやること（口座・帳簿・経費管理）までまとめました。',
     date: '2026-10-15',
+    updated: '2026-11-02',
     keywords: ['フリーランス 開業届 出し方', '開業届 青色申告承認申請書 同時', '開業届 出さないとどうなる', '青色申告 申請期限'],
     readingMinutes: 7,
     blocks: [
@@ -1140,24 +1141,24 @@ export const ARTICLES: Article[] = [
         type: 'table',
         headers: ['書類', '正式名称', '期限', '出さないと'],
         rows: [
-          ['開業届', '個人事業の開業・廃業等届出書', '開業日から 1 か月以内（遅れても罰則なし）', '屋号口座が作れない、青色申告の前提が揃わない'],
+          ['開業届', '個人事業の開業・廃業等届出書', '開業した年の確定申告期限まで（所得税法 229 条）', '屋号口座が作れない、青色申告の前提が揃わない'],
           ['青色申告承認申請書', '所得税の青色申告承認申請書', '開業日から 2 か月以内（1/1〜1/15 開業なら 3/15 まで）', 'その年は白色申告。65 万円控除・赤字の繰越・40 万円未満（2026 年 3 月までの取得は 30 万円未満）の一括経費が使えない'],
         ],
       },
       {
         type: 'p',
-        text: '開業届の期限は目安で、遅れても罰則はありません。一方で青色申告承認申請書は期限を過ぎると翌年からの適用になります。開業日をいつにするかは自分で決められるので、「開業日から 2 か月以内」に収まる日付で出すのが現実的です。',
+        text: '開業届の提出期限は、開業した年の確定申告期限までです（所得税法 229 条、国税庁タックスアンサー No.2090）。一方で青色申告承認申請書は、開業日から 2 か月以内に出さないとその年は青色申告になりません。開業日は実際に事業を始めた日を書くので、開業届と青色申告承認申請書を一緒に、開業日から 2 か月以内に出すのが確実です。',
       },
       { type: 'h2', text: '提出方法は 3 つ' },
       {
         type: 'ul',
         items: [
           'e-Tax（おすすめ）: マイナンバーカードとスマホがあれば自宅から提出でき、控えもデータで残る。e-Tax で確定申告すると 65 万円控除の条件も満たす',
-          '税務署の窓口: その場で控えに受付印をもらえる。屋号口座の開設で「控え」を求められることがあるので、紙で出すなら控えを 1 部多く持参する',
-          '郵送: 控えと返信用封筒（切手貼付）を同封する。受付印つきの控えが返送される',
+          '税務署の窓口: 2025 年 1 月から、控えに受付印は押されない。希望すれば、受け付けた日付と税務署名を書いたリーフレットを当分の間もらえるので、控えと一緒に保管する（屋号口座の開設などで提出の証明を求められたときに使える）',
+          '郵送: 提出するのは正本だけで、控えは自分で保管する。切手を貼った返信用封筒を同封すると、当分の間、日付と税務署名を書いたリーフレットが返送される',
         ],
       },
-      { type: 'links', items: ['freelance-rousai-tokubetsu-kanyu', 'jigyo-shotoku-zatsu-shotoku', 'akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'freelance-rousai-tokubetsu-kanyu', 'jigyo-shotoku-zatsu-shotoku', 'akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
       { type: 'h2', text: '開業届の書き方（迷いやすい欄）' },
       {
         type: 'table',
@@ -4673,7 +4674,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '配偶者の確定申告（翌年 2〜3 月）で所得が見積額と大きくずれ、配偶者控除・配偶者特別控除の額が変わる場合は、会社員側も年末調整のやり直し（翌年 1 月末の源泉徴収票の提出前まで）か、自分の確定申告で直します。見積額を少なく書いたまま放置すると、後から税務署の指摘で追加の納税になることがあります。',
       },
-      { type: 'links', items: ['fuyou-130man-freelance', 'side-job-nenmatsu-chosei-2026', 'freelance-nenmatsu-chosei', 'freelance-shotoku-koujo-ichiran', 'freelance-kaigyo-todoke', 'freelance-health-insurance-pension', 'tokutei-shinzoku-gakusei-freelance'] },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'fuyou-130man-freelance', 'side-job-nenmatsu-chosei-2026', 'freelance-nenmatsu-chosei', 'freelance-shotoku-koujo-ichiran', 'freelance-kaigyo-todoke', 'freelance-health-insurance-pension', 'tokutei-shinzoku-gakusei-freelance'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '開業届を出すと配偶者控除を受けられなくなる？' },
       {
@@ -5054,7 +5055,7 @@ export const ARTICLES: Article[] = [
         href: '/tools/aoiro',
         label: '青色申告の節税額シミュレーターを開く',
       },
-      { type: 'links', items: ['kakutei-shinkoku-2026-kaisei', 'ideco-jogen-75000-freelance', 'aoiro-kessansho-kakikata', 'freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'kakutei-shinkoku-2026-kaisei', 'ideco-jogen-75000-freelance', 'aoiro-kessansho-kakikata', 'freelance-denshi-chobo-hozon', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'freelance-boki-shiwake'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '2026 年分の確定申告（2027 年 2〜3 月）から変わる？' },
       {
@@ -5688,7 +5689,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
       },
-      { type: 'links', items: ['jigyo-shotoku-zatsu-shotoku', 'aoiro-kessansho-kakikata', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'side-job-tax-return-200k'] },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'jigyo-shotoku-zatsu-shotoku', 'aoiro-kessansho-kakikata', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'side-job-tax-return-200k'] },
       {
         type: 'note',
         text: '国税庁「令和 7 年分 収支内訳書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
@@ -9353,6 +9354,151 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'aoiro-jigyo-senjusha-kyuyo',
+    title: '家族に払う給与は経費になる？青色事業専従者給与の条件と届出（3 月 15 日・2 か月以内）、白色の事業専従者控除（86 万円・50 万円）、配偶者控除との関係',
+    description:
+      'フリーランス・個人事業主が、手伝ってくれる配偶者や家族に給与を払うときの税金の扱い。青色申告なら届け出た範囲で「青色事業専従者給与」として経費にでき、白色申告なら「事業専従者控除」（配偶者 86 万円・その他 50 万円が上限）を差し引けます。専従者の 3 つの条件、届出書の期限、相当な金額の考え方、配偶者控除・扶養控除が使えなくなること、源泉徴収と年末調整を、国税庁の案内と所得税法で確認しました。',
+    date: '2026-11-02',
+    keywords: ['青色事業専従者給与 条件', '専従者給与 届出 期限', '事業専従者控除 86万', '家族 給与 経費 個人事業主', '専従者給与 配偶者控除', '専従者給与 源泉徴収'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '個人事業では、同じ家計（生計を一にする）の配偶者や親族に払った給与は、原則として経費になりません（所得税法 56 条）。ただし、その家族が事業に専ら従事している場合は特例があり、青色申告なら「青色事業専従者給与」、白色申告なら「事業専従者控除」として差し引けます。国税庁タックスアンサー No.2075 と所得税法 57 条をもとに、条件と手続き、気をつけたい点を整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '青色申告: 届出書に書いた金額の範囲内で、労務の対価として相当な給与を経費にできる。上限額の定めはない',
+          '白色申告: 給与を払っても経費にならず、代わりに配偶者 86 万円・その他の親族 50 万円（または所得 ÷（専従者の数＋1）の低いほう）を差し引く',
+          '対象は、生計を一にする 15 歳以上（12 月 31 日時点）の配偶者や親族で、その年に 6 か月を超えて事業に専ら従事している人。学生や、ほかに仕事を持つ人は原則として対象外',
+          '青色は「青色事業専従者給与に関する届出書」を、経費にしたい年の 3 月 15 日まで（1 月 16 日以後に開業した場合や新たに専従者ができた場合は 2 か月以内）に税務署へ出す',
+          '専従者になった家族は、その年は配偶者控除・扶養控除の対象にならない（青色・白色とも）',
+          '給与を払う側は源泉徴収義務者になり、源泉徴収や年末調整が必要になる',
+        ],
+      },
+      { type: 'h2', text: '青色事業専従者給与と事業専従者控除の違い' },
+      {
+        type: 'table',
+        headers: ['', '青色申告（青色事業専従者給与）', '白色申告（事業専従者控除）'],
+        rows: [
+          ['経費にできる額', '届出書に書いた金額の範囲内で、実際に払った相当な給与の額', '配偶者 86 万円・その他 50 万円と、所得 ÷（専従者の数＋1）のうち低いほう'],
+          ['実際の支払い', '必要（届出書に書いた方法・時期で払う）', '要件にない（控除額が「みなし給与」になる）'],
+          ['事前の手続き', '届出書を期限までに提出', '不要（確定申告書に控除を受ける旨と金額を書く）'],
+          ['家族側の所得', '受け取った給与が給与所得になる', '控除額が給与所得の収入金額とみなされる'],
+          ['配偶者控除・扶養控除', '使えない', '使えない'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '白色の事業専従者控除の例: 控除前の事業所得が 300 万円で、専従者が配偶者 1 人なら、300 万円 ÷ 2 ＝ 150 万円より 86 万円のほうが低いので 86 万円。控除前の事業所得が 120 万円なら、120 万円 ÷ 2 ＝ 60 万円のほうが低いので 60 万円です。',
+      },
+      { type: 'h2', text: '専従者になれる家族の条件' },
+      {
+        type: 'ol',
+        items: [
+          '事業主と生計を一にする配偶者その他の親族であること',
+          'その年の 12 月 31 日時点で 15 歳以上であること',
+          'その年を通じて 6 か月を超える期間、その事業に専ら従事していること',
+        ],
+      },
+      {
+        type: 'p',
+        text: '3 つ目の「6 か月を超える期間」には例外があります。青色申告の場合、年の途中で開業した・廃業した、家族が結婚した・長く病気だった・退職して手伝い始めたなど、相当の理由でその年を通じて従事できなかったときは、従事できた期間の 2 分の 1 を超えていれば足ります（所得税法施行令 165 条 1 項）。国税庁の質疑応答事例では、8 月に会社を退職して親の事業を手伝い始めた子について、退職から年末までの 2 分の 1 を超えて専ら従事していれば、青色事業専従者給与を経費にできるとしています。',
+      },
+      {
+        type: 'p',
+        text: '一方で、次の人が該当する期間は「専ら従事する期間」に含まれません（所得税法施行令 165 条 2 項）。昼間の学校に通う学生（夜間の学校で昼間に従事する人などを除く）、ほかに職業を持つ人（その仕事の時間が短い人などを除く）、老衰や心身の障害で事業に従事する能力が著しく阻害されている人です。会社員として働きながら週末だけ手伝う配偶者は、原則として専従者になれません。',
+      },
+      {
+        type: 'cta',
+        title: '白色と青色で税金がいくら変わるか試算',
+        text: '売上と経費から、白色申告と青色申告（10 万・55 万・65 万円控除）の所得税・住民税・国保を比べる無料ツール（登録不要）。専従者給与の効果は含まない概算です。',
+        href: '/tools/aoiro',
+        label: '節税額を計算する',
+      },
+      { type: 'h2', text: '青色事業専従者給与の届出' },
+      {
+        type: 'table',
+        headers: ['ケース', '提出期限'],
+        rows: [
+          ['すでに事業をしていて、来年から専従者給与を経費にしたい', '経費にしたい年の 3 月 15 日まで'],
+          ['その年の 1 月 16 日以後に開業した', '開業した日から 2 か月以内'],
+          ['その年の 1 月 16 日以後に新たに専従者ができた', '専従者がいることになった日から 2 か月以内'],
+          ['専従者が増える、給与を増額するなど届出の内容を変える', '変更届出書を遅滞なく'],
+        ],
+      },
+      {
+        type: 'ul',
+        items: [
+          '届出書には、専従者の氏名、職務の内容、給与の金額、支給期などを書く',
+          '提出先は納税地の所轄税務署。e-Tax でも書面（持参・郵送）でも出せる。届出書とは別に給与規程を定めている場合は、その写しも出す',
+          '前提として、青色申告の承認を受けている（承認申請をしている）ことが必要。青色申告承認申請書と一緒に出すと漏れがない',
+          '提出期限が土日・祝日の場合は翌日が期限になる',
+        ],
+      },
+      { type: 'h2', text: '経費にできる金額の考え方' },
+      {
+        type: 'p',
+        text: '経費にできるのは、届出書に書いた方法で、書いた金額の範囲内で払った給与のうち、労務の対価として相当と認められる額です。相当かどうかは、従事した期間、仕事の内容と程度、事業の種類と規模、同業で同じくらいの規模の事業が払っている給与の水準などに照らして判断されます（所得税法 57 条 1 項）。過大とされた部分は経費になりません。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '届出書に書いた金額が経費にできる上限になる。実際に払う額は、その範囲内で仕事の実態に合わせる',
+          '給与は実際に支払い、振込の記録や給与の明細を残す。届出だけして払っていない給与は経費にならない',
+          '仕事の内容（経理・請求書の作成・顧客対応など）と、従事した時間が分かる記録を残しておくと説明しやすい',
+          '届出より多く払いたくなったら、先に変更届出書を出す',
+        ],
+      },
+      {
+        type: 'cta',
+        title: '帳簿をつける準備を Excel で',
+        text: '売上帳と、勘定科目のプルダウンつきの経費帳、科目別集計、所得税の概算をひとつにまとめた Excel キット。帳簿書類の保存の第一歩に。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      { type: 'h2', text: '配偶者控除・扶養控除が使えなくなる' },
+      {
+        type: 'p',
+        text: '青色事業専従者として給与を受ける人と、白色申告の事業専従者は、同一生計配偶者や扶養親族になれません。給与がいくらでも、その年は配偶者控除・配偶者特別控除・扶養控除の対象から外れます。国税庁の質疑応答事例では、父の青色事業専従者になっている妻を、会社員の夫が控除対象配偶者にすることもできないとしています。',
+      },
+      {
+        type: 'p',
+        text: 'たとえば配偶者に年 96 万円の専従者給与を払えば、事業主の所得から 96 万円が経費として引かれる一方、配偶者控除（最大 38 万円）は使えなくなります。配偶者は受け取った給与について給与所得として課税され、住民税や健康保険の扶養の判定にも影響します。家族全体の手取りがどう変わるかは、配偶者の側の税金・社会保険も含めて比べてください。国民健康保険の軽減の判定では、専従者給与を経費にしなかったものとして計算されるといった特別な扱いもあります。',
+      },
+      { type: 'h2', text: '給与を払う側の手続き（源泉徴収・年末調整）' },
+      {
+        type: 'ul',
+        items: [
+          '常時 2 人以下の家事使用人だけに給与を払う人を除き、給与を払う人は源泉徴収義務者になる（所得税法 183 条・184 条）。専従者給与も給与なので、支払いのときに源泉徴収税額表に従って所得税を差し引く',
+          '給与を払う事務所を開設したら、「給与支払事務所等の開設届出書」を 1 か月以内に税務署へ出す（開業と同時に給与を払い始める場合の扱いは税務署に確認）',
+          '源泉徴収した所得税は、原則として払った月の翌月 10 日までに納める。給与の支給人員が常時 10 人未満なら「納期の特例」の申請をすると、1〜6 月分を 7 月 10 日、7〜12 月分を翌年 1 月 20 日にまとめて納められる',
+          '年末には年末調整をして、源泉徴収票を作る',
+          '白色申告の事業専従者控除は、実際の給与の支払いではなく「みなし給与」なので、源泉徴収の対象にならない。ただし、その家族がほかにも源泉徴収される給与を受けていると、確定申告が必要になる（国税庁の質疑応答事例）',
+        ],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '専従者給与はいくらまでなら大丈夫？' },
+      { type: 'p', text: '青色事業専従者給与には法律上の上限額はなく、仕事の内容・従事した時間・事業の規模・同業の給与水準などに照らして相当な額かどうかで判断されます。金額の目安は国税庁の資料で示されていないため、迷う場合は税務署や税理士に相談してください。' },
+      { type: 'h3', text: '届出を出し忘れた。今年の給与は経費にできない？' },
+      { type: 'p', text: '青色事業専従者給与は、期限までに出した届出書に書いた範囲内で払った給与だけが経費になります。期限を過ぎた場合、その年は経費にできないと考え、翌年分に向けて 3 月 15 日までに提出してください。新たに専従者ができた場合は、その日から 2 か月以内が期限です。' },
+      { type: 'h3', text: 'パートで働いている妻に、空いた時間だけ手伝ってもらっている。専従者にできる？' },
+      { type: 'p', text: 'ほかに職業を持つ人は、その仕事の時間が短いなど専ら従事することが妨げられないと認められる場合を除き、専ら従事する期間に含まれません。勤務時間が長いパートをしている場合は、専従者になれない可能性が高いです。個別の判断は税務署に確認してください。' },
+      { type: 'h3', text: '子どもに給与を払える？' },
+      { type: 'p', text: 'その年の 12 月 31 日時点で 15 歳以上で、生計を一にし、6 か月を超えて専ら事業に従事していれば対象になります。ただし、昼間の学校の学生は原則として専ら従事する期間に含まれないため、高校生や大学生の子は通常対象になりません。専従者でない家族のアルバイト代は、生計を一にしている限り経費にならない点にも注意してください。' },
+      { type: 'h3', text: '白色申告で、実際に給与を払っていなくても控除できる？' },
+      { type: 'p', text: '事業専従者控除は、実際の給与の支払いを要件にしていません。要件を満たす専従者がいれば、確定申告書に控除を受ける旨と金額などを書いて差し引けます。差し引いた額は、その家族の給与所得の収入金額とみなされます。' },
+      { type: 'links', items: ['freelance-haigusha-koujo', 'aoiro-koujo-75man-2027', 'freelance-kaigyo-todoke', 'fuyou-130man-freelance', 'kokuho-keigen-freelance', 'kaji-anbun-freelance', 'aoiro-kessansho-kakikata'] },
+      {
+        type: 'note',
+        text: '国税庁タックスアンサー No.2075・No.2090・No.2505、「青色事業専従者給与に関する届出手続」、質疑応答事例（「年の中途で事業に従事した親族に係る青色事業専従者給与」「白色事業専従者が他に給与所得を有する場合」「青色事業専従者である妻」）、所得税法 56 条・57 条・183 条・184 条、所得税法施行令 165 条に基づく一般的な説明です（2026 年 11 月時点）。個別の判断は税務署または税理士に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -9413,7 +9559,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',

@@ -5,7 +5,7 @@ import Link from 'next/link'
 type Item = { t: string; when: string; note?: string; href?: string }
 const GROUPS: { title: string; items: Item[] }[] = [
   { title: '1. 事前準備（通年）', items: [
-    { t: '開業届を税務署に出した', when: '開業から 1 か月以内', note: '未提出でも申告はできる', href: '/blog/freelance-kaigyo-todoke' },
+    { t: '開業届を税務署に出した', when: '開業した年の確定申告期限まで', note: '未提出でも申告はできる', href: '/blog/freelance-kaigyo-todoke' },
     { t: '青色申告承認申請書を出した（青色申告する場合）', when: 'その年の 3/15 まで（開業年は 2 か月以内）', note: '65 万円控除には e-Tax か電子帳簿保存が必要', href: '/tools/aoiro' },
     { t: '事業用の銀行口座・クレジットカードを分けた', when: '通年', note: '仕訳と証憑の管理が楽になる' },
     { t: '会計ソフトや Excel で帳簿を毎月つけている', when: '毎月', note: '年末にまとめると漏れが出やすい', href: '/blog/freelance-boki-shiwake' },
