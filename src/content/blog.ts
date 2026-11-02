@@ -1157,7 +1157,7 @@ export const ARTICLES: Article[] = [
           '郵送: 控えと返信用封筒（切手貼付）を同封する。受付印つきの控えが返送される',
         ],
       },
-      { type: 'links', items: ['akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
+      { type: 'links', items: ['jigyo-shotoku-zatsu-shotoku', 'akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
       { type: 'h2', text: '開業届の書き方（迷いやすい欄）' },
       {
         type: 'table',
@@ -2839,7 +2839,7 @@ export const ARTICLES: Article[] = [
         title: '年収別: 副業で増える税金の早見表',
         items: [300, 400, 500, 600, 700, 800, 900, 1000].map((a) => ({ href: `/tools/fukugyo/${a}`, label: `年収 ${a.toLocaleString('ja-JP')} 万円` })),
       },
-      { type: 'links', items: ['iryohi-koujo-freelance', 'shushi-uchiwakesho-kakikata', 'side-job-nenmatsu-chosei-2026', 'side-job-juminzei-shinkoku', 'freelance-expenses-list', 'freelance-etax-how-to', 'freelance-tax-prep'] },
+      { type: 'links', items: ['jigyo-shotoku-zatsu-shotoku', 'iryohi-koujo-freelance', 'shushi-uchiwakesho-kakikata', 'side-job-nenmatsu-chosei-2026', 'side-job-juminzei-shinkoku', 'freelance-expenses-list', 'freelance-etax-how-to', 'freelance-tax-prep'] },
       {
         type: 'table',
         headers: ['ケース', '所得税の確定申告', '住民税の申告'],
@@ -5688,7 +5688,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
       },
-      { type: 'links', items: ['aoiro-kessansho-kakikata', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'side-job-tax-return-200k'] },
+      { type: 'links', items: ['jigyo-shotoku-zatsu-shotoku', 'aoiro-kessansho-kakikata', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'side-job-tax-return-200k'] },
       {
         type: 'note',
         text: '国税庁「令和 7 年分 収支内訳書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
@@ -8084,7 +8084,7 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: '純損失の繰戻し還付は、前年分も青色申告書を出していて、赤字の年分の青色申告書を期限内に出した場合に限られます（所得税法 140 条 4 項）。前年に青色申告をしていない開業 1 年目の人は使えないので、翌年以後への繰越しを選びます。' },
       { type: 'h3', text: '申告期限を過ぎてしまった。赤字の繰越しはできる？' },
       { type: 'p', text: '所得税法の「確定申告書」には期限後申告書も含まれるため（所得税法 2 条 1 項 37 号）、繰越しの条件は期限後に申告して満たせる場合があります。ただし、繰戻し還付は期限内の申告が条件です。期限を過ぎたときは、早めに申告して、扱いを税務署に確認してください。' },
-      { type: 'links', items: ['kokuho-keigen-freelance', 'kaigyohi-freelance', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-tax-prep', 'freelance-etax-how-to', 'aoiro-kessansho-kakikata', 'freelance-juminzei-first-year'] },
+      { type: 'links', items: ['jigyo-shotoku-zatsu-shotoku', 'kokuho-keigen-freelance', 'kaigyohi-freelance', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-tax-prep', 'freelance-etax-how-to', 'aoiro-kessansho-kakikata', 'freelance-juminzei-first-year'] },
       {
         type: 'note',
         text: '所得税法 2 条・69 条・70 条・123 条・140 条、地方税法 313 条・317 条の 3、国税庁「令和 7 年分 所得税及び復興特別所得税の確定申告の手引き（損失申告用）」、タックスアンサー No.2070・No.2072（令和 8 年 4 月 1 日現在法令等）に基づく一般的な説明です（2026 年 11 月時点）。個々のケースの計算や、国民健康保険料での扱いは、税務署・市区町村に確認してください。',
@@ -8837,6 +8837,171 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'jigyo-shotoku-zatsu-shotoku',
+    title: '副業・フリーランスの所得は事業所得？雑所得？国税庁の判定基準（帳簿の保存と 300 万円）、5 つの違い（青色申告・損益通算・赤字の繰越し）をわかりやすく',
+    description:
+      '副業やフリーランスの所得を確定申告で「事業所得」と「雑所得（業務）」のどちらにするかを、2022 年に改正された国税庁の所得税基本通達 35-2 と、その解説で整理しました。社会通念での判定、帳簿書類の保存の有無と収入金額 300 万円の関係、帳簿があっても個別判断になるケース（収入が例年 300 万円以下かつ主な収入の 10% 未満など）、青色申告特別控除・損益通算・赤字の繰越し・帳簿の保存義務・収支内訳書の添付の違いを、国税庁の資料で確認しました。',
+    date: '2026-11-02',
+    keywords: ['事業所得 雑所得 違い', '副業 事業所得 雑所得 判定', '雑所得 300万 帳簿', '業務に係る雑所得 とは', 'フリーランス 雑所得 事業所得 どっち', '所得税基本通達 35-2'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '副業やフリーランスの報酬を確定申告するとき、「事業所得」と「雑所得」のどちらで書けばいいのかは、多くの人が迷うところです。どちらも「収入 − 必要経費」で所得を計算するのは同じですが、青色申告ができるか、赤字を給与と相殺できるかなど、税金に関わる違いがあります。この記事では、国税庁が 2022 年に改正した所得税基本通達 35-2 と、その解説をもとに、判定の考え方と違いを整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '事業所得か雑所得かは、その活動が「社会通念上事業と称するに至る程度」で行われているかで判定する（所得税基本通達 35-2 の注）',
+          '取引を帳簿に記録して保存していれば、一般的には事業所得に区分される場合が多い。ただし、収入が例年 300 万円以下で主な収入の 10% 未満の場合や、例年赤字で解消の取組をしていない場合は個別に判断される',
+          '帳簿書類を保存していなければ、原則として業務に係る雑所得。収入が 300 万円を超え、事業所得と認められる事実がある場合は例外',
+          '「300 万円を超えたら事業所得、以下なら雑所得」という単純な線引きではない。300 万円は帳簿がない場合の例外の基準',
+          '事業所得だけができること: 青色申告（特別控除）、赤字を給与などと相殺する損益通算、青色申告なら赤字の 3 年繰越し',
+        ],
+      },
+      { type: 'h2', text: '「業務に係る雑所得」とは' },
+      {
+        type: 'p',
+        text: '雑所得は、ほかの 9 種類の所得のどれにも当たらない所得です（所得税法 35 条）。確定申告書の第一表では、雑所得が「公的年金等」「業務」「その他」の欄に分かれています。副業の原稿料やデザイン料など、事業と呼べる規模に達しない仕事の報酬が「業務に係る雑所得」です。',
+      },
+      {
+        type: 'p',
+        text: '所得税基本通達 35-2 は、事業所得と認められるものを除いて業務に係る雑所得に当たるものとして、次のような所得を例に挙げています。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '原稿、さし絵、作曲、デザインの報酬、放送謝金、著作権の使用料、講演料など',
+          '動産（船舶・航空機を除く）の貸付けによる所得',
+          '工業所有権の使用料',
+          '金銭の貸付けによる所得',
+          '営利を目的として継続的に行う資産の譲渡から生ずる所得',
+        ],
+      },
+      {
+        type: 'p',
+        text: '「原稿料やデザイン料は雑所得」と決まっているわけではなく、事業と認められる規模で行っていれば事業所得になります。国税庁の解説では、事業的規模なら事業所得、事業的規模でなければ業務に係る雑所得、という関係だと説明されています。',
+      },
+      { type: 'h2', text: '判定の考え方: 社会通念と帳簿書類の保存' },
+      {
+        type: 'p',
+        text: '通達の注の前段は、「事業所得と認められるかどうかは、その所得を得るための活動が、社会通念上事業と称するに至る程度で行っているかどうかで判定する」としています。国税庁の解説は、判例を引いて、営利性・有償性、継続性・反復性、自己の危険と計算による企画遂行性、かけた労力の程度、人的・物的設備、取引の目的、その人の職歴・社会的地位・生活状況などを総合的に考えるとしています。',
+      },
+      {
+        type: 'p',
+        text: 'そのうえで、実務上の目安になるのが帳簿書類の保存です。国税庁の解説にある区分のイメージをまとめると、次のようになります。',
+      },
+      {
+        type: 'table',
+        headers: ['収入金額', '帳簿書類の保存あり', '帳簿書類の保存なし'],
+        rows: [
+          ['300 万円超', '概ね事業所得（※）', '概ね業務に係る雑所得（事業所得と認められる事実があれば事業所得）'],
+          ['300 万円以下', '概ね事業所得（※）', '業務に係る雑所得'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '※ 帳簿書類を保存していても、次の場合は事業と認められるかどうかを個別に判断するとされています。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '収入金額が僅少と認められる場合: たとえば、収入金額が例年（概ね 3 年程度）300 万円以下で、主たる収入に対する割合が 10% 未満の場合',
+          '営利性が認められない場合: 例年赤字で、かつ、収入を増やしたり黒字にしたりするための営業活動などをしていない場合',
+        ],
+      },
+      {
+        type: 'p',
+        text: '解説によると、帳簿に記録していない、または記録しても保存していない場合は、一般に営利性・継続性・企画遂行性があるとは認めにくく、原則として事業所得に区分されないと考えられています。ただし、収入金額が 300 万円を超えるような規模で行っている場合は、帳簿書類の保存がないことだけで判定せず、事業所得と認められる事実があれば事業所得として扱う、とされています。',
+      },
+      {
+        type: 'note',
+        text: '通達の「収入金額 300 万円」は、所得の金額（収入 − 経費）ではなく収入金額です。また、2020 年度の税制改正で、業務に係る雑所得の前々年の収入が 300 万円を超える人に取引書類の保存が義務付けられたことを踏まえた基準だと、国税庁の解説で説明されています。',
+      },
+      { type: 'h2', text: '具体例で考える' },
+      {
+        type: 'table',
+        headers: ['ケース', '考え方'],
+        rows: [
+          ['会社員の副業で Web 制作。年 80 万円、帳簿なし', '帳簿書類の保存がなく収入も 300 万円以下なので、業務に係る雑所得'],
+          ['会社員（年収 600 万円）の副業でライター。毎年 40 万円前後、帳簿あり', '帳簿はあるが、例年 300 万円以下で主な収入の 10% 未満なので、事業と認められるかは個別判断'],
+          ['会社を辞めて独立したデザイナー。年 450 万円、帳簿あり', '主な収入で、帳簿書類も保存しているので、概ね事業所得'],
+          ['副業の動画編集が年 350 万円に増えたが、帳簿なし', '300 万円超なので、事業所得と認められる事実があれば事業所得。ただし事業所得なら記帳・帳簿の保存の義務がある'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '上の表は通達と解説の考え方を当てはめた一般的な目安です。実際の区分は個別の事実で決まるため、迷う場合は税務署に確認してください。',
+      },
+      { type: 'h2', text: '事業所得と雑所得の 5 つの違い' },
+      {
+        type: 'table',
+        headers: ['項目', '事業所得', '業務に係る雑所得'],
+        rows: [
+          ['青色申告・青色申告特別控除', 'できる（最大 65 万円。2027 年分から見直し）', 'できない'],
+          ['赤字の損益通算（給与などと相殺）', 'できる', 'できない'],
+          ['赤字の繰越し（純損失の繰越控除）', '青色申告なら翌年以後 3 年', 'できない'],
+          ['記帳・帳簿書類の保存', '記帳と保存の義務あり（白色も）', '前々年の収入が 300 万円超なら、請求書・領収書など現金預金取引等関係書類を 5 年保存'],
+          ['収支内訳書などの添付（白色）', '必要', '前々年の収入が 1,000 万円超なら必要'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '青色申告特別控除は「不動産所得または事業所得を生ずべき事業を営んでいること」が要件です（タックスアンサー No.2072）。損益通算ができるのは不動産所得・事業所得・譲渡所得・山林所得の損失だけで、雑所得の損失は他の所得から差し引けません（No.2250）。帳簿の保存と収支内訳書の添付は、白色申告者の記帳・帳簿等保存制度（No.2080）で定められています。',
+      },
+      {
+        type: 'p',
+        text: '一方で、所得の計算方法（収入 − 必要経費）、副業の所得が 20 万円以下なら所得税の確定申告が不要になる場合があること、住民税の申告が別に必要なことは、事業所得でも雑所得でも同じです。',
+      },
+      {
+        type: 'cta',
+        title: '帳簿をつける準備を Excel で',
+        text: '売上帳と、勘定科目のプルダウンつきの経費帳、科目別集計、所得税の概算をひとつにまとめた Excel キット。帳簿書類の保存の第一歩に。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      { type: 'h2', text: '事業所得として申告したいなら、やっておくこと' },
+      {
+        type: 'ol',
+        items: [
+          '取引を帳簿に記録して保存する（売上・経費の日付、相手先、金額）。請求書・領収書も保存する',
+          '事業として行っている実態を整える（継続的な受注、営業活動、仕事用の設備や口座など）',
+          '開業届を出し、青色申告をするなら青色申告承認申請書を期限までに出す（原則はその年の 3 月 15 日まで。1 月 16 日以後に新しく業務を始めた場合は開始日から 2 か月以内）',
+          '赤字が続く場合は、黒字にするための取組（営業・単価の見直しなど）を記録しておく',
+        ],
+      },
+      {
+        type: 'p',
+        text: '反対に、副業の規模が小さく、帳簿をつけないなら、業務に係る雑所得として申告するのが通達の考え方に沿った形です。その場合も、収入と経費の根拠になる書類は残しておきます。',
+      },
+      {
+        type: 'cta',
+        title: '売上と入金を案件ごとに記録',
+        text: 'FreelanceOS は、クライアント・案件ごとに売上と入金を記録できるツールです。Pro プランでは CSV で書き出して帳簿づけの元データに使えます（14 日間無料）。',
+        href: '/signup',
+        label: '無料ではじめる',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '開業届を出していれば事業所得になる？' },
+      { type: 'p', text: '国税庁の通達と解説が示す判定の基準は、社会通念上事業と称する程度かどうかと、帳簿書類の保存の有無です。開業届の提出は判定の基準として挙げられていません。開業届を出していても、活動の実態によっては雑所得と判断されることがありえます。' },
+      { type: 'h3', text: '副業の赤字を給与と相殺して還付を受けられる？' },
+      { type: 'p', text: '損益通算ができるのは事業所得などの赤字で、業務に係る雑所得の赤字は給与所得と相殺できません。副業の赤字で還付を受けられるのは、その副業が事業所得と認められる場合に限られます。' },
+      { type: 'h3', text: '前の年まで雑所得で申告していた。今年から事業所得にできる？' },
+      { type: 'p', text: '所得の区分は年ごとの事実で判断されます。今年から帳簿をつけ、事業と呼べる規模と実態で活動しているなら、事業所得として申告することが考えられます。青色申告をしたい場合は、原則としてその年の 3 月 15 日までに青色申告承認申請書を出す必要があります。' },
+      { type: 'h3', text: '雑所得でも帳簿をつける必要はある？' },
+      { type: 'p', text: '業務に係る雑所得では、前々年の収入金額が 300 万円を超える場合に、請求書や領収書など現金預金取引等関係書類を 5 年間保存する義務があります。法律上の義務がない場合でも、収入と経費を説明できるように記録を残しておくと安心です。' },
+      { type: 'h3', text: '確定申告書ではどこに書く？' },
+      { type: 'p', text: '事業所得は第一表の「事業（営業等）」欄、業務に係る雑所得は「雑（業務）」欄に書きます。事業所得は青色申告決算書か収支内訳書で計算した金額を、業務に係る雑所得は収入金額と必要経費から計算した金額を書きます。具体的な書き方は国税庁の確定申告の手引きで確認してください。' },
+      { type: 'links', items: ['side-job-tax-return-200k', 'akaji-kurikoshi-freelance', 'shushi-uchiwakesho-kakikata', 'freelance-kaigyo-todoke', 'aoiro-koujo-75man-2027', 'freelance-boki-shiwake'] },
+      {
+        type: 'note',
+        text: '国税庁「所得税基本通達 35-2」と「雑所得の範囲の取扱いに関する所得税基本通達の解説」（令和 4 年 10 月 7 日改正）、タックスアンサー No.2072（青色申告特別控除）・No.2080（白色申告者の記帳・帳簿等保存制度）・No.2250（損益通算）、所得税法 35 条に基づく一般的な説明です（2026 年 11 月時点）。個別の所得区分は事実関係で決まるため、判断に迷う場合は税務署に確認してください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -8897,7 +9062,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',
