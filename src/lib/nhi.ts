@@ -5,6 +5,7 @@
  */
 
 const BASIC = 430000 // 基準所得の計算で差し引く基礎控除相当
+const CHILD_CAP = 30000 // 子ども・子育て支援金分の上限（2026 年度）
 
 export type Part = { rate: number; perCapita: number; perHousehold: number; cap: number }
 export type NhiInputs = {
@@ -13,11 +14,11 @@ export type NhiInputs = {
   medical: Part; support: Part; care: Part
   childRate: number; childPerCapita: number
 }
-// 例示の料率（自治体により大きく異なる）。上限は 2025 年度の法定上限。
+// 例示の料率（自治体により大きく異なる）。上限は 2026 年度の法定上限。
 export const NHI_DEFAULTS: NhiInputs = {
   incomes: [3000000],
   members40to64: 0,
-  medical: { rate: 0.077, perCapita: 47000, perHousehold: 0, cap: 660000 },
+  medical: { rate: 0.077, perCapita: 47000, perHousehold: 0, cap: 670000 },
   support: { rate: 0.027, perCapita: 16000, perHousehold: 0, cap: 260000 },
   care: { rate: 0.022, perCapita: 16000, perHousehold: 0, cap: 170000 },
   childRate: 0, childPerCapita: 0,
@@ -31,7 +32,7 @@ export function calcNhi(v: NhiInputs) {
   const support = part(v.support, n, base)
   const careBase = v.members40to64 > 0 ? v.incomes.slice(0, v.members40to64).reduce((s, x) => s + Math.max(0, x - BASIC), 0) : 0
   const care = v.members40to64 > 0 ? part(v.care, v.members40to64, careBase) : 0
-  const child = Math.floor(base * v.childRate + v.childPerCapita * n)
+  const child = Math.min(CHILD_CAP, Math.floor(base * v.childRate + v.childPerCapita * n))
   const total = Math.floor((medical + support + care + child) / 100) * 100
   return { base, medical, support, care, child, total }
 }

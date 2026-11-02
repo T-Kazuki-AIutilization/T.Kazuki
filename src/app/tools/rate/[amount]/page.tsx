@@ -140,7 +140,7 @@ export default function RateTargetPage({ params }: { params: { amount: string } 
               <li key={x}><Link href={`/tools/rate/${x}`} className={`inline-block rounded border px-2 py-1 text-xs ${x === a ? 'border-primary bg-primary/10 font-semibold' : 'hover:bg-slate-50'}`}>手取り {x.toLocaleString('ja-JP')}万円</Link></li>
             ))}
           </ul>
-          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分。経費 60 万円（経費率別の表を除く）、青色申告特別控除 65 万円、独身、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円、個人事業税なし。概算です。<Link href="/tools/hayamihyo" className="text-primary hover:underline">売上別の手取り早見表はこちら</Link>。</p>
+          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分。経費 60 万円（経費率別の表を除く）、青色申告特別控除 65 万円、独身、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 113 万円）、国民年金 月 17,920 円、個人事業税なし。概算です。<Link href="/tools/hayamihyo" className="text-primary hover:underline">売上別の手取り早見表はこちら</Link>。</p>
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '無料ツール', item: `${SITE_URL}/tools` }, { '@type': 'ListItem', position: 2, name: '時間単価計算', item: `${SITE_URL}/tools/rate` }, { '@type': 'ListItem', position: 3, name: `手取り${label}`, item: `${SITE_URL}/tools/rate/${a}` }] }) }} />

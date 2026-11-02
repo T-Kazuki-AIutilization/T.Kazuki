@@ -5,7 +5,7 @@
 
 const PENSION_MONTHLY = 17920 // 国民年金 2026 年度
 const NHI_FLAT = 60000 // 国保 均等割（年・1人、自治体により 4〜8 万円）
-const NHI_CAP = 1090000
+const NHI_CAP = 1130000 // 国保 2026 年度の法定上限（医療 67 万＋支援 26 万＋介護 17 万＋子ども 3 万）
 const NHI_DEDUCT = 430000
 const RES_RATE = 0.1
 const RES_FLAT = 5000

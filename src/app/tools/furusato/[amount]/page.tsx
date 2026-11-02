@@ -147,7 +147,7 @@ export default function FurusatoAmountPage({ params }: { params: { amount: strin
               <li key={x}><Link href={`/tools/furusato/${x}`} className={`inline-block rounded border px-2 py-1 text-xs ${x === a ? 'border-primary bg-primary/10 font-semibold' : 'hover:bg-slate-50'}`}>{x.toLocaleString('ja-JP')}万円</Link></li>
             ))}
           </ul>
-          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年中の寄附・2026 年分の所得。独身・扶養なし、国民年金 月 17,920 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、住民税の調整控除 2,500 円で概算。実際の控除額はお住まいの自治体・税務署にご確認ください。<Link href="/blog/freelance-furusato-nozei" className="text-primary hover:underline">計算方法と確定申告の書き方の解説はこちら</Link>。</p>
+          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年中の寄附・2026 年分の所得。独身・扶養なし、国民年金 月 17,920 円、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 113 万円）、住民税の調整控除 2,500 円で概算。実際の控除額はお住まいの自治体・税務署にご確認ください。<Link href="/blog/freelance-furusato-nozei" className="text-primary hover:underline">計算方法と確定申告の書き方の解説はこちら</Link>。</p>
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '無料ツール', item: `${SITE_URL}/tools` }, { '@type': 'ListItem', position: 2, name: 'ふるさと納税の上限額', item: `${SITE_URL}/tools/furusato` }, { '@type': 'ListItem', position: 3, name: `売上${label}`, item: `${SITE_URL}/tools/furusato/${a}` }] }) }} />

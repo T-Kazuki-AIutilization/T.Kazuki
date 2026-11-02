@@ -65,7 +65,7 @@ export function NhiCalculator() {
               <div><Label className="text-[10px]">所得割 %</Label><Input inputMode="decimal" defaultValue={(v.childRate * 100).toFixed(2)} onBlur={e => setV(s => ({ ...s, childRate: n(e.target.value) / 100 }))} /></div>
               <div><Label className="text-[10px]">均等割 円</Label><Input inputMode="numeric" defaultValue={v.childPerCapita} onBlur={e => setV(s => ({ ...s, childPerCapita: n(e.target.value) }))} /></div>
             </div>
-            <p className="mt-1 text-[10px] text-muted-foreground">料率は自治体の通知で確認してください（初期値 0）。</p>
+            <p className="mt-1 text-[10px] text-muted-foreground">料率は自治体の通知で確認してください（初期値 0。上限は年 3 万円）。</p>
           </div>
         </details>
         <p className="text-xs text-muted-foreground">入力はこの端末にだけ保存されます。</p>

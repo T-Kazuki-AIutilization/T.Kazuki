@@ -129,7 +129,7 @@ export default function NhiAmountPage({ params }: { params: { amount: string } }
               <li key={v}><Link href={`/tools/nhi/${v}`} className={`inline-block rounded border px-2 py-1 text-xs ${v === a ? 'border-primary bg-primary/10 font-semibold' : 'hover:bg-slate-50'}`}>所得 {v.toLocaleString('ja-JP')}万円</Link></li>
             ))}
           </ul>
-          <p className="mt-6 text-xs text-muted-foreground">前提: 所得 {yen(x)} 円（売上 − 経費 − 青色申告特別控除）、例示の料率、上限は 2025 年度の法定上限。低所得世帯の軽減、子ども・子育て支援金分、減免は含みません。正確な保険料はお住まいの市区町村の通知・試算でご確認ください。<Link href="/blog/freelance-health-insurance-pension" className="text-primary hover:underline">国保と国民年金の解説はこちら</Link>。</p>
+          <p className="mt-6 text-xs text-muted-foreground">前提: 所得 {yen(x)} 円（売上 − 経費 − 青色申告特別控除）、例示の料率、上限は 2026 年度の法定上限（医療分 67 万円・後期高齢者支援金分 26 万円・介護分 17 万円）。低所得世帯の軽減、子ども・子育て支援金分、減免は含みません。正確な保険料はお住まいの市区町村の通知・試算でご確認ください。<Link href="/blog/freelance-health-insurance-pension" className="text-primary hover:underline">国保と国民年金の解説はこちら</Link>。</p>
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '無料ツール', item: `${SITE_URL}/tools` }, { '@type': 'ListItem', position: 2, name: '国民健康保険料の計算', item: `${SITE_URL}/tools/nhi` }, { '@type': 'ListItem', position: 3, name: `所得${label}`, item: `${SITE_URL}/tools/nhi/${a}` }] }) }} />

@@ -62,7 +62,7 @@ export function AoiroCalculator() {
               ))}
             </tbody>
           </table>
-          <p className="mt-3 text-xs text-muted-foreground">2026 年分・独身で概算。国保は（所得 − 43 万円）× 所得割率 ＋ 均等割 6 万円（上限 109 万円）。青色申告特別控除は国保の計算に使う所得も下げます。個人事業税・消費税、青色事業専従者給与や赤字の繰越の効果は含みません。</p>
+          <p className="mt-3 text-xs text-muted-foreground">2026 年分・独身で概算。国保は（所得 − 43 万円）× 所得割率 ＋ 均等割 6 万円（上限 113 万円）。青色申告特別控除は国保の計算に使う所得も下げます。個人事業税・消費税、青色事業専従者給与や赤字の繰越の効果は含みません。</p>
         </div>
       </section>
     </div>

@@ -153,7 +153,7 @@ export default function MonthlyTakeHomePage({ params }: { params: { amount: stri
               <li key={x}><Link href={`/tools/takehome/monthly/${x}`} className={`inline-block rounded border px-2 py-1 text-xs ${x === a ? 'border-primary bg-primary/10 font-semibold' : 'hover:bg-slate-50'}`}>月単価 {x}万円</Link></li>
             ))}
           </ul>
-          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分、月単価は税抜、独身。所得税の基礎控除は 2026 年分の所得区分別の額、住民税 10%＋均等割、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 109 万円）、国民年金 月 17,920 円。概算です。<Link href="/tools/takehome" className="text-primary hover:underline">売上別の手取り一覧はこちら</Link>。</p>
+          <p className="mt-6 text-xs text-muted-foreground">前提: 2026 年分、月単価は税抜、独身。所得税の基礎控除は 2026 年分の所得区分別の額、住民税 10%＋均等割、国保は（所得 − 43 万円）× 10% ＋ 均等割 6 万円（上限 113 万円）、国民年金 月 17,920 円。概算です。<Link href="/tools/takehome" className="text-primary hover:underline">売上別の手取り一覧はこちら</Link>。</p>
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: '無料ツール', item: `${SITE_URL}/tools` }, { '@type': 'ListItem', position: 2, name: '手取り計算', item: `${SITE_URL}/tools/takehome` }, { '@type': 'ListItem', position: 3, name: `月単価${label}`, item: `${SITE_URL}/tools/takehome/monthly/${a}` }] }) }} />
