@@ -1062,7 +1062,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '2割特例が使えるのは 2026 年分までです。令和 8 年度税制改正で、2027 年分と 2028 年分は個人事業者向けの「3割特例」（納税額＝売上にかかる消費税 × 30%）が使えるようになりました。2029 年分からは簡易課税か本則課税です。詳しくは「インボイスの 2 割特例は 2026 年分で終了。2027 年からの 3 割特例」の記事にまとめています。',
       },
-      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-invoice-how-to'] },
+      { type: 'links', items: ['shohizei-1000man-itsukara', 'shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-invoice-how-to'] },
       { type: 'h2', text: '登録しないと何が起きるか' },
       {
         type: 'p',
@@ -3003,7 +3003,7 @@ export const ARTICLES: Article[] = [
         title: '自分の売上で 2 割特例・3 割特例・簡易課税を比べる（無料）',
         items: [{ href: '/tools/shohizei', label: '消費税の計算ツール' }],
       },
-      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-registration', 'freelance-tax-calendar'] },
+      { type: 'links', items: ['shohizei-1000man-itsukara', 'shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-registration', 'freelance-tax-calendar'] },
       { type: 'h2', text: '3 割特例を使える人・使えない人' },
       {
         type: 'p',
@@ -5845,7 +5845,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/invoice', label: '無料の請求書作成ツールを使う' },
       },
-      { type: 'links', items: ['freelance-invoice-3wari-tokurei', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration'] },
+      { type: 'links', items: ['shohizei-1000man-itsukara', 'freelance-invoice-3wari-tokurei', 'freelance-etax-how-to', 'freelance-tax-calendar', 'freelance-invoice-registration'] },
       {
         type: 'note',
         text: '国税庁「2 割特例用 消費税及び地方消費税の確定申告の手引き（個人事業者・法人共通）」（令和 7 年 11 月版）と消費税の Q&A（問 117-3）に基づく一般的な説明です。2026 年分の申告書の様式や作成コーナーの画面は変わる場合があります。個別の判断は税務署や税理士にご確認ください。',
@@ -9671,6 +9671,129 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shohizei-1000man-itsukara',
+    title: '売上 1,000 万円を超えたら消費税はいつから？フリーランスの基準期間（2 年前）・特定期間（給与で判定できる）・税込で数える年と届出、2 割特例・3 割特例への影響',
+    description:
+      'フリーランス・個人事業主の消費税は、その年ではなく 2 年前（基準期間）の課税売上高が 1,000 万円を超えたかで決まります。いつから課税事業者になるかの早見表、前年 1〜6 月の特定期間は給与等の支払額で判定できること、免税事業者だった年は税込の全額で数えること、届出書、インボイス登録者の 2 割特例・3 割特例が使えなくなる年までを国税庁の資料に基づいて整理しました。',
+    date: '2026-11-03',
+    keywords: ['消費税 1000万 超えたら いつから', '個人事業主 消費税 1000万', '基準期間 課税売上高 個人事業主', '特定期間 給与 判定', '消費税 課税事業者届出書 基準期間用', 'フリーランス 売上 1000万 消費税'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '「売上が 1,000 万円を超えたら消費税がかかる」とよく言われますが、個人事業主が消費税を納めるかどうかは、その年の売上ではなく 2 年前（基準期間）の課税売上高で決まります（国税庁タックスアンサー No.6501）。1,000 万円を超えた年の翌々年から課税事業者になる、と覚えておくと分かりやすいです。インボイス登録をしている人は売上に関係なくすでに課税事業者ですが、1,000 万円を超えると 2 割特例・3 割特例が使えない年が出てきます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '判定するのは 2 年前の課税売上高。2025 年に 1,000 万円を超えたら 2027 年分が課税事業者（申告と納付は 2028 年 3 月 31 日まで）',
+          '前年 1〜6 月（特定期間）の課税売上高が 1,000 万円を超えても、同じ期間に払った給与等が 1,000 万円以下なら、給与等で判定して免税のままにできる。どちらで判定するかは自分で選べる',
+          '免税事業者だった年の売上は、請求書で消費税を上乗せしていても、受け取った税込の全額で 1,000 万円と比べる',
+          '課税事業者になる年が決まったら「消費税課税事業者届出書（基準期間用）」を速やかに出す',
+          'インボイス登録者は、2 年前の課税売上高が 1,000 万円を超えた年は 2 割特例（2026 年分まで）・3 割特例（2027・2028 年分）が使えず、簡易課税か本則課税になる',
+        ],
+      },
+      { type: 'h2', text: 'いつから課税事業者になるか（早見表）' },
+      {
+        type: 'table',
+        headers: ['課税売上高が 1,000 万円を超えた年', '課税事業者になる年', '消費税の申告・納付の期限'],
+        rows: [
+          ['2024 年', '2026 年分', '2027 年 3 月 31 日'],
+          ['2025 年', '2027 年分', '2028 年 3 月 31 日'],
+          ['2026 年', '2028 年分', '2029 年 3 月 31 日'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '判定は 1 年ごとです。たとえば 2025 年が 1,100 万円、2026 年が 900 万円なら、2027 年分は課税事業者、2028 年分は（インボイス登録をしていなければ）免税事業者に戻ります。課税事業者になる年に売上が 1,000 万円を下回っていても、その年は消費税の申告が必要です。',
+      },
+      {
+        type: 'p',
+        text: '開業した年と翌年は、基準期間（2 年前）に売上がないので、原則として免税事業者です（No.6531）。ただし、インボイス登録をした場合と、次の特定期間の基準に当たる場合は除きます。',
+      },
+      { type: 'h2', text: '特定期間: 前年 1〜6 月の売上と給与' },
+      {
+        type: 'p',
+        text: '2 年前の課税売上高が 1,000 万円以下でも、前年の 1 月 1 日〜6 月 30 日（特定期間）の課税売上高が 1,000 万円を超えると、その年は課税事業者になります。ただし、特定期間の 1,000 万円の判定は、課税売上高の代わりに、同じ期間に払った給与等の合計額で行うこともでき、どちらで判定するかは納税者が選べます（No.6501）。',
+      },
+      {
+        type: 'p',
+        text: '従業員を雇っていない一人のフリーランスなら給与等の支払額は 1,000 万円を大きく下回るので、前年の上半期の売上が 1,000 万円を超えても、給与等で判定すれば特定期間の基準では課税事業者になりません。前年の途中で開業した場合の特定期間は、開業日から 6 月 30 日までで、6 か月分に換算はしません（No.6531）。',
+      },
+      { type: 'h2', text: '課税売上高の数え方' },
+      {
+        type: 'table',
+        headers: ['項目', '扱い'],
+        rows: [
+          ['免税事業者だった年の売上', '受け取った金額の全額（税込）で数える。請求書で「消費税 10%」を上乗せしていても、その分を引かない（消費税法基本通達 1-4-5）'],
+          ['課税事業者だった年の売上', '消費税を除いた税抜の金額で数える'],
+          ['源泉徴収された報酬', '源泉徴収される前の報酬額で数える'],
+          ['返品・値引きをした分', '売上から差し引く'],
+          ['会社員の給与、保険金、預金の利息など', '課税売上ではないので含めない'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '見落としやすいのが 1 行目です。免税事業者が本体 950 万円に消費税相当の 95 万円を上乗せして請求し、1,045 万円を受け取っていれば、その年の課税売上高は 1,045 万円で、1,000 万円を超えます。売上が 900 万円台後半になったら、税込の入金額で確認しておきましょう。',
+      },
+      { type: 'h2', text: '出す書類' },
+      {
+        type: 'table',
+        headers: ['こんなとき', '書類', '期限'],
+        rows: [
+          ['基準期間（2 年前）の課税売上高が 1,000 万円を超えた', '消費税課税事業者届出書（基準期間用）', '事由が生じたら速やかに'],
+          ['特定期間（前年 1〜6 月）の課税売上高が 1,000 万円を超えた（給与等で判定しない場合）', '消費税課税事業者届出書（特定期間用）', '事由が生じたら速やかに'],
+          ['基準期間の課税売上高が 1,000 万円以下になった', '消費税の納税義務者でなくなった旨の届出書', '事由が生じたら速やかに'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '書類と期限は国税庁タックスアンサー No.6629 の一覧によります。なお、インボイス登録をしている人は、基準期間の課税売上高が 1,000 万円以下になっても、登録を取り消さない限り課税事業者のままです（No.6501）。',
+      },
+      { type: 'h2', text: 'インボイス登録をしている人への影響' },
+      {
+        type: 'p',
+        text: 'インボイス登録で課税事業者になった人は、2026 年分までは 2 割特例（売上の消費税の 2 割を納める）、2027・2028 年分は 3 割特例を使えます。ただしどちらも、基準期間（2 年前）の課税売上高が 1,000 万円を超えている年など、登録がなくても課税事業者になる年には使えません。',
+      },
+      {
+        type: 'table',
+        headers: ['計算方法', '納める消費税の目安（税抜売上 1,000 万円・第 5 種の場合）', 'この年に使えるか'],
+        rows: [
+          ['2 割特例・3 割特例', '20 万円・30 万円', '使えない（2 年前が 1,000 万円超）'],
+          ['簡易課税（サービス業など第 5 種、みなし仕入率 50%）', '約 50 万円', '届出をしていれば使える'],
+          ['本則課税（実際の経費の消費税を引く）', '経費の額で変わる', '使える'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '簡易課税を使えるのは基準期間の課税売上高が 5,000 万円以下の年で、原則として使いたい年の前年末までに「消費税簡易課税制度選択届出書」を出します。2 割特例・3 割特例を使った年の翌年分は、令和 8 年度の税制改正で、その翌年分の確定申告期限までに出せばその年分から簡易課税を使えるようになりました。第 5 種の場合、経費のうち消費税がかかるもの（課税仕入れ）が売上の半分より少なければ、簡易課税のほうが本則課税より納税額が少なくなります。売上が 1,000 万円に近づいたら、2 年後にどの方法にするかを決めておきましょう。',
+      },
+      {
+        type: 'cta',
+        title: '消費税の納税額を計算する（無料ツール）',
+        text: '売上と業種を入れると、2 割特例・3 割特例と簡易課税の納税額を比べられます。申告と納付の期限も確認できます。登録不要。',
+        href: '/tools/shohizei',
+        label: '消費税の計算ツールを開く',
+        secondary: { href: '/signup', label: 'FreelanceOS で売上を管理する（無料）' },
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '会社員の給与と副業の売上を合わせて 1,000 万円を超えたら？' },
+      { type: 'p', text: '給与は課税売上ではないので含めません。判定するのは、事業として行った売上（課税売上）の合計です。' },
+      { type: 'h3', text: '1,000 万円を超えた年から消費税を請求し始めるべき？' },
+      { type: 'p', text: '消費税を納めるのは 2 年後の売上の分です。その年に請求する金額をどうするかは取引先との契約によります。課税事業者になる年の売上から納めることになるので、その年の請求額や単価を見直すときの参考にしてください。' },
+      { type: 'h3', text: '法人成りすれば消費税はかからない？' },
+      { type: 'p', text: '新しく作った法人は、資本金 1,000 万円未満などの条件を満たせば設立後しばらく免税になることがありますが、特定期間の判定や、インボイス登録をした場合の扱いなど条件があります。3 割特例は個人事業者だけが対象なので、法人成りすると使えません。法人成りは消費税だけでなく社会保険料や手間も含めて判断することになるので、税理士に相談してください。' },
+      { type: 'h3', text: '届出書を出し忘れたら？' },
+      { type: 'p', text: '届出書を出していなくても、基準期間の課税売上高が 1,000 万円を超えていれば課税事業者で、消費税の申告と納付が必要です。気づいた時点で届出書を出し、申告期限に遅れた場合は期限後申告をします。' },
+      { type: 'links', items: ['freelance-invoice-3wari-tokurei', 'shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-registration', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'freelance-tax-calendar'] },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.6501（納税義務の免除）・No.6531（新規開業又は法人の新規設立のとき）・No.6629（消費税の各種届出書）、消費税法基本通達 1-4-5、令和 8 年度税制改正の大綱に基づく一般的な説明です。個別の判断は税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -9731,7 +9854,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',

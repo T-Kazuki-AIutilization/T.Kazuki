@@ -86,6 +86,7 @@ export default function ShohizeiToolPage() {
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/shohizei-shinkoku-2wari-yarikata" className="text-primary hover:underline">消費税の確定申告のやり方（2 割特例）。付表 6 と申告書の書き方、期限と納付</Link></li>
             <li><Link href="/blog/freelance-invoice-3wari-tokurei" className="text-primary hover:underline">2 割特例は 2026 年分で終了。2027 年からの 3 割特例で消費税はいくら増える？</Link></li>
+            <li><Link href="/blog/shohizei-1000man-itsukara" className="text-primary hover:underline">売上 1,000 万円を超えたら消費税はいつから？基準期間・特定期間と 2 割特例・3 割特例への影響</Link></li>
             <li><Link href="/blog/freelance-invoice-registration" className="text-primary hover:underline">フリーランスはインボイス登録すべき？判断基準と登録しない場合の値引き交渉</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">手取り計算シミュレーター（消費税を含めた手取り）</Link></li>
           </ul>
