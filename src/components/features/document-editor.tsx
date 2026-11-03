@@ -44,7 +44,8 @@ function save(key: string, v: unknown) { try { localStorage.setItem(key, JSON.st
 export function computeTotals(doc: Doc | null): Totals {
   const subtotal = (doc?.items ?? []).reduce((s, it) => s + Math.floor((it.qty || 0) * (it.unit || 0)), 0)
   const tax = Math.floor(subtotal * 0.1)
-  const withholding = doc?.withholding ? Math.floor(subtotal * 0.1021) : 0
+  // 1 回の支払いが 100 万円を超える部分は 20.42%
+  const withholding = !doc?.withholding ? 0 : subtotal <= 1000000 ? Math.floor(subtotal * 0.1021) : Math.floor((subtotal - 1000000) * 0.2042 + 102100)
   return { subtotal, tax, withholding, total: subtotal + tax - withholding }
 }
 
@@ -179,7 +180,7 @@ export function DocumentEditor({ storageKey, initial, fixedClientName, paid, bac
                   <button type="button" onClick={addItem} className="inline-flex items-center text-xs text-primary hover:underline"><Plus className="mr-1 h-3 w-3" />行を追加</button>
                 </div>
               </div>
-              <label className="flex items-center gap-2 text-xs"><input type="checkbox" checked={doc.withholding} onChange={e => setDoc(d => d && ({ ...d, withholding: e.target.checked }))} />源泉徴収税額（税抜額 × 10.21%）を差し引く</label>
+              <label className="flex items-center gap-2 text-xs"><input type="checkbox" checked={doc.withholding} onChange={e => setDoc(d => d && ({ ...d, withholding: e.target.checked }))} />源泉徴収税額（税抜額 × 10.21%、100 万円超の部分は 20.42%）を差し引く</label>
               <div><Label className="text-xs">備考</Label><textarea className="w-full rounded-md border px-3 py-2 text-sm" rows={2} value={doc.note} onChange={setD('note')} /></div>
             </div>
           </section>
@@ -226,7 +227,7 @@ export function DocumentEditor({ storageKey, initial, fixedClientName, paid, bac
             <div className="mt-4 ml-auto w-72 space-y-1">
               <div className="flex justify-between"><span>小計（税抜）</span><span>¥{yen(totals.subtotal)}</span></div>
               <div className="flex justify-between"><span>消費税（10%）</span><span>¥{yen(totals.tax)}</span></div>
-              {doc.withholding && <div className="flex justify-between"><span>源泉徴収税額（10.21%）</span><span>−¥{yen(totals.withholding)}</span></div>}
+              {doc.withholding && <div className="flex justify-between"><span>源泉徴収税額</span><span>−¥{yen(totals.withholding)}</span></div>}
               <div className="flex justify-between border-t-2 border-slate-800 pt-1 text-base font-bold"><span>合計</span><span>¥{yen(totals.total)}</span></div>
             </div>
             {issuer.bank && doc.kind === 'invoice' && (
