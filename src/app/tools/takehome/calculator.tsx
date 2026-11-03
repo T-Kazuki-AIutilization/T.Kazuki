@@ -39,8 +39,8 @@ export function TakeHomeCalculator() {
         <div>
           <Label className="text-xs">個人事業税</Label>
           <select className="mt-1 h-10 w-full rounded-md border px-3 text-sm" value={v.bizRate} onChange={e => setV(s => ({ ...s, bizRate: Number(e.target.value) }))}>
-            <option value={0}>非該当（ライター・プログラマー等）0%</option>
-            <option value={0.05}>該当（デザイン・コンサル・製造等）5%</option>
+            <option value={0}>非該当（ライター等）0%</option>
+            <option value={0.05}>該当（デザイン・コンサル・請負等）5%</option>
             <option value={0.04}>4%（畜産・水産・薪炭製造）</option>
             <option value={0.03}>3%（あん摩・マッサージ等）</option>
           </select>

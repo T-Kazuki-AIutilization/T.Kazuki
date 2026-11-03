@@ -129,7 +129,7 @@ export default function TakeHomeAmountPage({ params }: { params: { amount: strin
 
         <h2 className="mt-10 text-xl font-bold">条件によって変わるもの</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed">
-          <li>個人事業税: デザイン業・コンサルタント業など法定業種なら、（所得 − 事業主控除 290 万円）× 5% で約 {man(biz.bizTax)} 万円かかり、手取りは約 {man(biz.takeHome)} 万円になります。ライター・プログラマーなど非該当の業種はかかりません。</li>
+          <li>個人事業税: デザイン業・コンサルタント業など法定業種なら、（所得 − 事業主控除 290 万円）× 5% で約 {man(biz.bizTax)} 万円かかり、手取りは約 {man(biz.takeHome)} 万円になります。ライター（文筆業）など法定業種に当たらない場合はかかりません。エンジニア・プログラマーは、契約の形態などにより請負業として課税される場合があります（判断は都道府県）。</li>
           <li>インボイス登録した課税事業者: 消費税の納税が加わります。2026 年分は 2 割特例で約 {man(ct2.consumptionTax)} 万円（手取り 約 {man(ct2.takeHome)} 万円）、2027・2028 年分は 3 割特例で約 {man(ct3.consumptionTax)} 万円（手取り 約 {man(ct3.takeHome)} 万円）が目安です（売上を税抜で計算）。</li>
           <li>国民健康保険: 料率と均等割は自治体ごとに違い、40〜64 歳は介護分が加わります。扶養家族がいれば人数分の均等割がかかります。</li>
           <li>ふるさと納税: この条件での上限の目安は約 {furusato.toLocaleString('ja-JP')} 円です（<Link href={`/tools/furusato/${a}`} className="text-primary hover:underline">売上{label}のふるさと納税の上限</Link>）。</li>
