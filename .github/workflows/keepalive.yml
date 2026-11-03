@@ -1,0 +1,17 @@
+name: Supabase keepalive
+
+# Supabase の無料プロジェクトは 7 日間アクティビティがないと一時停止される（2026-11-03 に停止）。
+# Vercel Cron（1 日 1 回）に加えて、6 時間ごとにサイトの keepalive を呼んで DB への読み取りを発生させる。
+on:
+  schedule:
+    - cron: '41 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Call keepalive endpoint
+        run: |
+          curl -fsS --retry 3 --retry-delay 20 --max-time 30 https://freelanceos-eosin.vercel.app/api/cron/keepalive
