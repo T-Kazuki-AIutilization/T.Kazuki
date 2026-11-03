@@ -1304,7 +1304,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ポイントは「前年の所得」で決まることです。独立 1 年目は会社員時代の給与所得で計算されるため高くなりがちで、2 年目は 1 年目の事業所得で決まります。売上が伸びた翌年に保険料が跳ね上がるので、資金繰りの計画に入れておく必要があります。',
       },
-      { type: 'links', items: ['kokumin-nenkin-menjo-freelance', 'freelance-rousai-tokubetsu-kanyu', 'fuyou-130man-freelance', 'kokuho-keigen-freelance', 'saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
+      { type: 'links', items: ['kokumin-nenkin-menjo-freelance', 'fuka-nenkin-freelance', 'freelance-rousai-tokubetsu-kanyu', 'fuyou-130man-freelance', 'kokuho-keigen-freelance', 'saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '国民年金の保険料' },
       {
         type: 'p',
@@ -3526,7 +3526,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '国民年金保険料は全額が社会保険料控除になり、所得税・住民税が下がります。2 年前納した場合は、「納めた年に全額を控除する」か「各年分に相当する額をそれぞれの年に控除する」かを選べます。所得の高い年にまとめて控除すると節税効果が大きくなることがあります。各年に分ける場合は、内訳の明細書を申告書に添付します。手続きの詳細は国税庁の案内（2 年前納された国民年金保険料の社会保険料控除について）で確認してください。',
       },
-      { type: 'links', items: ['kokumin-nenkin-menjo-freelance', 'shakai-hokenryo-koujo-freelance', 'freelance-health-insurance-pension', 'freelance-year-end-checklist', 'freelance-take-home-pay'] },
+      { type: 'links', items: ['fuka-nenkin-freelance', 'kokumin-nenkin-menjo-freelance', 'shakai-hokenryo-koujo-freelance', 'freelance-health-insurance-pension', 'freelance-year-end-checklist', 'freelance-take-home-pay'] },
       { type: 'h2', text: '月 400 円で年金を増やせる「付加年金」' },
       {
         type: 'ul',
@@ -6280,7 +6280,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kyosai', label: '無料の節税額シミュレーターを使う' },
       },
-      { type: 'links', items: ['shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
+      { type: 'links', items: ['shokibo-kyosai-freelance', 'fuka-nenkin-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
       {
         type: 'note',
         text: '厚生労働省「2026 年 12 月（2027 年 1 月引き落とし分）から iDeCo の拠出限度額と加入可能年齢が引き上げられます」リーフレット、国税庁 タックスアンサー No.1135「小規模企業共済等掛金控除」に基づく一般的な説明です。上限の計算や手続きの締切は加入状況と加入先によって違うので、加入している金融機関（運営管理機関）で確認してください。',
@@ -9356,7 +9356,7 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: 'できます。日本年金機構は、追納した保険料は社会保険料控除の対象になると案内しています。確定申告では、その年に払った国民健康保険料などと合わせて社会保険料控除に記入します。控除証明書の扱いは日本年金機構の「社会保険料（国民年金保険料）控除証明書」のページか年金事務所で確認してください。' },
       { type: 'h3', text: '育児免除の届出を忘れて、保険料を払ってしまった' },
       { type: 'p', text: '育児免除の期間にすでに納めた保険料があっても、届出をすれば育児免除期間として扱われ、納めた分はほかの月に充当されるか還付されます。届出は、育児免除の要件を満たした日以降、速やかに行うよう案内されています。' },
-      { type: 'links', items: ['freelance-kokumin-nenkin-zennou', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'shakai-hokenryo-koujo-freelance', 'saishushoku-teate-kaigyo', 'ideco-jogen-75000-freelance', 'freelance-take-home-pay'] },
+      { type: 'links', items: ['freelance-kokumin-nenkin-zennou', 'fuka-nenkin-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'shakai-hokenryo-koujo-freelance', 'saishushoku-teate-kaigyo', 'ideco-jogen-75000-freelance', 'freelance-take-home-pay'] },
       {
         type: 'note',
         text: '日本年金機構「国民年金保険料の免除制度・納付猶予制度」「国民年金保険料の免除等の申請が可能な期間」「国民年金保険料の追納制度」「国民年金保険料の育児免除制度」「国民年金保険料の産前産後期間の免除制度」「付加保険料の納付」「日本年金機構の取り組み（国民年金保険料の強制徴収）」、iDeCo 公式サイト、国民年金法 88 条の 2・88 条の 3・90 条・94 条に基づく一般的な説明です（2026 年 11 月時点）。承認されるかどうかや必要な書類は、市区町村の国民年金窓口か年金事務所に確認してください。',
@@ -9935,6 +9935,127 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'fuka-nenkin-freelance',
+    title: '付加年金はフリーランスが入るべき？月 400 円で年金が年 200 円 × 月数増え、2 年で元が取れる仕組みと、iDeCo・国民年金基金との関係、申込み・やめ方',
+    description:
+      '付加年金は、国民年金の第 1 号被保険者（フリーランス・自営業）が月 400 円の付加保険料を上乗せすると、老齢基礎年金に「200 円 × 納付月数」が加算される制度です。2 年受け取れば元が取れる計算、払えない人（免除中・国民年金基金の加入員）、iDeCo の枠との関係、前納の割引額（令和 8 年度）、申込み・やめ方を日本年金機構の資料に基づいて整理しました。',
+    date: '2026-11-03',
+    keywords: ['付加年金 フリーランス', '付加年金 入るべき', '付加保険料 400円', '付加年金 iDeCo 併用', '付加年金 国民年金基金', '付加年金 申込み マイナポータル'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '会社員をやめてフリーランスになると、将来の年金は国民年金（老齢基礎年金）だけになります。年金を増やす方法には iDeCo や国民年金基金もありますが、いちばん少ない負担で始められるのが付加年金です。国民年金の保険料に月 400 円を上乗せするだけで、受け取る年金が増えます（日本年金機構「付加保険料の納付」）。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '付加保険料は月 400 円。受け取る年金に「200 円 × 付加保険料を納めた月数」（年額）が上乗せされる',
+          '払った額の半分が毎年戻ってくる計算なので、2 年以上受け取れば払った額を上回る',
+          '払えるのは国民年金の第 1 号被保険者と 65 歳未満の任意加入被保険者。免除・納付猶予を受けている人と国民年金基金の加入員は払えない',
+          'iDeCo とは同時に入れるが、第 1 号の iDeCo の上限は付加保険料と合わせた額。iDeCo を上限近くまで使う人は加入先に確認',
+          '申込みは市区町村役場・年金事務所かマイナポータルの電子申請。申し出た月の分からで、さかのぼっては払えない',
+        ],
+      },
+      { type: 'h2', text: '付加年金の仕組み: いくら払って、いくら増えるか' },
+      {
+        type: 'p',
+        text: '付加保険料は 1 か月 400 円で、国民年金の定額保険料（令和 8 年度は月 17,920 円）と一緒に納めます。65 歳から受け取る老齢基礎年金に、付加年金として「200 円 × 付加保険料を納めた月数」が毎年上乗せされます。',
+      },
+      {
+        type: 'table',
+        headers: ['付加保険料を納めた期間', '払う付加保険料の合計', '増える年金（年額）', '払った額を上回るまで'],
+        rows: [
+          ['1 年（12 か月）', '4,800 円', '2,400 円', '2 年'],
+          ['5 年（60 か月）', '24,000 円', '12,000 円', '2 年'],
+          ['10 年（120 か月）', '48,000 円', '24,000 円', '2 年'],
+          ['20 年（240 か月）', '96,000 円', '48,000 円', '2 年'],
+          ['40 年（480 か月）', '192,000 円', '96,000 円', '2 年'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '日本年金機構の例では、20 歳から 60 歳まで 40 年間納めると、老齢基礎年金 847,300 円に付加年金 96,000 円が上乗せされ、年 943,300 円になります（定額保険料を 40 年間納めた場合の令和 8 年度の額）。何年納めても、受け取り始めて 2 年で払った額と同じになり、3 年目以降は払った額を上回ります。',
+      },
+      { type: 'h2', text: '知っておきたい注意点' },
+      {
+        type: 'ul',
+        items: [
+          '付加年金には物価スライドがない（日本年金機構「年金用語集」）。物価が上がっても、付加年金の額は 200 円 × 月数のまま',
+          '国民年金基金の加入員は付加保険料を払えない。どちらかを選ぶことになる',
+          '国民年金保険料の免除（全額・一部）、納付猶予、学生納付特例を受けている間は払えない。産前産後の免除の期間は払える',
+          '申し出た月の分から始まり、それより前の月にさかのぼって払うことはできない。始めるなら早いほど納付月数が増える',
+          '会社員（第 2 号）や会社員の扶養配偶者（第 3 号）は対象外。フリーランスから会社員になると、付加保険料もそこで終わる',
+        ],
+      },
+      { type: 'h2', text: 'iDeCo・国民年金基金との関係' },
+      {
+        type: 'table',
+        headers: ['', '付加年金', '国民年金基金', 'iDeCo'],
+        rows: [
+          ['掛金', '月 400 円（固定）', '加入時の年齢や口数で決まる', '自分で決める（上限あり）'],
+          ['付加年金との併用', '—', 'できない', 'できる（上限の枠を合算）'],
+          ['受け取る額', '200 円 × 月数（年額・終身）', '加入した口数などで決まる', '運用の結果しだい'],
+          ['所得控除', '社会保険料控除', '社会保険料控除', '小規模企業共済等掛金控除'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '日本年金機構は「個人型確定拠出年金と付加年金は同時に加入することができます」としたうえで、iDeCo の拠出額によっては付加保険料と併用できない場合があるとしています。フリーランス（第 1 号）の iDeCo の上限は、国民年金基金の掛金・付加保険料と合わせて月 6.8 万円（2026 年 12 月分からは 7.5 万円）なので、付加保険料を払う人の iDeCo の枠はその分小さくなります。iDeCo を上限いっぱいまで使いたい人は、iDeCo の加入先（運営管理機関）に確認してください。',
+      },
+      {
+        type: 'p',
+        text: '付加保険料は、国民年金保険料と同じく社会保険料控除の対象です。年 4,800 円を払うと、その年の所得から 4,800 円が差し引かれます。',
+      },
+      { type: 'h2', text: '申込み・払い方・やめ方' },
+      {
+        type: 'table',
+        headers: ['手続き', '方法', 'いつから'],
+        rows: [
+          ['始める', '「国民年金被保険者関係届書（申出書）」を市区町村役場・年金事務所に出す。マイナポータルから電子申請もできる', '申し出た日の属する月の分から（郵送は受け付けた日の月の分から）'],
+          ['払う', '国民年金保険料と一緒に、納付書・口座振替・クレジットカードで。前納もできる', '納付期限は翌月末。過ぎても 2 年以内なら払える'],
+          ['やめる', '同じ申出書（辞退）を出す。マイナポータルからも申請できる', '申し出た月の前月の分まで払い、その月から払わなくなる'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '国民年金保険料を前納している人には、付加保険料の納付書が別に送られます。口座振替の人は、手続きの関係で最初の 1〜2 か月は納付書で払う場合があります（日本年金機構「国民年金付加年金制度のお知らせ」）。',
+      },
+      {
+        type: 'table',
+        headers: ['付加保険料の前納（令和 8 年度）', '納付書・クレジットカード', '口座振替'],
+        rows: [
+          ['2 年前納（毎月なら 9,600 円）', '9,250 円（350 円割引）', '9,220 円（380 円割引）'],
+          ['1 年前納（毎月なら 4,800 円）', '4,710 円（90 円割引）', '4,700 円（100 円割引）'],
+          ['6 か月前納（毎月なら 2,400 円）', '2,380 円（20 円割引）', '2,370 円（30 円割引）'],
+        ],
+      },
+      {
+        type: 'cta',
+        title: 'iDeCo・小規模企業共済の節税額を計算する（無料ツール）',
+        text: '売上と掛金を入れると、iDeCo・小規模企業共済で所得税・住民税がいくら減るかを計算できます。付加年金とあわせて老後の備えを考えるときに。登録不要。',
+        href: '/tools/kyosai',
+        label: '節税額の計算ツールを開く',
+        secondary: { href: '/signup', label: 'FreelanceOS で売上を管理する（無料）' },
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '会社をやめてフリーランスになった。いつ申し込めばいい？' },
+      { type: 'p', text: '国民年金の第 1 号被保険者への切り替え（種別変更）と同時に申し込めます。マイナポータルには、資格取得（種別変更）届と付加保険料の申出をまとめて出せる電子申請があります。申し出た月の分からしか払えないので、入るなら切り替えのときに一緒に出すと月数を取りこぼしません。' },
+      { type: 'h3', text: '国民年金保険料の免除を受けている。付加保険料だけ払える？' },
+      { type: 'p', text: '払えません。全額免除・一部免除・納付猶予・学生納付特例の期間は付加保険料を納められません（産前産後の免除の期間を除く）。' },
+      { type: 'h3', text: '払い忘れた月はどうなる？' },
+      { type: 'p', text: '納付期限（翌月末）を過ぎても、期限から 2 年間は払えます。ただし、申し出る前の月の分をさかのぼって払うことはできません。' },
+      { type: 'h3', text: '60 歳以降も払える？' },
+      { type: 'p', text: '60 歳以降に国民年金に任意加入している場合は、65 歳未満なら付加保険料を払えます。' },
+      { type: 'links', items: ['freelance-kokumin-nenkin-zennou', 'ideco-jogen-75000-freelance', 'kokumin-nenkin-menjo-freelance', 'shakai-hokenryo-koujo-freelance', 'freelance-health-insurance-pension', 'shokibo-kyosai-freelance'] },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の日本年金機構「付加保険料の納付」「付加保険料に関する電子申請」「国民年金保険料の前納」「年金用語集（付加年金）」「国民年金付加年金制度のお知らせ」に基づく一般的な説明です。個別の手続きは年金事務所または市区町村の国民年金の窓口にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -10001,7 +10122,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'setup',
     name: '開業・制度・ツール',
     description: '開業届、国保と年金、案件管理ツールの選び方',
-    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'fuyou-130man-freelance', 'freelance-rousai-tokubetsu-kanyu', 'freelance-kokumin-nenkin-zennou', 'kokumin-nenkin-menjo-freelance', 'freelance-project-management-tools'],
+    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'fuyou-130man-freelance', 'freelance-rousai-tokubetsu-kanyu', 'freelance-kokumin-nenkin-zennou', 'fuka-nenkin-freelance', 'kokumin-nenkin-menjo-freelance', 'freelance-project-management-tools'],
   },
 ]
 

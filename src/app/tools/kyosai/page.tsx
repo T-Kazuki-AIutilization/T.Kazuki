@@ -39,6 +39,7 @@ export default function KyosaiToolPage() {
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
             <li><Link href="/blog/ideco-jogen-75000-freelance" className="text-primary hover:underline">iDeCo の上限が月 7.5 万円に（2026 年 12 月分から）。節税額はいくら増える？</Link></li>
+            <li><Link href="/blog/fuka-nenkin-freelance" className="text-primary hover:underline">付加年金は入るべき？月 400 円で年金が増える仕組みと iDeCo との関係</Link></li>
             <li><Link href="/blog/shokibo-kyosai-freelance" className="text-primary hover:underline">小規模企業共済は入るべき？節税額と 2026 年分に間に合う加入方法、受け取るときの税金</Link></li>
             <li><Link href="/blog/keiei-safety-kyosai-freelance" className="text-primary hover:underline">経営セーフティ共済（倒産防止共済）は節税になる？掛金を経費にする条件と解約時の税金</Link></li>
             <li><Link href="/blog/freelance-year-end-checklist" className="text-primary hover:underline">フリーランスが年内にやることチェックリスト（共済の前納など）</Link></li>
