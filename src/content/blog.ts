@@ -730,6 +730,7 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: '金額や売上に対する割合の上限はありません。判断基準は「その支出が売上を得るために必要だったか」と、それを説明できるかです。ただし、業種のわりに経費の割合が極端に高いと、税務署から内容を確認されやすくなります。領収書や明細と、何のための支出かのメモを残しておきましょう。' },
       { type: 'h3', text: '一人で食べたランチやカフェ代は経費になる？' },
       { type: 'p', text: '一人での食事は、仕事の合間でも生活費なので原則として経費になりません。取引先との打ち合わせを兼ねた飲食代は会議費や接待交際費として経費にでき、作業のために入ったカフェの席料・ドリンク代は、仕事のための利用であることを説明できれば経費にしている人もいます（日付・目的をメモしておく）。' },
+      { type: 'links', items: ['kosaihi-freelance'] },
       { type: 'h3', text: '10 万円以上のパソコンはどうなる？' },
       { type: 'p', text: '1 つ（1 組）10 万円以上の備品は、原則として買った年に全額ではなく、耐用年数（パソコンは 4 年）に分けて減価償却します。青色申告をしている人は「少額減価償却資産の特例」で、2026 年 4 月 1 日以後に取得した 40 万円未満の資産（3 月 31 日までの取得は 30 万円未満）を、使い始めた年に全額経費にできます（年 300 万円まで）。20 万円未満なら白色申告でも 3 年で 1/3 ずつ経費にできます（一括償却資産）。' },
       { type: 'linkgrid', title: '方法ごとに今年の経費を比べる（無料）', items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール' }] },
@@ -10384,6 +10385,108 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kosaihi-freelance',
+    title: '個人事業主の交際費に上限はある？忘年会・お歳暮・ご祝儀は経費になるか、「1 人 1 万円」基準は法人のルール（フリーランス向け）',
+    description:
+      'フリーランス・個人事業主の接待交際費には、法人のような金額の上限はありません。経費になるかどうかは「業務のために必要か」「私的な部分と区分できるか」で決まります。上限と「1 人 1 万円以下の飲食費」の基準が法人税のルールであること、取引先との飲食・忘年会・お歳暮・ご祝儀・香典の考え方、経費にできない例、残しておく記録を、国税庁の資料と租税特別措置法に基づいて整理しました。',
+    date: '2026-11-04',
+    keywords: ['個人事業主 交際費 上限', 'フリーランス 交際費', '個人事業主 飲み代 経費', '交際費 1万円 個人事業主', '忘年会 経費 個人事業主', 'お歳暮 経費 個人事業主', '香典 経費 個人事業主'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '年末は、取引先との忘年会やお歳暮など、交際費が増える時期です。「交際費は年 800 万円まで」「1 人 1 万円以下なら会議費」といった話を目にしますが、これらは法人（会社）の税金のルールです。個人事業主・フリーランスの所得税では、交際費の扱いが違います。何が経費になり、何を記録しておけばいいかをまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '個人事業主の交際費には、金額の上限はない。交際費の上限（損金不算入）の規定は、租税特別措置法第 61 条の 4 の法人向けの規定',
+          '経費になるかは、業務のために必要な支出か、私的な部分と区分できるかで決まる（所得税法第 37 条・第 45 条）',
+          '「1 人 1 万円以下の飲食費は交際費から除く」も法人の基準。個人は会議費・交際費のどちらの科目にしても、経費になるかどうかは変わらない',
+          '友人・家族との食事や、自分一人の食事は、仕事の話をしても原則として経費にならない',
+          '日付・相手・人数・金額・目的を記録しておくと、業務のための支出だと説明しやすい',
+        ],
+      },
+      { type: 'h2', text: '法人と個人で何が違うか' },
+      {
+        type: 'table',
+        headers: ['', '法人（会社）', '個人事業主・フリーランス'],
+        rows: [
+          ['交際費の金額の上限', 'あり（租税特別措置法第 61 条の 4。資本金などに応じて損金にできる額が決まる）', 'なし'],
+          ['1 人 1 万円以下の飲食費', '一定の記録を保存すれば交際費から除ける（2024 年 3 月までは 5,000 円）', 'この基準はない。業務に必要な飲食なら金額にかかわらず経費'],
+          ['経費になるかの判断', '法人税法の損金の規定', '業務のために必要か、私的な部分と区分できるか'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '租税特別措置法で交際費の損金不算入を定めているのは第 61 条の 4 で、条文は「法人が」で始まります。国税庁のタックスアンサー No.5265「交際費等の範囲と損金不算入額の計算」も法人税の項目です。個人の所得税には同じような上限の規定はなく、国税庁のタックスアンサー No.2210「必要経費の知識」が示す一般的なルールで判断します。',
+      },
+      { type: 'h2', text: '経費になるかの判断基準' },
+      {
+        type: 'p',
+        text: '所得税で必要経費にできるのは、売上を得るために直接かかった費用と、その年の販売費・一般管理費などの業務上の費用です（所得税法第 37 条）。家事上の費用（生活費）は経費にならず、業務と私的な用途の両方にかかわる支出は、業務に必要だったことが明らかに区分できる部分だけが経費になります（所得税法第 45 条、所得税法施行令第 96 条、タックスアンサー No.2210）。交際費は私的な付き合いとの境目があいまいになりやすいので、「誰と・何のために」を説明できるかが分かれ目です。',
+      },
+      {
+        type: 'table',
+        headers: ['支出', '経費にできるか', '考え方'],
+        rows: [
+          ['取引先・見込み客との食事（打ち合わせ・接待）', 'できる', '業務の相手との飲食。相手と目的を記録しておく'],
+          ['取引先との忘年会・新年会の会費', 'できる', '取引先が主催する会や、取引関係者の集まりへの参加費'],
+          ['取引先へのお歳暮・お中元・手土産', 'できる', '贈った相手と品物を記録しておく'],
+          ['取引先の慶弔（ご祝儀・香典・お祝いの品）', 'できる', '領収書が出ないので、日付・相手・金額をメモし、招待状や会葬礼状を残す'],
+          ['同業者・仕事仲間との情報交換の飲食', '内容による', '仕事の紹介や共同の案件など、業務とのつながりを説明できるか'],
+          ['友人・家族との食事', 'できない', '私的な支出。仕事の話をしても原則として経費にならない'],
+          ['自分一人の食事', 'できない', '交際の相手がいない生活費'],
+          ['家族へのプレゼント、私的な冠婚葬祭', 'できない', '私的な支出'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '経費にできるのは、その年に支払いの義務が確定した分です（タックスアンサー No.2210）。12 月の忘年会の代金を 1 月にカードで払う場合も、12 月の飲食の分はその年の経費になります。',
+      },
+      { type: 'h2', text: '残しておきたい記録' },
+      {
+        type: 'p',
+        text: '法人が 1 人 1 万円以下の飲食費を交際費から除くときは、次の項目を書いた書類の保存が条件です（タックスアンサー No.5265）。個人事業主には義務ではありませんが、同じ項目を領収書の裏やメモに残しておくと、業務のための支出だと説明しやすくなります。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '飲食などの年月日',
+          '参加した相手の氏名または名称と、自分との関係（取引先 ◯◯社の担当者など）',
+          '参加した人数',
+          '金額と、店の名前・所在地',
+          '目的（新規案件の打ち合わせ、年末のあいさつなど）',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'ご祝儀や香典のように領収書が出ない支出は、出金伝票やメモに日付・相手・金額・内容を書き、招待状や会葬礼状と一緒に保存しておきます。',
+      },
+      { type: 'links', items: ['freelance-expenses-list', 'kaji-anbun-freelance', 'freelance-boki-shiwake', 'freelance-denshi-chobo-hozon'] },
+      {
+        type: 'cta',
+        title: '確定申告準備キット（Excel）',
+        text: '経費帳は科目別（接待交際費・会議費・旅費交通費など）に入力でき、作成コーナーに入れる数字がそのまま出ます。年末の集計と 2 月の申告に。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '個人事業主の交際費は年いくらまで？' },
+      { type: 'p', text: '金額の上限はありません。交際費の上限（損金不算入）は法人の規定（租税特別措置法第 61 条の 4）です。個人事業主は、業務のために必要な支出かどうかで判断します。売上に比べて交際費が極端に多い場合は、業務との関係を説明できるよう記録を残しておきましょう。' },
+      { type: 'h3', text: '1 人 1 万円を超える飲食は経費にならない？' },
+      { type: 'p', text: 'なります。1 人 1 万円以下の飲食費を交際費から除く基準は、法人の交際費の計算のためのものです。個人事業主は、取引先との業務のための飲食なら金額にかかわらず経費にでき、会議費・接待交際費のどちらの科目で記帳しても、経費になるかどうかは変わりません。' },
+      { type: 'h3', text: '打ち合わせのカフェ代は交際費？会議費？' },
+      { type: 'p', text: '取引先との打ち合わせのカフェ代は、会議費として記帳するのが一般的です。科目は自分で決めて、毎年同じ基準で使い分けます。自分一人で作業するためのカフェ代は、交際費ではありません。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.2210「必要経費の知識」・No.5265「交際費等の範囲と損金不算入額の計算」、所得税法第 37 条・第 45 条、所得税法施行令第 96 条、租税特別措置法第 61 条の 4 に基づく一般的な説明です。個別の支出が経費になるかは、税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -10444,7 +10547,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance'],
   },
   {
     id: 'setup',
