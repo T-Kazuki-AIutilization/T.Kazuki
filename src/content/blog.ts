@@ -1304,7 +1304,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ポイントは「前年の所得」で決まることです。独立 1 年目は会社員時代の給与所得で計算されるため高くなりがちで、2 年目は 1 年目の事業所得で決まります。売上が伸びた翌年に保険料が跳ね上がるので、資金繰りの計画に入れておく必要があります。',
       },
-      { type: 'links', items: ['kokumin-nenkin-menjo-freelance', 'fuka-nenkin-freelance', 'freelance-rousai-tokubetsu-kanyu', 'fuyou-130man-freelance', 'kokuho-keigen-freelance', 'saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
+      { type: 'links', items: ['kokumin-nenkin-menjo-freelance', 'fuka-nenkin-freelance', 'kokumin-nenkin-kikin-freelance', 'freelance-rousai-tokubetsu-kanyu', 'fuyou-130man-freelance', 'kokuho-keigen-freelance', 'saishushoku-teate-kaigyo', 'shakai-hokenryo-koujo-freelance', 'keiei-safety-kyosai-freelance', 'freelance-take-home-pay', 'freelance-tax-calendar', 'freelance-kaigyo-todoke'] },
       { type: 'h2', text: '国民年金の保険料' },
       {
         type: 'p',
@@ -6280,7 +6280,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kyosai', label: '無料の節税額シミュレーターを使う' },
       },
-      { type: 'links', items: ['shokibo-kyosai-freelance', 'fuka-nenkin-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
+      { type: 'links', items: ['shokibo-kyosai-freelance', 'fuka-nenkin-freelance', 'kokumin-nenkin-kikin-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'aoiro-koujo-75man-2027'] },
       {
         type: 'note',
         text: '厚生労働省「2026 年 12 月（2027 年 1 月引き落とし分）から iDeCo の拠出限度額と加入可能年齢が引き上げられます」リーフレット、国税庁 タックスアンサー No.1135「小規模企業共済等掛金控除」に基づく一般的な説明です。上限の計算や手続きの締切は加入状況と加入先によって違うので、加入している金融機関（運営管理機関）で確認してください。',
@@ -10049,10 +10049,164 @@ export const ARTICLES: Article[] = [
       { type: 'p', text: '納付期限（翌月末）を過ぎても、期限から 2 年間は払えます。ただし、申し出る前の月の分をさかのぼって払うことはできません。' },
       { type: 'h3', text: '60 歳以降も払える？' },
       { type: 'p', text: '60 歳以降に国民年金に任意加入している場合は、65 歳未満なら付加保険料を払えます。' },
-      { type: 'links', items: ['freelance-kokumin-nenkin-zennou', 'ideco-jogen-75000-freelance', 'kokumin-nenkin-menjo-freelance', 'shakai-hokenryo-koujo-freelance', 'freelance-health-insurance-pension', 'shokibo-kyosai-freelance'] },
+      { type: 'links', items: ['freelance-kokumin-nenkin-zennou', 'kokumin-nenkin-kikin-freelance', 'ideco-jogen-75000-freelance', 'kokumin-nenkin-menjo-freelance', 'shakai-hokenryo-koujo-freelance', 'freelance-health-insurance-pension', 'shokibo-kyosai-freelance'] },
       {
         type: 'note',
         text: '2026 年 11 月時点の日本年金機構「付加保険料の納付」「付加保険料に関する電子申請」「国民年金保険料の前納」「年金用語集（付加年金）」「国民年金付加年金制度のお知らせ」に基づく一般的な説明です。個別の手続きは年金事務所または市区町村の国民年金の窓口にご確認ください。',
+      },
+    ],
+  },
+  {
+    slug: 'kokumin-nenkin-kikin-freelance',
+    title: '国民年金基金はフリーランスに必要？掛金と年金額の目安、iDeCo・付加年金との違い、途中でやめられない注意点（2026 年 12 月から上限 7.5 万円）',
+    description:
+      '国民年金基金は、フリーランス・自営業（国民年金の第 1 号被保険者）が老齢基礎年金に上乗せする公的な年金です。加入時の年齢・性別ごとの掛金と年金月額、払った掛金を受け取る年金が上回るまでの年数、社会保険料控除で軽くなる税金、iDeCo との合算上限（2026 年 12 月分から月 7.5 万円）、付加年金と併用できないこと、自分の都合では脱退できないことを国民年金基金連合会の資料に基づいて整理しました。',
+    date: '2026-11-03',
+    keywords: ['国民年金基金 フリーランス', '国民年金基金 入るべき', '国民年金基金 掛金', '国民年金基金 iDeCo 併用', '国民年金基金 付加年金', '国民年金基金 やめられない'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '会社員には老齢基礎年金に老齢厚生年金が上乗せされますが、フリーランスの公的年金は老齢基礎年金だけです。その差を埋めるために作られたのが国民年金基金で、国民年金法に基づく公的な年金です（国民年金基金連合会「国民年金基金制度とは？」）。掛金は全額が社会保険料控除になりますが、一度入ると自分の都合ではやめられません。入る前に知っておきたい仕組みと金額をまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '加入できるのは国民年金の第 1 号被保険者（20 歳以上 60 歳未満）と、60 歳以上 65 歳未満などで国民年金に任意加入している人。国民年金保険料の免除・納付猶予を受けている人は入れない（産前産後・育児期間の免除は入れる）',
+          '掛金は加入時の年齢・性別と、選ぶ給付の型・口数で決まり、増口・減口しなければ 60 歳まで変わらない。受け取る年金額も加入時に決まる',
+          '例: 30 歳 0 月（誕生月）の男性が 1 口目を終身年金 B 型にすると掛金は月 9,500 円で、65 歳から年金月額 2 万円を一生受け取れる',
+          '掛金は全額が社会保険料控除。iDeCo と併用でき、掛金の上限は合わせて月 6.8 万円、2026 年 12 月分から 7.5 万円',
+          '付加年金とは同時に入れない（1 口目に付加年金に相当する部分が含まれる）。加入後は自分の都合で脱退できず、解約返戻金もない',
+        ],
+      },
+      { type: 'h2', text: '国民年金基金とは' },
+      {
+        type: 'p',
+        text: '国民年金基金は平成 3 年に作られた、第 1 号被保険者のための上乗せの年金です。住所や職業を問わず入れる「全国国民年金基金」と、特定の職業の人が入る「職能型国民年金基金」（3 つ）があり、事業内容は同じです。入れるのはどちらか 1 つだけで、あとから移ることもできません（国民年金基金の種類、よくあるご質問）。',
+      },
+      {
+        type: 'table',
+        headers: ['加入できる人', '加入できない人'],
+        rows: [
+          ['国民年金の第 1 号被保険者（20 歳以上 60 歳未満の自営業・フリーランスなど）', '会社員など厚生年金に入っている人（第 2 号）とその扶養配偶者（第 3 号）'],
+          ['60 歳以上 65 歳未満で国民年金に任意加入している人', '国民年金保険料の免除（一部免除・学生納付特例・納付猶予を含む）を受けている人。ただし産前産後期間・育児期間の免除の人は加入できる'],
+          ['海外に住んでいて国民年金に任意加入している人', '農業者年金に加入している人'],
+        ],
+      },
+      { type: 'h2', text: '掛金と年金額の目安' },
+      {
+        type: 'p',
+        text: '1 口目は、65 歳から一生受け取る終身年金の A 型（15 年保証付き）か B 型（保証期間なし）を選びます。A 型は年金を受け取る前や保証期間中に亡くなったとき遺族に一時金が出る分、掛金が高くなります。1 口目の年金月額（基本額）は、35 歳 0 月までに入ると 2 万円、35 歳 1 月〜45 歳 0 月は 1.5 万円、45 歳 1 月〜50 歳 0 月は 1 万円です。',
+      },
+      {
+        type: 'table',
+        headers: ['加入時年齢', '1 口目の年金月額', '男性 A 型 / B 型', '女性 A 型 / B 型'],
+        rows: [
+          ['20 歳 0 月', '2 万円', '7,220 円 / 6,540 円', '8,370 円 / 8,050 円'],
+          ['29 歳 1 月〜30 歳 0 月', '2 万円', '10,450 円 / 9,500 円', '12,110 円 / 11,670 円'],
+          ['34 歳 1 月〜35 歳 0 月', '2 万円', '13,060 円 / 11,890 円', '15,120 円 / 14,590 円'],
+          ['39 歳 1 月〜40 歳 0 月', '1.5 万円', '12,735 円 / 11,625 円', '14,760 円 / 14,250 円'],
+          ['44 歳 1 月〜45 歳 0 月', '1.5 万円', '17,685 円 / 16,185 円', '20,475 円 / 19,800 円'],
+          ['49 歳 1 月〜50 歳 0 月', '1 万円', '18,400 円 / 16,900 円', '21,300 円 / 20,640 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '金額は 1 口目の掛金月額で、国民年金基金のパンフレット（2026 年 4 月時点）の掛金月額表によります。加入時年齢は加入した月の末日の年齢で、誕生月に入ると「○歳 0 月」です。誕生月以外に入った場合は、次の年齢になるまでの月数に応じた加算額が年金に上乗せされます。50 歳 1 月以降に入った場合は、加入期間の月数で年金額が決まります。',
+      },
+      {
+        type: 'p',
+        text: '2 口目以降は、終身年金の A 型・B 型と、受け取る期間が決まった確定年金の I〜V 型（60 歳または 65 歳から 5〜15 年）の 7 種類から組み合わせて選べます。ただし、確定年金の年金額が終身年金（1 口目を含む）の年金額を超える組み合わせはできません（給付の種類）。',
+      },
+      { type: 'h3', text: '払った掛金を年金が上回るのはいつか' },
+      {
+        type: 'table',
+        headers: ['例: 30 歳 0 月に 1 口目 B 型で加入', '男性', '女性'],
+        rows: [
+          ['掛金月額', '9,500 円', '11,670 円'],
+          ['60 歳までに払う掛金（360 か月）', '342 万円', '約 420 万円'],
+          ['65 歳から受け取る年金', '年 24 万円（月 2 万円）', '年 24 万円（月 2 万円）'],
+          ['受け取った年金が払った掛金を上回るまで', '約 14.3 年（79 歳ごろ）', '約 17.5 年（82 歳ごろ）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '掛金による税金の軽減と、受け取る年金にかかる税金を考えない単純な計算です。年金額は加入時に決まった額で、受け取りが始まると終身で続きます。',
+      },
+      { type: 'h2', text: '税金: 掛金は全額が社会保険料控除' },
+      {
+        type: 'p',
+        text: '国民年金基金の掛金は全額が社会保険料控除の対象で、所得税と住民税が軽くなります。生計を一にする家族の掛金を払った場合も控除できます。控除を受けるのに使う社会保険料控除証明書は毎年 11 月に送られてくるので、確定申告まで保管しておきましょう（よくあるご質問・掛金納付に関して）。',
+      },
+      {
+        type: 'p',
+        text: '軽くなる税金の目安は「年間の掛金 × 所得税と住民税の合計の税率」です。上の例の男性（年 114,000 円）で、課税所得が 195 万円超 330 万円以下（所得税 10%）なら、所得税・復興特別所得税・住民税の合計の税率 20.21% で年約 2.3 万円になります（国民年金基金のパンフレットの軽減額速算表による概算）。国民健康保険料は所得控除を引く前の所得で計算されるので、掛金を払っても国保は下がりません。',
+      },
+      {
+        type: 'p',
+        text: '受け取る年金は雑所得で、国民年金や厚生年金と合わせて公的年金等控除の対象です。遺族一時金は非課税です。',
+      },
+      { type: 'h2', text: 'iDeCo・付加年金との関係' },
+      {
+        type: 'table',
+        headers: ['', '国民年金基金', 'iDeCo', '付加年金'],
+        rows: [
+          ['受け取る額', '加入時に決まる（口数と型による）', '運用の結果しだい', '200 円 × 納付月数（年額）'],
+          ['掛金', '年齢・性別・型・口数で決まる', '自分で決める', '月 400 円'],
+          ['所得控除', '社会保険料控除', '小規模企業共済等掛金控除', '社会保険料控除'],
+          ['国民年金基金との併用', '—', 'できる（掛金の上限を合算）', 'できない'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '国民年金基金と iDeCo の掛金は合わせて月 6.8 万円が上限で、2026 年 12 月分の掛金（2027 年 2 月の引き落とし）から 7.5 万円に上がります（国民年金基金連合会「掛金上限額変更について」）。国民年金基金に入ると、付加保険料（月 400 円）は納められなくなります。1 口目に付加年金に相当する部分が含まれているためです。',
+      },
+      { type: 'h2', text: '入る前に知っておきたい注意点' },
+      {
+        type: 'ul',
+        items: [
+          '加入は任意だが、加入後は自分の都合で脱退・解約できない。60 歳到達、会社員になって第 1 号でなくなった、国民年金保険料の免除を受けたなどの場合に資格を失う',
+          '資格を失っても、払った掛金は途中で引き出せない。払った期間に応じた年金を 65 歳（III〜V 型は 60 歳）から受け取る。加入期間が 15 年未満で資格を失った場合は、国民年金基金連合会から支給される（60 歳まで加入していた場合などを除く）',
+          '1 口目は減らしたり型を変えたりできない。2 口目以降は増口・減口ができる',
+          '国民年金保険料が未納のまま 2 年たつと、その期間の基金の掛金は年金に反映されず、掛金が返される。すでに社会保険料控除を受けていた場合は修正申告が必要',
+          '老齢基礎年金を繰り下げても、国民年金基金の年金は 65 歳（III〜V 型は 60 歳）から支給される。繰り上げた場合は、付加年金に相当する部分が減額されて繰り上げて支給される',
+          '基金が解散した場合は残った財産を分配するため、それまでに払った掛金を下回ることがある（重要なお知らせ）',
+        ],
+      },
+      { type: 'h2', text: '申込みと掛金の払い方' },
+      {
+        type: 'table',
+        headers: ['手続き', '内容'],
+        rows: [
+          ['申込み', '資料請求をして「国民年金基金加入申出書」を加入したい基金に郵送する。基金から委託を受けた金融機関などでも申し込める'],
+          ['掛金の払い方', '口座振替。原則として翌々月の 1 日に引き落とされる。引き落とせなかった月は翌月に 2 か月分をまとめて引き落とす'],
+          ['前納', '4 月から翌年 3 月までの 1 年度分をまとめて払うと、年間の掛金のうち 0.1 か月分が割り引かれる'],
+          ['口数の変更', '2 口目以降の増口・減口は申し出ればできる（前納した期間の減口はできない）'],
+          ['控除証明書', '毎年 11 月に社会保険料控除証明書が届く'],
+        ],
+      },
+      {
+        type: 'cta',
+        title: 'iDeCo・小規模企業共済の節税額を計算する（無料ツール）',
+        text: '売上と掛金を入れると、iDeCo・小規模企業共済で所得税・住民税がいくら減るかを計算できます。国民年金基金と iDeCo の掛金の配分を考えるときに。登録不要。',
+        href: '/tools/kyosai',
+        label: '節税額の計算ツールを開く',
+        secondary: { href: '/signup', label: 'FreelanceOS で売上を管理する（無料）' },
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '国民年金基金と付加年金、どちらがいい？' },
+      { type: 'p', text: '両方には入れないので、どちらかを選びます。付加年金は月 400 円で年金が「200 円 × 月数」増える小さな上乗せで、国民年金基金は口数しだいで年金月額 1〜2 万円以上を上乗せできる代わりに掛金も大きくなります。国民年金基金の 1 口目には付加年金に相当する部分が含まれています。' },
+      { type: 'h3', text: '途中で会社員になったら？' },
+      { type: 'p', text: '第 1 号被保険者でなくなるので、国民年金基金の加入資格を失います。それまでに払った掛金は返金されず、払った期間に応じた年金を将来受け取ります。' },
+      { type: 'h3', text: '売上が減って掛金を払うのが苦しくなったら？' },
+      { type: 'p', text: '2 口目以降に入っていれば減口して掛金を減らせます。1 口目は減らせないので、入るときは 1 口目を無理なく払い続けられる額にしておくことが大切です。国民年金保険料の免除（一部免除・納付猶予を含む）を受けると、国民年金基金の加入資格を失います（産前産後期間・育児期間の免除を除く）。' },
+      { type: 'h3', text: '確定申告ではどう書く？' },
+      { type: 'p', text: '1 年間（1〜12 月）に払った掛金を、社会保険料控除の欄に国民年金保険料などと合わせて書きます。毎年 11 月に届く社会保険料控除証明書の金額を確認しましょう。' },
+      { type: 'links', items: ['fuka-nenkin-freelance', 'ideco-jogen-75000-freelance', 'shakai-hokenryo-koujo-freelance', 'shokibo-kyosai-freelance', 'freelance-health-insurance-pension', 'kokumin-nenkin-menjo-freelance'] },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国民年金基金連合会「国民年金基金制度とは？」「加入条件・資格」「国民年金基金の種類」「給付の種類」「よくあるご質問」「重要なお知らせ」「掛金上限額変更について」、パンフレット「国民年金に安心とお得をプラス！国民年金基金」（2026 年 4 月時点）に基づく一般的な説明です。加入の判断や個別の掛金・年金額は、全国国民年金基金または職能型国民年金基金にご確認ください。',
       },
     ],
   },
@@ -10122,7 +10276,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'setup',
     name: '開業・制度・ツール',
     description: '開業届、国保と年金、案件管理ツールの選び方',
-    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'fuyou-130man-freelance', 'freelance-rousai-tokubetsu-kanyu', 'freelance-kokumin-nenkin-zennou', 'fuka-nenkin-freelance', 'kokumin-nenkin-menjo-freelance', 'freelance-project-management-tools'],
+    slugs: ['freelance-kaigyo-todoke', 'saishushoku-teate-kaigyo', 'kaigyohi-freelance', 'freelance-health-insurance-pension', 'kokuho-keigen-freelance', 'fuyou-130man-freelance', 'freelance-rousai-tokubetsu-kanyu', 'freelance-kokumin-nenkin-zennou', 'fuka-nenkin-freelance', 'kokumin-nenkin-kikin-freelance', 'kokumin-nenkin-menjo-freelance', 'freelance-project-management-tools'],
   },
 ]
 
