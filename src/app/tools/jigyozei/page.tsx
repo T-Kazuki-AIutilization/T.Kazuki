@@ -80,6 +80,7 @@ export default function JigyozeiToolPage() {
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
+            <li><Link href="/blog/kojin-jigyozei-freelance" className="text-primary hover:underline">個人事業税はいくらから？対象業種（エンジニア・デザイナー・ライター）と「事業税に関する事項」の書き方</Link></li>
             <li><Link href="/blog/freelance-tax-calendar" className="text-primary hover:underline">フリーランスの税金・納付スケジュール年間カレンダー（個人事業税は 8 月・11 月）</Link></li>
             <li><Link href="/blog/yotei-nozei-gengaku-shinsei" className="text-primary hover:underline">予定納税の第 2 期（11 月）は減額できる？2026 年は 11 月 16 日までに申請</Link></li>
             <li><Link href="/tools/takehome" className="text-primary hover:underline">フリーランスの手取り計算（所得税・住民税・国保・個人事業税をまとめて）</Link></li>

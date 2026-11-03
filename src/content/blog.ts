@@ -1753,6 +1753,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '事業所得から事業主控除 290 万円を引いた額に 3〜5%（多くの業種は 5%）がかかる都道府県税です。所得が 290 万円以下なら 0 円。法定業種に該当しない業種（文筆業など）は課税対象外の場合があります。確定申告をすれば自動で計算され、8 月に通知が届きます。',
       },
+      { type: 'links', items: ['kojin-jigyozei-freelance'] },
       { type: 'h3', text: '消費税（3月31日）' },
       {
         type: 'p',
@@ -10210,6 +10211,179 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kojin-jigyozei-freelance',
+    title: '個人事業税はいくらから？フリーランスの対象業種（エンジニア・デザイナー・ライター）、8 月・11 月の納付、確定申告書「事業税に関する事項」の書き方',
+    description:
+      'フリーランス・個人事業主の個人事業税は、法定業種（70 業種）の事業で、所得が事業主控除の 290 万円を超えるとかかります。青色申告特別控除を引かずに計算すること、業種ごとの税率（5%・4%・3%）、エンジニア・デザイナー・ライターの扱い、8 月・11 月の納付、払った年の経費にする方法、確定申告書第二表「事業税に関する事項」の各欄の書き方を、東京都主税局と国税庁の資料に基づいて整理しました。',
+    date: '2026-11-04',
+    keywords: ['個人事業税 いくらから', '個人事業税 フリーランス', '個人事業税 エンジニア', '個人事業税 デザイナー', '個人事業税 ライター', '事業税に関する事項 書き方', '個人事業税 経費'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '独立して 2 年目の夏に、都道府県から初めて届くことが多いのが個人事業税の納税通知書です。個人事業税は、所得税・住民税とは別に、都道府県が前年の事業の所得にかける税金です。確定申告をしていれば別の申告は要りませんが、申告書の「事業税に関する事項」の書き方しだいで税額が変わることがあります。かかる人・かからない人の境目と、払い方・書き方をまとめます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          'かかるのは、法定業種（70 業種）に当たる事業で、所得が事業主控除の年 290 万円を超える人。税率は多くの業種で 5%',
+          '計算に使う所得は、青色申告特別控除を引く前の額。確定申告書の所得より、65 万円（または 55 万円・10 万円）多い額で判定する',
+          'エンジニア・ライター・イラストレーターという名前の業種は一覧にない。仕事の実態から法定業種に当たるかを都道府県が判断する',
+          '確定申告をしていれば別の申告は不要。8 月ごろ届く納税通知書で、8 月と 11 月の 2 回に分けて払う（東京都の場合）',
+          '払った個人事業税は経費（租税公課）になる。通知が届いた年、または各納期に納めた年の経費にする',
+        ],
+      },
+      { type: 'h2', text: '個人事業税の計算方法' },
+      {
+        type: 'p',
+        text: '東京都主税局によると、税額は「（事業所得 ＋ 青色申告特別控除額 ± 専従者給与の調整 − 各種控除）× 税率」で計算します。各種控除の中心が事業主控除の年 290 万円で、1 年間ずっと事業をしていた人なら所得が 290 万円を超えた部分にだけ税金がかかります。個人の事業税には青色申告特別控除がないため、確定申告で引いた青色申告特別控除の額は所得に足し戻されます。',
+      },
+      {
+        type: 'table',
+        headers: ['売上 − 経費（青色申告特別控除の前）', '確定申告書の所得（青色 65 万円控除）', '個人事業税（税率 5% の業種）'],
+        rows: [
+          ['290 万円', '225 万円', '0 円'],
+          ['350 万円', '285 万円', '3 万円'],
+          ['400 万円', '335 万円', '5.5 万円'],
+          ['500 万円', '435 万円', '10.5 万円'],
+          ['700 万円', '635 万円', '20.5 万円'],
+          ['1,000 万円', '935 万円', '35.5 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '確定申告書の所得が 290 万円以下でも、青色申告特別控除を足し戻すと 290 万円を超えることがあります。たとえば確定申告書の所得が 285 万円（青色 65 万円控除）の人は、事業税では 350 万円として計算され、約 3 万円かかります。損失の繰越控除や事業用資産の譲渡損失がある場合は、さらに差し引かれます。',
+      },
+      {
+        type: 'cta',
+        title: '業種と売上・経費から個人事業税を計算する（無料ツール）',
+        text: '事業主控除 290 万円、青色申告特別控除を引かない計算、開業した年の月割に対応。8 月・11 月に払う額の目安も出ます。登録不要。',
+        href: '/tools/jigyozei',
+        label: '個人事業税の計算ツールを開く',
+      },
+      { type: 'h3', text: '年の途中で開業した年は事業主控除が月割になる' },
+      {
+        type: 'p',
+        text: '事業を行った期間が 1 年未満の年は、事業主控除が月割になります。東京都の表では、6 か月なら 145 万円、3 か月なら 72.5 万円です。7 月に開業して半年で 200 万円の所得があれば、145 万円を超える 55 万円に税金がかかります。開業した年の確定申告書では、第二表の「前年中の開（廃）業」欄に開業の日を書きます（後述）。',
+      },
+      { type: 'h2', text: '対象になる業種と税率' },
+      {
+        type: 'table',
+        headers: ['区分', 'フリーランスに関係しやすい業種の例', '税率'],
+        rows: [
+          ['第 1 種事業（37 業種）', '物品販売業、請負業、広告業、出版業、印刷業、写真業、代理業、仲立業、周旋業、運送業、不動産貸付業、飲食店業 など', '5%'],
+          ['第 2 種事業（3 業種）', '畜産業、水産業、薪炭製造業', '4%'],
+          ['第 3 種事業（30 業種）', 'デザイン業、コンサルタント業、設計監督者業、諸芸師匠業、税理士業、行政書士業、社会保険労務士業、理容業、美容業 など', '5%'],
+          ['第 3 種事業のうち', 'あん摩・マッサージ・指圧・はり・きゅう・柔道整復その他の医業に類する事業、装蹄師業', '3%'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '東京都主税局は「法定業種は 70 の業種があり、ほとんどの事業が該当します」と説明しています。一覧にない事業から生じた所得には、個人事業税はかかりません。',
+      },
+      { type: 'h3', text: 'エンジニア・デザイナー・ライター・イラストレーターは？' },
+      {
+        type: 'table',
+        headers: ['職種', '一覧での扱い', '考え方'],
+        rows: [
+          ['Web デザイナー・グラフィックデザイナー', '「デザイン業」が第 3 種事業にある', '対象になる可能性が高い（税率 5%）'],
+          ['エンジニア・プログラマー', '名前のある業種はない', '法定業種の「請負業」などに当たるかが、契約の形や仕事の実態で判断される'],
+          ['ライター・翻訳者', '「文筆業」は一覧にない', '法定業種に当たるかが、仕事の実態で判断される'],
+          ['イラストレーター・漫画家', '画家などの芸術家は一覧にない', '法定業種に当たるかが、仕事の実態で判断される'],
+          ['コンサルタント・コーチ', '「コンサルタント業」が第 3 種事業にある', '対象になる可能性が高い（税率 5%）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '個人事業税は、本人の申告ではなく都道府県が税額を決めて通知する税金で、どの業種に当たるかも仕事の実態をもとに都道府県が判断します。確定申告書第一表の職業欄には「システムエンジニア」「Web ライター」のように実態に合った名称を書き、届いた納税通知書の業種に疑問があれば、事務所がある都道府県の税事務所に問い合わせましょう。',
+      },
+      { type: 'h3', text: '副業で雑所得として申告している場合' },
+      {
+        type: 'p',
+        text: '東京都主税局は、事業税の対象になる所得は確定申告書の事業所得・不動産所得の金額だとしたうえで、「雑所得が課税の対象となる場合もあります」と注記しています。副業の所得が 290 万円を超える規模なら、雑所得で申告していても通知が届く可能性があります。',
+      },
+      { type: 'h2', text: 'いつ、どうやって払う？' },
+      {
+        type: 'table',
+        headers: ['項目', '内容（東京都の場合）'],
+        rows: [
+          ['申告', '所得税の確定申告（または住民税の申告）をしていれば不要。申告書の「事業税に関する事項」欄に記入する'],
+          ['通知', '8 月に都税事務所から納税通知書が届く'],
+          ['納期', '第 1 期 8 月 31 日、第 2 期 11 月 30 日（休日の場合は翌日）。2026 年の第 2 期は 11 月 30 日（月）'],
+          ['払い方', '窓口、口座振替、コンビニ、クレジットカード、スマートフォン決済アプリ、ペイジー'],
+          ['遅れて通知された場合', '9〜12 月に届いた通知書は、納期限が通知書ごとに変わる（第 2 期が翌年 2 月末になる場合も）'],
+          ['廃業した場合', '廃止の日から 1 か月以内に、確定申告とは別に個人事業税の申告が必要'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '納期限は都道府県ごとに条例で決まっているため、東京都以外の人は通知書に書かれた納期限を確認してください。独立 1 年目の所得に対する個人事業税は 2 年目の 8 月に初めて届くので、所得税・住民税・国民健康保険料と重なる 2 年目の夏に向けて、納税用の資金を取り分けておくことが大切です。',
+      },
+      { type: 'h2', text: '払った個人事業税は経費になる' },
+      {
+        type: 'p',
+        text: '個人事業税は事業にかかる税金なので、所得税の計算で必要経費（租税公課）にできます。所得税・住民税は経費になりません。国税庁の所得税基本通達 37-6 では、その年 12 月 31 日までに賦課決定（納税通知）された税額をその年の必要経費にするのが原則で、納期が分かれている税金は、各納期の税額を納期の開始の日または実際に納付した日の年の必要経費にすることもできます。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '2026 年 8 月に通知され、8 月・11 月に払う個人事業税（2025 年分の所得に対するもの）は、2026 年分の経費',
+          '帳簿では「租税公課」で計上する。個人の口座から払った場合も租税公課にできる（相手科目は事業主借）',
+          '事業を廃止した年は、翌年に課税される見込額をその年の経費にできる特例がある（所得税基本通達 37-7）',
+        ],
+      },
+      { type: 'h2', text: '確定申告書「事業税に関する事項」の書き方' },
+      {
+        type: 'p',
+        text: '確定申告書第二表の下にある「住民税・事業税に関する事項」のうち、事業税の欄は次のとおりです（国税庁「確定申告の手引き」手順 6）。当てはまるものがなければ空欄で構いません。e-Tax や確定申告書等作成コーナーでも同じ項目を入力します。',
+      },
+      {
+        type: 'table',
+        headers: ['欄', '書く人', '書く内容'],
+        rows: [
+          ['非課税所得など', '法定業種に当たらない事業の所得や、税率の違う事業（畜産業・水産業・医業類似・装蹄師業など）の所得がある人', '該当する番号と、その所得金額（青色申告特別控除前）。法定業種に当たらない事業の所得は「10」'],
+          ['損益通算の特例適用前の不動産所得', '土地を取得するための借入金の利子がある不動産所得の人', '利子を必要経費に入れて計算した不動産所得'],
+          ['前年中の開（廃）業', '申告する年の途中で開業・廃業した人', '「開始」「廃止」のどちらかを〇で囲み、月日を書く（事業主控除の月割に使われる）'],
+          ['不動産所得から差し引いた青色申告特別控除額', '不動産所得から青色申告特別控除を引いた人', 'その控除額'],
+          ['事業用資産の譲渡損失など', '事業に使っていた機械・車両などを売って損が出た人、災害で事業用資産に損失が出た人', '損失の金額'],
+          ['他都道府県の事務所等', '住所地以外の都道府県にも事務所がある人', '〇を記入（所得は従業者数に応じて都道府県ごとに分けて課税される）'],
+        ],
+      },
+      {
+        type: 'note',
+        text: '赤字の年の注意: 青色申告をしていて事業の所得が赤字になった場合、事業税でも翌年以後 3 年間、損失を繰り越して控除できます（東京都主税局）。事業用資産の譲渡損失などの繰越しは、損失が出た年以後、連続して申告していることが条件です（国税庁）。赤字でも確定申告をしておきましょう。',
+      },
+      {
+        type: 'links',
+        items: ['akaji-kurikoshi-freelance', 'freelance-tax-calendar', 'jigyo-shotoku-zatsu-shotoku', 'freelance-kaigyo-todoke'],
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '個人事業税はいくらからかかる？' },
+      { type: 'p', text: '法定業種に当たる事業で、青色申告特別控除を引く前の所得が 290 万円を超えるとかかります。税率 5% の業種なら、売上 − 経費が 400 万円で（400 万 − 290 万円）× 5% ＝ 5.5 万円です。年の途中で開業した年は、事業主控除が月割になります。' },
+      { type: 'h3', text: '開業届を出していなくてもかかる？' },
+      { type: 'p', text: 'かかります。個人事業税は、確定申告書の事業所得などをもとに都道府県が計算して通知します。東京都では、事業を始めた日から 15 日以内に「事業開始（廃止）等申告書」を都税事務所に出す決まりもあります（オンラインの LoGo フォームでも提出可）。' },
+      { type: 'h3', text: '納税通知書が届かないのは、かからないということ？' },
+      { type: 'p', text: '所得が事業主控除以下、または法定業種に当たらないと判断された場合は届きません。ただし、確定申告の内容が都道府県に届くまでに時間がかかり、8 月より遅れて通知されることもあります（東京都では 9〜12 月の通知もあります）。' },
+      { type: 'h3', text: '個人事業税は経費になる？' },
+      { type: 'p', text: 'なります。納税通知が届いた年（または各納期に納めた年）の必要経費（租税公課）です。所得税・住民税・国民健康保険料は経費にはなりません（国民健康保険料は社会保険料控除）。' },
+      { type: 'h3', text: '青色申告特別控除は引ける？' },
+      { type: 'p', text: '引けません。個人の事業税には青色申告特別控除がないため、確定申告で引いた額は所得に足し戻して計算されます。一方で、青色申告者の事業の赤字は事業税でも 3 年間繰り越せます。' },
+      {
+        type: 'cta',
+        title: '来年の手取りと税金をまとめて試算する（無料）',
+        text: '売上と経費を入れると、所得税・住民税・国保・年金・個人事業税・消費税と手取りの目安を一度に計算します。登録不要。',
+        href: '/tools/takehome',
+        label: '手取り計算シミュレーターを開く',
+        secondary: { href: '/signup', label: 'FreelanceOS で売上と納税の予定を管理する（無料）' },
+      },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の東京都主税局「個人事業税」、国税庁「令和 7 年分 確定申告の手引き（手順 6 住民税、事業税に関する事項）」、所得税基本通達 37-6・37-7 に基づく一般的な説明です。税率・納期限・業種の判断は都道府県によって異なる場合があります。個別の判断は、事務所がある都道府県の税事務所にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -10270,7 +10444,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',
