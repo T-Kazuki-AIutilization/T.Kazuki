@@ -803,7 +803,7 @@ export const ARTICLES: Article[] = [
         title: '源泉徴収された分が確定申告でいくら戻るかを計算する（無料）',
         items: [{ href: '/tools/kanpu', label: '確定申告の還付金の計算ツール' }],
       },
-      { type: 'links', items: ['akaji-kurikoshi-freelance', 'freelance-shotoku-shomei', 'kaji-anbun-freelance', 'kakutei-shinkoku-2026-kaisei', 'iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
+      { type: 'links', items: ['shiharai-chosho-freelance', 'akaji-kurikoshi-freelance', 'freelance-shotoku-shomei', 'kaji-anbun-freelance', 'kakutei-shinkoku-2026-kaisei', 'iryohi-koujo-freelance', 'uriage-keijo-jiki-nenmatsu', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'aoiro-kessansho-kakikata', 'freelance-kaikei-soft-hitsuyou', 'freelance-shotoku-koujo-ichiran', 'freelance-tax-calendar', 'freelance-expenses-list'] },
       { type: 'h2', text: '家事按分の考え方' },
       {
         type: 'p',
@@ -1543,7 +1543,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: 'Web 制作のように「デザイン（対象）」と「コーディング（対象外）」が 1 つの案件に混ざる場合は、請求書でデザイン料とコーディング料を分けて書くと、クライアント側も処理しやすくなります。分けていないと全額が対象として扱われることがあります。',
       },
-      { type: 'links', items: ['freelance-invoice-how-to', 'freelance-tax-prep', 'freelance-tax-calendar', 'yotei-nozei-gengaku-shinsei'] },
+      { type: 'links', items: ['shiharai-chosho-freelance', 'freelance-invoice-how-to', 'freelance-tax-prep', 'freelance-tax-calendar', 'yotei-nozei-gengaku-shinsei'] },
       { type: 'h2', text: '計算方法（10.21%、100 万円超は 20.42%）' },
       {
         type: 'p',
@@ -7574,7 +7574,7 @@ export const ARTICLES: Article[] = [
         label: 'BOOTH で無料ダウンロード',
         external: true,
       },
-      { type: 'links', items: ['hoshu-mibarai-taishoho', 'freelance-payment-tracking', 'freelance-invoice-how-to', 'freelance-payment-terms', 'freelance-boki-shiwake', 'freelance-invoice-3wari-tokurei'] },
+      { type: 'links', items: ['hoshu-mibarai-taishoho', 'shiharai-chosho-freelance', 'freelance-payment-tracking', 'freelance-invoice-how-to', 'freelance-payment-terms', 'freelance-boki-shiwake', 'freelance-invoice-3wari-tokurei'] },
       {
         type: 'note',
         text: '民法 485 条、国税庁「インボイス制度に関する Q&A」問 29・問 30・問 103-2（令和 8 年 4 月改訂版など）に基づく一般的な説明です（2026 年 11 月時点）。個別の状況は税務署に確認してください。',
@@ -9794,6 +9794,147 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shiharai-chosho-freelance',
+    title: '支払調書が届かない・もらえないときは？フリーランスの確定申告で必要か、源泉徴収税額の確かめ方と合わないときの原因（2026 年分）',
+    description:
+      '支払調書はクライアントが税務署に出す書類で、フリーランスに届くかは取引先しだいです。確定申告は支払調書がなくても請求書と入金記録でできます。提出範囲（原稿料・デザイン料などは年 5 万円超）、2026 年分の提出期限（2027 年 2 月 1 日）、源泉徴収税額の計算と申告書への書き方、金額が合わない原因（未払・消費税・年またぎ）、写しを頼むメール文例を国税庁の資料に基づいて整理しました。',
+    date: '2026-11-03',
+    keywords: ['支払調書 届かない', '支払調書 もらえない 確定申告', 'フリーランス 支払調書', '支払調書 必要 確定申告', '支払調書 源泉徴収税額 合わない', '支払調書 マイナンバー'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '年末年始になると「支払調書が届かない」「去年はもらえたのに今年は来ない」と気になるフリーランスの方がいると思います。支払調書（報酬、料金、契約金及び賞金の支払調書）は、報酬を支払ったクライアントが税務署に出す書類です。確定申告は支払調書がなくても、自分の請求書と入金記録から行えます。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '支払調書はクライアントが税務署に出す書類。2026 年分の提出期限は 2027 年 2 月 1 日（月）',
+          '国税庁の手引は、支払を受ける人に渡すことを「写しを交付する場合には」という書き方で扱っている。届くかどうかは取引先しだい',
+          '確定申告では、報酬の金額と源泉徴収税額を申告書第二表の「所得の内訳」欄に書く。支払調書がなくても請求書と入金記録から計算できる',
+          '支払調書と自分の記録が合わないときは、未払・消費税の扱い・年またぎが主な原因',
+          'クライアントから求められるマイナンバーは、税務署に出す支払調書に書くためのもの。本人に渡す写しにはマイナンバーを書かない決まり',
+        ],
+      },
+      { type: 'h2', text: '支払調書とは: 誰が、いつ、どこに出すか' },
+      {
+        type: 'p',
+        text: '原稿料・デザイン料・講演料などの報酬を支払った人は、1 年分をまとめた支払調書を、翌年 1 月 31 日までに税務署へ提出します（国税庁タックスアンサー No.7431）。2026 年分は 1 月 31 日が日曜日のため、提出期限は 2027 年 2 月 1 日（月）です（国税庁「令和 8 年分 給与所得の源泉徴収票等の法定調書の作成と提出の手引」）。',
+      },
+      {
+        type: 'table',
+        headers: ['報酬の種類', '支払調書が提出される範囲（同じ人への 1 年間の支払）'],
+        rows: [
+          ['原稿料・さし絵料・デザイン料・講演料・弁護士や税理士の報酬など', '5 万円を超えるもの'],
+          ['外交員・集金人の報酬、ホステス・コンパニオン等の報酬、広告宣伝のための賞金', '50 万円を超えるもの'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '金額は原則として消費税込みで判定しますが、請求書などで消費税の額がはっきり分かれていれば、税抜で判定・記載しても差し支えありません（税抜で書く場合は摘要欄に消費税の額を書きます）。源泉徴収されなかった報酬や、作成時点で未払の報酬も、その年に支払の確定したものは支払調書に載ります（法定調書の手引）。',
+      },
+      { type: 'h2', text: '支払調書が届かない理由' },
+      {
+        type: 'p',
+        text: '会社員の「給与所得の源泉徴収票」は、会社が本人に渡すことが義務づけられています。一方、報酬の支払調書について、国税庁の手引は「支払を受ける者に支払調書の写しを交付する場合には」という書き方をしていて、税務署に出す書類として扱っています。そのため、写しを送ってくれる取引先もあれば、送らない取引先もあります。1 年間の支払が 5 万円以下の取引先は、そもそも支払調書の提出範囲に入りません。',
+      },
+      {
+        type: 'p',
+        text: '支払調書が届かなくても、確定申告で困ることはありません。次の手順で、自分の記録から報酬と源泉徴収税額を出せます。',
+      },
+      { type: 'h2', text: '支払調書なしで源泉徴収税額を確かめる方法' },
+      {
+        type: 'ol',
+        items: [
+          'その年の請求書を取引先ごとに並べ、報酬額（税抜・税込のどちらで源泉徴収されているか）と源泉徴収税額を拾う',
+          '入金記録と突き合わせる。入金額 ＝ 報酬額（税込）− 源泉徴収税額（− 振込手数料を差し引かれた場合はその額）',
+          '取引先ごとに 1 年分の報酬額と源泉徴収税額を合計する',
+        ],
+      },
+      {
+        type: 'table',
+        headers: ['例: 原稿料 月 10 万円＋消費税 1 万円', '1 か月', '1 年分（12 か月）'],
+        rows: [
+          ['報酬（税込）', '110,000 円', '1,320,000 円'],
+          ['源泉徴収税額（税抜 10 万円 × 10.21%）', '10,210 円', '122,520 円'],
+          ['入金額', '99,790 円', '1,197,480 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '源泉徴収税額は、1 回の支払が 100 万円以下なら報酬額の 10.21% です。請求書で消費税額が分かれていれば税抜の額に、分かれていなければ税込の額にかかります。詳しい計算は源泉徴収の記事と計算ツールを参照してください。',
+      },
+      { type: 'h2', text: '確定申告書への書き方' },
+      {
+        type: 'p',
+        text: '報酬から源泉徴収された税額は、申告書第二表の「所得の内訳（所得税及び復興特別所得税の源泉徴収税額）」欄に、支払者ごとに書きます。原稿料や弁護士・税理士などの報酬は、同じ支払者から受けた 1 年分をまとめて書いても差し支えありません。欄が足りなければ「所得の内訳書」を使います（国税庁「所得の内訳書」の書き方）。',
+      },
+      {
+        type: 'table',
+        headers: ['欄', '書くこと（上の例の場合）'],
+        rows: [
+          ['所得の種類', '営業等（事業所得の場合）'],
+          ['種目', '原稿料'],
+          ['支払者の氏名・名称', '報酬を支払った会社の名称'],
+          ['収入金額', '1,320,000 円（税込経理の場合）'],
+          ['源泉徴収税額', '122,520 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'まだ入金されていない報酬で、それに対する源泉徴収税額があるときは、その金額を源泉徴収税額の欄に内書きします（所得の内訳書の書き方）。第二表の源泉徴収税額の合計は、第一表の「源泉徴収税額」欄に移し、所得税額から差し引かれます。',
+      },
+      { type: 'h2', text: '支払調書と自分の記録が合わないときの主な原因' },
+      {
+        type: 'table',
+        headers: ['原因', '何が起きるか', '確認すること'],
+        rows: [
+          ['消費税の扱い', '支払調書は税込で書くのが原則。税抜で書いた場合は摘要欄に消費税額がある', '自分の帳簿が税込経理か税抜経理か'],
+          ['未払の報酬', '支払調書には、その年に支払の確定した報酬が未払分も含めて載る（未払額は内書き）', '年末時点で未入金の請求'],
+          ['年またぎ', '12 月に納品して 1 月に入金された報酬は、支払調書と自分の帳簿で計上する年がずれることがある', '売上を計上した年（納品・作業完了の日）'],
+          ['振込手数料の差し引き', '入金額は手数料の分だけ少なくなるので、入金額の合計と支払調書の金額がずれる', '入金額との差が手数料分か'],
+          ['取引先の記載誤り', '支払調書の金額そのものが誤っている', '請求書と入金記録。誤りがあれば取引先に連絡'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '確定申告は、支払調書ではなく実際の取引（請求書・入金記録・帳簿）にもとづいて行います。支払調書は、取引先ごとの源泉徴収税額に漏れがないかを確かめる資料として使いましょう。',
+      },
+      { type: 'h2', text: '写しを送ってほしいときのメール文例' },
+      {
+        type: 'p',
+        text: '写しがあると源泉徴収税額の確認が楽になるので、取引先に頼むこと自体は問題ありません。ただし送るかどうかは取引先の判断なので、届かなくても自分の記録で申告できるようにしておきましょう。',
+      },
+      {
+        type: 'note',
+        text: '件名: 2026 年分の支払調書（写し）送付のお願い\n\n○○株式会社 ご担当者様\n\nいつもお世話になっております。○○です。\n確定申告の準備のため、2026 年分の報酬に係る支払調書の写しをお送りいただくことは可能でしょうか。PDF でも差し支えありません。\nお手数をおかけしますが、ご検討のほどよろしくお願いいたします。',
+      },
+      {
+        type: 'cta',
+        title: '源泉徴収税額と手取りを計算する（無料ツール）',
+        text: '報酬額を入れると、源泉徴収税額（10.21%・100 万円超の部分は 20.42%）と入金額を計算できます。登録不要。',
+        href: '/tools/withholding',
+        label: '源泉徴収の計算ツールを開く',
+        secondary: { href: '/signup', label: 'FreelanceOS で請求と入金を管理する（無料）' },
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '支払調書が届かないと確定申告できない？' },
+      { type: 'p', text: 'できます。請求書と入金記録から、取引先ごとの報酬額と源泉徴収税額を計算して申告書第二表に書きます。' },
+      { type: 'h3', text: '1 年間の支払が 5 万円以下の取引先は？' },
+      { type: 'p', text: '支払調書の提出範囲に入らないので、支払調書は作られません。ただし源泉徴収は 1 回の支払ごとに行われるので、源泉徴収されていれば、その税額は確定申告で書けます。' },
+      { type: 'h3', text: 'マイナンバーを求められたのはなぜ？' },
+      { type: 'p', text: '税務署に出す支払調書には、支払を受ける人のマイナンバーを書く必要があるからです（No.7431）。一方、本人に写しを渡すときはマイナンバーを書いて渡すことはできません。' },
+      { type: 'h3', text: '取引先が支払調書を出していなかったら？' },
+      { type: 'p', text: '支払調書の提出は支払った側（取引先）の義務で、受け取った側が代わりに出すものではありません。自分は自分の記録にもとづいて確定申告をします。' },
+      { type: 'links', items: ['freelance-withholding-tax', 'furikomi-tesuryo-sashihiki', 'uriage-keijo-jiki-nenmatsu', 'hoshu-mibarai-taishoho', 'freelance-tax-prep', 'freelance-etax-how-to'] },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.7431（「報酬、料金、契約金及び賞金の支払調書」の提出範囲と提出枚数等）・No.7400（法定調書の提出義務者）、「令和 8 年分 給与所得の源泉徴収票等の法定調書の作成と提出の手引」、「所得の内訳書」の書き方に基づく一般的な説明です。個別の判断は税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -9854,7 +9995,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance'],
   },
   {
     id: 'setup',
