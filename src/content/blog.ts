@@ -4058,6 +4058,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'このほか、災害や盗難の損失に使える雑損控除があります。配偶者・扶養の所得要件は、2025 年の改正で 48 万円から 58 万円に、2026 年分からさらに 62 万円（給与だけなら年収 136 万円以下）に引き上げられました。',
       },
+      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
       { type: 'h2', text: '青色申告特別控除は「所得控除」ではない' },
       {
         type: 'p',
@@ -7169,7 +7170,7 @@ export const ARTICLES: Article[] = [
           ['パソコン・カメラなど', '仕事で使う時間の割合（減価償却の事業専用割合）', '使い方のメモ'],
         ],
       },
-      { type: 'links', items: ['kuruma-keihi-freelance'] },
+      { type: 'links', items: ['kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance'] },
       {
         type: 'p',
         text: '仕事専用の部屋がなく、リビングの一角で作業している場合は、作業スペースの面積に、そのスペースを仕事で使う時間の割合を掛けるなど、面積と時間を組み合わせる方法もあります。どの方法でも、なぜその割合にしたかを第三者に説明できることが大切です。',
@@ -10622,6 +10623,147 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'jishin-hokenryo-koujo-freelance',
+    title: '地震保険料控除はいくら税金が減る？フリーランス・個人事業主の確定申告の書き方と、自宅兼事務所は居住部分だけ（事業分は経費）',
+    description:
+      'フリーランス・個人事業主の地震保険料控除をまとめました。控除額（所得税は最高 5 万円、住民税は最高 2.5 万円）と旧長期損害保険料の計算、税率別に税金がいくら減るかの目安、対象になる保険・共済、自宅兼事務所の按分（床面積の割合、居住部分 90% 以上なら全額）、前納した場合、確定申告書の書き方を、国税庁のタックスアンサー・所得税基本通達・確定申告の手引きに基づいて整理しました。',
+    date: '2026-11-04',
+    keywords: ['地震保険料控除 フリーランス', '地震保険料控除 個人事業主', '地震保険料控除 いくら戻る', '地震保険 自宅兼事務所 按分', '地震保険料控除 確定申告 書き方', '旧長期損害保険料'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '10〜11 月になると、保険会社から地震保険料の控除証明書が届きます。会社員は年末調整で控除を受けますが、フリーランス・個人事業主は確定申告で自分で申告します。自宅を仕事場にしている場合は、保険料を「控除」と「経費」に分ける必要があります。控除額の計算、税金がいくら減るか、申告書の書き方を順に整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '所得税の控除額は、その年に払った地震保険料の全額（最高 5 万円）。住民税は払った額の 2 分の 1（最高 2.5 万円）',
+          '対象は、自分や生計を一にする親族が持つ、住んでいる家と家財に付けた地震保険（共済を含む）。火災保険の部分は対象外',
+          '自宅兼事務所は、居住部分の保険料だけが控除の対象。居住部分がおおむね 90% 以上なら全額を控除にしてよい',
+          '仕事で使う部分の保険料は、控除ではなく経費（損害保険料）に入れられる',
+          '確定申告では、保険会社の控除証明書の金額を第一表と第二表に書き、証明書を添付するか提示する',
+        ],
+      },
+      { type: 'h2', text: '地震保険料控除の金額' },
+      {
+        type: 'p',
+        text: '控除額は、その年（1〜12 月）に実際に払った保険料で決まります。所得税は国税庁のタックスアンサー No.1145、住民税は地方税法 314 条の 2 などに定められています。',
+      },
+      {
+        type: 'table',
+        headers: ['払った保険料', '所得税の控除額', '住民税の控除額'],
+        rows: [
+          ['地震保険料', '5 万円以下は全額、5 万円超は 5 万円', '払った額の 2 分の 1（最高 2.5 万円）'],
+          ['旧長期損害保険料', '1 万円以下は全額、1 万円超 2 万円以下は「払った額 × 1/2 ＋ 5,000 円」、2 万円超は 1.5 万円', '5,000 円以下は全額、5,000 円超は「5,000 円 ＋ 超えた額（最高 1 万円）× 1/2」（最高 1 万円）'],
+          ['両方ある場合', 'それぞれの計算額の合計（最高 5 万円）', 'それぞれの計算額の合計（最高 2.5 万円）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '旧長期損害保険料は、2006 年（平成 18 年）12 月 31 日までに結んだ、保険期間 10 年以上で満期返戻金のある損害保険で、2007 年以後に契約を変更していないものの保険料です。損害保険料控除は 2007 年分から廃止されましたが、この契約だけは経過措置として控除の対象に残っています。1 つの契約で地震保険料と旧長期損害保険料の両方を払っている場合は、どちらか一方を選んで控除します。どちらに当たるかは、控除証明書に書かれています。',
+      },
+      { type: 'h2', text: '税金はいくら減る？（目安）' },
+      {
+        type: 'p',
+        text: '控除で減る税金は「控除額 × 税率」です。所得税は所得税率に復興特別所得税（2.1%）を加えた率、住民税は一律 10% で計算した目安は次のとおりです。',
+      },
+      {
+        type: 'table',
+        headers: ['所得税率', '地震保険料 年 2 万円', '地震保険料 年 5 万円以上'],
+        rows: [
+          ['5%（課税所得 195 万円以下）', '約 2,000 円（所得税 1,021 円＋住民税 1,000 円）', '約 5,000 円（所得税 2,552 円＋住民税 2,500 円）'],
+          ['10%（195 万円超 330 万円以下）', '約 3,000 円（2,042 円＋1,000 円）', '約 7,600 円（5,105 円＋2,500 円）'],
+          ['20%（330 万円超 695 万円以下）', '約 5,100 円（4,084 円＋1,000 円）', '約 12,700 円（10,210 円＋2,500 円）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '地震保険料控除では国民健康保険料は下がりません。国保の保険料は、所得控除を引く前の所得（基礎控除だけを引いた額）で計算されるためです。',
+      },
+      { type: 'h2', text: '対象になる保険・ならない保険' },
+      {
+        type: 'p',
+        text: '対象は、自分や生計を一にする配偶者・親族が持っている「常に住んでいる家」と「家具・衣服などの生活用動産」を目的にした保険や共済のうち、地震・噴火・津波による損害を補償する部分の保険料です（タックスアンサー No.1146）。',
+      },
+      {
+        type: 'table',
+        headers: ['保険・共済', '控除の対象か'],
+        rows: [
+          ['火災保険に付けた地震保険（持ち家の建物・家財）', '対象'],
+          ['賃貸住宅で家財に付けた地震保険', '対象（生活用動産）'],
+          ['JA の建物更生共済、生協の火災共済・自然災害共済など', '地震等の損害を補償する部分が対象（証明書で確認）'],
+          ['火災保険の保険料（地震保険以外の部分）', '対象外（2006 年までの旧長期損害保険契約を除く）'],
+          ['事務所・店舗として借りている部屋や、商品・仕事の設備の保険', '対象外（住まいや生活用の資産ではない）'],
+          ['常に住んでいない家（別荘など）', '対象外'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '控除を受けられるのは、その年に実際に保険料を払った人です。払込期日が来ていても、まだ払っていない分は含まれません。保険の責任開始日より前に払った保険料は、責任開始日に払ったものとして扱います（所得税基本通達 77-3・77-7）。たとえば 12 月に払った新しい契約の補償が 1 月から始まる場合、その保険料は翌年分の控除になります。',
+      },
+      { type: 'h2', text: '自宅兼事務所は「居住部分だけ控除・事業分は経費」' },
+      {
+        type: 'p',
+        text: '居住用と仕事用を兼ねている家は、居住用の部分だけが控除の対象です（所得税基本通達 77-2）。保険証券で部分ごとの保険料が分かれていないときは、建物の保険料に「居住部分の床面積 ÷ 家全体の床面積」を掛けた額を居住用の保険料にできます（同 77-5）。また、家全体のおおむね 90% 以上を住まいとして使っているなら、保険料の全額を居住用として控除にして差し支えありません（同 77-6）。',
+      },
+      {
+        type: 'table',
+        headers: ['例（持ち家 100 ㎡、建物の地震保険料 年 4 万円）', '控除の対象', '経費（損害保険料）'],
+        rows: [
+          ['仕事部屋 15 ㎡（居住部分 85%）', '34,000 円（所得税の控除 34,000 円、住民税 17,000 円）', '6,000 円'],
+          ['仕事部屋 8 ㎡（居住部分 92%）', '全額 40,000 円にしてよい（90% 以上のため）', 'なし（全額を控除にした場合）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '仕事で使う部分の保険料は、事業の必要経費（損害保険料）として扱えます。同じ保険料を控除と経費の両方に入れることはできないので、按分した割合を帳簿と申告書でそろえておきましょう。家賃・電気代など他の家事按分と同じ割合を使うと説明しやすくなります。',
+      },
+      { type: 'links', items: ['kaji-anbun-freelance', 'freelance-shotoku-koujo-ichiran', 'seimei-hoken-koujo-2026', 'shakai-hokenryo-koujo-freelance'] },
+      { type: 'h2', text: '長期契約を前納した場合' },
+      {
+        type: 'p',
+        text: '何年分かの保険料を前納した場合、その年の控除の対象は「前納した総額（割引後）× その年に来る払込期日の回数 ÷ 払込期日の総回数」で計算した額です（所得税基本通達 77-7 が準用する 76-3）。ここでいう前納は、払込期日ごとに保険料に充てる前提で先に払い、途中で解約などしたら未充当分が戻る払い方です。長期契約の一括払いがこれに当たるかどうかは契約によって違うため、保険会社の控除証明書に書かれた「その年の金額」を使ってください。',
+      },
+      { type: 'h2', text: '確定申告書の書き方' },
+      {
+        type: 'ul',
+        items: [
+          '第一表: 「地震保険料控除」欄（令和 7 年分の様式では ⑬）に控除額を書く',
+          '第二表: 「地震保険料控除」の「地震保険料」欄・「旧長期損害保険料」欄の「支払保険料等の計」に、証明書の支払保険料を書く',
+          '「うち年末調整等以外」欄: 給与の源泉徴収票に載っていない金額を書く。会社の年末調整を受けていないフリーランスは、「支払保険料等の計」と同じ金額になる',
+          '控除証明書（電子の証明書を印刷した書面を含む）を申告書に添付するか、提出のときに提示する',
+        ],
+      },
+      {
+        type: 'p',
+        text: '控除額の計算で 1 円未満の端数が出たときは、切り上げて差し支えありません（国税庁 確定申告の手引き）。確定申告書等作成コーナーなら、証明書の金額と区分（地震保険料・旧長期損害保険料）を入れるだけで控除額が計算されます。',
+      },
+      {
+        type: 'cta',
+        title: '確定申告準備キット（Excel）',
+        text: '経費帳は科目別（損害保険料・地代家賃など）に入力でき、控除証明書を含む提出書類のチェックリスト付き。年末の集計と 2 月の申告に。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '火災保険料は控除になりますか？' },
+      { type: 'p', text: '火災保険の部分は控除の対象ではありません。損害保険料控除は 2007 年分から廃止され、今は地震保険料と、2006 年までに結んだ一定の長期損害保険契約（旧長期損害保険料）だけが対象です。ただし自宅兼事務所の火災保険料のうち仕事で使う部分は、経費（損害保険料）にできます。' },
+      { type: 'h3', text: '副業で会社の年末調整を受けた場合は？' },
+      { type: 'p', text: '年末調整で控除済みの保険料は、確定申告書の第二表の「支払保険料等の計」欄に「源泉徴収分」と書き、「うち年末調整等以外」欄には源泉徴収票に載っていない金額だけを書きます。年末調整で控除済みの分は、証明書の添付も不要です。' },
+      { type: 'h3', text: '親名義の家の地震保険料を払っています。控除できますか？' },
+      { type: 'p', text: '生計を一にする親族が持っている家で、自分も常に住んでいる家なら、自分が払った地震保険料は控除の対象になります（タックスアンサー No.1146）。保険料を実際に払った人が控除を受けます。' },
+      { type: 'h3', text: '控除証明書をなくしました' },
+      { type: 'p', text: '契約している保険会社や共済に再発行を依頼してください。控除を受けるには、支払金額と控除の対象であることを証明する書類が必要です。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.1145「地震保険料控除」・No.1146「地震保険料控除の対象となる保険契約」、所得税基本通達 76-3・77-2・77-3・77-5〜77-7、令和 7 年分 確定申告の手引き（手順 3 地震保険料控除）、地方税法 314 条の 2・平成 18 年改正法附則に基づく一般的な説明です。税額は目安で、個別の判断は税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -10682,7 +10824,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance'],
   },
   {
     id: 'setup',
