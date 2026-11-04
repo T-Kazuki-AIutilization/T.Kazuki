@@ -4058,7 +4058,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'このほか、災害や盗難の損失に使える雑損控除があります。配偶者・扶養の所得要件は、2025 年の改正で 48 万円から 58 万円に、2026 年分からさらに 62 万円（給与だけなら年収 136 万円以下）に引き上げられました。',
       },
-      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
+      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
       { type: 'h2', text: '青色申告特別控除は「所得控除」ではない' },
       {
         type: 'p',
@@ -10764,6 +10764,137 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'hitorioya-koujo-freelance',
+    title: 'ひとり親控除はフリーランス・個人事業主も使える｜所得 500 万円以下の判定は青色申告特別控除の後、2027 年分から 38 万円に（寡婦控除との違い）',
+    description:
+      'フリーランス・個人事業主のひとり親控除・寡婦控除をまとめました。控除額（所得税 35 万円・住民税 30 万円、2027 年分から所得税 38 万円）、合計所得金額 500 万円以下の判定（事業所得は青色申告特別控除の後、iDeCo・小規模企業共済は判定に関係しない）、子の所得 62 万円以下、住民税が非課税になる 135 万円以下、確定申告書の書き方を、国税庁と所得税法・地方税法の条文に基づいて整理しました。',
+    date: '2026-11-04',
+    keywords: ['ひとり親控除 個人事業主', 'ひとり親控除 フリーランス', 'ひとり親控除 合計所得 500万 事業所得', 'ひとり親控除 確定申告 書き方', '寡婦控除 個人事業主', 'ひとり親控除 38万円'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: 'ひとり親控除は、会社員だけでなくフリーランス・個人事業主も確定申告で受けられる所得控除です。年末調整がない分、自分で申告しないと控除されません。フリーランスの場合、「合計所得金額 500 万円以下」の判定が売上ではなく事業所得で行われることが大事なポイントです。要件、所得の判定、税金がいくら減るか、申告書の書き方を順に整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '控除額は所得税 35 万円、住民税 30 万円。所得税は 2027 年分から 38 万円、住民税は 2028 年度分から 33 万円に上がる',
+          '要件は 12 月 31 日の時点で、結婚していない（または配偶者が生死不明）・生計を一にする子がいる・合計所得金額 500 万円以下・事実婚の相手がいない、の 4 つ。男性も対象',
+          'フリーランスの「合計所得金額」は、売上から経費と青色申告特別控除を引いた事業所得。iDeCo・小規模企業共済・国保などの所得控除は判定に関係しない',
+          '子の要件は総所得金額等 62 万円以下（2026 年分から。給与だけなら年収 136 万円以下）。子の年齢の制限はない',
+          '前年の合計所得金額が 135 万円以下なら、住民税がかからない',
+        ],
+      },
+      { type: 'h2', text: 'ひとり親控除の要件と金額' },
+      {
+        type: 'p',
+        text: 'ひとり親とは、原則としてその年の 12 月 31 日の時点で、婚姻をしていない人または配偶者の生死が明らかでない一定の人のうち、次のすべてに当てはまる人です（国税庁 タックスアンサー No.1171、所得税法 2 条 1 項 31 号）。未婚・離婚・死別の別は問いません。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '生計を一にする子がいる。子は、その年の総所得金額等が 62 万円以下（2025 年分は 58 万円以下）で、他の人の同一生計配偶者や扶養親族になっていない人',
+          '本人の合計所得金額が 500 万円以下',
+          '事実上婚姻関係と同様の事情にあると認められる人がいない。住民票の続柄に「夫（未届）」「妻（未届）」などと記載されている人がいる場合が該当する（国税庁 確定申告の手引き）',
+        ],
+      },
+      {
+        type: 'table',
+        headers: ['', '所得税', '住民税'],
+        rows: [
+          ['ひとり親控除', '35 万円（2027 年分から 38 万円）', '30 万円（2028 年度分から 33 万円）'],
+          ['寡婦控除（ひとり親に当たらない場合）', '27 万円', '26 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '2027 年分からの 38 万円は、2027 年 1 月 1 日施行の改正後の所得税法 81 条、住民税の 33 万円は 2028 年 1 月 1 日施行の改正後の地方税法 314 条の 2 で確認できます（e-Gov 法令検索）。寡婦控除は、夫と死別した人、または夫と離婚して扶養親族がいる人で、合計所得金額 500 万円以下の人が対象です（タックスアンサー No.1170）。生計を一にする子がいてひとり親の要件を満たす人は、ひとり親控除のほうを受けます。',
+      },
+      { type: 'h2', text: 'フリーランスの「合計所得金額 500 万円以下」の判定' },
+      {
+        type: 'p',
+        text: '合計所得金額は、事業所得や給与所得などの所得の合計です。事業所得は「売上 − 必要経費 − 青色申告特別控除」で、売上の額では判定しません。一方、iDeCo・小規模企業共済・国民年金・国保などの所得控除は、合計所得金額を計算したあとに引くものなので、判定には関係しません。また、前年以前の赤字の繰越控除も、引く前の金額で判定します（所得税法 2 条 1 項 30 号）。',
+      },
+      {
+        type: 'table',
+        headers: ['例（売上 800 万円・経費 250 万円）', '合計所得金額', 'ひとり親控除'],
+        rows: [
+          ['白色申告', '550 万円', '受けられない'],
+          ['青色申告（65 万円控除）', '485 万円', '受けられる'],
+          ['白色申告で iDeCo に年 60 万円', '550 万円（iDeCo は判定に関係しない）', '受けられない'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '500 万円の前後にいる人は、青色申告の 65 万円控除を受けられるかどうかで結果が変わります。会社の給与もある人は、給与所得（年収から給与所得控除を引いた額）も合計に入ります。',
+      },
+      {
+        type: 'cta',
+        title: '青色申告で所得と税金がいくら下がるか計算する（無料ツール）',
+        text: '白色申告と比べて、65 万・55 万・10 万円の青色申告特別控除で下がる所得税・住民税・国保を計算します。',
+        href: '/tools/aoiro',
+        label: '青色申告の節税額ツールを開く',
+      },
+      { type: 'h2', text: '税金はいくら減る？（目安）' },
+      {
+        type: 'p',
+        text: '所得税は「35 万円 × 所得税率 × 1.021（復興特別所得税を含む）」、住民税は「30 万円 × 10%」で、年間の目安は次のとおりです。',
+      },
+      {
+        type: 'table',
+        headers: ['所得税率', '所得税', '住民税', '合計'],
+        rows: [
+          ['5%（課税所得 195 万円以下）', '約 17,900 円', '30,000 円', '約 4.8 万円'],
+          ['10%（195 万円超 330 万円以下）', '約 35,700 円', '30,000 円', '約 6.6 万円'],
+          ['20%（330 万円超 695 万円以下）', '約 71,500 円', '30,000 円', '約 10.1 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'さらに、前年の合計所得金額が 135 万円以下のひとり親・寡婦には、住民税がかかりません（地方税法 295 条。都道府県民税も同様）。売上から経費と青色申告特別控除を引いた所得が 135 万円以下かどうかを確認しましょう。',
+      },
+      { type: 'h2', text: '子の要件のポイント' },
+      {
+        type: 'ul',
+        items: [
+          '子の年齢の制限はない。16 歳未満で扶養控除の対象にならない子でも、ひとり親控除の要件の「子」になる',
+          '子の総所得金額等は 2026 年分から 62 万円以下。アルバイトの給与だけなら年収 136 万円以下が目安',
+          '子が元配偶者など他の人の扶養親族になっていると、要件を満たさない。16 歳以上の子を自分の扶養控除の対象にするのは問題ない',
+        ],
+      },
+      { type: 'links', items: ['freelance-shotoku-koujo-ichiran', 'tokutei-shinzoku-gakusei-freelance', 'freelance-haigusha-koujo', 'aoiro-koujo-75man-2027'] },
+      { type: 'h2', text: '確定申告書の書き方' },
+      {
+        type: 'ul',
+        items: [
+          '第一表: 「寡婦、ひとり親控除」欄に控除額（35 万円）を書き、ひとり親控除の場合は「区分」の□に「1」を書く',
+          '第二表: 「本人に関する事項」欄の「ひとり親」に○をつける（寡婦控除の場合は「寡婦」に○をつけ、当てはまる事由にチェック）',
+          '確定申告書等作成コーナーでは、本人の状況を選ぶと控除額が自動で入る',
+        ],
+      },
+      {
+        type: 'p',
+        text: '前の年に申告し忘れていた場合は、更正の請求で 5 年前の分までさかのぼって還付を受けられます。',
+      },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '年の途中で離婚しました。その年から控除を受けられますか？' },
+      { type: 'p', text: 'ひとり親かどうかは原則としてその年の 12 月 31 日の時点で判定します。12 月 31 日に婚姻をしておらず、他の要件も満たしていれば、離婚した年の分から受けられます。' },
+      { type: 'h3', text: '父親でも受けられますか？' },
+      { type: 'p', text: '受けられます。ひとり親控除に性別の要件はありません。寡婦控除は女性が対象ですが、ひとり親控除は父親・母親のどちらも対象です。' },
+      { type: 'h3', text: 'iDeCo を増やせば 500 万円以下になりますか？' },
+      { type: 'p', text: 'なりません。iDeCo・小規模企業共済の掛金は所得控除で、合計所得金額を計算したあとに引くため、ひとり親控除の判定には影響しません。判定の所得を下げるのは、必要経費と青色申告特別控除です。' },
+      { type: 'h3', text: '会社員の副業で、会社の年末調整でひとり親控除を受けています' },
+      { type: 'p', text: '確定申告をする場合も、第一表と第二表に同じようにひとり親控除を書きます。副業の所得を合わせた合計所得金額が 500 万円を超えると受けられなくなるので、副業の所得が大きい年は注意してください。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.1170「寡婦控除」・No.1171「ひとり親控除」、令和 7 年分 確定申告の手引き（手順 3 寡婦・ひとり親控除）、所得税法 2 条 1 項 30 号・31 号・80 条・81 条（2027 年 1 月 1 日施行の改正後を含む）、地方税法 295 条・314 条の 2（2028 年 1 月 1 日施行の改正後を含む）に基づく一般的な説明です。税額は目安で、個別の判断は税務署・市区町村または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -10824,7 +10955,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance'],
   },
   {
     id: 'setup',
