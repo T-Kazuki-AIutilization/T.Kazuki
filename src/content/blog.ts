@@ -4058,7 +4058,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'このほか、災害や盗難の損失に使える雑損控除があります。配偶者・扶養の所得要件は、2025 年の改正で 48 万円から 58 万円に、2026 年分からさらに 62 万円（給与だけなら年収 136 万円以下）に引き上げられました。',
       },
-      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
+      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
       { type: 'h2', text: '青色申告特別控除は「所得控除」ではない' },
       {
         type: 'p',
@@ -6897,6 +6897,7 @@ export const ARTICLES: Article[] = [
           '同じ保険料を家族の側でも控除しないようにする（払った人が控除する）',
         ],
       },
+      { type: 'links', items: ['oya-fuyou-koujo-freelance'] },
       { type: 'h2', text: '国民年金を前納したとき' },
       {
         type: 'p',
@@ -11252,6 +11253,136 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'oya-fuyou-koujo-freelance',
+    title: '親を扶養控除に入れるには？フリーランス・個人事業主の老人扶養（48 万・同居 58 万円）、親の年金 172 万円以下（2026 年分）、別居でも仕送りしていれば対象',
+    description:
+      'フリーランス・個人事業主が親を扶養控除の対象にする方法をまとめました。控除額（70 歳以上は 48 万円、同居なら 58 万円。住民税は 38 万・45 万円）、親の所得要件（2026 年分は合計所得 62 万円以下、65 歳以上で年金だけなら 172 万円以下）、別居でも生活費を送金していれば生計を一にするとされること、老人ホームに入所すると同居にならないこと、親を事業専従者にすると対象外になること、親の国保・後期高齢者医療の保険料は口座振替なら自分の社会保険料控除になることを、国税庁と所得税法・地方税法・租税特別措置法に基づいて整理しました。',
+    date: '2026-11-05',
+    keywords: ['親 扶養控除 個人事業主', '親 扶養 フリーランス 確定申告', '老人扶養親族 同居老親 58万', '親 扶養控除 年金 いくらまで 2026', '別居 親 扶養控除 仕送り', '親 後期高齢者医療 保険料 社会保険料控除'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '年金で暮らす親を扶養控除の対象にすると、フリーランス・個人事業主の税金は年に数万〜十数万円下がります。会社員なら年末調整で申告しますが、フリーランスは確定申告で自分で申告しないと控除されません。親の年金がいくらまでなら対象になるか、別居でもよいか、親の保険料はどう扱うかを、条文と国税庁の案内に基づいて整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '控除額は、70 歳以上の親で 48 万円、同居している 70 歳以上の親（同居老親等）なら 58 万円。70 歳未満は 38 万円。住民税は 38 万・45 万・33 万円',
+          '親の合計所得金額が 62 万円以下（2026 年分。2025 年分は 58 万円以下）であること。65 歳以上で公的年金だけなら、年金収入 172 万円以下が目安',
+          '別居でも、常に生活費や療養費を送金していれば「生計を一にする」とされる',
+          '老人ホームに入所している親は、同居老親等ではなく 48 万円の扱い。入院は同居のまま',
+          '親を青色事業専従者・事業専従者にすると扶養控除の対象外。兄弟などほかの人が扶養控除を受けている親も対象外',
+          '親の国保・後期高齢者医療の保険料を自分の口座から払えば、自分の社会保険料控除になる。年金からの天引き分は親の控除',
+        ],
+      },
+      { type: 'h2', text: '控除額' },
+      {
+        type: 'table',
+        headers: ['親の年齢・同居', '所得税', '住民税'],
+        rows: [
+          ['70 歳未満（16 歳以上の一般の控除対象扶養親族）', '38 万円', '33 万円'],
+          ['70 歳以上（老人扶養親族）・同居していない', '48 万円', '38 万円'],
+          ['70 歳以上・自分か配偶者と同居している自分か配偶者の父母・祖父母（同居老親等）', '58 万円', '45 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '所得税は国税庁 タックスアンサー No.1180 と所得税法 84 条・租税特別措置法 41 条の 16、住民税は地方税法 314 条の 2 で確認できます。年齢はその年の 12 月 31 日の時点で判定し、2026 年分の 70 歳以上は 1957 年（昭和 32 年）1 月 1 日以前に生まれた人です。配偶者の父母（義父母）も、生計を一にしていれば対象になります。',
+      },
+      { type: 'h2', text: '親の所得要件：年金だけなら 172 万円以下が目安' },
+      {
+        type: 'p',
+        text: '扶養親族になるのは、合計所得金額が 62 万円以下（2026 年分。2026 年 12 月 1 日施行の改正で 2026 年分から適用）の人です（所得税法 2 条 1 項 34 号）。公的年金の所得は「年金収入 − 公的年金等控除額」で、65 歳以上で年金以外の所得が 1,000 万円以下なら、年金収入 330 万円までは公的年金等控除額が 110 万円です（所得税法 35 条 4 項、租税特別措置法 41 条の 15 の 3）。',
+      },
+      {
+        type: 'table',
+        headers: ['親の状況（2026 年分、年金以外の所得なし）', '扶養親族になる年金収入の目安'],
+        rows: [
+          ['65 歳以上', '172 万円以下（172 万 − 110 万 = 62 万円）'],
+          ['65 歳未満', '122 万円以下（122 万 − 60 万 = 62 万円）'],
+          ['（参考）2025 年分・65 歳以上', '168 万円以下（所得 58 万円以下）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '親にパートの給与や不動産収入などがあれば、年金の所得と合計して判定します。年齢の 65 歳もその年の 12 月 31 日の時点で判定します。住民税の扶養親族の所得要件は地方税法で別に定められていて、所得税と改正の時期が異なるため、住民税での扱いはお住まいの市区町村に確認してください。',
+      },
+      { type: 'h2', text: '別居の親でも「生計を一にする」なら対象' },
+      {
+        type: 'p',
+        text: '「生計を一にする」は、同じ家に住んでいることではありません。所得税基本通達 2-47 では、別居していても、常に生活費・療養費などの送金が行われている場合は生計を一にするものとしています。同じ家に住んでいる場合は、明らかに互いに独立した生活をしている場合を除き、生計を一にするとされます。別居の親を扶養にするときは、送金の記録（振込の明細など）を残しておくと説明しやすくなります。',
+      },
+      {
+        type: 'p',
+        text: '同居老親等の「同居」は、病気の治療で入院している間は、長期にわたっても同居として扱ってかまいません。一方、老人ホームなどに入所している場合は、老人ホームが居所になるため同居には当たらず、48 万円の老人扶養親族になります（タックスアンサー No.1180）。',
+      },
+      { type: 'h2', text: '個人事業主ならではの注意点' },
+      {
+        type: 'ul',
+        items: [
+          '親に仕事を手伝ってもらい、青色事業専従者給与を払う（または白色の事業専従者控除を受ける）と、その親は扶養親族から外れる。給与の額に関係なく、その年は扶養控除を受けられない',
+          '1 人の親を 2 人以上の扶養親族にはできない。兄弟の誰かが年末調整などで扶養控除を受けているなら、誰が受けるかを決めておく',
+          '親の国民健康保険料・後期高齢者医療保険料・介護保険料を、自分の口座から振替で払った分は、自分の社会保険料控除になる。年金から天引き（特別徴収）された分は、払ったのは親なので親の控除になる（タックスアンサー No.1130 の質疑応答）',
+          '生計を一にする親の医療費を自分が払った場合も、自分の医療費控除に含められる',
+        ],
+      },
+      { type: 'links', items: ['shakai-hokenryo-koujo-freelance', 'iryohi-koujo-freelance', 'aoiro-jigyo-senjusha-kyuyo', 'shogaisha-koujo-freelance'] },
+      { type: 'h2', text: '税金はいくら減る？（目安）' },
+      {
+        type: 'p',
+        text: '所得税は「控除額 × 所得税率 × 1.021（復興特別所得税を含む）」、住民税は「控除額 × 10%」で計算した年間の目安です。',
+      },
+      {
+        type: 'table',
+        headers: ['所得税率', '70 歳未満（38 万円）', '70 歳以上・別居（48 万円）', '70 歳以上・同居（58 万円）'],
+        rows: [
+          ['5%（課税所得 195 万円以下）', '約 5.2 万円', '約 6.3 万円', '約 7.5 万円'],
+          ['10%（195 万円超 330 万円以下）', '約 7.2 万円', '約 8.7 万円', '約 10.4 万円'],
+          ['20%（330 万円超 695 万円以下）', '約 11.1 万円', '約 13.6 万円', '約 16.3 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '親が障害者控除の対象（市区町村長等の認定など）にもなる場合は、扶養控除に加えて障害者控除（27 万円、特別障害者 40 万円、同居特別障害者 75 万円）を受けられます。',
+      },
+      {
+        type: 'cta',
+        title: '確定申告準備キット（Excel）',
+        text: '経費帳と、控除証明書・保険料の納付証明などの提出書類チェックリスト付き。年末の集計と 2 月の申告に。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      { type: 'h2', text: '確定申告書の書き方' },
+      {
+        type: 'ul',
+        items: [
+          '第一表: 「扶養控除」欄（令和 7 年分の様式では ㉓）に、扶養控除の合計額を書く',
+          '第二表: 「配偶者や親族に関する事項」欄の 2 行目以降（1 行目は配偶者用）に、親の氏名・マイナンバー・生年月日を書く。親と別居している場合は、同じ欄の住民税に関する項目にもその旨を記入する',
+          '確定申告書等作成コーナーでは、親の生年月日と同居の有無を入れると控除額が自動で入る',
+        ],
+      },
+      {
+        type: 'p',
+        text: '前の年に申告し忘れていた場合は、更正の請求で 5 年前の分までさかのぼって還付を受けられます。',
+      },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'freelance-shotoku-koujo-ichiran', 'freelance-haigusha-koujo'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '親が国民健康保険に入っていても、税金の扶養控除は受けられますか？' },
+      { type: 'p', text: '受けられます。税金の扶養控除は、親の所得と生計を一にしているかで判定し、親がどの健康保険に入っているかは関係ありません。健康保険の扶養（被扶養者）は、健康保険ごとの別の基準で判定します。' },
+      { type: 'h3', text: '年の途中で親が亡くなりました。その年の扶養控除は受けられますか？' },
+      { type: 'p', text: '亡くなった人については、亡くなった時の現況で扶養親族に当たるかを判定します（所得税法 85 条）。亡くなった時に生計を一にしていて、その年の所得が要件以下であれば、その年分の扶養控除を受けられます。' },
+      { type: 'h3', text: '仕送りはいくら以上必要ですか？' },
+      { type: 'p', text: '法令や通達に金額の基準はありません。「常に生活費・療養費などの送金が行われている」ことが目安で、年に 1 回だけまとめて渡すような場合は生計を一にするとは言いにくくなります。迷うときは税務署に確認してください。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.1180「扶養控除」・No.1130「社会保険料控除」とその質疑応答、令和 7 年分 確定申告の手引き（手順 3 扶養控除）、所得税基本通達 2-47、所得税法 2 条 1 項 34 号・35 条 4 項・84 条・85 条（2026 年 12 月 1 日施行の改正後を含む）、租税特別措置法 41 条の 15 の 3・41 条の 16、地方税法 314 条の 2（e-Gov 法令検索）に基づく一般的な説明です。税額は目安で、個別の判断は税務署・市区町村または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -11312,7 +11443,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance'],
   },
   {
     id: 'setup',
