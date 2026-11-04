@@ -7248,6 +7248,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: '住宅ローン控除を受けている場合は、居住用の部分だけが控除の対象になります。控除を受けるには床面積の 2 分の 1 以上を専ら自分の居住用に使っていることが必要で（国税庁 タックスアンサー No.1211-1）、居住用の部分がおおむね 90% 以上なら家全体を居住用として扱えます（租税特別措置法関係通達 41-29）。仕事で使う割合を大きくすると、控除額が減る場合があります。住んでいた家を途中から仕事にも使う場合の減価償却の計算は複雑なので、税務署か税理士に確認すると安心です。',
       },
+      { type: 'links', items: ['jutaku-loan-koujo-freelance'] },
       { type: 'h2', text: '帳簿のつけ方と決算書への書き方' },
       {
         type: 'p',
@@ -11383,6 +11384,135 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'jutaku-loan-koujo-freelance',
+    title: '個人事業主の住宅ローン控除｜自宅兼事務所は居住用 90% 以上なら全額、仕事部屋の割合で控除が減る計算と、所得税が少なくて引ききれないときの注意点（2026 年入居）',
+    description:
+      'フリーランス・個人事業主の住宅ローン控除（住宅借入金等特別控除）をまとめました。2026 年入居の控除限度額（新築・中古）、自宅兼事務所は床面積の 2 分の 1 以上が居住用であることが条件で、居住用がおおむね 90% 以上なら全額・それ未満なら居住用の割合で年末残高を按分すること（措置法施行令 26 条 7 項・措置法通達 41-27・41-29）、合計所得金額 2,000 万円以下の判定は青色申告特別控除の後、所得税が少ないと控除を引ききれず住民税から引けるのは課税所得の 5%（上限 9.75 万円）までであること、毎年確定申告で受ける手続きを、国税庁と条文に基づいて整理しました。',
+    date: '2026-11-05',
+    keywords: ['住宅ローン控除 個人事業主', '住宅ローン控除 自宅兼事務所', '住宅ローン控除 フリーランス', '住宅ローン控除 按分 90%', '住宅ローン控除 2026 入居 限度額', '住宅ローン控除 引ききれない 個人事業主'],
+    readingMinutes: 8,
+    blocks: [
+      {
+        type: 'p',
+        text: '家を買ったフリーランス・個人事業主も、会社員と同じように住宅ローン控除（住宅借入金等特別控除）を受けられます。ただし、自宅の一部を仕事場にしていると控除の対象が居住用の部分に限られることがあり、所得税が少ない年は控除を使いきれないこともあります。2026 年に入居した場合の控除額と、個人事業主ならではの注意点を、国税庁の案内と条文に基づいて整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '控除額は「年末のローン残高 × 0.7%」（控除限度額あり）を、所得税から直接引く。2026 年入居の新築は、省エネ基準に適合しない住宅は原則として対象外',
+          '自宅兼事務所でも、建物全体の床面積が 50 ㎡以上で、その 2 分の 1 以上を専ら居住用に使っていれば受けられる',
+          '居住用の部分がおおむね 90% 以上なら、ローン残高の全額が対象。90% 未満なら、居住用の割合をかけた残高だけが対象になる',
+          '合計所得金額 2,000 万円以下（青色申告特別控除の後の金額で判定）',
+          '所得税から引ききれない分は、翌年度の住民税から引ける。ただし前年分の課税所得の 5%（上限 9.75 万円）まで。節税で所得税が少ないと、控除の一部が使われずに消える',
+          '会社員と違って年末調整がないため、2 年目以降も毎年の確定申告で受ける',
+        ],
+      },
+      { type: 'h2', text: '2026 年入居の控除限度額' },
+      {
+        type: 'p',
+        text: '控除額は「住宅ローンの年末残高（住宅の取得対価のほうが少なければその額）× 0.7%」で、次の控除限度額が上限です（国税庁 タックスアンサー No.1211-1・No.1211-3）。かっこ内は、40 歳未満で配偶者がいる人、40 歳以上で 40 歳未満の配偶者がいる人、19 歳未満の扶養親族がいる人（特例対象個人）の場合です。',
+      },
+      {
+        type: 'table',
+        headers: ['住宅の区分（2026 年入居）', '新築', '中古住宅'],
+        rows: [
+          ['認定長期優良住宅・認定低炭素住宅', '年 31.5 万円（35 万円）・13 年', '年 24.5 万円（31.5 万円）・13 年'],
+          ['ZEH 水準省エネ住宅', '年 24.5 万円（31.5 万円）・13 年', '年 24.5 万円（31.5 万円）・13 年'],
+          ['省エネ基準適合住宅', '年 14 万円（21 万円）・13 年', '年 14 万円（21 万円）・13 年'],
+          ['その他の住宅', '原則 0 円（2023 年末までに建築確認を受けたもの等は年 14 万円・10 年）', '年 14 万円・10 年'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '床面積 40 ㎡以上 50 ㎡未満の住宅は、合計所得金額 1,000 万円以下の年だけ対象になるなど、別の条件があります。中古住宅は 1982 年（昭和 57 年）1 月 1 日以後に建築されたもの（または一定の耐震基準に適合するもの）が対象です。住宅の区分は証明書で確認するため、購入時の書類を手元にそろえておきましょう。',
+      },
+      { type: 'h2', text: '自宅兼事務所の場合' },
+      {
+        type: 'p',
+        text: '仕事場を兼ねた家でも、次の 2 つを満たせば住宅ローン控除を受けられます（タックスアンサー No.1211-1、措置法通達 41-12）。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '床面積が 50 ㎡以上。事務所に使っている部分も含めた建物全体の床面積（マンションは登記上の専有部分）で判定する',
+          '床面積の 2 分の 1 以上を、専ら自分の居住用に使っている',
+        ],
+      },
+      {
+        type: 'p',
+        text: '家の一部を居住以外に使っている場合、控除の対象になるローン残高は、居住用の部分の床面積の割合をかけた額になります（租税特別措置法施行令 26 条 7 項）。仕事専用の部屋は居住用以外、居間に仕事机を置くような兼用の部分は、居住専用と居住以外の床面積の比で分けます（措置法通達 41-27）。ただし、居住用の部分がおおむね 90% 以上なら、家全体を居住用として扱えます（措置法通達 41-29）。',
+      },
+      {
+        type: 'table',
+        headers: ['例（2026 年入居・ZEH 水準省エネ住宅・年末残高 3,000 万円）', '控除の対象になる残高', '1 年目の控除額'],
+        rows: [
+          ['仕事専用の部屋なし', '3,000 万円', '21 万円'],
+          ['仕事専用の部屋が床面積の 8%（居住用 92%）', '3,000 万円（おおむね 90% 以上なので全額）', '21 万円'],
+          ['仕事専用の部屋が床面積の 15%（居住用 85%）', '2,550 万円', '17.85 万円'],
+          ['仕事専用の部分が床面積の 60%（居住用 40%）', '対象外（居住用が 2 分の 1 未満）', '0 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '家事按分で仕事部屋の分の減価償却費や住宅ローンの利息を経費にしている場合、その部分は居住用以外に使っている部分です。経費にする割合と住宅ローン控除の居住用の割合は、同じ考え方でそろえておきましょう。仕事に使う割合が 10% を超えるかどうかで控除額が変わるため、経費を増やす得と控除が減る損の両方を比べて決めるのがおすすめです。',
+      },
+      {
+        type: 'cta',
+        title: '家賃・電気代・通信費の按分を計算する（無料ツール）',
+        text: '仕事部屋の面積、仕事の時間、業務で使う割合を入れるだけで、経費にできる額と税金・国保が下がる目安を計算します。登録不要。',
+        href: '/tools/anbun',
+        label: '家事按分の計算ツールを開く',
+      },
+      { type: 'links', items: ['kaji-anbun-freelance', 'shogaku-genka-shokyaku-40man'] },
+      { type: 'h2', text: '所得税が少ないと控除を使いきれない' },
+      {
+        type: 'p',
+        text: '住宅ローン控除は、所得税の額から直接引く税額控除です。所得税が控除額より少ないと、その年の所得税から引ききれない分が出ます。引ききれない分は翌年度の住民税から引けますが、上限は前年分の所得税の課税総所得金額等の 5%（上限 9.75 万円）です（地方税法附則 5 条の 4）。それでも残った分は、翌年以降に繰り越せません。',
+      },
+      {
+        type: 'table',
+        headers: ['例（2026 年分）', '金額'],
+        rows: [
+          ['合計所得金額（青色申告特別控除 65 万円の後）', '300 万円'],
+          ['社会保険料控除・基礎控除', '60 万円・104 万円'],
+          ['課税所得金額 → 所得税（5%）', '136 万円 → 6.8 万円'],
+          ['住宅ローン控除の額（上の表で居住用 85% の例）', '17.85 万円'],
+          ['所得税から引ける額 / 住民税から引ける額', '6.8 万円 / 6.8 万円（136 万円 × 5%）'],
+          ['使われずに消える額', '4.25 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'フリーランスは、青色申告特別控除・iDeCo・小規模企業共済などで所得税を下げやすい一方、所得税が下がりすぎると住宅ローン控除が使いきれなくなります。iDeCo や共済の掛金を増やす前に、住宅ローン控除の額と、その年の所得税・住民税で引ける額を見比べてください。将来の年金や退職金の積み立てとしての価値もあるので、税金だけで判断する必要はありません。',
+      },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'shokibo-kyosai-freelance', 'aoiro-koujo-75man-2027'] },
+      { type: 'h2', text: '個人事業主の確定申告の手続き' },
+      {
+        type: 'ul',
+        items: [
+          '1 年目: 確定申告書に「住宅借入金等特別控除額の計算明細書」、金融機関の「住宅取得資金に係る借入金の年末残高等証明書」、登記事項証明書・売買契約書（工事請負契約書）の写し、住宅の区分の証明書などを添付する',
+          '2 年目以降: 会社員は年末調整で受けられるが、個人事業主は毎年の確定申告で、計算明細書と年末残高等証明書を添付して受ける',
+          '自宅兼事務所の場合は、居住用の部分の床面積と割合を計算明細書で計算して書く（居住用がおおむね 90% 以上なら全体を居住用として計算できる）',
+          '「調書方式」に対応した金融機関で手続きをしている場合は、年末残高等証明書の添付が不要になるなど、提出書類が一部異なる',
+          '合計所得金額が 2,000 万円を超えた年は、その年だけ控除を受けられない（翌年に 2,000 万円以下になれば、残りの期間は受けられる）',
+        ],
+      },
+      { type: 'links', items: ['freelance-etax-how-to', 'kakutei-shinkoku-kigengo-shusei', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '自宅の 1 部屋を仕事部屋にしています。住宅ローン控除はどのくらい減りますか？' },
+      { type: 'p', text: '仕事専用の部屋が家全体の床面積のおおむね 10% 以下なら、居住用がおおむね 90% 以上なので控除は減りません。10% を超えると、居住用の割合をかけた残高だけが控除の対象になります。たとえば仕事部屋が 15% なら、控除の対象は残高の 85% です。' },
+      { type: 'h3', text: '赤字の年は住宅ローン控除はどうなりますか？' },
+      { type: 'p', text: '所得税がかからない年は、所得税からは控除を引けません。住民税から引ける額も課税所得金額をもとに計算するため、課税所得がゼロならゼロです。使えなかった分は翌年以降に繰り越せず、控除期間（10 年・13 年）も延びません。' },
+      { type: 'h3', text: '開業する前に家を買いました。後から仕事部屋にしたらどうなりますか？' },
+      { type: 'p', text: '住宅ローン控除の居住用の割合は、仕事に使っている部分を除いて計算します。開業して仕事専用の部屋ができ、その割合がおおむね 10% を超える場合は、控除額が変わることがあります。年の途中で使い方が変わったときの扱いは、税務署に確認してください。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.1211-1「住宅の新築等をし、令和 4 年以降に居住の用に供した場合」・No.1211-3「中古住宅を取得し、令和 4 年以降に居住の用に供した場合」、租税特別措置法関係通達 41-12・41-27・41-29、租税特別措置法施行令 26 条 7 項、地方税法附則 5 条の 4（2027 年 1 月 1 日施行の改正後。e-Gov 法令検索）に基づく一般的な説明です。控除額は目安で、個別の判断は税務署・市区町村または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -11443,7 +11573,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'jutaku-loan-koujo-freelance'],
   },
   {
     id: 'setup',
