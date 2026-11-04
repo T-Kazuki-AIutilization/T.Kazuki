@@ -4058,7 +4058,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'このほか、災害や盗難の損失に使える雑損控除があります。配偶者・扶養の所得要件は、2025 年の改正で 48 万円から 58 万円に、2026 年分からさらに 62 万円（給与だけなら年収 136 万円以下）に引き上げられました。',
       },
-      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
+      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kinro-gakusei-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
       { type: 'h2', text: '青色申告特別控除は「所得控除」ではない' },
       {
         type: 'p',
@@ -4905,6 +4905,7 @@ export const ARTICLES: Article[] = [
           '住民税は所得税より基準が低く、所得 45 万円前後からかかることがある（勤労学生控除で軽くなる。基準は自治体による）',
         ],
       },
+      { type: 'links', items: ['kinro-gakusei-koujo-freelance'] },
       { type: 'h2', text: '健康保険の扶養は別の基準（150 万円未満）' },
       {
         type: 'p',
@@ -11007,6 +11008,127 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kinro-gakusei-koujo-freelance',
+    title: '勤労学生控除は学生フリーランスも使える｜業務委託・個人事業の所得 89 万円以下（2026 年分）、所得税より住民税が下がる控除',
+    description:
+      '学生のフリーランス・個人事業主の勤労学生控除をまとめました。自分で働いて得た事業所得・雑所得も対象になること、合計所得金額 89 万円以下（2026 年分。2025 年分は 85 万円）と勤労以外の所得 10 万円以下の要件、2026 年分は基礎控除 104 万円のため所得税は変わらず住民税（控除 26 万円）が下がること、青色申告特別控除で 89 万円以下に収まる例、親の扶養との関係、確定申告書の書き方を、国税庁と所得税法・地方税法の条文に基づいて整理しました。',
+    date: '2026-11-04',
+    keywords: ['勤労学生控除 フリーランス', '勤労学生控除 事業所得', '勤労学生控除 業務委託', '勤労学生控除 89万', '大学生 個人事業主 確定申告', '勤労学生控除 住民税'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '勤労学生控除は、アルバイトの給与だけでなく、業務委託や個人事業で自分が働いて得た所得にも使える所得控除です。学生のフリーランスは年末調整がないため、確定申告などで自分で申告しないと受けられません。2026 年分は所得税の基礎控除が大きく上がったため、この控除で実際に下がるのは主に住民税です。要件、税金がどう変わるか、申告書の書き方を整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '控除額は所得税 27 万円、住民税 26 万円',
+          '要件は 12 月 31 日の時点で、学生であること・自分の勤労による所得（事業所得・給与所得・雑所得など）があること・合計所得金額 89 万円以下（2026 年分。2025 年分は 85 万円）・勤労以外の所得 10 万円以下の 4 つ',
+          'フリーランスの合計所得金額は、売上から経費と青色申告特別控除を引いた事業所得。売上の額では判定しない',
+          '2026 年分は基礎控除が 104 万円（合計所得 489 万円以下）のため、合計所得 89 万円以下なら勤労学生控除がなくても所得税はかからない。下がるのは住民税（26 万円 × 10% で年 2.6 万円前後）',
+          '親の扶養控除・特定親族特別控除は子の合計所得金額で判定する。勤労学生控除を受けても、親の控除の判定は変わらない',
+        ],
+      },
+      { type: 'h2', text: '勤労学生の要件' },
+      {
+        type: 'p',
+        text: '所得税法では、勤労学生を「学生で、自己の勤労に基づいて得た事業所得、給与所得、退職所得又は雑所得（給与所得等）を有するもののうち、合計所得金額が 89 万円以下で、かつ、給与所得等以外の所得が 10 万円以下の人」と定めています（所得税法 2 条 1 項 32 号。2026 年 12 月 1 日施行の改正後。国税庁 タックスアンサー No.1175）。判定はその年の 12 月 31 日の現況で行います。',
+      },
+      {
+        type: 'table',
+        headers: ['要件', '学生フリーランスでの見方'],
+        rows: [
+          ['学生であること', '大学・短大・高専・高校など。専修学校・各種学校・職業訓練は一定の課程に限る（当てはまるかは学校の窓口で確認）'],
+          ['自分の勤労による所得がある', 'デザイン・ライティング・プログラミングなど、自分が働いて得た事業所得・雑所得も対象'],
+          ['合計所得金額 89 万円以下', '売上 − 経費 − 青色申告特別控除。アルバイトの給与所得もあれば合計する'],
+          ['勤労以外の所得 10 万円以下', '自分の勤労によらない所得（確定申告に含めた株の売却益や配当など）が 10 万円を超えると受けられない'],
+        ],
+      },
+      {
+        type: 'p',
+        text: 'アルバイトの給与だけの場合、2026 年分は給与所得控除が最低 74 万円のため、年収 163 万円以下なら合計所得金額が 89 万円以下になります。業務委託の報酬は給与所得控除がないので、経費を引いた事業所得（または雑所得）で判定します。',
+      },
+      { type: 'h2', text: '2026 年分は所得税ではなく住民税が下がる' },
+      {
+        type: 'p',
+        text: '2026 年分の所得税の基礎控除は、合計所得金額 489 万円以下なら 104 万円です（タックスアンサー No.1199）。勤労学生控除の対象になる人は合計所得金額が 89 万円以下なので、基礎控除だけで所得がゼロになり、勤労学生控除がなくても所得税はかかりません（2025 年分も基礎控除 95 万円で同じ）。一方、住民税の基礎控除は 43 万円のままなので、勤労学生控除の 26 万円がそのまま効きます（地方税法 314 条の 2）。',
+      },
+      {
+        type: 'table',
+        headers: ['合計所得金額（2026 年分）', '住民税の所得割（控除なし）', '勤労学生控除あり', '差'],
+        rows: [
+          ['60 万円', '約 1.7 万円', '0 円', '約 1.7 万円'],
+          ['80 万円', '約 3.7 万円', '約 1.1 万円', '約 2.6 万円'],
+          ['89 万円', '約 4.6 万円', '約 2.0 万円', '約 2.6 万円'],
+          ['90 万円', '約 4.7 万円', '受けられない', '—'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '表は所得割の税率 10%、社会保険料控除などの他の控除がない場合の目安で、調整控除や均等割は含めていません。所得が少ない人は、自治体の基準で住民税がかからないこともあります。住民税の勤労学生の判定にも所得税法の定義が使われ、前年の合計所得金額で判定します（地方税法 314 条の 2 第 9 項）。',
+      },
+      { type: 'links', items: ['freelance-juminzei-first-year', 'side-job-juminzei-shinkoku', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'h2', text: '89 万円を少し超えるときは青色申告' },
+      {
+        type: 'p',
+        text: '合計所得金額は青色申告特別控除の後の金額なので、青色申告にすると 89 万円以下に収まることがあります。',
+      },
+      {
+        type: 'table',
+        headers: ['例（売上 150 万円・経費 20 万円）', '合計所得金額', '勤労学生控除'],
+        rows: [
+          ['白色申告', '130 万円', '受けられない'],
+          ['青色申告（10 万円控除）', '120 万円', '受けられない'],
+          ['青色申告（65 万円控除。複式簿記と e-Tax など）', '65 万円', '受けられる'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '青色申告にするには、原則として青色申告にしたい年の 3 月 15 日まで（その年の 1 月 16 日以後に開業した場合は開業の日から 2 か月以内）に「青色申告承認申請書」を税務署に出す必要があります。',
+      },
+      {
+        type: 'cta',
+        title: '青色申告で所得と税金がいくら下がるか計算する（無料ツール）',
+        text: '白色申告と比べて、65 万・55 万・10 万円の青色申告特別控除で下がる所得税・住民税・国保を計算します。',
+        href: '/tools/aoiro',
+        label: '青色申告の節税額ツールを開く',
+      },
+      { type: 'h2', text: '親の扶養との関係' },
+      {
+        type: 'p',
+        text: '親が受ける扶養控除（2026 年分は子の合計所得金額 62 万円以下）や特定親族特別控除（19 歳以上 23 歳未満の子で 62 万円超 123 万円以下）は、子の合計所得金額で判定します。勤労学生控除は合計所得金額を計算した後に引く所得控除なので、子が勤労学生控除を受けても、親の控除の判定には影響しません。',
+      },
+      { type: 'links', items: ['tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027'] },
+      { type: 'h2', text: '確定申告書の書き方' },
+      {
+        type: 'ul',
+        items: [
+          '第一表: 「勤労学生、障害者控除」欄（令和 7 年分の様式では ⑲〜⑳）に 27 万円を書く（障害者控除もある場合は合計額）',
+          '第二表: 「本人に関する事項」欄の「勤労学生」に○をつける',
+          '専修学校・各種学校の生徒や認定職業訓練を受けている人で、年末調整でこの控除を受けていない場合は、「年調以外かつ専修学校等」にチェックし、学校の長などが交付する証明書を添付するか提示する',
+        ],
+      },
+      {
+        type: 'p',
+        text: '所得税がかからない人は確定申告をしなくてもかまいませんが、住民税で勤労学生控除を受けるには、市区町村への住民税の申告か確定申告が必要です。報酬から所得税が源泉徴収されている場合は、確定申告をすると源泉徴収された税金が戻ります。',
+      },
+      { type: 'links', items: ['freelance-withholding-tax', 'freelance-kakutei-shinkoku-ikurakara'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: 'クラウドソーシングで受けた仕事の所得も「勤労による所得」になりますか？' },
+      { type: 'p', text: '自分でデザインや記事作成などをして得た報酬は、自己の勤労に基づく事業所得または雑所得に当たります。ただし、勤労によらない所得（投資の利益など）は勤労による所得に含まれず、10 万円を超えると控除を受けられません。所得の種類に迷うときは税務署に確認してください。' },
+      { type: 'h3', text: '4 月に卒業して就職しました。その年も受けられますか？' },
+      { type: 'p', text: '勤労学生かどうかは 12 月 31 日の現況で判定します。12 月 31 日に学生でなければ、その年の分は受けられません。' },
+      { type: 'h3', text: '2025 年分の申告で勤労学生控除を書き忘れました' },
+      { type: 'p', text: '2025 年分の要件は合計所得金額 85 万円以下です。その場合、合計所得金額が 85 万円以下なら基礎控除（95 万円）だけで所得税はかからないため、影響するのは住民税です。住民税の計算に反映されているかは、市区町村に確認してください。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.1175「勤労学生控除」・No.1199「基礎控除」、令和 7 年分 確定申告の手引き（手順 3 勤労学生控除）、所得税法 2 条 1 項 32 号・82 条（2026 年 12 月 1 日施行の改正後を含む）、地方税法 314 条の 2（e-Gov 法令検索）に基づく一般的な説明です。住民税の額は目安で、個別の判断は税務署・市区町村または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -11067,7 +11189,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance'],
   },
   {
     id: 'setup',
