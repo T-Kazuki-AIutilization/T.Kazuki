@@ -4676,6 +4676,7 @@ export const ARTICLES: Article[] = [
           '年の途中で開業した・会社を辞めた: 会社員時代の給与所得と、開業後の事業所得を合計した年間の所得で判定する',
         ],
       },
+      { type: 'links', items: ['kanai-roudousha-tokurei'] },
       { type: 'h2', text: '年末調整の「配偶者控除等申告書」の書き方' },
       {
         type: 'p',
@@ -4893,6 +4894,7 @@ export const ARTICLES: Article[] = [
         type: 'note',
         text: '特定の会社に継続して役務を提供する働き方（一部のライター・配達など）は、「家内労働者等の事業所得等の所得計算の特例」で、経費が少なくても最低 69 万円（2026 年分）を経費として計算できる場合があります。該当するかどうかは契約の内容によるため、税務署や国税庁のページで確認してください。',
       },
+      { type: 'links', items: ['kanai-roudousha-tokurei'] },
       { type: 'h2', text: '子ども自身の税金と確定申告' },
       {
         type: 'ul',
@@ -10895,6 +10897,116 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kanai-roudousha-tokurei',
+    title: '家内労働者等の必要経費の特例とは？内職・外交員・1 社と継続契約のフリーランスは経費が少なくても 69 万円まで（2026 年分）、収入 173 万円以下なら所得税 0 円',
+    description:
+      '家内労働者等の事業所得等の所得計算の特例（租税特別措置法 27 条）をまとめました。対象（家内労働者・外交員・集金人・検針人・特定の者に継続的に人的役務を提供する人）、実際の経費が少なくても必要経費を 69 万円まで認める計算（2026 年分。2025 年分は 65 万円）、給与がある場合の差し引き、収入 173 万円以下なら所得税がかからない・131 万円以下なら配偶者控除や扶養控除の対象になる目安を、国税庁タックスアンサー No.1810 と条文に基づいて整理しました。',
+    date: '2026-11-04',
+    keywords: ['家内労働者等の特例', '家内労働者 必要経費 69万円', '家内労働者等 フリーランス', '内職 確定申告 経費 69万', '特定の者に対して継続的に人的役務の提供', '外交員 必要経費 特例'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '内職や、特定の会社と継続して業務委託契約を結んで働いている人は、実際の経費が少なくても、必要経費を最低 69 万円（2026 年分）として所得を計算できる場合があります。「家内労働者等の事業所得等の所得計算の特例」です。経費がほとんどかからない働き方の人ほど、税金と扶養の判定に大きく影響します。対象になる人、計算方法、収入いくらまでなら税金がかからないかを整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '対象は、家内労働法の家内労働者（内職など）、外交員、集金人、電力量計の検針人、特定の者に対して継続的に人的役務の提供を行うことを業務とする人',
+          '実際の経費が 69 万円未満でも、必要経費を 69 万円まで認める（2026 年分。2025 年分は 65 万円、2020〜2024 年分は 55 万円）',
+          'この特例に当たる所得だけなら、収入 173 万円以下で所得税がかからない。131 万円以下なら家族の配偶者控除・扶養控除の対象になる',
+          '給与もある場合は「69 万円 − 給与所得控除額」が特例の額。給与収入が 69 万円以上あると使えない',
+          '特例の経費は、その所得の収入金額が上限。特例で赤字にはならない',
+        ],
+      },
+      { type: 'h2', text: '対象になる人' },
+      {
+        type: 'p',
+        text: '特例の対象は、次の人が事業所得または雑所得を得ている場合です（租税特別措置法 27 条、同法施行令 18 条の 2、国税庁 タックスアンサー No.1810）。',
+      },
+      {
+        type: 'table',
+        headers: ['区分', '例'],
+        rows: [
+          ['家内労働法に規定する家内労働者', '業者から委託を受けて、自宅で部品の組立て・加工などをする内職'],
+          ['外交員・集金人・電力量計の検針人', '報酬を受け取って保険の勧誘などをする外交員、集金や検針の業務'],
+          ['特定の者に対して継続的に人的役務の提供を行うことを業務とする人', '決まった取引先から継続して仕事を受け、自分の労務を提供している人'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '3 つ目の「特定の者に対して継続的に」に当たるかどうかは、契約の内容や取引先の数などによって判断が分かれます。取引先が決まっていて継続して仕事を受けている場合は当てはまる可能性がありますが、不特定多数から単発の仕事を受ける働き方は「特定の者に対して継続的に」とは言いにくくなります。迷うときは、申告の前に税務署に確認してください。',
+      },
+      { type: 'h2', text: '必要経費の計算' },
+      {
+        type: 'p',
+        text: '実際にかかった経費が 69 万円未満のときは、必要経費を 69 万円として所得を計算します。実際の経費が 69 万円以上なら、特例を使わず実際の経費で計算します。事業所得と雑所得の両方があるときは、実際の経費の合計が 69 万円未満なら、合計で 69 万円まで認められ、69 万円との差額はまず雑所得の経費に加えます。',
+      },
+      {
+        type: 'table',
+        headers: ['例（2026 年分、この特例に当たる所得だけ）', '実際の経費', '計算に使う必要経費', '所得'],
+        rows: [
+          ['収入 50 万円', '3 万円', '50 万円（収入が上限）', '0 円'],
+          ['収入 120 万円', '10 万円', '69 万円', '51 万円'],
+          ['収入 173 万円', '15 万円', '69 万円', '104 万円'],
+          ['収入 300 万円', '90 万円', '90 万円（実際の経費のほうが多い）', '210 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '国税庁によると、この特例に当たる所得しかない人は、2026 年分は収入 173 万円以下なら所得が基礎控除の 104 万円以下になり、所得税がかかりません。収入 131 万円以下なら所得が 62 万円以下になり、家族の所得税の計算で配偶者控除や扶養控除の対象になります（2025 年分はどちらも 160 万円以下）。',
+      },
+      { type: 'links', items: ['freelance-haigusha-koujo', 'tokutei-shinzoku-gakusei-freelance', 'freelance-kakutei-shinkoku-ikurakara'] },
+      { type: 'h2', text: '給与もある場合' },
+      {
+        type: 'p',
+        text: 'パート・アルバイトなどの給与もある場合、特例で認められる経費は「69 万円 − 給与所得控除額」になり、これと実際の経費のうち多いほうを使います。給与の収入が 69 万円以上あると、給与所得控除額が 69 万円以上になるため、この特例は使えません。',
+      },
+      {
+        type: 'table',
+        headers: ['給与の収入（2026 年分）', '特例の扱い'],
+        rows: [
+          ['69 万円未満', '「69 万円 − その給与に係る給与所得控除額」と実際の経費の多いほうを必要経費にする'],
+          ['69 万円以上', '特例は使えない（実際の経費で計算）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '給与がある場合や、事業所得と雑所得の両方がある場合は、国税庁の「家内労働者等の事業所得等の所得計算の特例の適用を受ける場合の必要経費の額の計算書」を使うと計算しやすくなります。',
+      },
+      {
+        type: 'cta',
+        title: '業務委託の報酬から源泉徴収税額と手取りを計算する（無料ツール）',
+        text: '報酬額を入れると、源泉徴収される所得税（10.21%）と振り込まれる額を計算します。確定申告で戻る税金の確認に。登録不要。',
+        href: '/tools/withholding',
+        label: '源泉徴収の計算ツールを開く',
+      },
+      { type: 'h2', text: '注意したいこと' },
+      {
+        type: 'ul',
+        items: [
+          '特例の経費は、その所得の収入金額が上限。収入 50 万円なら経費も 50 万円までで、赤字を作って他の所得と相殺することはできない',
+          '2026 年分の 69 万円・173 万円・131 万円は、2026 年 12 月 1 日施行の改正で 2026 年分から適用される金額',
+          '健康保険の扶養（年収 130 万円未満など）は、税金とは別に各健康保険の基準で判定する。この特例で所得が下がっても、健康保険の判定がそのまま有利になるとは限らない',
+          '報酬から所得税が源泉徴収されている場合、所得税がかからない収入でも、確定申告をすれば源泉徴収された税金が戻る',
+        ],
+      },
+      { type: 'links', items: ['fuyou-130man-freelance', 'jigyo-shotoku-zatsu-shotoku', 'side-job-tax-return-200k'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '業務委託のライターやデザイナーも対象になりますか？' },
+      { type: 'p', text: '「特定の者に対して継続的に人的役務の提供を行うことを業務とする人」に当たれば対象です。ただし条文には業種名がなく、取引先が複数ある場合などは判断が分かれます。契約書や取引の実態をもとに、税務署に確認してから使うと安心です。' },
+      { type: 'h3', text: '経費の領収書がなくても 69 万円を引けますか？' },
+      { type: 'p', text: '特例の対象になる人は、実際の経費が 69 万円未満でも 69 万円（収入が上限）を必要経費として計算できます。ただし特例を使わない場合や、69 万円を超える経費を計上する場合は、実際の経費の記録と領収書が必要です。' },
+      { type: 'h3', text: '2025 年分の確定申告ではいくらですか？' },
+      { type: 'p', text: '2025 年分は 65 万円です。この場合、この特例に当たる所得だけなら収入 160 万円以下で所得税がかからず、家族の配偶者控除・扶養控除の対象にもなります（国税庁 タックスアンサー No.1810）。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.1810「家内労働者等の事業所得等の所得計算の特例」、令和 8 年度税制改正（所得税の基礎控除の引上げ等関係）Q&A（国税庁、令和 8 年 5 月）、租税特別措置法 27 条・同法施行令 18 条の 2（e-Gov 法令検索）に基づく一般的な説明です。対象になるかどうかの判断は、税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -10955,7 +11067,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei'],
   },
   {
     id: 'setup',
