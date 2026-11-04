@@ -4058,7 +4058,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'このほか、災害や盗難の損失に使える雑損控除があります。配偶者・扶養の所得要件は、2025 年の改正で 48 万円から 58 万円に、2026 年分からさらに 62 万円（給与だけなら年収 136 万円以下）に引き上げられました。',
       },
-      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kinro-gakusei-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
+      { type: 'links', items: ['jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'seimei-hoken-koujo-2026', 'iryohi-koujo-freelance'] },
       { type: 'h2', text: '青色申告特別控除は「所得控除」ではない' },
       {
         type: 'p',
@@ -9486,6 +9486,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'たとえば配偶者に年 96 万円の専従者給与を払えば、事業主の所得から 96 万円が経費として引かれる一方、配偶者控除（最大 38 万円）は使えなくなります。配偶者は受け取った給与について給与所得として課税され、住民税や健康保険の扶養の判定にも影響します。家族全体の手取りがどう変わるかは、配偶者の側の税金・社会保険も含めて比べてください。国民健康保険の軽減の判定では、専従者給与を経費にしなかったものとして計算されるといった特別な扱いもあります。',
       },
+      { type: 'links', items: ['shogaisha-koujo-freelance'] },
       { type: 'h2', text: '給与を払う側の手続き（源泉徴収・年末調整）' },
       {
         type: 'ul',
@@ -11129,6 +11130,128 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shogaisha-koujo-freelance',
+    title: '障害者控除はフリーランス・個人事業主も確定申告で受けられる｜27 万・40 万・同居 75 万円、家族を事業専従者にすると対象外になる注意点',
+    description:
+      'フリーランス・個人事業主の障害者控除をまとめました。控除額（所得税 27 万円・特別障害者 40 万円・同居特別障害者 75 万円、住民税 26 万・30 万・53 万円）、対象になる人（手帳・65 歳以上の市町村長等の認定。要介護認定だけでは対象外）、16 歳未満の子や配偶者控除のない配偶者も対象になること、家族に青色事業専従者給与を払うと対象外になること、本人の所得 135 万円以下で住民税が非課税になること、確定申告書の書き方を、国税庁と所得税法・地方税法の条文に基づいて整理しました。',
+    date: '2026-11-05',
+    keywords: ['障害者控除 個人事業主', '障害者控除 フリーランス', '障害者控除 確定申告 書き方', '同居特別障害者 75万', '障害者控除 事業専従者', '障害者控除 要介護認定'],
+    readingMinutes: 6,
+    blocks: [
+      {
+        type: 'p',
+        text: '障害者控除は、本人や家族が障害者に当てはまるときに受けられる所得控除です。会社員は年末調整で受けますが、フリーランス・個人事業主は確定申告で自分で申告します。家族を仕事の手伝いとして事業専従者にしていると対象外になるなど、個人事業ならではの注意点もあります。控除額、対象になる人、税金がいくら減るか、申告書の書き方を整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '控除額は、障害者 27 万円、特別障害者 40 万円、同居特別障害者 75 万円（住民税は 26 万・30 万・53 万円）',
+          '本人だけでなく、同一生計配偶者や扶養親族が障害者でも受けられる。16 歳未満の子や、本人の所得が 1,000 万円を超えて配偶者控除がない配偶者も対象',
+          '介護保険の要介護認定だけでは対象にならない。65 歳以上の人は、市区町村長等の「障害者控除対象者認定」を受けると対象になる',
+          '家族に青色事業専従者給与を払っている（または白色の事業専従者控除を受けている）と、その家族は障害者控除の対象外',
+          '本人が障害者で、前年の合計所得金額が 135 万円以下なら住民税がかからない',
+        ],
+      },
+      { type: 'h2', text: '控除額' },
+      {
+        type: 'table',
+        headers: ['区分', '所得税', '住民税'],
+        rows: [
+          ['障害者', '27 万円', '26 万円'],
+          ['特別障害者', '40 万円', '30 万円'],
+          ['同居特別障害者（特別障害者である同一生計配偶者・扶養親族で、本人や配偶者、生計を一にする親族と同居している人）', '75 万円', '53 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '所得税は所得税法 79 条と国税庁 タックスアンサー No.1160、住民税は地方税法 314 条の 2 に定められています。対象の家族が複数いれば、1 人ごとに控除を受けられます。同居特別障害者の 75 万円は家族が対象の場合だけで、本人が特別障害者の場合は 40 万円です。',
+      },
+      { type: 'h2', text: '対象になる人' },
+      {
+        type: 'p',
+        text: '障害者控除の対象は、所得税法施行令 10 条で決められた次のような人です（タックスアンサー No.1160）。かっこ内は特別障害者になる場合です。',
+      },
+      {
+        type: 'table',
+        headers: ['区分', '特別障害者になる場合'],
+        rows: [
+          ['身体障害者手帳に身体上の障害がある人として記載されている人', '障害の程度が 1 級・2 級'],
+          ['精神障害者保健福祉手帳の交付を受けている人', '障害等級が 1 級'],
+          ['児童相談所・知的障害者更生相談所などで知的障害者と判定された人', '重度の知的障害者と判定された人'],
+          ['65 歳以上で、市区町村長や福祉事務所長から障害者に準ずると認定された人', '特別障害者に準ずると認定された人'],
+          ['12 月 31 日の時点で 6 か月以上寝たきりで、複雑な介護を必要とする人', '全員が特別障害者'],
+          ['精神上の障害で事理を弁識する能力を欠く常況にある人、戦傷病者手帳・原爆被爆者の認定を受けている人', '事理を弁識する能力を欠く人・原爆被爆者は特別障害者、戦傷病者は特別項症〜第 3 項症'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '介護保険法の要介護認定を受けただけでは、障害者控除の対象になりません（タックスアンサー No.1185）。親が要介護の場合は、市区町村の窓口で障害者控除の対象者としての認定（認定書。名称は市区町村による）を受けられるか確認しましょう。身体障害者手帳などを申請中の人も、申告の時に申請中か医師の診断書があり、12 月 31 日の時点で明らかに手帳の交付を受けられる程度の障害があれば対象になります（No.1186）。',
+      },
+      { type: 'h2', text: '家族が対象になる条件と、事業専従者の注意点' },
+      {
+        type: 'p',
+        text: '家族について障害者控除を受けられるのは、その家族が同一生計配偶者か扶養親族の場合です。どちらも、生計を一にしていて、合計所得金額が 62 万円以下（2026 年分。2025 年分は 58 万円以下）であることが条件です。同一生計配偶者には本人の所得制限がないため、本人の合計所得金額が 1,000 万円を超えて配偶者控除を受けられなくても、配偶者の障害者控除は受けられます。また、16 歳未満で扶養控除の対象にならない子も対象です。',
+      },
+      {
+        type: 'p',
+        text: 'ただし、青色事業専従者として給与の支払いを受けている家族や、白色申告の事業専従者は、同一生計配偶者・扶養親族から除かれます（所得税法 2 条 1 項 33 号・34 号）。そのため、障害のある家族に専従者給与を払うと、その家族の障害者控除（同居特別障害者なら所得税 75 万円・住民税 53 万円）と、配偶者控除・扶養控除の両方が受けられなくなります。専従者給与を経費にするのと控除を受けるのと、どちらが有利かは金額で比べてください。',
+      },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'freelance-haigusha-koujo', 'freelance-shotoku-koujo-ichiran'] },
+      { type: 'h2', text: '税金はいくら減る？（目安）' },
+      {
+        type: 'p',
+        text: '所得税は「控除額 × 所得税率 × 1.021（復興特別所得税を含む）」、住民税は「控除額 × 10%」で計算した年間の目安です。',
+      },
+      {
+        type: 'table',
+        headers: ['所得税率', '障害者', '特別障害者', '同居特別障害者'],
+        rows: [
+          ['5%（課税所得 195 万円以下）', '約 4.0 万円', '約 5.0 万円', '約 9.1 万円'],
+          ['10%（195 万円超 330 万円以下）', '約 5.4 万円', '約 7.1 万円', '約 13.0 万円'],
+          ['20%（330 万円超 695 万円以下）', '約 8.1 万円', '約 11.2 万円', '約 20.6 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '本人が障害者の場合は、前年の合計所得金額が 135 万円以下なら住民税（所得割・均等割）がかかりません（地方税法 295 条。都道府県民税も同様）。フリーランスの合計所得金額は、売上から経費と青色申告特別控除を引いた額です。',
+      },
+      {
+        type: 'cta',
+        title: '青色申告で所得と税金がいくら下がるか計算する（無料ツール）',
+        text: '白色申告と比べて、65 万・55 万・10 万円の青色申告特別控除で下がる所得税・住民税・国保を計算します。',
+        href: '/tools/aoiro',
+        label: '青色申告の節税額ツールを開く',
+      },
+      { type: 'h2', text: '確定申告書の書き方' },
+      {
+        type: 'ul',
+        items: [
+          '第一表: 「勤労学生、障害者控除」欄（令和 7 年分の様式では ⑲〜⑳）に控除額を書く。家族が複数いる場合や勤労学生控除もある場合は合計額',
+          '第二表（本人が障害者）: 「本人に関する事項」欄の「障害者」または「特別障害者」に○をつける',
+          '第二表（家族が障害者）: 「配偶者や親族に関する事項」欄にその家族を書き、「障」または「特障」に○をつける',
+          '確定申告書等作成コーナーでは、本人や家族の障害の区分を選ぶと控除額が自動で入る',
+        ],
+      },
+      {
+        type: 'p',
+        text: '前の年に申告し忘れていた場合は、更正の請求で 5 年前の分までさかのぼって還付を受けられます。',
+      },
+      { type: 'links', items: ['kakutei-shinkoku-kigengo-shusei', 'hitorioya-koujo-freelance'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '親が要介護 3 です。障害者控除を受けられますか？' },
+      { type: 'p', text: '要介護認定だけでは対象になりません。65 歳以上の親なら、市区町村長等から障害者（または特別障害者）に準ずると認定されれば対象です。認定の基準や申請方法は市区町村によって違うので、窓口で確認してください。親が扶養親族（合計所得金額 62 万円以下など）であることも必要です。' },
+      { type: 'h3', text: '別居している親でも受けられますか？' },
+      { type: 'p', text: '生計を一にしていて扶養親族に当たれば、障害者（27 万円）・特別障害者（40 万円）の控除は受けられます。同居特別障害者の 75 万円は、本人や配偶者、生計を一にする親族と同居している場合に限られます。' },
+      { type: 'h3', text: '子が 10 歳で扶養控除がありません。障害者控除は受けられますか？' },
+      { type: 'p', text: '受けられます。16 歳未満の子は扶養控除の対象になりませんが、扶養親族には当たるため、障害者控除は受けられます。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.1160「障害者控除」・No.1185・No.1186、令和 7 年分 確定申告の手引き（手順 3 障害者控除）、所得税法 2 条 1 項 33 号・34 号・79 条（2026 年 12 月 1 日施行の改正後を含む）、地方税法 295 条・314 条の 2（e-Gov 法令検索）に基づく一般的な説明です。税額は目安で、個別の判断は税務署・市区町村または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -11189,7 +11312,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance'],
   },
   {
     id: 'setup',
