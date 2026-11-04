@@ -7169,6 +7169,7 @@ export const ARTICLES: Article[] = [
           ['パソコン・カメラなど', '仕事で使う時間の割合（減価償却の事業専用割合）', '使い方のメモ'],
         ],
       },
+      { type: 'links', items: ['kuruma-keihi-freelance'] },
       {
         type: 'p',
         text: '仕事専用の部屋がなく、リビングの一角で作業している場合は、作業スペースの面積に、そのスペースを仕事で使う時間の割合を掛けるなど、面積と時間を組み合わせる方法もあります。どの方法でも、なぜその割合にしたかを第三者に説明できることが大切です。',
@@ -10487,6 +10488,140 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'kuruma-keihi-freelance',
+    title: '個人事業主・フリーランスの車の経費｜中古車（4 年落ち）の耐用年数と減価償却、ガソリン・保険・自動車税・ローン利息の按分',
+    description:
+      'フリーランス・個人事業主が仕事にも使う車の経費をまとめました。新車・中古車の耐用年数（普通自動車 6 年・軽自動車 4 年、4 年落ちの中古車は 2 年）、年の途中で買った年の月割、減価償却の計算例、ガソリン代・駐車場代・自動車保険・自動車税・車検・ローン利息の扱い、プライベートと兼用する場合の按分、売ったときの税金を、国税庁のタックスアンサーに基づいて整理しました。',
+    date: '2026-11-04',
+    keywords: ['個人事業主 車 経費', 'フリーランス 車 経費', '中古車 4年落ち 減価償却 個人事業主', '車 耐用年数 中古 個人事業主', '車 按分 個人事業主', '自動車ローン 利息 経費'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '取材や打ち合わせ、機材の運搬などで車を使うフリーランスは、車にかかる費用のうち仕事で使った分を経費にできます。ただし車の購入代金は、買った年に全額ではなく、耐用年数に分けて減価償却で経費にするのが原則です。中古車を選ぶと耐用年数が短くなり、1 年あたりの経費が大きくなります。計算方法と、維持費の扱いを順に整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '購入代金は減価償却。法定耐用年数は普通自動車 6 年、軽自動車（総排気量 0.66 リットル以下）4 年',
+          '中古車は簡便法で耐用年数を短くできる。4 年落ちの普通自動車なら 2 年、法定耐用年数をすべて過ぎた車も 2 年',
+          '年の途中で使い始めた年は月割。12 月に使い始めれば 1 か月分だけ',
+          'ガソリン代・駐車場代・高速代・自動車保険・自動車税・車検・修理代・ローンの利息も経費。元本の返済は経費ではない',
+          'プライベートと兼用なら、走行距離などの事業割合を掛けた額だけを経費にする',
+        ],
+      },
+      { type: 'h2', text: '車の購入代金は減価償却する' },
+      {
+        type: 'p',
+        text: '10 万円以上の車は、取得価額を耐用年数に応じて分けて経費にします（減価償却）。個人事業主は、償却方法の届出をしていなければ定額法で、毎年ほぼ同じ額を経費にします（タックスアンサー No.2100）。購入した資産の取得価額は、購入代金（購入手数料などを含む）と、業務に使うまでにかかった費用の合計です（No.2106）。',
+      },
+      {
+        type: 'table',
+        headers: ['車の種類', '法定耐用年数', '定額法の償却率', '300 万円の車を 1 月から使った場合の年間の償却費'],
+        rows: [
+          ['普通自動車', '6 年', '0.167', '501,000 円'],
+          ['軽自動車（0.66 リットル以下）', '4 年', '0.250', '750,000 円'],
+          ['2 輪自動車（バイク）', '3 年', '0.334', '1,002,000 円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '年の途中で使い始めた年は、1 年分の償却費を 12 で割り、使った月数を掛けます（No.2106）。普通自動車 300 万円を 10 月から使った年は、501,000 円 × 3/12 ＝ 125,250 円です。償却は最後に 1 円を残すまで続けます。',
+      },
+      { type: 'h2', text: '中古車は耐用年数が短くなる（簡便法）' },
+      {
+        type: 'p',
+        text: '中古資産は、法定耐用年数ではなく、使い始めてから使える期間の見積もりを耐用年数にします。見積もりが難しいときは、次の簡便法で計算できます（タックスアンサー No.5404）。1 年未満の端数は切り捨て、2 年に満たないときは 2 年です。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '法定耐用年数をすべて過ぎた車: 法定耐用年数 × 20%',
+          '法定耐用年数の一部を過ぎた車: （法定耐用年数 − 経過年数）＋ 経過年数 × 20%',
+        ],
+      },
+      {
+        type: 'table',
+        headers: ['中古車', '計算', '耐用年数'],
+        rows: [
+          ['普通自動車・2 年落ち', '（6 − 2）＋ 2 × 20% ＝ 4.4 年', '4 年'],
+          ['普通自動車・3 年落ち', '（6 − 3）＋ 3 × 20% ＝ 3.6 年', '3 年'],
+          ['普通自動車・4 年落ち', '（6 − 4）＋ 4 × 20% ＝ 2.8 年', '2 年'],
+          ['普通自動車・6 年落ち以上', '6 × 20% ＝ 1.2 年', '2 年（2 年未満は 2 年）'],
+          ['軽自動車・2 年落ち', '（4 − 2）＋ 2 × 20% ＝ 2.4 年', '2 年'],
+          ['軽自動車・4 年落ち以上', '4 × 20% ＝ 0.8 年', '2 年'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '経過年数は、車検証の「初度登録年月」から自分が使い始めるまでの期間を目安にします。耐用年数 2 年の定額法の償却率は 0.500 なので、中古の普通自動車 120 万円（4 年落ち）を 7 月から使った場合、1 年目は 120 万円 × 0.500 × 6/12 ＝ 30 万円、2 年目は 60 万円、3 年目は残りの 29 万 9,999 円が償却費です。新車より短い期間で経費にできるので、利益が多い年には効果が大きくなります。ただし経費を早く計上しても、使ったお金以上に税金が減るわけではありません。',
+      },
+      {
+        type: 'cta',
+        title: '車の減価償却を計算する（無料ツール）',
+        text: '普通自動車・軽自動車・バイクを選んで、取得価額と使い始めた月を入れると、年ごとの償却費を計算します。事業で使う割合の按分にも対応。登録不要。',
+        href: '/tools/genka-shokyaku',
+        label: '減価償却の計算ツールを開く',
+      },
+      {
+        type: 'note',
+        text: '青色申告なら、取得価額 40 万円未満（2026 年 4 月 1 日以後の取得）の中古車は、少額減価償却資産の特例で使い始めた年に全額を経費にできます（年 300 万円まで）。詳しくは「少額減価償却資産の特例が 40 万円未満に」の記事をご覧ください。',
+      },
+      { type: 'h2', text: '維持費の扱い' },
+      {
+        type: 'table',
+        headers: ['費用', '勘定科目の例', '注意点'],
+        rows: [
+          ['ガソリン代・オイル交換', '車両費（または旅費交通費）', 'レシートを保存'],
+          ['月極駐車場代', '地代家賃（または車両費）', '自宅の駐車場を兼ねる場合は按分'],
+          ['仕事先でのコインパーキング・高速代', '旅費交通費', '日付と行き先をメモ'],
+          ['車検・修理・タイヤ交換', '車両費（または修繕費）', '整備の明細を保存'],
+          ['自動車保険（任意保険）・自賠責保険', '損害保険料', '事業で使う割合の分'],
+          ['自動車税・重量税', '租税公課', '事業で使う割合の分'],
+          ['自動車ローンの利息', '利子割引料', '元本の返済は経費ではない'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '業務用資産を買うための借入金の利息は必要経費になります（タックスアンサー No.2210）。ローンの返済額のうち経費になるのは利息の部分だけで、元本は減価償却で経費にします。勘定科目は、毎年同じ基準で使い分ければ「車両費」にまとめても構いません。',
+      },
+      { type: 'h2', text: 'プライベートと兼用なら按分する' },
+      {
+        type: 'p',
+        text: '家事と業務の両方に使う費用は、業務に必要だったことが明らかに区分できる部分だけが経費になります（タックスアンサー No.2210）。車なら、走行距離のうち仕事で走った割合を使うのが説明しやすい方法です。日付・行き先・目的・走行距離を記録しておきましょう。減価償却費、ガソリン代、保険料、自動車税、ローンの利息など、車にかかる費用すべてに同じ割合を掛けます。',
+      },
+      {
+        type: 'table',
+        headers: ['例（事業割合 60%）', '年間の支出', '経費にする額'],
+        rows: [
+          ['減価償却費（中古車 120 万円・2 年目）', '600,000 円', '360,000 円'],
+          ['ガソリン代', '120,000 円', '72,000 円'],
+          ['自動車保険', '60,000 円', '36,000 円'],
+          ['自動車税', '36,000 円', '21,600 円'],
+          ['合計', '816,000 円', '489,600 円'],
+        ],
+      },
+      { type: 'links', items: ['kaji-anbun-freelance', 'shogaku-genka-shokyaku-40man', 'freelance-expenses-list', 'aoiro-kessansho-kakikata'] },
+      { type: 'h2', text: '仕事に使っていた車を売ったとき' },
+      {
+        type: 'p',
+        text: '国税庁のタックスアンサー No.3152 では、土地・建物や株式以外の資産を売ったときの所得は、総合課税の譲渡所得とされています（商品として売る棚卸資産は除く）。仕事に使っていた車を売ったときも、売った代金と未償却残高などを比べて譲渡所得を計算し、特別控除（最高 50 万円）を差し引きます。消費税の課税事業者は、事業に使っていた車の売却代金も消費税の課税の対象です（No.6105）。',
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '車を一括で経費にできる？' },
+      { type: 'p', text: '10 万円以上の車は原則として減価償却です。青色申告なら、取得価額 40 万円未満（2026 年 4 月 1 日以後の取得）の車は少額減価償却資産の特例で一括で経費にできます。それ以上の車は、中古車の簡便法で耐用年数を短くする方法があります。' },
+      { type: 'h3', text: '4 年落ちの中古車が節税になると聞いたのは本当？' },
+      { type: 'p', text: '4 年落ちの普通自動車は耐用年数が 2 年になり、購入代金を 2 年（使い始めた月によっては 3 年分の申告）で経費にできます。経費になる総額は購入代金と同じで、早く計上できるだけです。使ったお金以上に税金が減ることはないので、仕事に必要な車かどうかで判断しましょう。' },
+      { type: 'h3', text: '仕事でしか使わなければ 100% 経費にできる？' },
+      { type: 'p', text: 'できます。ただし自宅に 1 台しかない車を 100% 事業用とすると、私的な利用がないことを説明しにくくなります。走行記録をつけ、実態に合った割合にしておきましょう。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁タックスアンサー No.2100「減価償却のあらまし」・No.2106「定額法と定率法による減価償却」・No.5404「中古資産の耐用年数」・No.2210「必要経費の知識」・No.3152「譲渡所得の計算のしかた（総合課税）」・No.6105「課税の対象」、減価償却資産の耐用年数等に関する省令に基づく一般的な説明です。個別の判断は税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -10547,7 +10682,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance'],
   },
   {
     id: 'setup',

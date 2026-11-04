@@ -88,6 +88,7 @@ export default function GenkaToolPage() {
         <section className="mt-12 text-sm leading-relaxed text-muted-foreground">
           <h2 className="text-base font-semibold text-foreground">あわせて読みたい</h2>
           <ul className="mt-2 list-disc space-y-1 pl-5">
+            <li><Link href="/blog/kuruma-keihi-freelance" className="text-primary hover:underline">個人事業主の車の経費（中古車 4 年落ちの耐用年数・按分）</Link></li>
             <li><Link href="/blog/shogaku-genka-shokyaku-40man" className="text-primary hover:underline">少額減価償却資産の特例が 40 万円未満に（2026 年 4 月以後の取得）。償却資産税の申告と決算書の書き方</Link></li>
             <li><Link href="/blog/shokyaku-shisan-shinkoku-freelance" className="text-primary hover:underline">償却資産の申告は必要？対象になる資産と免税点 180 万円（2027 年度から）</Link></li>
             <li><Link href="/blog/freelance-expenses-list" className="text-primary hover:underline">フリーランスの経費にできるもの一覧</Link></li>
