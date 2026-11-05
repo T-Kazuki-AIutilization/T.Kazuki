@@ -734,7 +734,7 @@ export const ARTICLES: Article[] = [
       { type: 'h3', text: '10 万円以上のパソコンはどうなる？' },
       { type: 'p', text: '1 つ（1 組）10 万円以上の備品は、原則として買った年に全額ではなく、耐用年数（パソコンは 4 年）に分けて減価償却します。青色申告をしている人は「少額減価償却資産の特例」で、2026 年 4 月 1 日以後に取得した 40 万円未満の資産（3 月 31 日までの取得は 30 万円未満）を、使い始めた年に全額経費にできます（年 300 万円まで）。20 万円未満なら白色申告でも 3 年で 1/3 ずつ経費にできます（一括償却資産）。' },
       { type: 'linkgrid', title: '方法ごとに今年の経費を比べる（無料）', items: [{ href: '/tools/genka-shokyaku', label: '減価償却の計算ツール' }] },
-      { type: 'links', items: ['inshizei-freelance', 'kaigyohi-freelance', 'kaji-anbun-freelance', 'shogaku-genka-shokyaku-40man'] },
+      { type: 'links', items: ['inshizei-freelance', 'kaigyohi-freelance', 'kaji-anbun-freelance', 'shogaku-genka-shokyaku-40man', 'shucho-kanko-keihi-freelance'] },
       { type: 'h3', text: '経費にしてはいけないものを入れてしまったら？' },
       { type: 'p', text: '確定申告の期限後に気づいた場合は、修正申告をして不足分の税金を納めます。税務調査で指摘されてから修正すると、過少申告加算税や延滞税がかかることがあります。迷うものは、家事按分の割合を控えめにするか、税務署や税理士に確認するのが安全です。' },
       { type: 'affiliate', title: '経費の記録を自動化するなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
@@ -7300,7 +7300,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/anbun', label: '家事按分の計算ツールを使う' },
       },
-      { type: 'links', items: ['freelance-expenses-list', 'freelance-boki-shiwake', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shogaku-genka-shokyaku-40man', 'side-job-tax-return-200k', 'freelance-tax-prep', 'kakutei-shinkoku-2026-kaisei'] },
+      { type: 'links', items: ['freelance-expenses-list', 'freelance-boki-shiwake', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shogaku-genka-shokyaku-40man', 'side-job-tax-return-200k', 'freelance-tax-prep', 'kakutei-shinkoku-2026-kaisei', 'shucho-kanko-keihi-freelance'] },
       {
         type: 'note',
         text: '国税庁 タックスアンサー No.2210・No.1211-1、所得税法 56 条、所得税法施行令 96 条、所得税基本通達 2-47・45-1・45-2、租税特別措置法関係通達 41-29 に基づく一般的な説明です（2026 年 11 月時点）。税額は概算で、実際の額は所得控除や市区町村の国保の料率によって変わります。個別の状況は税務署に確認してください。',
@@ -10473,7 +10473,7 @@ export const ARTICLES: Article[] = [
         type: 'p',
         text: 'ご祝儀や香典のように領収書が出ない支出は、出金伝票やメモに日付・相手・金額・内容を書き、招待状や会葬礼状と一緒に保存しておきます。',
       },
-      { type: 'links', items: ['freelance-expenses-list', 'kaji-anbun-freelance', 'freelance-boki-shiwake', 'freelance-denshi-chobo-hozon'] },
+      { type: 'links', items: ['freelance-expenses-list', 'kaji-anbun-freelance', 'freelance-boki-shiwake', 'freelance-denshi-chobo-hozon', 'shucho-kanko-keihi-freelance'] },
       {
         type: 'cta',
         title: '確定申告準備キット（Excel）',
@@ -11904,6 +11904,136 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'shucho-kanko-keihi-freelance',
+    title: '出張ついでの観光は経費になる？フリーランスの旅費の按分｜仕事が目的なら往復の交通費は全額、観光の日の分は除く、家族の旅費は原則経費にならない',
+    description:
+      'フリーランス・個人事業主が仕事と観光を兼ねた旅行をしたときの旅費の扱いをまとめました。事業に直接必要な旅行かは目的・旅行先・経路・期間で実質判定すること、仕事と観光を併せた旅行は期間の比などで按分し、取引先との商談などが直接の目的なら往復の交通費は全額経費にできること（所得税基本通達 37-16〜37-22）、国税庁の海外渡航費の通達にある業務従事割合（仕事の日数 ÷（仕事の日数＋観光の日数））と 90%・50%・10% の区切り、同伴した家族の旅費は原則として経費にならないこと、家事関連費は業務に必要な部分を明らかに区分できる場合だけ経費になること（所得税法 45 条・施行令 96 条）を整理しました。',
+    date: '2026-11-05',
+    keywords: ['出張 観光 経費 個人事業主', 'フリーランス 旅費 按分', '出張 ついで 観光 経費', '海外出張 観光 経費 個人事業主', '家族 旅費 経費 個人事業主', 'ワーケーション 経費 フリーランス'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '取材やイベント、取引先との打ち合わせで遠出したついでに、1 日観光して帰る。フリーランスにはよくあることですが、その旅費をどこまで経費にできるかは迷うところです。所得税の通達には、仕事と観光を併せて行った旅行の旅費の分け方が書かれています。考え方と計算例を、国税庁の通達と所得税法に基づいて整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '経費になるのは、事業の遂行上直接必要な旅行の費用だけ。必要かどうかは、目的・旅行先・経路・期間などを総合的に見て実質で判定する',
+          'ほぼ全期間が明らかに仕事なら、不当に多額でない限り全額を経費にできる',
+          '仕事と観光を併せて行った旅行は、仕事の期間と観光の期間の比などで按分し、仕事の部分だけを経費にする',
+          '取引先との商談・契約などが旅行の直接の目的で、ついでに観光した場合は、仕事の場所までの往復の交通費は全額経費にでき、残りの費用を按分する',
+          '同伴した家族などの旅費は、通訳が必要など明らかに目的の達成に必要な場合を除き、経費にならない',
+          '観光ツアーへの参加や、主に観光目的の団体旅行は、原則として事業に必要な旅行に当たらない',
+        ],
+      },
+      { type: 'h2', text: '経費になる旅行・ならない旅行' },
+      {
+        type: 'p',
+        text: '個人事業主の生活上の費用（家事費）と、それに関連する費用（家事関連費）は経費になりません（所得税法 45 条 1 項 1 号）。家事関連費のうち経費になるのは、主な部分が業務の遂行上必要で、その必要な部分を明らかに区分できる場合のその部分などに限られます（所得税法施行令 96 条）。仕事と観光を兼ねた旅行は、この「必要な部分の区分」が問題になります。',
+      },
+      {
+        type: 'p',
+        text: '所得税基本通達には、事業を営む人が海外渡航したときの旅費の扱いが書かれています（37-16〜37-22）。事業の遂行上直接必要かどうかは、旅行の目的、旅行先、旅行経路、旅行期間などを総合して実質的に判定し、次の旅行は原則として事業に必要な旅行に当たらないとしています（37-19）。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '観光渡航の許可を得て行う旅行',
+          '旅行会社などが行う団体旅行に応募して行く旅行',
+          '同業者団体などが主催する、主に観光目的の団体旅行',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'ただし、これらに当たる旅行でも、旅行先や仕事の内容から事業に直接関連する部分があれば、その部分の旅行に直接かかった費用は経費になります（37-22）。通達は海外渡航について書かれたものですが、仕事と私用を分けて仕事の部分だけを経費にするという考え方は、所得税法 45 条・施行令 96 条の家事関連費と同じです。',
+      },
+      { type: 'h2', text: '仕事と観光を兼ねた旅行の分け方' },
+      {
+        type: 'table',
+        headers: ['旅行の内容', '経費にできる額'],
+        rows: [
+          ['おおむね全期間が明らかに仕事', '社会通念上合理的な基準で計算されているなど、不当に多額でない限り全額（37-18）'],
+          ['仕事と観光を併せて行った', '仕事の期間と観光の期間の比などで按分した、仕事の部分（37-21）'],
+          ['商談・契約などが直接の目的で、ついでに観光', '仕事の場所までの往復の交通費は全額。残りの費用（宿泊費など）を按分した仕事の部分（37-21 ただし書）'],
+          ['観光が主な目的', '原則として経費にならない。旅行中に事業に直接関連する部分があれば、その部分に直接かかった費用だけ（37-19・37-22）'],
+        ],
+      },
+      { type: 'h3', text: '国税庁の「業務従事割合」の計算' },
+      {
+        type: 'p',
+        text: '按分の具体的な方法は、国税庁の「海外渡航費の取扱いについて」（平成 12 年 10 月 11 日の法令解釈通達）に示されています。同業者団体などが主催する海外視察旅行についての通達ですが、法人と個人の両方が対象で、旅程を日数で分けて按分する考え方は、自分で行く旅行の按分を考えるときの参考になります。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '業務従事割合 ＝ 仕事（視察等）の日数 ÷（仕事の日数 ＋ 観光の日数）。目的地までの往復や移動の日（旅行日）と、休日・休養の日（その他）は計算に入れない',
+          '昼間の通常の業務時間（おおむね 8 時間）を 1 日とし、おおむね 0.25 日単位で数える。夜に仕事をした時間は仕事の日数に足す',
+          '業務従事割合を 10% 単位に四捨五入した割合（損金等算入割合）が 90% 以上なら全額、10% 以下なら全額が経費にならない',
+          '業務従事割合が 50% 以上なら、仕事の場所までの往復の交通費は全額、その他の費用に損金等算入割合をかけた額を経費にする。50% 未満なら、旅費全体に損金等算入割合をかける',
+        ],
+      },
+      {
+        type: 'table',
+        headers: ['例（海外の展示会に行き、観光もした）', '金額・日数'],
+        rows: [
+          ['展示会の見学・取引先の訪問（仕事の日数）', '3 日'],
+          ['観光の日数', '1.5 日'],
+          ['往復の移動の日（計算に入れない）', '2 日'],
+          ['業務従事割合', '3 ÷（3 ＋ 1.5）＝ 66.7% → 損金等算入割合 70%'],
+          ['往復の航空券（展示会の会場の都市まで）', '12 万円 → 全額 12 万円'],
+          ['宿泊費・現地の交通費など', '10 万円 × 70% ＝ 7 万円'],
+          ['経費にできる額', '19 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '仕事の日数に入るのは、工場・店舗などの視察や訪問、展示会・見本市への参加、市場の調査、国際会議やセミナーへの出席、同業者団体の訪問などで、自分の業種や事業の内容から見て業務上必要なものです。自由行動の時間の私的な外出や、観光のついでの簡単な見学は観光の日数に入ります。',
+      },
+      { type: 'links', items: ['freelance-expenses-list', 'kaji-anbun-freelance', 'kosaihi-freelance'] },
+      { type: 'h2', text: '家族を連れて行った場合' },
+      {
+        type: 'p',
+        text: '事業に必要な旅行に家族や、事業に常時従事していない人を同伴した場合、その人の費用は経費になりません。ただし、常に補佐が必要な身体障害者が補佐人を連れて行く場合、国際会議への出席などで配偶者の同伴が必要な場合、外国語や専門知識のある人が必要で、従業員に適任者がいないため親族などを連れて行く場合のように、明らかに旅行の目的を達するために必要な同伴であれば、通常必要な費用は経費にできます（所得税基本通達 37-20）。',
+      },
+      {
+        type: 'p',
+        text: '青色事業専従者など事業を手伝っている家族が、仕事のために行く旅費は、使用人の旅費と同じように扱います（37-17）。その場合も、その家族の旅行が事業に直接必要であることが条件です。',
+      },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo'] },
+      { type: 'h2', text: '国内の出張・ワーケーションの注意点' },
+      {
+        type: 'ul',
+        items: [
+          '国内の旅行も、生活上の費用と業務に必要な費用を分け、業務に必要な部分を明らかに区分できる部分だけを経費にする（所得税法施行令 96 条）',
+          '旅行先でしかできない仕事（取材・撮影・打ち合わせ・イベントへの出展など）があったかが、業務に必要かを説明するときのポイントになる。いつもの仕事を場所を変えてしただけの場合は、業務上の必要性を説明しにくい',
+          '日程表、仕事の内容のメモ、打ち合わせの相手、イベントの案内、撮影した写真など、仕事をした記録を残しておく',
+          '観光だけの日の宿泊費・観光施設の入場料・お土産（取引先への手土産を除く）は経費にしない',
+        ],
+      },
+      {
+        type: 'cta',
+        title: '確定申告準備キット（Excel）',
+        text: '経費帳は科目別（旅費交通費・接待交際費など）に入力でき、作成コーナーに入れる数字がそのまま出ます。年末の集計と 2 月の申告に。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '取材のための旅行は経費になりますか？' },
+      { type: 'p', text: 'ライターやカメラマンなどが、記事や作品のために取材・撮影に行く旅行は、仕事の内容から見て事業に必要であれば経費になります。依頼を受けた案件や、発表の予定がある企画との関係がわかる記録を残しておきましょう。取材と関係のない観光の部分は分けて考えます。' },
+      { type: 'h3', text: '出張先で観光した日の宿泊費は経費になりますか？' },
+      { type: 'p', text: '観光のために延泊した分は、原則として経費になりません。取引先との商談などが目的の旅行なら、仕事の場所までの往復の交通費は全額経費にでき、宿泊費などの残りの費用を仕事と観光の日数などで按分します。' },
+      { type: 'h3', text: '自分の出張に日当を出して経費にできますか？' },
+      { type: 'p', text: '個人事業主が自分自身に払うお金は、事業の経費にはなりません。経費にできるのは、交通費や宿泊費など、実際にかかった旅行の費用です。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の所得税基本通達 37-16〜37-22（海外渡航費）、国税庁「海外渡航費の取扱いについて」（平成 12 年 10 月 11 日 課法 2-15 ほか 法令解釈通達）、タックスアンサー No.5388、所得税法 45 条、所得税法施行令 96 条（e-Gov 法令検索）に基づく一般的な説明です。旅行が事業に必要かどうかは個別の事実で判断されるため、迷う場合は税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -11964,7 +12094,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'jutaku-loan-koujo-freelance', 'haigyo-tetsuzuki-freelance', 'hojinnari-freelance', 'tanaoroshi-kojin-jigyonushi'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'jutaku-loan-koujo-freelance', 'haigyo-tetsuzuki-freelance', 'hojinnari-freelance', 'tanaoroshi-kojin-jigyonushi', 'shucho-kanko-keihi-freelance'],
   },
   {
     id: 'setup',
