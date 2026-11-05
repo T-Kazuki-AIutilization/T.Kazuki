@@ -1159,7 +1159,7 @@ export const ARTICLES: Article[] = [
           '郵送: 提出するのは正本だけで、控えは自分で保管する。切手を貼った返信用封筒を同封すると、当分の間、日付と税務署名を書いたリーフレットが返送される',
         ],
       },
-      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'freelance-rousai-tokubetsu-kanyu', 'jigyo-shotoku-zatsu-shotoku', 'akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list'] },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'freelance-rousai-tokubetsu-kanyu', 'jigyo-shotoku-zatsu-shotoku', 'akaji-kurikoshi-freelance', 'kaigyohi-freelance', 'saishushoku-teate-kaigyo', 'aoiro-koujo-75man-2027', 'freelance-health-insurance-pension', 'freelance-haigusha-koujo', 'freelance-tax-prep', 'freelance-expenses-list', 'haigyo-tetsuzuki-freelance'] },
       { type: 'h2', text: '開業届の書き方（迷いやすい欄）' },
       {
         type: 'table',
@@ -6808,7 +6808,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kyosai', label: '無料の節税額シミュレーターを使う' },
       },
-      { type: 'links', items: ['ideco-jogen-75000-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist'] },
+      { type: 'links', items: ['ideco-jogen-75000-freelance', 'keiei-safety-kyosai-freelance', 'freelance-shotoku-koujo-ichiran', 'freelance-year-end-checklist', 'haigyo-tetsuzuki-freelance'] },
       {
         type: 'note',
         text: '中小企業基盤整備機構の小規模企業共済の案内（掛金・加入資格・共済金等請求・一括納付）とお知らせ（2026 年 10 月 16 日・10 月 30 日）、国税庁タックスアンサー No.1135・No.1420 に基づく一般的な説明です（2026 年 10 月時点）。加入の可否や受け取るときの税金は個別の状況で変わるので、加入窓口・税務署・税理士に確認してください。',
@@ -11513,6 +11513,121 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'haigyo-tetsuzuki-freelance',
+    title: '個人事業主・フリーランスの廃業手続き｜廃業届の期限、インボイスは事業廃止届出書で失効、青色申告の取りやめ届で廃業した年まで白色にしない注意点',
+    description:
+      'フリーランス・個人事業主が廃業するときの手続きをまとめました。個人事業の開業・廃業等届出書（廃業した年分の確定申告期限まで）、消費税・インボイス登録は「事業廃止届出書」で廃止日の翌日に登録が失効すること、青色申告の承認は廃業の翌年分から自動的に失効し、取りやめ届に廃業した年を書くとその年から白色申告になること、個人事業税の廃止から 1 か月以内の申告、廃業後に出た経費の扱い（所得税法 63 条・152 条）、廃業した年の確定申告を、国税庁と条文に基づいて整理しました。',
+    date: '2026-11-05',
+    keywords: ['個人事業主 廃業 手続き', 'フリーランス 廃業届 期限', '廃業 インボイス 事業廃止届出書', '青色申告の取りやめ届出書 廃業', '廃業 確定申告 個人事業主', '個人事業税 廃業 申告'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '就職が決まった、法人を作る、仕事を辞めるなどでフリーランスをやめるときは、税務署などに届出が必要です。期限に余裕のあるものと、すぐに出すものがあり、インボイス登録や青色申告をしていた人は出す書類が増えます。廃業の手続きと、廃業した年の確定申告で気をつけることを、国税庁の案内と条文に基づいて整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          '税務署に「個人事業の開業・廃業等届出書」を出す。期限は廃業した年分の確定申告期限（翌年 3 月 15 日ごろ）まで',
+          'インボイス登録をしている人・消費税の課税事業者は「事業廃止届出書」を速やかに出す。インボイスの登録は廃業した日の翌日に失効する（登録の取消しを求める届出書ではない）',
+          '青色申告の承認は、事業を全部やめると翌年分から自動的に失効する。取りやめ届を出すなら、取りやめる年に廃業した年を書かない（書くとその年から白色申告になる）',
+          '個人事業税は、廃業した年の 1 月 1 日から廃業日までの所得にもかかる。所得が事業主控除（290 万円を営業した月数で月割り）を超えるなら、廃業日から 1 か月以内に都道府県に申告する',
+          '廃業した年も、廃業日までの事業所得を翌年 3 月の確定申告で申告する。廃業後に出た事業の経費は、廃業した年か前年の経費にできる',
+        ],
+      },
+      { type: 'h2', text: '廃業するときに出す書類' },
+      {
+        type: 'table',
+        headers: ['書類', '出す人', '期限・提出先'],
+        rows: [
+          ['個人事業の開業・廃業等届出書', '全員', '廃業した年分の確定申告期限まで・税務署（所得税法 229 条）'],
+          ['事業廃止届出書（消費税）', '消費税の課税事業者、インボイス登録をしている人', '速やかに・税務署（消費税法 57 条）'],
+          ['給与支払事務所等の開設・移転・廃止届出書', '青色事業専従者や従業員に給与を払っていた人', '廃止の日から 1 か月以内・税務署（所得税法 230 条）'],
+          ['所得税の青色申告の取りやめ届出書', '青色申告の承認を受けていた人（下の注意を参照）', '取りやめる年分の確定申告期限まで・税務署'],
+          ['個人事業税の申告（事業廃止）', '廃業した年の所得が事業主控除を超える人', '廃業日から 1 か月以内・都道府県（地方税法 72 条の 55）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '税務署への届出は、e-Tax でも書面（持参・郵送）でも出せます（国税庁「A1-5 個人事業の開業届出・廃業届出等手続」）。都道府県によっては、個人事業税の事業廃止の届出書を別に出すよう条例で決めているので、都道府県税事務所のページも確認してください。',
+      },
+      { type: 'links', items: ['freelance-kaigyo-todoke', 'kojin-jigyozei-freelance'] },
+      { type: 'h2', text: 'インボイス登録は「事業廃止届出書」で失効する' },
+      {
+        type: 'p',
+        text: 'インボイス（適格請求書発行事業者）の登録をしている人が廃業するときは、「適格請求書発行事業者の登録の取消しを求める旨の届出書」ではなく、「事業廃止届出書」を出します（国税庁 タックスアンサー No.6603）。事業廃止届出書を出すと、事業を廃止した日の翌日に登録の効力がなくなります（インボイス制度に関する Q&A 問 14、消費税法 57 条の 2 第 10 項）。簡易課税や課税事業者の選択をしていた人も、事業廃止届出書を出せば、それぞれの不適用届出書も出したものとして扱われます。',
+      },
+      {
+        type: 'p',
+        text: '消費税の課税事業者だった人は、廃業した年の分の消費税の確定申告も必要です。仕事に使っていた車やパソコンなどを廃業後に自分で使い続ける場合は、廃業した時点で事業として売ったものとみなされ（みなし譲渡）、その時の価額（一般的には未償却残高）を課税売上に含めます（No.6603）。',
+      },
+      { type: 'links', items: ['shohizei-shinkoku-2wari-yarikata', 'freelance-invoice-registration'] },
+      { type: 'h2', text: '青色申告の取りやめ届で失敗しないために' },
+      {
+        type: 'p',
+        text: '青色申告の承認を受けている人が事業を全部廃止した場合、承認は廃止した日の属する年の翌年分以後について、自動的に効力を失います（所得税法 151 条 2 項）。つまり、廃業した年の分は、それまでどおり青色申告で申告できます。',
+      },
+      {
+        type: 'p',
+        text: '一方、「青色申告の取りやめ届出書」を出すと、届出書に書いた「取りやめる年」の分から承認がなくなります（所得税法 151 条 1 項）。国税庁の廃業の手続きの一覧には取りやめ届も載っていますが、たとえば 2026 年に廃業して取りやめる年を「2026 年分」と書くと、2026 年分から白色申告になり、青色申告特別控除（最大 65 万円）や赤字の繰越しが使えなくなります。出す場合は、廃業した年の翌年を書きましょう。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '取りやめ届を出した日から 1 年以内に青色申告の承認申請をすると、却下されることがある（所得税法 145 条 3 号）。また事業を始める可能性があるなら、急いで出す必要はない',
+          '廃業の翌年以降に事業を再開する場合は、あらためて青色申告承認申請書を出す',
+        ],
+      },
+      { type: 'links', items: ['aoiro-kessansho-kakikata', 'akaji-kurikoshi-freelance'] },
+      { type: 'h2', text: '廃業した年の確定申告と税金' },
+      {
+        type: 'ul',
+        items: [
+          '所得税: 1 月 1 日から廃業日までの事業所得と、廃業後の給与などを合わせて、翌年 3 月に確定申告する（給与が 1 か所で年末調整を受け、事業所得などが 20 万円以下の場合は、所得税の確定申告をしなくてよいことがある。その場合も住民税の申告は必要）',
+          '個人事業税: 廃業した年の所得にもかかる。事業主控除の 290 万円は、事業をした月数で月割りする（1 か月未満は 1 か月。地方税法 72 条の 49 の 14）。納税は廃業後すぐに課税される（同法 72 条の 51）',
+          '住民税・国民健康保険料: 前年の所得で計算するので、廃業した翌年も廃業した年の所得で課税される。収入が大きく下がった場合は、国保の減免の対象になることがある',
+          '予定納税: 廃業で今年の所得が大きく減る見込みなら、第 2 期分の減額申請を検討する（2026 年は 11 月 16 日まで）',
+        ],
+      },
+      { type: 'links', items: ['yotei-nozei-gengaku-shinsei', 'kokuho-keigen-freelance', 'kakutei-shinkoku-nofu-hoho'] },
+      { type: 'h2', text: '廃業後に出た経費は、廃業した年か前年の経費にできる' },
+      {
+        type: 'p',
+        text: '廃業した後に、廃業前の事業に関する費用や損失が出ることがあります。事業を続けていれば経費になったはずのものは、廃業した年分（その年に事業の収入がなければ、収入があった最後の年分）か、その前年分の事業所得の経費にできます（所得税法 63 条）。すでにその年分の確定申告を出している場合は、その費用が出た日の翌日から 2 か月以内に更正の請求をして、税金を取り戻せます（所得税法 152 条）。2 か月を過ぎないよう注意しましょう。',
+      },
+      {
+        type: 'cta',
+        title: '廃業する年の売上と入金を最後まで記録する',
+        text: 'FreelanceOS なら、案件・売上・入金を 1 画面で管理でき、廃業前の未入金の請求もひと目でわかります。無料で使えます。',
+        href: '/signup',
+        label: '無料で FreelanceOS を使う',
+      },
+      { type: 'h2', text: '税金以外の手続き' },
+      {
+        type: 'ul',
+        items: [
+          '小規模企業共済: 個人事業を廃業すると、共済金（廃業時の共済金 A）を受け取れる。掛金を納めた期間によって受け取れる額が変わる',
+          '雇用保険: 開業の時に再就職手当を受けていた人が廃業した場合、受給期間の残りの基本手当を受けられることがある。ハローワークに確認する',
+          '取引先: 廃業日と、最後の請求・入金の予定を伝える。インボイス登録をしていた人は、登録が失効する日も伝えておく',
+          '帳簿の保存: 廃業しても、帳簿や書類の保存義務はなくならない（青色申告の帳簿は原則 7 年）',
+        ],
+      },
+      { type: 'links', items: ['shokibo-kyosai-freelance', 'saishushoku-teate-kaigyo', 'freelance-denshi-chobo-hozon'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '廃業届を出さないとどうなりますか？' },
+      { type: 'p', text: '廃業届は所得税法 229 条で提出が決められている届出なので、期限（廃業した年分の確定申告期限）までに出しておきましょう。インボイス登録をしている人は、事業廃止届出書を出さないと原則として登録が残ります（税務署長が事業の廃止を認めて登録を取り消すこともあります。消費税法 57 条の 2 第 6 項）。' },
+      { type: 'h3', text: 'しばらく休むだけでも廃業届は必要ですか？' },
+      { type: 'p', text: '所得税法 229 条で届出が必要なのは、事業の開始・廃止や事務所の設置・移転・廃止で、一時的な休業は含まれていません。再開の予定があるなら、廃業届を出さずに休業する選択もあります。休業中も、インボイス登録や消費税の届出はそのまま残る点に注意してください。' },
+      { type: 'h3', text: '法人を作って事業を引き継ぐ場合も廃業届は必要ですか？' },
+      { type: 'p', text: '必要です。個人事業を廃止し、法人の設立届出書などを出します。国税庁は、個人事業の全てを新たに設立した法人に引き継ぐ場合の手続きに「法人設立ワンストップサービス」の利用をすすめています。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の国税庁「廃業する場合」「A1-5 個人事業の開業届出・廃業届出等手続」「A1-9 所得税の青色申告の取りやめ手続」「A2-7 給与支払事務所等の開設・移転・廃止の届出」、タックスアンサー No.6603「個人事業者が事業を廃止した場合」、インボイス制度に関する Q&A 問 14、所得税法 63 条・145 条・151 条・152 条・229 条・230 条、地方税法 72 条の 49 の 11・72 条の 49 の 14・72 条の 51・72 条の 55（e-Gov 法令検索）に基づく一般的な説明です。個別の判断は税務署・都道府県税事務所または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -11573,7 +11688,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'jutaku-loan-koujo-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'jutaku-loan-koujo-freelance', 'haigyo-tetsuzuki-freelance'],
   },
   {
     id: 'setup',
