@@ -2642,7 +2642,7 @@ export const ARTICLES: Article[] = [
           '75 万円を狙うなら、優良な電子帳簿の要件に対応した会計ソフトを選び、2027 年 1 月 1 日の取引から入力する（対応状況はプランごとに公式サイトで確認）',
         ],
       },
-      { type: 'links', items: ['shakai-hokenryo-koujo-freelance', 'shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to'] },
+      { type: 'links', items: ['shakai-hokenryo-koujo-freelance', 'shokibo-kyosai-freelance', 'keiei-safety-kyosai-freelance', 'iryohi-koujo-freelance', 'ideco-jogen-75000-freelance', 'uriage-keijo-jiki-nenmatsu', 'aoiro-koujo-75man-2027', 'freelance-kaikei-soft-hitsuyou', 'freelance-etax-how-to', 'tanaoroshi-kojin-jigyonushi'] },
       { type: 'affiliate', title: '1 月から会計ソフトで帳簿をつけるなら', ids: ['mf-kakutei', 'yayoi-aoiro', 'freee-kaikei'] },
       { type: 'h2', text: 'よくある質問' },
       { type: 'h3', text: '12 月に買ったパソコンは今年の経費になる？' },
@@ -5540,7 +5540,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
       },
-      { type: 'links', items: ['freelance-shotoku-shomei', 'kaji-anbun-freelance', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man'] },
+      { type: 'links', items: ['freelance-shotoku-shomei', 'kaji-anbun-freelance', 'kakutei-shinkoku-kigengo-shusei', 'shushi-uchiwakesho-kakikata', 'freelance-etax-how-to', 'freelance-boki-shiwake', 'aoiro-koujo-75man-2027', 'shogaku-genka-shokyaku-40man', 'tanaoroshi-kojin-jigyonushi'] },
       {
         type: 'note',
         text: '国税庁「令和 7 年分 青色申告決算書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
@@ -5704,7 +5704,7 @@ export const ARTICLES: Article[] = [
         external: true,
         secondary: { href: '/tools/kakutei-checklist', label: '確定申告の準備チェックリスト（無料）' },
       },
-      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'jigyo-shotoku-zatsu-shotoku', 'aoiro-kessansho-kakikata', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'side-job-tax-return-200k'] },
+      { type: 'links', items: ['aoiro-jigyo-senjusha-kyuyo', 'jigyo-shotoku-zatsu-shotoku', 'aoiro-kessansho-kakikata', 'freelance-etax-how-to', 'freelance-kaigyo-todoke', 'side-job-tax-return-200k', 'tanaoroshi-kojin-jigyonushi'] },
       {
         type: 'note',
         text: '国税庁「令和 7 年分 収支内訳書（一般用）の書き方」に基づく一般的な説明です（令和 8 年分の様式で欄の配置が変わる場合があります）。個別の判断は税務署や税理士にご確認ください。',
@@ -11768,6 +11768,142 @@ export const ARTICLES: Article[] = [
       },
     ],
   },
+  {
+    slug: 'tanaoroshi-kojin-jigyonushi',
+    title: '個人事業主の棚卸しのやり方｜12 月 31 日の在庫の数え方、届出がなければ最終仕入原価法、ハンドメイド・同人グッズの在庫や未使用の消耗品も対象',
+    description:
+      'フリーランス・個人事業主の年末の棚卸しをまとめました。売上原価＝期首の棚卸高＋仕入高−期末の棚卸高の計算、棚卸しが必要な資産（商品・製品・原材料、未使用の包装材料や事務用品、まだ使っていない 10 万円未満の備品）、12 月 31 日に数えられないときの扱い、評価方法を届け出ていなければ最終仕入原価法になること、白色申告は原価法だけで低価法は青色申告だけ、破損品・売れ残りは処分可能価額で評価できること、自分で使った商品は売上になることを、所得税法・所得税法施行令と国税庁「青色申告の決算の手引き」に基づいて整理しました。',
+    date: '2026-11-05',
+    keywords: ['個人事業主 棚卸し やり方', '棚卸 最終仕入原価法 計算', 'ハンドメイド 在庫 確定申告', '同人誌 在庫 棚卸 確定申告', '棚卸 消耗品 年末', '売上原価 計算 個人事業主'],
+    readingMinutes: 7,
+    blocks: [
+      {
+        type: 'p',
+        text: '商品を仕入れて売る人や、ハンドメイド作品・同人誌・グッズを作って売る人は、12 月 31 日に在庫を数える「棚卸し」が必要です。仕入れや制作にかかった費用は、全額がその年の経費になるわけではなく、売れ残った在庫の分は翌年に持ち越します。年末の棚卸しのやり方と、在庫の金額の計算方法を、所得税法・所得税法施行令と国税庁の「青色申告の決算の手引き」に基づいて整理します。',
+      },
+      { type: 'h2', text: '先に結論' },
+      {
+        type: 'ul',
+        items: [
+          'その年の経費になる売上原価は「年初の棚卸高 ＋ 1 年間の仕入高 − 年末の棚卸高」。年末に残った在庫の分は、その年の経費にならない',
+          '棚卸しが必要なのは、商品・製品・原材料などのほか、まだ使っていない包装材料・事務用品などの消耗品や、まだ使っていない 10 万円未満の備品なども含む',
+          '棚卸しは 12 月 31 日に行う。忙しくてできなければ前後の日でもよいが、12 月 31 日時点の在庫に計算し直す',
+          '評価方法を税務署に届け出ていなければ「最終仕入原価法」（年末にいちばん近い時期の仕入単価 × 年末の数量）で計算する',
+          '白色申告で選べるのは原価法だけ。時価が下がった在庫を時価で評価する低価法は、青色申告の人だけが選べる',
+          '破損品・売れ残り・流行遅れで通常の値段では売れない在庫は、処分できる価額で評価できる',
+        ],
+      },
+      { type: 'h2', text: '売上原価の計算と、棚卸しが必要な理由' },
+      {
+        type: 'p',
+        text: '事業所得の経費になるのは、その年に売れた分の原価（売上原価）です。国税庁の「青色申告の決算の手引き」では、売上原価と消耗品費を次の式で計算するとしています。',
+      },
+      {
+        type: 'ul',
+        items: [
+          '売上原価 ＝ 年初（期首）の棚卸高 ＋ 年間の仕入高 − 年末（期末）の棚卸高',
+          '消耗品費 ＝ 年初（期首）の棚卸高 ＋ 年間の購入高 − 年末（期末）の棚卸高',
+        ],
+      },
+      {
+        type: 'table',
+        headers: ['例（グッズを販売する人）', '金額'],
+        rows: [
+          ['年初の在庫（前年末の棚卸高）', '5 万円'],
+          ['1 年間の仕入高（グッズの製作費）', '60 万円'],
+          ['年末の在庫（200 個 × 最後に作ったときの単価 300 円）', '6 万円'],
+          ['売上原価（その年の経費になる額）', '5 万 ＋ 60 万 − 6 万 ＝ 59 万円'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '年末の在庫の 6 万円は翌年の「年初の在庫」になり、翌年に売れたときに経費になります。棚卸しをせずに仕入高をそのまま経費にすると、経費が多すぎて所得を少なく申告することになるので注意しましょう。逆に、売れ残りを数え忘れて前年の在庫を書かなかった年は、経費が少なくなります。',
+      },
+      { type: 'h2', text: '棚卸しが必要な資産' },
+      {
+        type: 'table',
+        headers: ['区分', '例'],
+        rows: [
+          ['商品・製品など', '仕入れた商品、自分で作った製品（ハンドメイド作品・同人誌・グッズなど）、半製品、仕掛品、原材料、作業くずなど'],
+          ['消耗品など', 'まだ使っていない包装材料・梱包資材、ガソリン、事務用品などの消耗品。使用可能期間が 1 年未満か取得価額が 10 万円未満の少額な減価償却資産で、まだ使っていないもの'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '手引きでは、通常の年に比べて特に増えていない消耗品などは、棚卸しを省略してもかまわないとしています。年末にまとめ買いした梱包資材や、買ったけれど年内に使い始めていないパソコン周辺機器などは、棚卸しの対象として翌年に回す必要があります（所得税法施行令 3 条、「青色申告の決算の手引き」）。',
+      },
+      {
+        type: 'p',
+        text: 'ライターやデザイナーなど、在庫を持たないフリーランスは、商品・製品の棚卸しは基本的にいりません。ただし、年末に大量に買って使っていない消耗品がある場合は、上の扱いになります。',
+      },
+      { type: 'links', items: ['shogaku-genka-shokyaku-40man', 'freelance-expenses-list', 'uriage-keijo-jiki-nenmatsu'] },
+      { type: 'h2', text: '棚卸しのやり方' },
+      {
+        type: 'ol',
+        items: [
+          '12 月 31 日に、商品や消耗品の種類・品質・型ごとに、数量を実際に数える（実地棚卸し）',
+          '数量を書いたメモなどの記録は、棚卸表と一緒に保存しておく',
+          '種類ごとに「単価 × 数量」で年末の棚卸高を計算し、合計する',
+          '決算書（白色は収支内訳書）の売上原価の欄に、年初と年末の商品（製品）棚卸高と、1 年間の仕入金額を書く',
+        ],
+      },
+      {
+        type: 'p',
+        text: '忙しくて 12 月 31 日に棚卸しができない場合は、年末の前後の日に行ってもかまいません。その場合は、12 月 31 日と棚卸しをした日の間の売上や仕入から 12 月 31 日時点の在庫を計算し、計算の方法を明らかにしておきます。商品出入帳などで毎日の在庫数を記録し、毎年一定の時期に実地で数えて確かめている場合は、帳簿の在庫数から年末の棚卸高を計算して、年末の実地棚卸しを省略できます（「青色申告の決算の手引き」）。',
+      },
+      { type: 'h2', text: '在庫の金額の評価方法' },
+      {
+        type: 'p',
+        text: '年末の在庫の金額は、自分で選んで税務署に届け出た評価方法で計算します（所得税法 47 条）。届け出ていない場合は、最終仕入原価法で計算します（所得税法施行令 102 条）。',
+      },
+      {
+        type: 'table',
+        headers: ['評価方法', '内容', '選べる人'],
+        rows: [
+          ['最終仕入原価法（届出がない場合）', '年末にいちばん近い時期に仕入れた（作った）ときの単価 × 年末の数量', '全員'],
+          ['個別法・先入先出法・総平均法・移動平均法・売価還元法', '仕入れごとの単価や平均の単価などで計算する原価法', '全員（届出が必要）'],
+          ['低価法', '原価法で計算した額と、12 月 31 日の時価のどちらか低いほう', '青色申告の人だけ（届出が必要）'],
+        ],
+      },
+      {
+        type: 'p',
+        text: '青色申告の承認を受けていない人が選べるのは原価法だけです（所得税法施行令 99 条 1 項）。評価方法の届出書は、事業を始めた年分の確定申告期限までに出します（所得税法施行令 100 条 2 項、国税庁「A1-17 所得税の棚卸資産の評価方法の届出手続」）。後から評価方法を変えるには、新しい方法を使う年の 3 月 15 日までに変更の承認申請書を出します（同令 101 条）。在庫の少ないフリーランスは、届出をせずに最終仕入原価法で計算する人が多いでしょう。',
+      },
+      {
+        type: 'p',
+        text: '在庫の単価（取得価額）には、購入の代価のほか、引取運賃・購入手数料など購入のためにかかった費用も含めます。自分で作った製品は、作るためにかかった原材料費・外注費などの合計です（所得税法施行令 103 条）。',
+      },
+      { type: 'h2', text: '破損品・売れ残り・自分で使った商品' },
+      {
+        type: 'ul',
+        items: [
+          '災害で著しく損傷したり、棚ざらし・流行遅れで、通常の値段で売れないものや通常の方法で使えないものは、ほかの在庫と分けて、12 月 31 日の処分可能価額で評価できる',
+          '年内に捨てた売れ残りは、年末の在庫に含めないので、結果として売上原価（経費）に入る。捨てた日や数量の記録を残しておく',
+          '商品を自分や家族のために使ったり、人にあげたりした場合は、その分も売上（収入金額）になる。原則は通常の販売価額だが、仕入価額（通常の販売価額のおおむね 70% より低いときは 70% の額）で計算してもよい',
+        ],
+      },
+      {
+        type: 'cta',
+        title: '確定申告準備キット（Excel）',
+        text: '経費帳と、控除証明書・保険料の納付証明などの提出書類チェックリスト付き。年末の集計と 2 月の申告に。',
+        href: BOOTH_TAX_URL,
+        label: 'BOOTH で見る（1,280円）',
+        external: true,
+      },
+      { type: 'links', items: ['aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'freelance-year-end-checklist'] },
+      { type: 'h2', text: 'よくある質問' },
+      { type: 'h3', text: '在庫が少なくても棚卸しは必要ですか？' },
+      { type: 'p', text: '商品や製品の在庫があれば、少なくても年末の棚卸高を計算して売上原価を出します。消耗品は、通常の年に比べて特に増えていなければ棚卸しを省略してもかまわないとされています。' },
+      { type: 'h3', text: '去年まで棚卸しをしていませんでした。どうすればよいですか？' },
+      { type: 'p', text: '今年の年末から棚卸しをすると、今年の「年初の在庫」が前年の決算書と合わなくなります。過去の年分の申告に影響することがあるため、税務署か税理士に相談してください。' },
+      { type: 'h3', text: '同人誌やグッズを委託販売に預けています。在庫に含めますか？' },
+      { type: 'p', text: '委託販売の売上は、委託先が販売した日の収入になります（売上計算書が毎日または 1 か月以内ごとに届く場合は、継続して届いた日の収入にすることもできます。所得税基本通達 36-8）。12 月 31 日時点で委託先でまだ売れていないものは自分の在庫なので、委託先の在庫報告などで数量を確認して、棚卸高に含めましょう。' },
+      {
+        type: 'note',
+        text: '2026 年 11 月時点の所得税法 2 条 1 項 16 号・47 条、所得税法施行令 3 条・99 条〜103 条（e-Gov 法令検索）、所得税基本通達 36-8、国税庁「令和 7 年分 青色申告の決算の手引き（一般用）」の「Ⅰ 棚卸表の作成」「家事消費した商品など」、「A1-17 所得税の棚卸資産の評価方法の届出手続」に基づく一般的な説明です。個別の判断は税務署または税理士にご確認ください。',
+      },
+    ],
+  },
 ]
 
 export function getArticle(slug: string): Article | undefined {
@@ -11828,7 +11964,7 @@ export const CATEGORIES: { id: string; name: string; description: string; slugs:
     id: 'tax',
     name: '税金・確定申告',
     description: '手取り、経費、確定申告の準備と e-Tax、納税スケジュール、インボイス',
-    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'jutaku-loan-koujo-freelance', 'haigyo-tetsuzuki-freelance', 'hojinnari-freelance'],
+    slugs: ['freelance-take-home-pay', 'freelance-expenses-list', 'freelance-tax-prep', 'freelance-etax-how-to', 'freelance-shotoku-shomei', 'akaji-kurikoshi-freelance', 'kakutei-shinkoku-nofu-hoho', 'kojin-jigyozei-freelance', 'freelance-tax-calendar', 'freelance-invoice-registration', 'freelance-invoice-touroku-yarikata', 'freelance-invoice-3wari-tokurei', 'freelance-shotoku-koujo-ichiran', 'freelance-denshi-chobo-hozon', 'freelance-year-end-checklist', 'freelance-furusato-nozei', 'freelance-nenmatsu-chosei', 'freelance-juminzei-first-year', 'freelance-boki-shiwake', 'freelance-kakutei-shinkoku-ikurakara', 'freelance-kaikei-soft-hitsuyou', 'side-job-tax-return-200k', 'jigyo-shotoku-zatsu-shotoku', 'side-job-juminzei-shinkoku', 'side-job-furusato-nozei', 'side-job-nenmatsu-chosei-2026', 'freelance-haigusha-koujo', 'seimei-hoken-koujo-2026', 'tokutei-shinzoku-gakusei-freelance', 'aoiro-koujo-75man-2027', 'aoiro-jigyo-senjusha-kyuyo', 'yotei-nozei-gengaku-shinsei', 'shogaku-genka-shokyaku-40man', 'shokyaku-shisan-shinkoku-freelance', 'aoiro-kessansho-kakikata', 'shushi-uchiwakesho-kakikata', 'shohizei-shinkoku-2wari-yarikata', 'shohizei-1000man-itsukara', 'shiharai-chosho-freelance', 'kakutei-shinkoku-kigengo-shusei', 'uriage-keijo-jiki-nenmatsu', 'ideco-jogen-75000-freelance', 'iryohi-koujo-freelance', 'keiei-safety-kyosai-freelance', 'shokibo-kyosai-freelance', 'shakai-hokenryo-koujo-freelance', 'kakutei-shinkoku-2026-kaisei', 'kaji-anbun-freelance', 'kosaihi-freelance', 'kuruma-keihi-freelance', 'jishin-hokenryo-koujo-freelance', 'hitorioya-koujo-freelance', 'kanai-roudousha-tokurei', 'kinro-gakusei-koujo-freelance', 'shogaisha-koujo-freelance', 'oya-fuyou-koujo-freelance', 'jutaku-loan-koujo-freelance', 'haigyo-tetsuzuki-freelance', 'hojinnari-freelance', 'tanaoroshi-kojin-jigyonushi'],
   },
   {
     id: 'setup',
